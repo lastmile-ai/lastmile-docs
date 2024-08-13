@@ -1,7 +1,7 @@
 # lastmile-docs
 Documentation website for LastMile AI's products
 
-[![LastMile AI Docs](https://github.com/lastmile-ai/lastmile-docs/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/lastmile-ai/lastmile-docs/actions/workflows/deploy-docs.yml)
+[![Deploy LastMile AI Docs](https://github.com/lastmile-ai/lastmile-docs/actions/workflows/deploy-docs.yml/badge.svg?branch=main)](https://github.com/lastmile-ai/lastmile-docs/actions/workflows/deploy-docs.yml)
 
 
 ## About LastMile AI
