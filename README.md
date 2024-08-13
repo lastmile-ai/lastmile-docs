@@ -1,6 +1,9 @@
 # lastmile-docs
 Documentation website for LastMile AI's products
 
+[![LastMile AI Docs](https://github.com/lastmile-ai/lastmile-docs/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/lastmile-ai/lastmile-docs/actions/workflows/deploy-docs.yml)
+
+
 ## About LastMile AI
 [LastMile AI](https://lastmileai.dev) is a company that helps software developers build, test and deploy robust generative AI applications. Specifically, the company provides models and tools for developers to evaluate the performance of AI applications.
 
