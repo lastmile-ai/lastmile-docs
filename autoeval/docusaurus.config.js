@@ -52,26 +52,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      navbar: {
-        items: [
-          {
-            to: "/docs/basics",
-            label: "Overview",
-            position: "left",
-          },
-          {
-            to: "/docs/quick-start",
-            label: "Quick Start",
-            position: "left",
-          },
-          {
-            href: "https://discord.com/invite/xBhNKTetGx",
-            position: "right",
-            className: "header-discord-link",
-            "aria-label": "Discord Community",
-          },
-        ],
-      },
       footer: {
         style: "dark",
         links: [

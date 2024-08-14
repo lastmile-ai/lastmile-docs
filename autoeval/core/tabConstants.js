@@ -59,7 +59,6 @@ export default {
   defaultPythonPackageManager,
   defaultPlatform,
   defaultSyntax,
-  defaultAIConfigLanguage,
   getDevNotesTabs,
   oses,
   nodePackageManagers,
