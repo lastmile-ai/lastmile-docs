@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "autoeval/**/*"
+      - "website/**/*"
 
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
@@ -19,14 +19,14 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: autoeval
+        working-directory: website
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: yarn
-          cache-dependency-path: ./autoeval
+          cache-dependency-path: ./website
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
@@ -40,7 +40,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Build output to publish to the `gh-pages` branch:
-          publish_dir: ./autoeval/build
+          publish_dir: ./website/build
           cname: docs.lastmileai.dev
           # The following lines assign commit authorship to the official
           # GH-Actions bot for deploys to `gh-pages` branch:
