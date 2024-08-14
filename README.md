@@ -8,7 +8,7 @@ Documentation website for LastMile AI's products
 [LastMile AI](https://lastmileai.dev) is a company that helps software developers build, test and deploy robust generative AI applications. Specifically, the company provides models and tools for developers to evaluate the performance of AI applications.
 
 ## Overview
-This repository contains the documentation for LastMile AI's products. The docsite is built with [Docusaurus](https://docusaurus.io)
+This repository contains the documentation for LastMile AI's products. The autoeval is built with [Docusaurus](https://docusaurus.io)
 
 ## Contributing
 We welcome contributions from the community, especially fixes and improvements to the documentation.
@@ -21,7 +21,7 @@ Please see the [Docusaurus](https://docusaurus.io) documentation for more inform
 
 At a glance, the steps to contribute are:
 0. Clone the repository and create a new branch (or fork the repository)
-1. Navigate to the `docsite` folder
+1. Navigate to the `autoeval` folder
 2. Make your changes
     * Install packages with `yarn` 
     * Run the development server with `yarn start`
