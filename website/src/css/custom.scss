@@ -6,6 +6,13 @@
 
 /* You can override the default Infima variables here. */
 
+@font-face {
+  font-family: "Space Mono";
+  src: url("/static/fonts/SpaceMono-Regular.ttf") format("ttf supports variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
 :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
@@ -14,7 +21,9 @@
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
+  --ifm-code-font-size: 80%;
+  --ifm-font-size-base: 85%;
+  --ifm-font-family-base: 'SF Mono',SFMono-Regular,ui-monospace,monospace,system-ui,sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* Footer */
@@ -29,13 +38,13 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #ff1cf7;
-  --ifm-color-primary-dark: #ff00f6;
-  --ifm-color-primary-darker: #f100e8;
-  --ifm-color-primary-darkest: #c600bf;
-  --ifm-color-primary-light: #ff38f8;
-  --ifm-color-primary-lighter: #ff46f8;
-  --ifm-color-primary-lightest: #ff71fa;
+  --ifm-color-primary: #1C70FF;
+  --ifm-color-primary-dark: #1C70FF;
+  --ifm-color-primary-darker: #1C70FF;
+  --ifm-color-primary-darkest: #1C70FF;
+  --ifm-color-primary-light: #1C70FF;
+  --ifm-color-primary-lighter: #1C70FF;
+  --ifm-color-primary-lightest: #1C70FF;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -292,10 +301,6 @@ td .label {
 }
 
 @media screen and (min-width: 1300px) {
-  #__docusaurus_skipToContent_fallback {
-    width: 92rem;
-    margin: 0 auto;
-  }
 
   #__docusaurus_skipToContent_fallback aside {
     border-right: none;
@@ -308,10 +313,6 @@ td .label {
     background-color: transparent;
     backdrop-filter: blur(10px);
     box-shadow: none;
-    .navbar__inner {
-      width: 92rem;
-      margin: 0 auto;
-    }
   }
 }
 
@@ -321,8 +322,7 @@ td .label {
 
 [data-theme="dark"] {
   #__docusaurus {
-    background: radial-gradient(ellipse at top, #08122d, #030712),
-      radial-gradient(ellipse at bottom, #030712, #030712);
+    background: radial-gradient(ellipse at top, #1C1C1C, #000000), radial-gradient(ellipse at bottom, #000000, #000000);
   }
   .table-of-contents li {
     color: var(--ifm-color-gray-600);

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+id: metrics
 ---
 
 import Tabs from '@theme/Tabs';

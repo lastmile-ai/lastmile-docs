@@ -5,9 +5,9 @@ const { themes } = require("prism-react-renderer");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Evaluation",
+  title: "AutoEval",
   tagline:
-    "Evaluate, test, and safeguard your LLM applications.",
+    "Train and Deploy fine-tuned Evaluator Models to Evaluate, Test, and Guard your LLM applications.",
   favicon: "img/favicon-light-theme.ico",
 
   // Set the production url of your site here
@@ -103,7 +103,7 @@ const config = {
       },
       colorMode: {
         defaultMode: "dark",
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       prism: {

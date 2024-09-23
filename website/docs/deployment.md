@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+id: deployment
 ---
 
 import Tabs from '@theme/Tabs';
