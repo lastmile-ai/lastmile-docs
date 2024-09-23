@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+id: overview
 ---
 
 import Tabs from '@theme/Tabs';

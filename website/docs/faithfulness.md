@@ -1,12 +1,12 @@
 ---
-id: summarization
+id: faithfulness
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import constants from '@site/core/tabConstants';
 
-# Summarization
+# Faithfulness
 
 A 400M parameter state-of-the-art, encoder based model for calcuating the factual consistency of the generated answer against the provided context.
 
@@ -18,7 +18,8 @@ A 400M parameter state-of-the-art, encoder based model for calcuating the factua
 
 |  |  |  
 | --- | --- | 
-| CNN Daily News Mail | 85% | 
+| [HaluEval](https://arxiv.org/abs/2305.11747) | 86% | 
+| [WikiEval](https://huggingface.co/datasets/explodinggradients/WikiEval) | 98% | 
 | Latency | < 2ms for 1000 tokens | 
 
 ### Example Use

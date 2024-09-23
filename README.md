@@ -21,7 +21,7 @@ Please see the [Docusaurus](https://docusaurus.io) documentation for more inform
 
 At a glance, the steps to contribute are:
 0. Clone the repository and create a new branch (or fork the repository)
-1. Navigate to the `autoeval` folder
+1. Navigate to the `website` folder
 2. Make your changes
     * Install packages with `yarn` 
     * Run the development server with `yarn start`
