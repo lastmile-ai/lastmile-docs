@@ -27,7 +27,7 @@ Optimized Tasks: *Detecting inaccuracies, Detecting hallucinations, and Measurin
 
 The AutoEval fine-tuning platform enables customization of the AlBERTa SLMs to better evaluate and measure your application's performance.
 
-![[Pasted image 20240927181243.png]]
+![diagram](https://github.com/user-attachments/assets/5f9b7d24-6e5b-49e4-b333-4e3b0988a6ef)
 #### Platform Capabilities
 
 ##### 1. Synthetic Data Generation
