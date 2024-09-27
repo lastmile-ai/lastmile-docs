@@ -8,4 +8,12 @@ import constants from '@site/core/tabConstants';
 
 # Quickstart
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Welcome to the quickstart for getting started with LastMile AI's AutoEval platform! This guide will walk you through the basics of the platform.
+
+### Account Setup
+
+First, you'll need a LastMile AI token to get started.
+1. Sign up for a [LastMile AI account](https://lastmileai.dev/auth/signin?callbackUrl=https%3A%2F%2Flastmileai.dev%2Fworkbooks%2Fworkshop) with your email
+2. Get a LastMile AI API Token from the [Settings Page](https://lastmileai.dev/settings?page=tokens)
+
+## 
