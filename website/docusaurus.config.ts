@@ -1,10 +1,13 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const { themes } = require("prism-react-renderer");
+import type * as Preset from "@docusaurus/preset-classic";
+import type { Config } from "@docusaurus/types";
+import type * as Plugin from "@docusaurus/types/src/plugin";
+import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+
+const config: Config = {
   title: "AutoEval",
   tagline:
     "Train and Deploy fine-tuned Evaluator Models to Evaluate, Test, and Guard your LLM applications.",
@@ -33,25 +36,43 @@ const config = {
   presets: [
     [
       "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: "./sidebars.ts",
+          docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.scss"),
+          customCss: "./src/css/custom.scss",
         },
         gtag: {
           trackingID: "G-7WTWGRSSS8",
           anonymizeIP: false,
         },
-      }),
+      } satisfies Preset.Options,
     ],
   ],
-  plugins: ["docusaurus-plugin-sass"],
+
+  plugins: ["docusaurus-plugin-sass",
+    [
+      'docusaurus-plugin-openapi-docs',
+      {
+        id: "api", // used to identify this plugin instance and its data
+        docsPluginId: "classic",
+        config: {
+          mock_api: { // "mock" is an arbitrary name for this API
+            specPath: "static/open_api/mock.json",
+            outputDir: "docs/api",
+            sidebarOptions: {
+              groupPathsBy: "tag",
+            },
+          } satisfies OpenApiPlugin.Options,
+        } satisfies Plugin.PluginOptions,
+      },
+    ],
+  ],
+  themes: ['docusaurus-theme-openapi-docs'],
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       footer: {
         style: "dark",
         links: [
@@ -124,7 +145,7 @@ const config = {
           "flow",
         ],
       },
-    }),
+    } satisfies Preset.ThemeConfig,
 };
 
 module.exports = config;
