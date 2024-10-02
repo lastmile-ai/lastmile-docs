@@ -18,7 +18,7 @@ const FeatureList: FeatureItem[] = [
         Overview of LastMile AI's AutoEval platform to evaluate LLMs through fine-tuned evaluator models.
       </>
     ),
-    link: './docs/lmai-platform'
+    link: './docs/autoeval-platform'
   },
   {
     title: 'Quickstart',
