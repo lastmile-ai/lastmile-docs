@@ -20,7 +20,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "lastmile-ai", // Usually your GitHub org/user name.
-  projectName: "eval", // Usually your repo name.
+  projectName: "lastmile-docs", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
