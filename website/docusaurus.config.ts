@@ -59,8 +59,8 @@ const config: Config = {
         id: "api", // used to identify this plugin instance and its data
         docsPluginId: "classic",
         config: {
-          mock_api: { // "mock" is an arbitrary name for this API
-            specPath: "static/open_api/mock.json",
+          auto_eval_api: {
+            specPath: "static/open_api/2/model.json",
             outputDir: "docs/api",
             sidebarOptions: {
               groupPathsBy: "tag",

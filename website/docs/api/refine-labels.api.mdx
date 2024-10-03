@@ -1,11 +1,11 @@
 ---
-id: list-metric-bases
-title: "List Metric Bases"
-description: "Retrieve a list of metric bases"
-sidebar_label: "List Metric Bases"
+id: refine-labels
+title: "Refine Labels"
+description: "Description of refineLabels"
+sidebar_label: "Refine Labels"
 hide_title: true
 hide_table_of_contents: true
-api: eJy1VG1v2jAQ/iuRPydLSteX8Q06JjEVFVHWSUNoMslB3DpxZjusLOK/784J76haP0xCxPY99t0999xVzPKFYe0JG6gEpDcAq0Vs2NRnqgDNrVB5P2FtJoWxtbHLDRjmswRMrEVBCLSPyAZL8LhHUE/NvczBvVmDNxCXWtgVOqtYF7gGjcvpGl1p+FWCsV2VoLViscot5JaWvCikiF0Y4bMhTxUzcQoZp5VdFYC+1ewZYosuCk1BW4H+0CqSPYzBWPIFW699Bq88KyRsIMepBY0dbQi2whKU3R+CRnXE+B69qMEUKje121YU0eeQnscyjsGYeSm9La8Y8P/MFF/XwC0kHXtq9dlc6YyjhSWICazIgK6URfLeK86L0v3zMRjLbWnOmpRe8Fz82WpsA5nsPOallGyK2KUwYiakk89pYJCXGd0bjvpPnXEPTwa9Qbc3wqvvqvcBZVjI1mUQXQfRzfgiakf0+8EOKDqGXDWQPUpYaUAHN7efoosW29HB7h4Gw/veuPeZnRJBB8Hlx6vrm1t2mPo2w7eUWWvRSRNh2IWpokcLZZxyuE1xF/JChK2Ql1b9hCWXYUb9H562OYa/BE0jYrrr4UcSZq29TSdvq5JaW9A9B8H9rAb4zeLLRkRfv49dO5LYR7sB0HtPd4p8rpzrDRccwUKC1+l7nWHfe2qdDKpTSNu7Uxlyho1ICVO2NbT1ISInRFzGXUPmPNtQ3oxK7+w43Jth/zAZG+IsvNqwkFzkrhO1pHfqck1wPAhEUjrbkuHaFQ2/x2XDUqVUbrxYVeTmm5brNR0jz3pVF3PJteAz4m1CLZYCT9xIrtgLkNbu6hSCMYVHcFlSmCeDau1vbnRwyBX2Tex0T5HDh8cx6aIZ+5QMnmr+Gw/pv82oORylTmrurGKS54uSLwhbv0kqQlbSPREeic5l1Zh4vtqLEOlxiLF6gRwp8ptULO0xXHz8L+bYaXc=
+api: eJylVE2P2jAQ/SuRz2mDOHJjl1ai2qoroO1hhaohGYh3E9u1Hboo4r93xg4kLFWp1EvkeD7fmzduhYedE5MnMQMPDn2yRLuXOYp1KrRBC15qNS/ERFjcSoUPsMHKiVQU6HIrDZvJOOv/Er1N3vg6zBsr/YHqtOIOwaKl4/pINSz+bND5O12QtRW5Vh6V5yMYU8k81M+eHVdphctLrIFPXvoKqfBiUGkRc1FBfzBs1JtnzPnfWMbiJTqOLSJURtUnmp0vb4XvoWowhEY3561UO3E8RjTSYsGERrf12+u+OJmi0RmtXMw9Ho1ChxfkLps8R+e2TZWcR0Jd/SdXsepNtC4WH+DdaF0hKEG912SB3T+QccrShwT0IYUvNevL6DA6A76kvwyMzMYZNF7/QKIy63jLrqRl92hZweteZ0uGHts/qe3cYOm94bjgwmiiQ9odPmpbA3EqPn1fBRRM56IX6YdXqE2FVzLqRDHEL9VWD+l/AOc/ywqT6TyZPs6Tb+OrNbp2mST3uqZJ0aAZLmONruP3I54As1ZDGLiCup9y8udFHWzYjZ3t6PL46jNTgQzzbmzFOeKMnkh2kjwZxnlOXDDyItLLJ4PmU/KIKa5tN+Tx1VbHI18TufYQJ7gHK2HDdNHzQAEIRXgrWvGC5CLuY/fvVtxdemb9Sv/H9BQxJeEZ/1ff9UCFj1+WKxZD9x7VuuAYC78YDn0nQvDDyNFBX+GuFRWoXRM2QcScLAAipRzuzaXSAqrOBOow6JDoCR4r/YKKKEo7KJ7/qV1K/hvSEves
 sidebar_class_name: "post api-method"
 info_path: docs/api/lastmile-ai-api-v-2
 custom_edit_url: null
@@ -27,20 +27,20 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"List Metric Bases"}
+  children={"Refine Labels"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/model/listMetricBases"}
+  path={"/api/2/auto_eval/dataset/refineLabels"}
 >
   
 </MethodEndpoint>
 
 
 
-Retrieve a list of metric bases
+Description of refineLabels
 
 <Heading
   id={"request"}
@@ -80,14 +80,52 @@ Retrieve a list of metric bases
         style={{"marginLeft":"1rem"}}
       >
         <SchemaItem
-          collapsible={false}
-          name={"id"}
-          required={false}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string"}}
+          collapsible={true}
+          className={"schemaItem"}
         >
-          
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  datasetId
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <SchemaItem
+                collapsible={false}
+                name={"value"}
+                required={true}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string"}}
+              >
+                
+              </SchemaItem>
+            </div>
+          </details>
         </SchemaItem>
       </ul>
     </details>
@@ -146,65 +184,20 @@ Retrieve a list of metric bases
                     >
                       <SchemaItem
                         collapsible={false}
-                        name={"id"}
-                        required={false}
+                        name={"success"}
+                        required={true}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"boolean"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"message"}
+                        required={true}
                         schemaName={"string"}
                         qualifierMessage={undefined}
                         schema={{"type":"string"}}
-                      >
-                        
-                      </SchemaItem><SchemaItem
-                        collapsible={false}
-                        name={"createdAt"}
-                        required={false}
-                        schemaName={"date-time"}
-                        qualifierMessage={undefined}
-                        schema={{"type":"string","format":"date-time"}}
-                      >
-                        
-                      </SchemaItem><SchemaItem
-                        collapsible={false}
-                        name={"updatedAt"}
-                        required={false}
-                        schemaName={"date-time"}
-                        qualifierMessage={undefined}
-                        schema={{"type":"string","format":"date-time"}}
-                      >
-                        
-                      </SchemaItem><SchemaItem
-                        collapsible={false}
-                        name={"creatorId"}
-                        required={false}
-                        schemaName={"string"}
-                        qualifierMessage={undefined}
-                        schema={{"type":"string"}}
-                      >
-                        
-                      </SchemaItem><SchemaItem
-                        collapsible={false}
-                        name={"status"}
-                        required={false}
-                        schemaName={"string"}
-                        qualifierMessage={undefined}
-                        schema={{"type":"string"}}
-                      >
-                        
-                      </SchemaItem><SchemaItem
-                        collapsible={false}
-                        name={"organizationId"}
-                        required={false}
-                        schemaName={["string","null"]}
-                        qualifierMessage={undefined}
-                        schema={{"type":["string","null"]}}
-                      >
-                        
-                      </SchemaItem><SchemaItem
-                        collapsible={false}
-                        name={"visibility"}
-                        required={false}
-                        schemaName={"string"}
-                        qualifierMessage={"**Possible values:** [`PRIVATE`, `MEMBER`]"}
-                        schema={{"type":"string","enum":["PRIVATE","MEMBER"]}}
                       >
                         
                       </SchemaItem>
@@ -215,7 +208,7 @@ Retrieve a list of metric bases
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"id\": \"listMetricBases-exampleid\",\n  \"createdAt\": \"2023-06-07T10:00:00Z\",\n  \"updatedAt\": \"2023-06-07T10:05:00Z\",\n  \"creatorId\": \"user-789012\",\n  \"status\": \"COMPLETED\",\n  \"organizationId\": \"org-345678\",\n  \"visibility\": \"PRIVATE\"\n}"}
+                    responseExample={"{\n  \"success\": true,\n  \"message\": \"string\"\n}"}
                     language={"json"}
                   >
                     
