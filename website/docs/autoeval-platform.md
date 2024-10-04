@@ -1,5 +1,6 @@
 ---
 id: autoeval-platform
+slug: /
 ---
 
 import Tabs from '@theme/Tabs';
