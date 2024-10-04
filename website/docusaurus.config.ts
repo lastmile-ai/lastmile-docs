@@ -11,7 +11,7 @@ const config: Config = {
   title: "AutoEval",
   tagline:
     "Train and Deploy fine-tuned Evaluator Models to Evaluate, Test, and Guard your LLM applications.",
-  favicon: "img/favicon-light-theme.ico",
+  favicon: "img/lm_favicon.png",
 
   // Set the production url of your site here
   url: "https://docs.lastmileai.dev",
