@@ -47,7 +47,7 @@
   integrity sha512-gDrt2so19jW26jY3/MkFg5mEypFIPbPoXsQGQWAi6TrCPsNOSEYepBMPlucqWigsmEy/prp5ug2jy/N3PVG/8w==
   dependencies:
     "@algolia/cache-common" "4.24.0"
-
+    
 "@algolia/client-account@4.24.0":
   version "4.24.0"
   resolved "https://registry.yarnpkg.com/@algolia/client-account/-/client-account-4.24.0.tgz#eba7a921d828e7c8c40a32d4add21206c7fe12f1"
