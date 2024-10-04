@@ -40,6 +40,7 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
+          routeBasePath: '/',
         },
         theme: {
           customCss: "./src/css/custom.scss",
