@@ -1,12 +1,12 @@
 ---
-id: correctness
+id: alberta-8k
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import constants from '@site/core/tabConstants';
 
-# Correctness
+# AlBERTa-LC-8k
 
 A 400M parameter state-of-the-art, encoder based model for calcuating the factual consistency of the generated answer against the provided context.
 
