@@ -6,6 +6,12 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import constants from '@site/core/tabConstants';
 
-# Single Container on Private Clouds
+# Deployment Options
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Hosted by LastMile AI
+
+LastMile AI provides a hosted version of the AutoEval platform and the AlBERTa models. Users can try the platform as a service without installing the platform onto their environment. The hosted platform is a single-tenant service with usage based billing. For users looking for an on-prem installation, visit [Containers on Private Clouds](#private-clouds).
+
+## Containers on Private Clouds {#private-clouds}
+
+LastMile AI provides a deployable container (OCI) that can be hosted on your private cloud through [Docker](https://www.docker.com/), [Podman](https://podman.io/), or any other OCI certified service. If you are interested in hosting the AutoEval and AlBERTa models within your private cloud, please contact [sales@lastmileai.dev](mailto:sales@lastmileai.dev).
