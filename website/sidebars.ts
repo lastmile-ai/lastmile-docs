@@ -41,6 +41,7 @@ const sidebars: SidebarsConfig = {
       collapsible: true,
       collapsed: false,
     },
+    'metrics',
     'deployment',
     {
       type: 'link',
@@ -48,6 +49,7 @@ const sidebars: SidebarsConfig = {
       href: 'https://github.com/lastmile-ai/eval-cookbook',
     },
     'sdk',
+    'workbooks',
     {
       type: "category",
       label: "API Specs",

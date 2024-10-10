@@ -476,8 +476,14 @@ td .label {
   }
 }
 
-img {
+img[src*="#diagram"] {
   max-width: 80%; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img[src*="#screenshot"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
