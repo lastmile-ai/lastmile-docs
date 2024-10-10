@@ -12,13 +12,13 @@ import constants from '@site/core/tabConstants';
 
 The [LastMile Python library](https://pypi.org/project/lastmile/) provides pythonic access to the LastMile REST API from any Python 3.7+ application. 
 
-Installation
+#### Installation
 ```bash
 # install from PyPI
 pip install lastmile
 ```
 
-Usage
+#### Usage
 ```python
 import os
 from lastmile import Lastmile
