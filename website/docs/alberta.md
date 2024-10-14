@@ -8,7 +8,7 @@ import constants from '@site/core/tabConstants';
 
 # AlBERTa
 
-A 400M parameter state-of-the-art, encoder based model for calcuating the factual consistency of the generated answer against the provided context.
+A 400M parameter state-of-the-art, encoder based model designed for evaluating. This models works well without few-shot prompting or fine-tuning. However, for further performance improvements, the AlBERTa fleet of models are available for fine-tuning.
 
 ### Model Description
 
