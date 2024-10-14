@@ -51,6 +51,11 @@ const sidebars: SidebarsConfig = {
     'sdk',
     'workbooks',
     {
+      type: 'link',
+      label: 'AIConfig',
+      href: 'https://aiconfig.lastmileai.dev/docs/basics',
+    },
+    {
       type: "category",
       label: "API Specs",
       link: {
