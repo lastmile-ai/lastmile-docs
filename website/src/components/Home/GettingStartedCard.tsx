@@ -1,21 +1,22 @@
 import React from "react";
+import CodeBlock from "@theme/CodeBlock";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import { SplitPane } from "../SplitPane";
-import { MarkdownRenderer } from "../MarkdownRenderer";
 
 export interface GettingStartedCardProps {
-  pythonCode: string;
-  nodeCode: string;
+  codeBlocks: {
+    language: string;
+    label?: string;
+    code: string;
+  }[];
+  defaultLanguage?: string;
 }
 
 export function GettingStartedCard({
-  pythonCode,
-  nodeCode,
+  codeBlocks,
+  defaultLanguage,
 }: GettingStartedCardProps) {
-  const pythonMdx = "```python\n" + pythonCode + "\n```";
-  const nodeMdx = "```javascript\n" + nodeCode + "\n```";
-
   return (
     <SplitPane
       className="getting-started-card"
@@ -29,12 +30,16 @@ export function GettingStartedCard({
       }
       rightChild={
         <Tabs>
-          <TabItem value="python" label="Python" default>
-            <MarkdownRenderer mdx={pythonMdx} />
-          </TabItem>
-          <TabItem value="node" label="node.js">
-            <MarkdownRenderer mdx={nodeMdx} />
-          </TabItem>
+          {codeBlocks.map(({ language, label, code }) => (
+            <TabItem
+              value={label ?? language}
+              label={label ?? language}
+              key={label ?? language}
+              default={defaultLanguage === language}
+            >
+              <CodeBlock language={language}>{code}</CodeBlock>
+            </TabItem>
+          ))}
         </Tabs>
       }
     />
