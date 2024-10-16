@@ -1,0 +1,26 @@
+.card {
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  transition: box-shadow 0.3s;
+  display: inline-block;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon {
+  margin-left: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card:hover .icon {
+  opacity: 1;
+}

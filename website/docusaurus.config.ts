@@ -6,7 +6,6 @@ import type { Config } from "@docusaurus/types";
 import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
-
 const config: Config = {
   title: "AutoEval",
   tagline:
@@ -40,7 +39,7 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           docItemComponent: "@theme/ApiItem", // Derived from docusaurus-theme-openapi
-          routeBasePath: '/',
+          routeBasePath: "/",
         },
         theme: {
           customCss: "./src/css/custom.scss",
@@ -53,9 +52,10 @@ const config: Config = {
     ],
   ],
 
-  plugins: ["docusaurus-plugin-sass",
+  plugins: [
+    "docusaurus-plugin-sass",
     [
-      'docusaurus-plugin-openapi-docs',
+      "docusaurus-plugin-openapi-docs",
       {
         id: "api", // used to identify this plugin instance and its data
         docsPluginId: "classic",
@@ -71,83 +71,81 @@ const config: Config = {
       },
     ],
   ],
-  themes: ['docusaurus-theme-openapi-docs'],
-  themeConfig:
-    {
-      footer: {
-        
-        style: "dark",
-        // links: [
-        //   {
-        //     title: "Developers",
-        //     items: [
-        //       {
-        //         label: "GitHub",
-        //         href: "https://github.com/lastmile-ai",
-        //       },
-        //       {
-        //         label: "Blog",
-        //         href: "https://blog.lastmileai.dev",
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     title: "Community",
-        //     items: [
-        //       {
-        //         label: "Discord",
-        //         href: "https://discord.com/invite/xBhNKTetGx",
-        //       },
-        //       {
-        //         label: "LinkedIn",
-        //         href: "https://www.linkedin.com/company/lastmile-ai/",
-        //       },
-        //       {
-        //         label: "Twitter",
-        //         href: "https://twitter.com/LastMile",
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     title: "Legal",
-        //     items: [
-        //       {
-        //         label: "Privacy",
-        //         href: "https://lastmileai.dev/privacy",
-        //       },
-        //       {
-        //         label: "Terms",
-        //         href: "https://lastmileai.dev/terms",
-        //       },
-        //     ],
-        //   },
-        // ],
-        copyright: "Copyright © 2024 LastMile AI, Inc.",
-      },
-      colorMode: {
-        disableSwitch: true,
-        respectPrefersColorScheme: true,
-        // defaultMode: 'light',
-      },
-      prism: {
-        defaultLanguage: "jsx",
-        theme: require("./core/prismTheme"),
-        additionalLanguages: [
-          "bash",
-          "json",
-          "json5",
-          "jsonp",
-          "python",
-          "java",
-          "kotlin",
-          "objectivec",
-          "swift",
-          "groovy",
-          "ruby",
-          "flow",
-        ],
-      },
-    } satisfies Preset.ThemeConfig,
+  themes: ["docusaurus-theme-openapi-docs"],
+  themeConfig: {
+    footer: {
+      style: "dark",
+      // links: [
+      //   {
+      //     title: "Developers",
+      //     items: [
+      //       {
+      //         label: "GitHub",
+      //         href: "https://github.com/lastmile-ai",
+      //       },
+      //       {
+      //         label: "Blog",
+      //         href: "https://blog.lastmileai.dev",
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     title: "Community",
+      //     items: [
+      //       {
+      //         label: "Discord",
+      //         href: "https://discord.com/invite/xBhNKTetGx",
+      //       },
+      //       {
+      //         label: "LinkedIn",
+      //         href: "https://www.linkedin.com/company/lastmile-ai/",
+      //       },
+      //       {
+      //         label: "Twitter",
+      //         href: "https://twitter.com/LastMile",
+      //       },
+      //     ],
+      //   },
+      //   {
+      //     title: "Legal",
+      //     items: [
+      //       {
+      //         label: "Privacy",
+      //         href: "https://lastmileai.dev/privacy",
+      //       },
+      //       {
+      //         label: "Terms",
+      //         href: "https://lastmileai.dev/terms",
+      //       },
+      //     ],
+      //   },
+      // ],
+      copyright: "Copyright © 2024 LastMile AI, Inc.",
+    },
+    colorMode: {
+      disableSwitch: true,
+      respectPrefersColorScheme: true,
+      // defaultMode: 'light',
+    },
+    prism: {
+      defaultLanguage: "jsx",
+      theme: require("./core/prismTheme"),
+      additionalLanguages: [
+        "bash",
+        "json",
+        "json5",
+        "jsonp",
+        "python",
+        "java",
+        "kotlin",
+        "objectivec",
+        "swift",
+        "groovy",
+        "ruby",
+        "flow",
+      ],
+    },
+  } satisfies Preset.ThemeConfig,
 };
 
 module.exports = config;
