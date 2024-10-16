@@ -14,46 +14,46 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
 const sidebars: SidebarsConfig = {
-  
   sidebar: [
-    'intro',
-    'overview',
-    'quickstart',
+    "intro",
+    "app_home", // TODO: saqadri - remove from nav
+    "overview",
+    "quickstart",
     {
-      type: 'category',
-      label: 'Models',
-      link: { 
-        type: 'doc', 
-        id: 'models',
+      type: "category",
+      label: "Models",
+      link: {
+        type: "doc",
+        id: "models",
       },
-      items: ['alberta', 'alberta-8k'],
+      items: ["alberta", "alberta-8k"],
       collapsible: true,
       collapsed: false,
     },
     {
-      type: 'category',
-      label: 'AutoEval Platform',
-      link: { 
-        type: 'doc', 
-        id: 'platform',
+      type: "category",
+      label: "AutoEval Platform",
+      link: {
+        type: "doc",
+        id: "platform",
       },
-      items: ['data-generation', 'fine-tuning',  'active-learning'],
+      items: ["data-generation", "fine-tuning", "active-learning"],
       collapsible: true,
       collapsed: false,
     },
-    'metrics',
-    'deployment',
+    "metrics",
+    "deployment",
     {
-      type: 'link',
-      label: 'Cookbook',
-      href: 'https://github.com/lastmile-ai/eval-cookbook',
+      type: "link",
+      label: "Cookbook",
+      href: "https://github.com/lastmile-ai/eval-cookbook",
     },
-    'sdk',
-    'workbooks',
+    "sdk",
+    "workbooks",
     {
-      type: 'link',
-      label: 'AIConfig',
-      href: 'https://aiconfig.lastmileai.dev/docs/basics',
+      type: "link",
+      label: "AIConfig",
+      href: "https://aiconfig.lastmileai.dev/docs/basics",
     },
     {
       type: "category",
@@ -68,6 +68,6 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
     },
   ],
-}
+};
 
 module.exports = sidebars;
