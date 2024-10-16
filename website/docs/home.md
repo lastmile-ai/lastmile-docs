@@ -6,28 +6,33 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import constants from '@site/core/tabConstants';
 
-<!-- import { GettingStartedCard } from '@site/src/components/home/GettingStartedCard'; -->
-
 import { Card } from '@site/src/components/Card';
 import { Grid } from '@site/src/components/Grid';
+import { SplitPane } from '@site/src/components/SplitPane';
+import { GettingStartedCard } from '@site/src/components/Home/GettingStartedCard';
 
 # AutoEval developer platform
 
 LastMile is the full-stack developer platform to debug, evaluate and improve LLM applications. We make it easy to fine-tune custom evaluators, set up guardrails & monitor app performance.
 
-## Developer quickstart
-
-<!-- <GettingStartedCard
-pythonCode={`
-    from lastmile import LastMile
-    lastmile.eval("Hello world")`
-}
-nodeCode={`const { LastMile } = require('lastmile');
-  LastMile.eval("Hello world");`}
-className="custom-split-pane"
-leftPaneClassName="custom-left-pane"
-rightPaneClassName="custom-right-pane"
-/> -->
+<GettingStartedCard
+  defaultLanguage="python"
+  codeBlocks={
+    [
+      {
+        language: "python",
+        code: `from lastmile import LastMile;
+        LastMile.eval("Hello world")`
+      },
+      {
+        language: "javascript",
+        label: "node.js",
+        code: `const { LastMile } = require('lastmile');
+        LastMile.eval("Hello world");`
+      }
+    ]
+  }
+/>
 
 ## Meet alBERTa 🍁
 
