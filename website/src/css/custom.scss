@@ -8,7 +8,8 @@
 
 @font-face {
   font-family: "Space Mono";
-  src: url("/static/fonts/SpaceMono-Regular.ttf") format("ttf supports variations");
+  src: url("/static/fonts/SpaceMono-Regular.ttf")
+    format("ttf supports variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
 }
@@ -23,8 +24,10 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 80%;
   --ifm-font-size-base: 85%;
-  --ifm-font-family-base: system-ui,ui-monospace,monospace,system-ui,sans-serif;
+  --ifm-font-family-base: system-ui, ui-monospace, monospace, system-ui,
+    sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --blendMode: light-dark(difference, unset) !important;
 
   /* Footer */
   .footer__title {
@@ -38,24 +41,24 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #1C70FF;
-  --ifm-color-primary-dark: #1C70FF;
-  --ifm-color-primary-darker: #1C70FF;
-  --ifm-color-primary-darkest: #1C70FF;
-  --ifm-color-primary-light: #1C70FF;
-  --ifm-color-primary-lighter: #1C70FF;
-  --ifm-color-primary-lightest: #1C70FF;
+  --ifm-color-primary: #1c70ff;
+  --ifm-color-primary-dark: #1c70ff;
+  --ifm-color-primary-darker: #1c70ff;
+  --ifm-color-primary-darkest: #1c70ff;
+  --ifm-color-primary-light: #1c70ff;
+  --ifm-color-primary-lighter: #1c70ff;
+  --ifm-color-primary-lightest: #1c70ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="light"] {
-  --ifm-color-primary: #1C70FF;
-  --ifm-color-primary-dark: #1C70FF;
-  --ifm-color-primary-darker: #1C70FF;
-  --ifm-color-primary-darkest: #1C70FF;
-  --ifm-color-primary-light: #1C70FF;
-  --ifm-color-primary-lighter: #1C70FF;
-  --ifm-color-primary-lightest: #1C70FF;
+  --ifm-color-primary: #1c70ff;
+  --ifm-color-primary-dark: #1c70ff;
+  --ifm-color-primary-darker: #1c70ff;
+  --ifm-color-primary-darkest: #1c70ff;
+  --ifm-color-primary-light: #1c70ff;
+  --ifm-color-primary-lighter: #1c70ff;
+  --ifm-color-primary-lightest: #1c70ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -96,6 +99,118 @@
 }
 
 /* Labels */
+.getting-started-card,
+.custom-card {
+  background-color: light-dark(#f8f8f9, #070707) !important;
+  border: solid 1px light-dark(#ececf1, #1a1a1a) !important;
+  transition: all 0.2s ease;
+  color: light-dark(black, white);
+  font-size: larger;
+}
+
+.getting-started-card:hover,
+.custom-card:hover {
+  text-decoration: none;
+  background-color: light-dark(white, #0a0a0a) !important;
+  transition: all 0.2s ease;
+}
+
+.getting-started-card-left-pane {
+  border: none !important;
+}
+#meet-alberta-,
+#out-of-the-box-metrics,
+#design-your-own-metric,
+#explore-our-guides {
+  font-size: x-large;
+  margin-top: 64px;
+}
+
+.custom-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 16px !important;
+}
+
+.custom-grid a:hover {
+  // mix-blend-mode: lighten;
+  box-shadow: none;
+}
+
+.alberta-grid .model-512 {
+  background-image: url(/static/img/model-512.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-blend-mode: exclusion;
+  background-color: light-dark(#91caff, #1d1ba8) !important;
+}
+.alberta-grid .model-8k {
+  background-image: url(/static/img/model-8k.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-blend-mode: exclusion;
+  background-color: light-dark(#ffecd0, #723e1a) !important;
+}
+
+.alberta-grid p {
+  max-width: 70%;
+}
+
+.custom-grid .faithfulness {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  color: black;
+  p {
+    color: black !important;
+  }
+}
+
+.custom-grid .similarity {
+  background-image: linear-gradient(120deg, #a18cd1 0%, #fbc2eb 100%);
+  color: black;
+  p {
+    color: black !important;
+  }
+}
+
+.custom-grid .summarization {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: black;
+  p {
+    color: black !important;
+  }
+}
+
+.custom-grid .toxicity {
+  background-image: linear-gradient(
+    120deg,
+    #f78ca0 0%,
+    #f9748f 19%,
+    #fd868c 60%,
+    #fe9a8b 100%
+  );
+  color: black;
+  p {
+    color: black !important;
+  }
+}
+
+.alberta-grid .model-512:hover,
+.alberta-grid .model-8k:hover {
+  mix-blend-mode: light-dark(lighten, darken);
+}
+
+.guides-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 16px !important;
+}
+
+.guides-grid a:hover {
+  box-shadow: none;
+}
+
+.guides-grid .custom-card {
+  background: none !important;
+  border: none !important;
+}
 
 .label {
   display: inline-block;
@@ -301,7 +416,6 @@ td .label {
 }
 
 @media screen and (min-width: 1300px) {
-
   #__docusaurus_skipToContent_fallback aside {
     border-right: none;
   }
@@ -320,9 +434,14 @@ td .label {
   border-left: none;
 }
 
+.codeBlock_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module {
+  background: #060606 !important;
+}
+
 [data-theme="dark"] {
   #__docusaurus {
-    background: radial-gradient(ellipse at top, #1C1C1C, #000000), radial-gradient(ellipse at bottom, #000000, #000000);
+    background: radial-gradient(ellipse at top, #1c1c1c75, #000000),
+      radial-gradient(ellipse at bottom, #000000, #000000);
   }
   .table-of-contents li {
     color: var(--ifm-color-gray-600);
@@ -340,7 +459,7 @@ td .label {
 
 [data-theme="light"] {
   #__docusaurus {
-    background: radial-gradient(ellipse at top, #eaf1f4, #ffffff),
+    background: radial-gradient(ellipse at top, #f8f8f9, #ffffff),
       radial-gradient(ellipse at bottom, #ffffff, #ffffff);
   }
   .hero--primary {
@@ -477,7 +596,7 @@ td .label {
 }
 
 img[src*="#diagram"] {
-  max-width: 80%; 
+  max-width: 80%;
   display: block;
   margin-left: auto;
   margin-right: auto;
