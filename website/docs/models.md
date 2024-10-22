@@ -21,8 +21,6 @@ The AlBERTa model series are language models optimized for evaluating the correc
 
 ## Models++
 
-
-
 | model | input length | latency | task |
 | --- | --- | --- | --- |
 | AlBERTa-512 | 512 token coontext | &lt;10ms | nli |

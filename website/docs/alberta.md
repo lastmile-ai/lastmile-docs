@@ -1,14 +1,14 @@
 ---
-id: qa
+id: alberta
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import constants from '@site/core/tabConstants';
 
-# Question and Answer
+# AlBERTa
 
-A 400M parameter state-of-the-art, encoder based model for calcuating the factual consistency of the generated answer against the relevant information.
+A 400M parameter state-of-the-art, encoder based model designed for evaluating. This models works well without few-shot prompting or fine-tuning. However, for further performance improvements, the AlBERTa fleet of models are available for fine-tuning.
 
 ### Model Description
 
@@ -18,7 +18,8 @@ A 400M parameter state-of-the-art, encoder based model for calcuating the factua
 
 |  |  |  
 | --- | --- | 
-| [WikiQA](https://paperswithcode.com/dataset/wikiqa) | 80.7% | 
+| [HaluEval](https://arxiv.org/abs/2305.11747) | 86% | 
+| [WikiEval](https://huggingface.co/datasets/explodinggradients/WikiEval) | 98% | 
 | Latency | < 2ms for 1000 tokens | 
 
 ### Example Use
