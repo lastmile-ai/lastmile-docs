@@ -16,22 +16,22 @@ import { GettingStartedCard } from '@site/src/components/Home/GettingStartedCard
 LastMile is the full-stack developer platform to debug, evaluate and improve LLM applications. We make it easy to fine-tune custom evaluators, set up guardrails & monitor app performance.
 
 <GettingStartedCard
-  defaultLanguage="python"
-  codeBlocks={
-    [
-      {
-        language: "python",
-        code: `from lastmile import LastMile;
-        LastMile.eval("Hello world")`
-      },
-      {
-        language: "javascript",
-        label: "node.js",
-        code: `const { LastMile } = require('lastmile');
-        LastMile.eval("Hello world");`
-      }
-    ]
-  }
+defaultLanguage="python"
+codeBlocks={
+[
+{
+language: "python",
+code: `from lastmile import LastMile;
+LastMile.eval("Hello world")`
+},
+{
+language: "javascript",
+label: "node.js",
+code: `const { LastMile } = require('lastmile');
+LastMile.eval("Hello world");`
+}
+]
+}
 />
 
 ## Meet alBERTa 🍁
@@ -42,26 +42,26 @@ alBERTa is a family of small language models designed for evaluation. They are o
 - **fast** -- can run inference on CPU in < 300ms
 - **customizable** -- fine-tune for custom evaluation tasks
 
-<Grid className="custom-grid">
+<Grid className="alberta-grid">
   <Card
     href="/alberta"
     title="alBERTa-512 🍁"
     description="2048 token context, specialized for evaluation tasks (like faithfulness), and gives a numeric 0->1 score."
     backgroundColor="#F5F5F5"
-    className="custom-card"
+    className="custom-card model-512"
   />
   <Card
     href="/alberta"
     title="alBERTa-LC-8k 🍁"
     description="Long-context window variant that can scale to 128k+ tokens using a scaled dot-product attention layer"
     backgroundColor="#F5F5F5"
-    className="custom-card"
+    className="custom-card model-8k"
   />
 </Grid>
 
 ### Out-of-the-box metrics
 
-Batteries-included evaluation metrics covering common AI application types, such as RAG and multi-agent compound AI systems.
+<!-- Batteries-included evaluation metrics covering common AI application types, such as RAG and multi-agent compound AI systems. -->
 
 <Grid className="custom-grid">
   <Card
@@ -69,28 +69,28 @@ Batteries-included evaluation metrics covering common AI application types, such
     title="Faithfulness"
     description="Measures how adherent or faithful an LLM response is to the provided context. Often used for hallucination detection."
     backgroundColor="#F1F1F1"
-    className="custom-card"
+    className="custom-card faithfulness"
   />
   <Card
     href="/metrics"
     title="Semantic Similarity"
     description="Measures semantic similarity between two strings. Often used for context relevance, or input/output relevance, or similarity between a response and ground truth."
     backgroundColor="#F1F1F1"
-    className="custom-card"
+    className="custom-card similarity"
   />
   <Card
     href="/metrics"
     title="Summarization Quality"
     description="Quantify the quality of a summarization response."
     backgroundColor="#F1F1F1"
-    className="custom-card"
+    className="custom-card summarization"
   />
   <Card
     href="/metrics"
     title="Toxicity"
     description="Quantify the toxicity level in an LLM response."
     backgroundColor="#F1F1F1"
-    className="custom-card"
+    className="custom-card toxicity"
   />
   <Card
     href="/metrics"
@@ -103,26 +103,26 @@ Batteries-included evaluation metrics covering common AI application types, such
 
 ## Design your own metric
 
-Use the fine-tuning service to design your own evaluators that represent custom criteria for your app quality.
+<!-- Use the fine-tuning service to design your own evaluators that represent custom criteria for your app quality. -->
 
 <Grid className="custom-grid">
   <Card
     href="/datasets"
-    title="Datasets"
-    description="Upload and manage application data for running and training evals"
+    title="Create Datasets"
+    description="Upload and manage application data for running and training evals, and generate synthetic labels."
     backgroundColor="#FBF6F7"
     className="custom-card"
   />
-  <Card
+  <!-- <Card
     href="/llm_judge"
     title="LLM Judge"
     description="Generate high-quality labels for your data using a mixture of LLM Judge with human-in-the-loop"
     backgroundColor="#F2F9FF"
     className="custom-card"
-  />
+  /> -->
   <Card
     href="/fine_tune"
-    title="Fine-tune"
+    title="Fine-tune Models"
     description="Use the AutoEval fine-tuning service to develop custom metrics for your application."
     backgroundColor="#EFFFF4"
     className="custom-card"
@@ -138,7 +138,7 @@ Use the fine-tuning service to design your own evaluators that represent custom 
 
 ## Explore our guides
 
-<Grid className="custom-grid">
+<Grid className="guides-grid">
   <Card
     href="/retrieval_systems"
     title="Retrieval systems"
