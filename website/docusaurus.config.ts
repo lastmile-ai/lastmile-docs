@@ -73,59 +73,40 @@ const config: Config = {
   ],
   themes: ["docusaurus-theme-openapi-docs"],
   themeConfig: {
-    footer: {
-      style: "dark",
-      // links: [
-      //   {
-      //     title: "Developers",
-      //     items: [
-      //       {
-      //         label: "GitHub",
-      //         href: "https://github.com/lastmile-ai",
-      //       },
-      //       {
-      //         label: "Blog",
-      //         href: "https://blog.lastmileai.dev",
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: "Community",
-      //     items: [
-      //       {
-      //         label: "Discord",
-      //         href: "https://discord.com/invite/xBhNKTetGx",
-      //       },
-      //       {
-      //         label: "LinkedIn",
-      //         href: "https://www.linkedin.com/company/lastmile-ai/",
-      //       },
-      //       {
-      //         label: "Twitter",
-      //         href: "https://twitter.com/LastMile",
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     title: "Legal",
-      //     items: [
-      //       {
-      //         label: "Privacy",
-      //         href: "https://lastmileai.dev/privacy",
-      //       },
-      //       {
-      //         label: "Terms",
-      //         href: "https://lastmileai.dev/terms",
-      //       },
-      //     ],
-      //   },
-      // ],
-      copyright: "Copyright © 2024 LastMile AI, Inc.",
+    navbar: {
+      logo: {
+        alt: "LastMile AI",
+        src: "img/lm_favicon.png",
+        //src: "img/logo[l-light].svg",
+        //srcDark: "img/logo[l-dark].svg",
+        href: "https://lastmileai.dev/",
+      },
+      items: [
+        {
+          href: "https://lastmileai.dev/blog",
+          label: "Blog",
+          className: "navbar-blog-link",
+          position: "right",
+        },
+        {
+          href: "https://discord.com/invite/xBhNKTetGx",
+          position: "right",
+          className: "header-discord-link",
+          "aria-label": "Discord Community",
+        },
+        {
+          href: "https://lastmileai.dev/",
+          position: "right",
+          className: "navbar-button",
+          label: "Sign In",
+          "aria-label": "Sign In",
+        },
+      ],
     },
     colorMode: {
-      disableSwitch: true,
-      respectPrefersColorScheme: true,
-      // defaultMode: 'light',
+      defaultMode: "dark",
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
     },
     prism: {
       defaultLanguage: "jsx",
