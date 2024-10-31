@@ -65,6 +65,35 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+.navbar-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #1e90ff; /* Blue background color */
+  color: white;
+  border-radius: 20px; /* Rounded edges */
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+  transition: background-color 0.3s ease;
+  border: none;
+  margin: 0 10px 0 0;
+}
+
+.navbar-button svg {
+  display: none; /* Hides any SVG (icon) within the button */
+}
+
+.navbar-blog-link svg {
+  display: none; /* Hides any SVG (icon) within the button */
+}
+
+.navbar-button:hover {
+  background-color: #0169d0; /* Slightly darker blue on hover */
+  color: white;
+  text-decoration: none;
+}
+
 .header-github-link:hover {
   opacity: 0.6;
 }
@@ -421,7 +450,7 @@ td .label {
 @media screen and (max-width: 1300px) {
   [data-theme="light"] {
     .navbar--fixed-top {
-      background-color: #eaf1f3;
+      background-color: #ffffff;
     }
   }
 
@@ -444,6 +473,10 @@ td .label {
     background-color: transparent;
     backdrop-filter: blur(10px);
     box-shadow: none;
+    .navbar__inner {
+      width: 92rem;
+      margin: 0 auto;
+    }
   }
 }
 
