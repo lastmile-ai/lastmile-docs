@@ -15,19 +15,20 @@
 }
 
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #1c70ff;
+  --ifm-color-primary-dark: #1c70ff;
+  --ifm-color-primary-darker: #1c70ff;
+  --ifm-color-primary-darkest: #1c70ff;
+  --ifm-color-primary-light: #1c70ff;
+  --ifm-color-primary-lighter: #1c70ff;
+  --ifm-color-primary-lightest: #1c70ff;
   --ifm-code-font-size: 80%;
   --ifm-font-size-base: 85%;
   --ifm-font-family-base: system-ui, ui-monospace, monospace, system-ui,
     sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --blendMode: light-dark(difference, unset) !important;
+  --cardBorder: light-dark(#fafafa, #1a1a1a);
 
   /* Footer */
   .footer__title {
@@ -102,7 +103,7 @@
 .getting-started-card,
 .custom-card {
   background-color: light-dark(#f8f8f9, #070707) !important;
-  border: solid 1px light-dark(#ececf1, #1a1a1a) !important;
+  border: solid 1px var(--cardBorder) !important;
   transition: all 0.2s ease;
   color: light-dark(black, white);
   font-size: larger;
