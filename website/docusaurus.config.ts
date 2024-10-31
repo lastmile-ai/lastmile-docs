@@ -45,7 +45,7 @@ const config: Config = {
           customCss: "./src/css/custom.scss",
         },
         gtag: {
-          trackingID: "G-7WTWGRSSS8",
+          trackingID: "G-T5824TZMLB",
           anonymizeIP: false,
         },
       } satisfies Preset.Options,
@@ -104,7 +104,6 @@ const config: Config = {
       ],
     },
     colorMode: {
-      defaultMode: "dark",
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
@@ -125,6 +124,12 @@ const config: Config = {
         "ruby",
         "flow",
       ],
+    },
+    algolia: {
+      appId: "52IHMS3OPW", //"MXLMDZIH1G",
+      apiKey: "a86a03cd0a8003f9d0fd2b978ad288a7", //"f6d81aeda02c8a22b494595e9d9f869e", //"ae2a15a60477c4a9ab7840b2a1e640fc",
+      indexName: "lastmile-docs", //"aiconfig",
+      contextualSearch: false,
     },
   } satisfies Preset.ThemeConfig,
 };
