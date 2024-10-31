@@ -99,6 +99,12 @@
     no-repeat;
 }
 
+.col p:first-of-type {
+  font-size: large;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
 /* Labels */
 .getting-started-card,
 .custom-card {
