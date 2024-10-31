@@ -126,9 +126,9 @@ const config: Config = {
       ],
     },
     algolia: {
-      appId: "52IHMS3OPW", //"MXLMDZIH1G",
-      apiKey: "a86a03cd0a8003f9d0fd2b978ad288a7", //"f6d81aeda02c8a22b494595e9d9f869e", //"ae2a15a60477c4a9ab7840b2a1e640fc",
-      indexName: "lastmile-docs", //"aiconfig",
+      appId: "52IHMS3OPW",
+      apiKey: "a86a03cd0a8003f9d0fd2b978ad288a7",
+      indexName: "lastmile-docs",
       contextualSearch: false,
     },
   } satisfies Preset.ThemeConfig,
