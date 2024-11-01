@@ -65,10 +65,6 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Other Resources",
-      link: {
-        type: "doc",
-        id: "platform",
-      },
       items: [
         {
           type: "link",
