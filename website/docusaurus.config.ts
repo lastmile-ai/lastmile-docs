@@ -78,7 +78,7 @@ const config: Config = {
         alt: "LastMile AI",
         src: "img/logo[l-dark].svg",
         srcDark: "img/logo[l-light].svg",
-        href: "https://lastmileai.dev/",
+        href: "https://docs.lastmileai.dev/",
       },
       items: [
         {
