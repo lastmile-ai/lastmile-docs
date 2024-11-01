@@ -7,7 +7,7 @@ import type * as Plugin from "@docusaurus/types/src/plugin";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
 
 const config: Config = {
-  title: "AutoEval",
+  title: "LastMile AI Platform",
   tagline:
     "Train and Deploy fine-tuned Evaluator Models to Evaluate, Test, and Guard your LLM applications.",
   favicon: "img/lm_favicon.png",
