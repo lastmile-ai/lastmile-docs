@@ -6,19 +6,21 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import constants from '@site/core/tabConstants';
 
-# AutoEval Python SDK
+# SDK
 
 ![PyPI](https://img.shields.io/pypi/v/lastmile?label=lastmile)
 
-The [LastMile Python library](https://pypi.org/project/lastmile/) provides pythonic access to the LastMile REST API from any Python 3.7+ application. 
+The [LastMile Python library](https://pypi.org/project/lastmile/) provides pythonic access to the LastMile REST API from any Python 3.7+ application.
 
 #### Installation
+
 ```bash
 # install from PyPI
 pip install lastmile
 ```
 
 #### Usage
+
 ```python
 import os
 from lastmile import Lastmile

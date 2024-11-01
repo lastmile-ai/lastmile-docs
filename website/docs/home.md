@@ -11,7 +11,7 @@ import { Grid } from '@site/src/components/Grid';
 import { SplitPane } from '@site/src/components/SplitPane';
 import { GettingStartedCard } from '@site/src/components/Home/GettingStartedCard';
 
-# AutoEval developer platform
+# Introduction
 
 LastMile is the full-stack developer platform to debug, evaluate and improve LLM applications. We make it easy to fine-tune custom evaluators, set up guardrails & monitor app performance.
 
