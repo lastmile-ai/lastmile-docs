@@ -76,9 +76,8 @@ const config: Config = {
     navbar: {
       logo: {
         alt: "LastMile AI",
-        src: "img/lm_favicon.png",
-        //src: "img/logo[l-light].svg",
-        //srcDark: "img/logo[l-dark].svg",
+        src: "img/logo[l-dark].svg",
+        srcDark: "img/logo[l-light].svg",
         href: "https://lastmileai.dev/",
       },
       items: [

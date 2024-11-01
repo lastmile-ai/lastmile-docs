@@ -28,7 +28,7 @@
     sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --blendMode: light-dark(difference, unset) !important;
-  --cardBorder: light-dark(#fafafa, #1a1a1a);
+  --cardBorder: light-dark(#f1f1f1, #1a1a1a);
   --pillBg: light-dark(#f4f4f5, #27272a);
   --pillBgHover: light-dark(#f4f4f5cc, #27272acc);
 
@@ -484,7 +484,24 @@ td .label {
       width: 100%;
       margin: 0 auto;
     }
+    .navbar__logo img {
+      max-width: 80px;
+    }
   }
+}
+
+.prism-code {
+  font-size: small;
+  overflow-x: scroll;
+  padding: 1rem;
+  background-color: rgb(18, 18, 18);
+  border-width: 24px 1px 1px;
+  border-style: solid;
+  border-color: rgb(27, 27, 27);
+  border-radius: 0;
+}
+.prism-code:hover {
+  background-color: rgb(19, 19, 19) !important;
 }
 
 .table-of-contents__left-border {
