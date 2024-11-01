@@ -1,6 +1,5 @@
 ---
 id: intro
-slug: /
 ---
 
 import Tabs from '@theme/Tabs';

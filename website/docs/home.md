@@ -1,5 +1,6 @@
 ---
 id: app_home
+slug: /
 ---
 
 import Tabs from '@theme/Tabs';
