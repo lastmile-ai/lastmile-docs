@@ -6,20 +6,18 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import constants from '@site/core/tabConstants';
 
-# AlBERTa-LC-8k
+# al-BERTa-LC-8k
 
 A 400M parameter state-of-the-art, encoder based model for calcuating the factual consistency of the generated answer against the provided context.
 
 ### Model Description
 
-
-
 ### Performance
 
-|  |  |  
-| --- | --- | 
-| [SQuAD 2.0](https://huggingface.co/datasets/rajpurkar/squad_v2) | 96.7% | 
-| Latency | < 2ms for 1000 tokens | 
+|                                                                 |                       |
+| --------------------------------------------------------------- | --------------------- |
+| [SQuAD 2.0](https://huggingface.co/datasets/rajpurkar/squad_v2) | 96.7%                 |
+| Latency                                                         | < 2ms for 1000 tokens |
 
 ### Example Use
 
