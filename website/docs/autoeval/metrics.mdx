@@ -1,12 +1,10 @@
 ---
-id: metrics
+title: "Evaluation Metrics"
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import constants from '@site/core/tabConstants';
-
-# Metrics
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import constants from "@site/core/tabConstants";
 
 Evaluation Metrics are the key to unlocking development velocity and safety in productionizing LLM applications. Metrics measure the performance of your LLM (or Retrieval Augmented Generation - RAG) applications. LastMile AI's metrics include `hallucination detection`, `summarization`, `relevance`, `q/a`, `semantic similarity`, `exact match`, `bleu`, `rouge`, and `toxicity`.
 
@@ -62,7 +60,11 @@ display(pd.DataFrame({
 }))
 ```
 
-<img width="1000" alt="faithful" src="https://github.com/lastmile-ai/aiconfig/assets/81494782/912eecca-fcd2-41e9-871b-09a36a5f1258"/>
+<img
+  width="1000"
+  alt="faithful"
+  src="https://github.com/lastmile-ai/aiconfig/assets/81494782/912eecca-fcd2-41e9-871b-09a36a5f1258"
+/>
 
 The faithfulness score of 0.66 suggests that the LLM-generated response is only partially faithful to the retrieved context. While it correctly mentions Einstein's famous equation, E = mc², it also includes information about Brownian motion, which is not present in the context. The inclusion of this additional information likely contributed to the lower score, indicating that the LLM relied on its own knowledge beyond the given context.
 
@@ -115,7 +117,11 @@ display(pd.DataFrame({
 }))
 ```
 
-<img width="1000" alt="summarization" src="https://github.com/lastmile-ai/aiconfig/assets/81494782/57bf8fe1-8d47-43f4-b175-91e7bf338056"/>
+<img
+  width="1000"
+  alt="summarization"
+  src="https://github.com/lastmile-ai/aiconfig/assets/81494782/57bf8fe1-8d47-43f4-b175-91e7bf338056"
+/>
 
 The summarization score of 0.88 indicates the summary effectively captures key points about Einstein, including his German origin, development of relativity theory, E = mc² equation, 1921 Nobel Prize for the photoelectric effect, and work on unified field theory. It successfully condenses essential information while maintaining accuracy. The score isn't perfect, likely due to omitting Einstein's influence on philosophy of science and his later isolation from mainstream physics.
 
@@ -168,7 +174,11 @@ display(pd.DataFrame({
 }))
 ```
 
-<img width="1000" alt="relevance" src="https://github.com/lastmile-ai/aiconfig/assets/81494782/66cb897e-8063-4054-a9dd-3bcc9036b029"/>
+<img
+  width="1000"
+  alt="relevance"
+  src="https://github.com/lastmile-ai/aiconfig/assets/81494782/66cb897e-8063-4054-a9dd-3bcc9036b029"
+/>
 
 The relevance score of 0.94 indicates high alignment between the LLM-generated response and the expected output. Both texts cover Einstein's key contributions: the theory of relativity, E = mc², and the photoelectric effect. The score isn't perfect, as the LLM response omits mentions of general relativity and Einstein's broader impact on physics. However, it adds relevant details about light's constant speed. Overall, the high score reflects strong topical relevance and accurate conveyance of Einstein's main scientific achievements.
 
@@ -221,7 +231,11 @@ display(pd.DataFrame({
 }))
 ```
 
-<img width="1000" alt="Screen Shot 2024-07-05 at 3 27 59 PM" src="https://github.com/lastmile-ai/aiconfig/assets/81494782/b0a15efb-d6c7-4600-9216-e85f992d4b57"/>
+<img
+  width="1000"
+  alt="Screen Shot 2024-07-05 at 3 27 59 PM"
+  src="https://github.com/lastmile-ai/aiconfig/assets/81494782/b0a15efb-d6c7-4600-9216-e85f992d4b57"
+/>
 
 The Q/A on Retrieved Data score of 1 indicates the LLM response fully and accurately answers the query based on the retrieved context. It correctly identifies Einstein's Nobel Prize reason and year, notes it wasn't for relativity, and doesn't add information beyond the context, demonstrating high fidelity to the provided data.
 
@@ -270,7 +284,11 @@ display(pd.DataFrame({
 }))
 ```
 
-<img width="1000" alt="Screen Shot 2024-07-05 at 4 47 32 PM" src="https://github.com/lastmile-ai/aiconfig/assets/81494782/4cc5638f-88b2-4dc7-8e4a-be584df1383e"/>
+<img
+  width="1000"
+  alt="Screen Shot 2024-07-05 at 4 47 32 PM"
+  src="https://github.com/lastmile-ai/aiconfig/assets/81494782/4cc5638f-88b2-4dc7-8e4a-be584df1383e"
+/>
 
 The Semantic Similarity Score of 0.80 shows high textual similarity despite opposite meanings. The strings differ only by "not", reversing the claim about Einstein's theory reception. This high score highlights a key limitation: the metric doesn't detect meaning differences or contradictions. It emphasizes the need to use this metric alongside others that can assess semantic accuracy and factual correctness.
 
@@ -311,7 +329,11 @@ display(pd.DataFrame({
 
 ```
 
-<img width="820" alt="Screen Shot 2024-07-05 at 4 55 48 PM" src="https://github.com/lastmile-ai/aiconfig/assets/81494782/0680fb06-0271-4683-ba22-2818b9196712"/>
+<img
+  width="820"
+  alt="Screen Shot 2024-07-05 at 4 55 48 PM"
+  src="https://github.com/lastmile-ai/aiconfig/assets/81494782/0680fb06-0271-4683-ba22-2818b9196712"
+/>
 
 The Exact Match Score of 1 indicates the LLM-generated response perfectly matches the reference text. Both strings identically describe Einstein's famous equation, demonstrating the metric's ability to detect perfect matches. This score is useful for verifying precise reproduction of expected outputs.
 
@@ -354,7 +376,11 @@ display(pd.DataFrame({
 
 ```
 
-<img width="725" alt="Screen Shot 2024-07-05 at 5 04 01 PM" src="https://github.com/lastmile-ai/aiconfig/assets/81494782/2f6a0dae-4bde-431c-aaac-2d0716ca5699"/>
+<img
+  width="725"
+  alt="Screen Shot 2024-07-05 at 5 04 01 PM"
+  src="https://github.com/lastmile-ai/aiconfig/assets/81494782/2f6a0dae-4bde-431c-aaac-2d0716ca5699"
+/>
 
 The BLEU Score of 0.4 shows moderate similarity between the texts. Both convey the core idea about Einstein's theory of relativity, but differ in specific wording (e.g., "developed" vs. "created"). This score reflects BLEU's sensitivity to exact word matches and order, highlighting why it should be used alongside other metrics for comprehensive evaluation.
 
@@ -399,7 +425,11 @@ display(pd.DataFrame({
 }))
 ```
 
-<img width="730" alt="Screen Shot 2024-07-05 at 5 10 21 PM" src="https://github.com/lastmile-ai/aiconfig/assets/81494782/32052c1a-c904-49d6-917d-c49fbc44d3f2"/>
+<img
+  width="730"
+  alt="Screen Shot 2024-07-05 at 5 10 21 PM"
+  src="https://github.com/lastmile-ai/aiconfig/assets/81494782/32052c1a-c904-49d6-917d-c49fbc44d3f2"
+/>
 
 The ROUGE Score of 0.56 indicates moderate content overlap between the generated and reference summaries. Both capture key aspects of Einstein's theory of relativity, including the unification of space and time, spacetime concept, and the E=mc² equation. However, the score suggests some differences in coverage or phrasing. This demonstrates how ROUGE evaluates summary quality based on shared content, balancing similarities and variations in expression.
 
@@ -438,6 +468,10 @@ display(pd.DataFrame({
 }))
 ```
 
-<img width="500" alt="Screen Shot 2024-07-05 at 4 35 53 PM" src="https://github.com/lastmile-ai/aiconfig/assets/81494782/c844abde-d75f-49f1-b1d5-bfd1e9b5cd88"/>
+<img
+  width="500"
+  alt="Screen Shot 2024-07-05 at 4 35 53 PM"
+  src="https://github.com/lastmile-ai/aiconfig/assets/81494782/c844abde-d75f-49f1-b1d5-bfd1e9b5cd88"
+/>
 
 The Toxicity Scores accurately identify the presence of toxic content. The first response scores 0, expressing a personal preference respectfully. The second scores 1 due to its demeaning language. This demonstrates the evaluator's ability to distinguish between respectful and toxic expressions in everyday discussions.
