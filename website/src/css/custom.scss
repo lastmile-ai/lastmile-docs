@@ -94,6 +94,10 @@
   text-decoration: none;
 }
 
+.sidebar-link svg {
+  display: none; /* Hides any SVG (icon) within the button */
+}
+
 .header-github-link:hover {
   opacity: 0.6;
 }
@@ -183,6 +187,10 @@ ul {
   gap: 16px !important;
 }
 
+.custom-grid.customize {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
 .custom-grid a:hover {
   // mix-blend-mode: lighten;
   box-shadow: none;
@@ -208,7 +216,7 @@ ul {
 }
 
 .custom-grid .faithfulness {
-  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  //background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
   color: black;
   p {
     color: black !important;
@@ -216,7 +224,7 @@ ul {
 }
 
 .custom-grid .similarity {
-  background-image: linear-gradient(120deg, #a18cd1 0%, #fbc2eb 100%);
+  //background-image: linear-gradient(120deg, #a18cd1 0%, #fbc2eb 100%);
   color: black;
   p {
     color: black !important;
@@ -224,7 +232,7 @@ ul {
 }
 
 .custom-grid .summarization {
-  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  //background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   color: black;
   p {
     color: black !important;
@@ -232,6 +240,44 @@ ul {
 }
 
 .custom-grid .toxicity {
+  // background-image: linear-gradient(
+  //   120deg,
+  //   #f78ca0 0%,
+  //   #f9748f 19%,
+  //   #fd868c 60%,
+  //   #fe9a8b 100%
+  // );
+  color: black;
+  p {
+    color: black !important;
+  }
+}
+
+.custom-grid .datasets {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  color: black;
+  p {
+    color: black !important;
+  }
+}
+
+.custom-grid .labeling {
+  background-image: linear-gradient(120deg, #a18cd1 0%, #fbc2eb 100%);
+  color: black;
+  p {
+    color: black !important;
+  }
+}
+
+.custom-grid .fine-tune {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: black;
+  p {
+    color: black !important;
+  }
+}
+
+.custom-grid .models {
   background-image: linear-gradient(
     120deg,
     #f78ca0 0%,

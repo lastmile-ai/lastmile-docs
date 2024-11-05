@@ -23,7 +23,7 @@ export function GettingStartedCard({
       leftPaneClassName="getting-started-card-left-pane"
       rightPaneClassName="getting-started-card-right-pane"
       leftChild={
-        <a href={"/getting_started"}>
+        <a href={"/quickstart"}>
           <h3>Developer quickstart</h3>
           <p>Compute your first evaluation metric within 5 minutes.</p>
         </a>

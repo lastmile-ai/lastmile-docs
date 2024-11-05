@@ -6,23 +6,12 @@ interface CardProps {
   href: string;
   title: string;
   description: string;
-  backgroundColor: string;
   className?: string; // Allow passing of custom class names
 }
 
-export function Card({
-  href,
-  title,
-  description,
-  backgroundColor,
-  className,
-}: CardProps) {
+export function Card({ href, title, description, className }: CardProps) {
   return (
-    <a
-      href={href}
-      className={classNames(styles.card, className)}
-      style={{ backgroundColor }}
-    >
+    <a href={href} className={classNames(styles.card, className)}>
       <h3 className={styles.cardTitle}>
         {title}
         <span className={styles.icon}>&gt;</span>
