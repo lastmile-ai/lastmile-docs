@@ -82,7 +82,7 @@ const config: Config = {
       },
       items: [
         {
-          to: "/category/api-specs",
+          to: "/category/api",
           label: "API Reference",
           position: "right",
         },
