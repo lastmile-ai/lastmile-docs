@@ -16,6 +16,14 @@ This repository contains the documentation for LastMile AI's products. The autoe
 
 We welcome contributions from the community, especially fixes and improvements to the documentation.
 
+### API docs generation
+
+To regen the SDK, run the following:
+
+```
+yarn docusaurus gen-api-docs all
+```
+
 ### File an issue
 
 If you find a problem with the documentation, please file an issue in this repository.

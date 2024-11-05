@@ -1,0 +1,217 @@
+---
+id: get-download-url
+title: "Get Dataset Download URL"
+description: "Description of get_download_url"
+sidebar_label: "Get Dataset Download URL"
+hide_title: true
+hide_table_of_contents: true
+api: eJytVE1vGjEQ/SuWzzRE9MaNlLRKlaoRUPUQoWjYHcDJ7tq1Z5OgFf+9M/aybKBqeugBtB6/+XrzPI0m2AQ9vtdTIAhIejnQ1qEHMra6yfVYb5Cm9qUqLOQ/fKEHOseQeeMEwNfT40nZtWL0Q97CH+qID5jV3tCOszT6CsGjn9S05eNyz9k8/qox0JXNGdHozFaEFcknOFeYLFYyfAySrdEh22IJ8kWGCuQCvnB9qfauzNntLAXl7LRzgrKrR8zk7Ly0RwaDBMmTpzR6jDjtjO+5P0NRY3RNsEDeVBu936e2jMdcuE2w5an5mJyv0mVwtgop9ujyMlb4hu15nWUYwrouVDclrup/kZbSv89aTw9nzZ8KZLFFNf+oHDdnNhXmijMpsuoQRBEDWirU2hR4ccZfP1+kiu9LpK0VfTob5+xAJKWH4MxwNISa7AMy78M28vCPwvTP6EX9y6NK58JVarOv1a7LLZET3wjj8yqC2JI+PltfAg9Cf/25iH3IDGZHiV+/QukKPNNeq6S+gky1tv2Z3UKgb8yPmtyo2fV8oSZ3N2dsHy5UqP0aMlRr6yPDnbcrgNhYXrCvtJ/8RheXmnMKmSVE0VRQtkpRrVTUQSsywtPMvZf7DzuhJZPwlYZckKkkeZ3klCZ5z0o2jBzxr5umJG331ECfheUpbkUM7Ns0K0axXvZ7MTP9fpfm/AzewEoI5fXDDgg5j09W0xMyRH9KXXxYSIWDbi5nz2o/OHhM+Ek6+it22dPr3ff5QuTS7rvS5uLj4YWN8j/WWlaweEcVRlujC6g2NWwEm2KKROCtNk+0GLtqr6Da9SpkeiJiYZ+wYooGbSskZy6Xg/8GWDkddw==
+sidebar_class_name: "post api-method"
+info_path: api/lastmile-ai-rest-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Get Dataset Download URL"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2/auto_eval/dataset/get_download_url"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Description of get_download_url
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  datasetId
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <SchemaItem
+                collapsible={false}
+                name={"value"}
+                required={true}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string"}}
+              >
+                
+              </SchemaItem>
+            </div>
+          </details>
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Successful operation
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"downloadUrl"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"The S3 presigned URL to download the dataset file."}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"downloadUrl\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
