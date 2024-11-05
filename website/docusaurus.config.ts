@@ -82,6 +82,16 @@ const config: Config = {
       },
       items: [
         {
+          to: "/category/api-specs",
+          label: "API Reference",
+          position: "right",
+        },
+        {
+          to: "/release-notes",
+          label: "Release Notes",
+          position: "right",
+        },
+        {
           href: "https://lastmileai.dev/blog",
           label: "Blog",
           className: "navbar-blog-link",
