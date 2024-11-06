@@ -1,13 +1,13 @@
 ---
-id: create-fine-tune-job
-title: "Create Job"
-description: "Description of createJob"
-sidebar_label: "Create Job"
+id: fine-tune-submit
+title: "Submit Fine Tune Job"
+description: "Submit an evaluator fine-tuning job."
+sidebar_label: "Submit Fine Tune Job"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVUtv2zAM/iuGztlc5JhbHyvQYsWKJtsORTAwNhOrtSVNkrMGRv77SMl2HCdoL70YEvXx/ZFuhIeNE7NncSsVJouaPnO0W5mhWE6ENmjBS63ucjETmUXwyEDG3euVmIgcXWalYQwhbg63RK+TqBCBDrPaSr8jX424QrBo6bjckxeLf2t0/krn9NqITCuPyvMRjCllFiJIXxy7aITLCqyAT176Esnr9Tiup2iQvPqdYYRevWDGd2M5JS/RsYEcPDj0nNzB2k0v/Eh9C2WNQTXCnLdSbcR+H1OSFnOubIQtSboiww86x/LYYyf6dH8VeuAch866Mj10bx95VVCdczpq/Zn3yKz+AayFHVmXHit3LotRGsHvsZfW5nIMzQctG9Z4UAHSiVrOaOViZtOLi8CCIwrP6yxD59Z1mfTsJ0OfQcro+sOCv+jVMT/ug+CT2TESR6ehSpE4heaRNzqMkQFf0C0FI9NpCrXXf5AMpWtKz1N66fGk2y1aXirLw9jPuUAx0G74+0gL7w3rBQjdVxEwaQ+32lbguQ6/FyEdLvrTYWd8e4PKlHgy0G1BBowczd8pYDgwkffd43jT9eJuf7aCUFip1nrYwO/g/IMsMbm8Sy4f75Jf0xN7p5BZcq0rYgyxzhGcSxqh068XHCu3pgI1CDVSLjmzmAdL9b0d3fbD45tPTQlSsZ/almwgUuCZ2C8JyQn0NKBzRwSelN4gtb9g/pBW03Dtf9pyv2cx9c7uIkG2YCWsuEzPvLIKhDz8GRrxijtOKgb+ZcGxTfqenQzhftJpXNIAG/8udjmg+OOP+YK51v59KuIHSS38IyF/Z0Lwj5C1A32DrBElqE0NG8ZGm9x4KkkxIPaIyCGrbhuq3SBCKk9ALPQrKirRpE3F853CJeP/AUhOoOs=
+api: eJzdVktPGzEQ/iuWz4EgjtwoLRKoiIqk6oFGyNmdJIZd27XHtGm0/70zdnazZNPHAVVVD5Dd2Xl+/mbGG4lqGeTZvbzUBo4wGhDXdi5nI2kdeIXamqtSnslF+/koxHmtUY5kCaHw2rEKKUySWCgj4FlVUaH1ojXSZike7fyYjAIU0WtcU8iNfAPKgz+PuKLXWUNBPXyJEPCNLUljIwtrEAzyo3Ku0kVKaPwYOORGhmIFteIn1FhBlwXXMqVcqZK77JAi49qxhp0/QsHvznOFqCGwA0qP69x5uk6C35lxqZDMslpAT8XKpsmlaA8lg5vVZiRd7FK7sGahl/2Yl4OPv4tvVH0g/P7Z3KYHVQlWFws6GVxBPpFmT/ePXfXEA49zFaCiWm5sCdVLWFvRqwOLXmnzViGFxpchd8LXD0rU+tsxCVryA+WFrWJtQs9Uea/WFEAj1OGAy0HLAgq7EEV2JNCKOYgYoBTa9Hv3+LMRk+ic9RS2VT8jJRdxJGzE9Lv0NpryAT21MxlcEifgm6pdBSOhBMHxJIKudaU8RwqxrpXX31NDi1ovVygMkPvsjuZISU76Po8HmOzTbECC/QMagjf73zB53I6t4ZyZNU1WDs6akMl3enLCP/uTvCgghEWsRLcDyONrzOIc+h8ZxgeRSyjRlxpwZXnxOZu2h1O8pORYOT0+HauI9oH33JhxfuC9+ED24243BvDP4HmxznY7b8IQ5VT7m6/Ld4Xo2Dap0fs8KZEkPxB7aoWMxqdpKoqhv9stzHeZWS8A3ELSGwEHF1BeIz+b+Z34wFwfBhgO4gM6+3NzqDIYc/ftx3Ry2ixsnyHvVcAbXYE4vxJ37yZTcf7halBI+4E6zS9UsVuFnbWrFJKw5qsKH2C2Oz0+4ZSYCrUyPcC2lx7muJi2d6fBRu06508vSVs+IHzDMWWkDUePvmJnmYj31IOaNE/pryPjtu07OjKXMiGJhCvmMdltNnyKH33VNCwm9vh1pukzzR41ZzTvec+sQJXEPr6nPQGpyItcxtGUsxt1RzYYBs2otTinQeLwl7qzXqt9uJ1MmWXby19NLCOpV19JyP/PpORrKVunJkqyjayUWUa1ZN3sk/mhXrbWXiulqtqtada9DAmepDG1T2AIotG2FOR3Spec/wD4DOjH
 sidebar_class_name: "post api-method"
-info_path: docs/api/lastmile-ai-api-v-2
+info_path: api/lastmile-ai-rest-api
 custom_edit_url: null
 ---
 
@@ -27,20 +27,21 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Create Job"}
+  children={"Submit Fine Tune Job"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/finetune/createJob"}
+  path={"/api/2/auto_eval/fine_tune_job/submit"}
+  context={"endpoint"}
 >
   
 </MethodEndpoint>
 
 
 
-Description of createJob
+Submit an evaluator fine-tuning job.
 
 <Heading
   id={"request"}
@@ -96,7 +97,7 @@ Description of createJob
                 <strong
                   className={"openapi-schema__property"}
                 >
-                  datasetId
+                  jobId
                 </strong><span
                   className={"openapi-schema__name"}
                 >
@@ -143,7 +144,7 @@ Description of createJob
                 <strong
                   className={"openapi-schema__property"}
                 >
-                  baseModelId
+                  fineTuneJobConfig
                 </strong><span
                   className={"openapi-schema__name"}
                 >
@@ -161,78 +162,183 @@ Description of createJob
             </summary><div
               style={{"marginLeft":"1rem"}}
             >
-              <SchemaItem
-                collapsible={false}
-                name={"value"}
-                required={true}
-                schemaName={"string"}
-                qualifierMessage={undefined}
-                schema={{"type":"string"}}
+              <div
+                style={{"marginTop":".5rem","marginBottom":".5rem"}}
               >
                 
-              </SchemaItem>
-            </div>
-          </details>
-        </SchemaItem><SchemaItem
-          collapsible={true}
-          className={"schemaItem"}
-        >
-          <details
-            style={{}}
-            className={"openapi-markdown__details"}
-          >
-            <summary
-              style={{}}
-            >
-              <span
-                className={"openapi-schema__container"}
-              >
-                <strong
-                  className={"openapi-schema__property"}
-                >
-                  metadata
-                </strong><span
-                  className={"openapi-schema__name"}
-                >
-                   object
-                </span><span
-                  className={"openapi-schema__divider"}
-                >
-                  
-                </span><span
-                  className={"openapi-schema__required"}
-                >
-                  required
-                </span>
-              </span>
-            </summary><div
-              style={{"marginLeft":"1rem"}}
-            >
-              <SchemaItem
+                
+                Set of columns to be used in fine-tuning.
+                 Supported columns: input, output, ground_truth
+                 For example, a task similar to summarization might need output and
+                 ground_truth.
+                
+                
+              </div><SchemaItem
                 collapsible={false}
                 name={"name"}
-                required={true}
+                required={false}
                 schemaName={"string"}
                 qualifierMessage={undefined}
-                schema={{"type":"string"}}
+                schema={{"type":"string","description":"Optional name for the job."}}
               >
                 
               </SchemaItem><SchemaItem
                 collapsible={false}
                 name={"description"}
-                required={true}
+                required={false}
                 schemaName={"string"}
                 qualifierMessage={undefined}
-                schema={{"type":"string"}}
+                schema={{"type":"string","description":"Optional description for the job."}}
               >
                 
               </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        baselineModelId
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object
+                      </span><span
+                        className={"openapi-schema__divider"}
+                      >
+                        
+                      </span><span
+                        className={"openapi-schema__required"}
+                      >
+                        required
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"value"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string"}}
+                    >
+                      
+                    </SchemaItem>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        trainDatasetId
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object
+                      </span><span
+                        className={"openapi-schema__divider"}
+                      >
+                        
+                      </span><span
+                        className={"openapi-schema__required"}
+                      >
+                        required
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"value"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string"}}
+                    >
+                      
+                    </SchemaItem>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        testDatasetId
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object
+                      </span><span
+                        className={"openapi-schema__divider"}
+                      >
+                        
+                      </span><span
+                        className={"openapi-schema__required"}
+                      >
+                        required
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"value"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string"}}
+                    >
+                      
+                    </SchemaItem>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
                 collapsible={false}
-                name={"tags"}
+                name={"selectedColumns"}
                 required={true}
                 schemaName={"string[]"}
                 qualifierMessage={undefined}
-                schema={{"type":"array","items":{"type":"string"}}}
+                schema={{"type":"array","items":{"type":"string"},"description":"Set of columns to be used in fine-tuning.\n Supported columns: input, output, ground_truth\n For example, a task similar to summarization might need output and\n ground_truth."}}
               >
                 
               </SchemaItem>

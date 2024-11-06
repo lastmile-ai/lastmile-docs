@@ -1,13 +1,13 @@
 ---
-id: refine-labels
-title: "Refine Labels"
-description: "Description of refineLabels"
-sidebar_label: "Refine Labels"
+id: dataset-get-download-url
+title: "Get Dataset Download URL"
+description: "Description of get_download_url"
+sidebar_label: "Get Dataset Download URL"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVE2P2jAQ/SuRz2mDOHJjl1ai2qoroO1hhaohGYh3E9u1Hboo4r93xg4kLFWp1EvkeD7fmzduhYedE5MnMQMPDn2yRLuXOYp1KrRBC15qNS/ERFjcSoUPsMHKiVQU6HIrDZvJOOv/Er1N3vg6zBsr/YHqtOIOwaKl4/pINSz+bND5O12QtRW5Vh6V5yMYU8k81M+eHVdphctLrIFPXvoKqfBiUGkRc1FBfzBs1JtnzPnfWMbiJTqOLSJURtUnmp0vb4XvoWowhEY3561UO3E8RjTSYsGERrf12+u+OJmi0RmtXMw9Ho1ChxfkLps8R+e2TZWcR0Jd/SdXsepNtC4WH+DdaF0hKEG912SB3T+QccrShwT0IYUvNevL6DA6A76kvwyMzMYZNF7/QKIy63jLrqRl92hZweteZ0uGHts/qe3cYOm94bjgwmiiQ9odPmpbA3EqPn1fBRRM56IX6YdXqE2FVzLqRDHEL9VWD+l/AOc/ywqT6TyZPs6Tb+OrNbp2mST3uqZJ0aAZLmONruP3I54As1ZDGLiCup9y8udFHWzYjZ3t6PL46jNTgQzzbmzFOeKMnkh2kjwZxnlOXDDyItLLJ4PmU/KIKa5tN+Tx1VbHI18TufYQJ7gHK2HDdNHzQAEIRXgrWvGC5CLuY/fvVtxdemb9Sv/H9BQxJeEZ/1ff9UCFj1+WKxZD9x7VuuAYC78YDn0nQvDDyNFBX+GuFRWoXRM2QcScLAAipRzuzaXSAqrOBOow6JDoCR4r/YKKKEo7KJ7/qV1K/hvSEves
+api: eJytVE1vGjEQ/SuWzyQb0VtupKRVqlSNgKqHCEXD7gBOdteuPZsErfjvnbEX2EDU9NADaG2/+Xhvnt1qglXQl/d6DAQBSc8H2jr0QMbWN4W+1EU6OFshPRT2pS4tFA+NL/VAFxhyb5xAGTg+rJRdqnfwAfPGG9pwvVZfIXj0o4bWvJxvua7H3w0GurIFI1qd25qwJvkE50qTx56yxyDVWh3yNVYgX2SoRG7gK1LHYtzV/Tm5naSkXJ02TlB28Yi5rJ0XomQwSJKOplA+ZBzvNz8Kf4aywRiaYIG8qVd6u020jMdCVE6w+fH2oTgfpcPgbB1S7uHFRezwjdrTJs8xhGVTqv28uKv/JVoq/7Fquxie7wn5Y4PM1qimn5RjcmZVY6G4kiKrdkkUMaCTQi1Niecn+vXrRan4vEJaW3Gqs3HODsRSOgNnsmEGDdkHZN2zLnP2rjH9M3q5B/ODS6eiVaLZ9+qe5ZrISWyE8XoRQbyTPr5YXwEPQn/7NYs8ZAaTg8WvX6FyJZ54r3NS30GmXtr+zG4h0HfWR41u1OR6OlOju5sTtXcHKjR+CTmqpfVR4X20K4F4szrnWKGf4obnF5pripgVRNPUUHVOUZ1V1M4rMsLjyr2b+w9vQicm4Stl3JCppXiT7JQmec9ONowc8m8/TSnavVgDfZKWp7gWM3Bs2y4YxX7ZbmWb5febNOdn8AYWIig/PxyAUPD45Gl6Qoboz4nF2Uw6HOzncnKttoNdxIivpKO/Yuc9v979mM7ELt17V9lCYjy88Kb8X2otj7FERxfGvVaXUK8aWAk25RSLwFtvHnkxsuqOoN70OmR5ImJmn7BmiQYdFZI1t8vJ/wAkxiGI
 sidebar_class_name: "post api-method"
-info_path: docs/api/lastmile-ai-api-v-2
+info_path: api/lastmile-ai-rest-api
 custom_edit_url: null
 ---
 
@@ -27,20 +27,21 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Refine Labels"}
+  children={"Get Dataset Download URL"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/dataset/refineLabels"}
+  path={"/api/2/auto_eval/dataset/get_download_url"}
+  context={"endpoint"}
 >
   
 </MethodEndpoint>
 
 
 
-Description of refineLabels
+Description of get_download_url
 
 <Heading
   id={"request"}
@@ -184,20 +185,11 @@ Description of refineLabels
                     >
                       <SchemaItem
                         collapsible={false}
-                        name={"success"}
-                        required={true}
-                        schemaName={"boolean"}
-                        qualifierMessage={undefined}
-                        schema={{"type":"boolean"}}
-                      >
-                        
-                      </SchemaItem><SchemaItem
-                        collapsible={false}
-                        name={"message"}
+                        name={"downloadUrl"}
                         required={true}
                         schemaName={"string"}
                         qualifierMessage={undefined}
-                        schema={{"type":"string"}}
+                        schema={{"type":"string","description":"The S3 presigned URL to download the dataset file."}}
                       >
                         
                       </SchemaItem>
@@ -208,7 +200,7 @@ Description of refineLabels
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"success\": true,\n  \"message\": \"string\"\n}"}
+                    responseExample={"{\n  \"downloadUrl\": \"string\"\n}"}
                     language={"json"}
                   >
                     

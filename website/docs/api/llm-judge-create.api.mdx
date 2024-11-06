@@ -1,13 +1,13 @@
 ---
-id: create-pseudo-label-job
-title: "Create Pseudo Label Job"
-description: "Description of createPseudoLabelJob"
-sidebar_label: "Create Pseudo Label Job"
+id: llm-judge-create
+title: "Create LLM Judge labeling Job"
+description: "Create an LLM Judge labeling job (also known as pseudo-labeling)."
+sidebar_label: "Create LLM Judge labeling Job"
 hide_title: true
 hide_table_of_contents: true
-api: eJztV0tv2zgQ/iuELr64sdcbbAvf0qQLpKjRIPHuHgKjoKWxzVQitSTljWH4v+8MKcnUw3GwTW97saXhcJ7fPLSPLF+baPoY3XDLDVj2AHorYogWw0jloLkVSt4m0TSKNXALdwaKRH3hS0g/q2U0jBIwsRY5sSHTzfGNqRU7ccdAXGhhd6h3H30ErkHj4+KAOjX8XYCxH1WCp/soVtKCtPTI8zwVsbNn9GRI2z4y8QYyTk9W2BTQgOsejfdeJiq2u5yY1PIJYnrPNfloBRiSURjQ5Oq+4jNWC7mODuilj055Wuq6qYnnJG95WkCP4IN3WGhIKAeebYHUlExHlplKIG1qrUhvrrNOd6gtiCTe/lqznNMeb7i9VlmeArFfK7kS60aeGuevzdAWZKJ0b4YyCkv3pA3Q+QbY7Q1h0+KTu8SsYph6tlLaEeParAsnGIzha6+/lM215jsULSxkpu3VzPOf9UWrtCc9bXvvkYvFXLIlsIHZGdQ4GLIBQRX/0eIBN0YYy6UdOHODijkfiZK5Doc3/aIDEmfrUfaiYyXkGgweGcYrKWylVebEkrGsDG5trTO2a1GKp2ROFXUmZJkUuQVtHPiYUWzFtc8Of56r7yDD9Ai0co0tBU+FFFmRRdN3k18u319++PW3yw/ujqfWxPd9ppRsTBbZkhzAGDlNhJc1SKoEcDZgTlxdFDpMqL/WG/bgwhnwWZXfvVKmyr/lzFXzizLb5e8rqqqfAO5hbJs+lmZ1UPBf8oc1keV2jtJTDGej8zRPzpWT6G/c/1fvz6rethaRhOihgbLE6fiJEOmyPgP0JD4/kHonRwcoJ6QvXMotp3l9YozNquNzKZY865ufrej1nPuV6gW8tfxvBcDpbWopZS7arOXGEu4n3d0hnOxBdFCYF2dyJY13eTIe018THg9FHGNaV0XKQkFvtJp57WeT8aSWzTXosyO88RLUInulLlAeVxtFm3Cu3KqSc7vBtxHPxWgy4oVV3wAFjcpcjE4uv5o6IS28x034gaLlTa724drmjbU53XMs+L70DMPy4XelM24pIn/NnWOUgfvjGv3pmVMxhQtu0FTCvbYMVoDknjW0y9TYG0/tfdXmdlRdLmwBoW7Vj1V/PR7WaKsVLxrDf9waw+Nqdo57h4xIfkTzyd7WGDzHLuQ7yalWXpOrT7GS4OAo5EqFsP/CjZ0JnCpXt+zq7pb9OenI67JMGaVESWrxyE7w86yTi7EbwgjojMvAVF+rzIOXOfSynu+94APtlZ9+JaYtPNsRZkNI0l9ot7n7gnrEdiKQkxyri+oIVcpIn2iEw4bqEu/v95SdP3R6OBAZK0HvfLltuRZ8SYF8pCRugCfu03MffYcdue29eTcnK4c11jv97TCsblxhb8zti7yLoHXcfX2YU+WWn7dUA0jV/B8k0u80cu2abvs1g2h7rEO5LmgtmUZeJkEDg7MJ2kSrLTivqgkkd4GFGB7H4UoHQzQsXXHbLaH7cPgXN0iSng==
+api: eJzlWFtP60YQ/isrv9BKIeHQo56jvLTcKoFAIEjVB4iijT1JFuxddy9AGuW/d2bXsR3bEFSh89IHSLKenf3m8s3MehVZPjfR8D66vLxiFy6ZA7vkU0iFnEfjXqRy0NwKJc+TaBilabb/SDL7sQZuIepFCZhYi5xEUODELzMuWaUuLdSxRzVlP/HUKPYk1Ytk3LDcgEvU/kbk5z5qNBA7LewSQa2iY+Aa9JGzC/w5XiMiDX87MPZYJSiximIlLUhLX3mepyL2aAePhvCsIhMvIOP0zQqbQgnxxh/sLb1Q09ugEw+3y5yE1PQRYvqda/KAFWBIR76160TJmZjXdd90Pd+lVPIMvJIgZawm3zc9e+2/8JSROJspzewCyKX9aN2Q/bCq2nJbI7fcgKWwV/adlou7jHrmqeuwar0OARQaEkq6IDbG1Rm83C2UPf3Bx/LYimfwEYPkRx9u8NDYQnKiUpdJU9vKteZLPEBYyEyHymZI79wUMTI1Y3HQxaxiU2DOQMKEbPKs/yDZ2WvuD9/sGKJc7myPKWf951wrJ5OJ1Ug+lP8DEwReeZan0GOcGZdlXIt/PN0YuuiJZWK+sEwq/APUi0XAaywOoDNH16fXQ4ZxdmmC2SYMYdSQEyMTdkae8fquAO2Mb7jGXLeA50qX/UZWxwtuTxRhILE2AU+2nn+U1s8gE6U73ZypBNLdlBohc85Pyf/EIb+JIoDuL4kVl7A8vzIwhs/h/aDXrLoK8jtt0Sr9QDW5RSkWY4TQ/3tmafDEvR7bQ7waPxHxHjdGGMul3fNwa2V2tycK4dIdAXq/xQSPtdI9bqGEXIPBRwYTrtDCZlplXi2BZYVzS7TtaugRpfiU4Gy8TpwIQZHPoE1IYmxMM65DdPjrSD3BFicFopyDRsCZkCJzWTTcP/zy9dvX77/8+vW73xNWy8VvXVAKMYYpPSUD0Ef+JMqXOUhqt+AxYEx883W6HtCwrdPttQ07ks+q/OaDOlU+yZkvWe/qbNa4wKgNf2rpXvftto0FrFYW/Jf4ISey3I5Qe0pjSr1Fbz/ZRSeRdJYFW9e8kw8baRZkEDm32HxnQqIlZEaA2/KiSKLaUdQxptiKmmXyAxh82f39SD45s2CzFPA/VnmCwF1qi+NLmIZY9RAd41ksHPEQYfHWGzYGb2M0in1pxkUfv1vV9+GekGET6yR1mucv/VKvD415EvlR1XUJb2XAVGFJ4LJlwTmyRDtsPLSbhaZdDpbt9EtqPbvZZN9oIq2cecPZnQa0cvb/0Y8bXu+cjsfrdZAzuZImkOrw4IA+mi6LY2T3zKWsvHREvc+a78PpO+mO0+/29HfhFz558mssh0O9o/xgYBeKLlu58qNLzunuEw14LgaHA+6smgAqGgRvT3wKTVDFoLySYV+kokgXpuo2dUeOCmjrd6oS8sLanPZ6MWKiFyIW+C+YbRm35JC/Rt4uCsBtdRU7C5n43iUp3HPeqlHVcn0ILxxbq7xd94S21NtjfVu2NYXfbx6O3x44NyNjhbuYFGsL5YR3vxnLqodlWpdAxltTx0Gj/x9smvZBZ3ejNlUpr7pTzczu1lFt6qrLVHMp2ELOVJ0Vl9zYK4Ej5NE5uz27G7Gjm/P2jFk8wNKkZzyuBodyN4HExYxu/ZSxYd9h/8C3cEz/jMta5hQvFzreLGCeNY+vvRn4lLcSBU0svNoB4haSMDrt7waBovdYoARKHuJfSVMicIOoFP1AVQz5gkiOW1cris+fOl2vaRl5pZeBwM9Y1fmU3H5PE8ACeIK8pJx6giUZF8zcHxHAXpnfrWK57m12HGGhze27suNaHbq5vhtRHSheuFCe46rmL7hI/4dRRO+JaHe4gdDaKkq5nDu6sQyjoJMSiW8XnUaR8VZtLkNyWUOI7vESnh7ool5hih+dES4q/xcvQ5K3
 sidebar_class_name: "post api-method"
-info_path: docs/api/lastmile-ai-api-v-2
+info_path: api/lastmile-ai-rest-api
 custom_edit_url: null
 ---
 
@@ -27,20 +27,21 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Create Pseudo Label Job"}
+  children={"Create LLM Judge labeling Job"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/dataset/createPseudoLabelJob"}
+  path={"/api/2/auto_eval/pseudo_label_job/create"}
+  context={"endpoint"}
 >
   
 </MethodEndpoint>
 
 
 
-Description of createPseudoLabelJob
+Create an LLM Judge labeling job (also known as pseudo-labeling).
 
 <Heading
   id={"request"}
@@ -80,15 +81,6 @@ Description of createPseudoLabelJob
         style={{"marginLeft":"1rem"}}
       >
         <SchemaItem
-          collapsible={false}
-          name={"userId"}
-          required={true}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string"}}
-        >
-          
-        </SchemaItem><SchemaItem
           collapsible={true}
           className={"schemaItem"}
         >
@@ -105,7 +97,7 @@ Description of createPseudoLabelJob
                 <strong
                   className={"openapi-schema__property"}
                 >
-                  datasetId
+                  pseudoLabelJobConfig
                 </strong><span
                   className={"openapi-schema__name"}
                 >
@@ -123,101 +115,170 @@ Description of createPseudoLabelJob
             </summary><div
               style={{"marginLeft":"1rem"}}
             >
-              <SchemaItem
-                collapsible={false}
-                name={"value"}
-                required={true}
-                schemaName={"string"}
-                qualifierMessage={undefined}
-                schema={{"type":"string"}}
+              <div
+                style={{"marginTop":".5rem","marginBottom":".5rem"}}
               >
                 
-              </SchemaItem>
-            </div>
-          </details>
-        </SchemaItem><SchemaItem
-          collapsible={true}
-          className={"schemaItem"}
-        >
-          <details
-            style={{}}
-            className={"openapi-markdown__details"}
-          >
-            <summary
-              style={{}}
-            >
-              <span
-                className={"openapi-schema__container"}
-              >
-                <strong
-                  className={"openapi-schema__property"}
-                >
-                  labelingModelId
-                </strong><span
-                  className={"openapi-schema__name"}
-                >
-                   object
-                </span><span
-                  className={"openapi-schema__divider"}
-                >
-                  
-                </span><span
-                  className={"openapi-schema__required"}
-                >
-                  required
-                </span>
-              </span>
-            </summary><div
-              style={{"marginLeft":"1rem"}}
-            >
-              <SchemaItem
+                
+                Subset of columns to be used in pseudo-labeling.
+                 Expected columns: input, output, ground_truth
+                 For example, a summarization task might not need an input column.
+                 TODO: Should this be repeated EvaluationMetricParameter enum?
+                
+                
+              </div><SchemaItem
                 collapsible={false}
-                name={"value"}
-                required={true}
+                name={"name"}
+                required={false}
                 schemaName={"string"}
                 qualifierMessage={undefined}
-                schema={{"type":"string"}}
+                schema={{"type":"string","description":"Optional name for the job."}}
               >
                 
-              </SchemaItem>
-            </div>
-          </details>
-        </SchemaItem><SchemaItem
-          collapsible={true}
-          className={"schemaItem"}
-        >
-          <details
-            style={{}}
-            className={"openapi-markdown__details"}
-          >
-            <summary
-              style={{}}
-            >
-              <span
-                className={"openapi-schema__container"}
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"description"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","description":"Optional description for the job."}}
               >
-                <strong
-                  className={"openapi-schema__property"}
+                
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
                 >
-                  operation
-                </strong><span
-                  className={"openapi-schema__name"}
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        datasetId
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object
+                      </span><span
+                        className={"openapi-schema__divider"}
+                      >
+                        
+                      </span><span
+                        className={"openapi-schema__required"}
+                      >
+                        required
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"value"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string"}}
+                    >
+                      
+                    </SchemaItem>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
                 >
-                   object
-                </span><span
-                  className={"openapi-schema__divider"}
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        fewShotDatasetId
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"value"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string"}}
+                    >
+                      
+                    </SchemaItem>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
                 >
-                  
-                </span><span
-                  className={"openapi-schema__required"}
-                >
-                  required
-                </span>
-              </span>
-            </summary><div
-              style={{"marginLeft":"1rem"}}
-            >
-              <SchemaItem
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        activeLabeledDatasetId
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <SchemaItem
+                      collapsible={false}
+                      name={"value"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string"}}
+                    >
+                      
+                    </SchemaItem>
+                  </div>
+                </details>
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"selectedColumns"}
+                required={true}
+                schemaName={"string[]"}
+                qualifierMessage={undefined}
+                schema={{"type":"array","items":{"type":"string"},"description":"Subset of columns to be used in pseudo-labeling.\n Expected columns: input, output, ground_truth\n For example, a summarization task might not need an input column.\n TODO: Should this be repeated EvaluationMetricParameter enum?"}}
+              >
+                
+              </SchemaItem><SchemaItem
                 collapsible={true}
                 className={"schemaItem"}
               >
@@ -429,73 +490,14 @@ Description of createPseudoLabelJob
                     >
                       
                     </SchemaItem><SchemaItem
-                      collapsible={true}
-                      className={"schemaItem"}
+                      collapsible={false}
+                      name={"template"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string","description":"The template string that defines the prompt"}}
                     >
-                      <details
-                        style={{}}
-                        className={"openapi-markdown__details"}
-                      >
-                        <summary
-                          style={{}}
-                        >
-                          <span
-                            className={"openapi-schema__container"}
-                          >
-                            <strong
-                              className={"openapi-schema__property"}
-                            >
-                              messages
-                            </strong><span
-                              className={"openapi-schema__name"}
-                            >
-                               object[]
-                            </span><span
-                              className={"openapi-schema__divider"}
-                            >
-                              
-                            </span><span
-                              className={"openapi-schema__required"}
-                            >
-                              required
-                            </span>
-                          </span>
-                        </summary><div
-                          style={{"marginLeft":"1rem"}}
-                        >
-                          <li>
-                            <div
-                              style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
-                            >
-                              Array [
-                            </div>
-                          </li><SchemaItem
-                            collapsible={false}
-                            name={"role"}
-                            required={true}
-                            schemaName={"string"}
-                            qualifierMessage={undefined}
-                            schema={{"type":"string","description":"Role can be 'system', 'user', or 'assistant'."}}
-                          >
-                            
-                          </SchemaItem><SchemaItem
-                            collapsible={false}
-                            name={"content"}
-                            required={true}
-                            schemaName={"string"}
-                            qualifierMessage={undefined}
-                            schema={{"type":"string","description":"The content of the message."}}
-                          >
-                            
-                          </SchemaItem><li>
-                            <div
-                              style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
-                            >
-                              ]
-                            </div>
-                          </li>
-                        </div>
-                      </details>
+                      
                     </SchemaItem>
                   </div>
                 </details>
@@ -505,72 +507,16 @@ Description of createPseudoLabelJob
                 required={true}
                 schemaName={"string"}
                 qualifierMessage={undefined}
-                schema={{"type":"string"}}
-              >
-                
-              </SchemaItem>
-            </div>
-          </details>
-        </SchemaItem><SchemaItem
-          collapsible={true}
-          className={"schemaItem"}
-        >
-          <details
-            style={{}}
-            className={"openapi-markdown__details"}
-          >
-            <summary
-              style={{}}
-            >
-              <span
-                className={"openapi-schema__container"}
-              >
-                <strong
-                  className={"openapi-schema__property"}
-                >
-                  metadata
-                </strong><span
-                  className={"openapi-schema__name"}
-                >
-                   object
-                </span><span
-                  className={"openapi-schema__divider"}
-                >
-                  
-                </span><span
-                  className={"openapi-schema__required"}
-                >
-                  required
-                </span>
-              </span>
-            </summary><div
-              style={{"marginLeft":"1rem"}}
-            >
-              <SchemaItem
-                collapsible={false}
-                name={"name"}
-                required={true}
-                schemaName={"string"}
-                qualifierMessage={undefined}
-                schema={{"type":"string"}}
+                schema={{"type":"string","description":"TODO: @Ankush flesh out default prompt templates or \"Base Metric\"\n representation of prompt lmai.proto.model_fine_tuning.v1.templates."}}
               >
                 
               </SchemaItem><SchemaItem
                 collapsible={false}
-                name={"description"}
+                name={"skipActiveLabeling"}
                 required={true}
-                schemaName={"string"}
+                schemaName={"boolean"}
                 qualifierMessage={undefined}
-                schema={{"type":"string"}}
-              >
-                
-              </SchemaItem><SchemaItem
-                collapsible={false}
-                name={"tags"}
-                required={true}
-                schemaName={"string[]"}
-                qualifierMessage={undefined}
-                schema={{"type":"array","items":{"type":"string"}}}
+                schema={{"type":"boolean","description":"If true, skip active labeling."}}
               >
                 
               </SchemaItem>

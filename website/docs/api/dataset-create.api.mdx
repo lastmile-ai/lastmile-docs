@@ -1,11 +1,11 @@
 ---
-id: get
-title: "Get Dataset"
-description: "Retrieve a Dataset."
-sidebar_label: "Get Dataset"
+id: dataset-create
+title: "Create Dataset"
+description: "Create a Dataset, such as application traces. Currently limited to a maximum size of 100MB. At least one of 'input', 'output' and 'ground_truth' columns are required."
+sidebar_label: "Create Dataset"
 hide_title: true
 hide_table_of_contents: true
-api: eJzVVt1zGjcQ/1c0egbD4DZu/EYcp6XTNBkg04cMkxF3C8i5ky7Sng1h+N+7Kx3cccZx3CQz6YOxbrXfH9rfVqJaenn5Xr5UqDygnHWkLcAp1NaMUnkpl0TsyBR84nTBVKKNAZ2GWxBKVHJnxOMhKZ3GDanbyhegHLhhiSv6nO1IrYNPJXh8YVPi2MrEGgSDfFRFkekkmOzdeLawlT5ZQa74hBozIKO/A1bGxlETmcRNwVd2fgMJfxeOnUcNniV12pSvhCmox+RuVVZCEI1snqI1S7nbxSC0g5RTFtlmbTJZJVqk+sIaH5UO+n3+d5zISZkk4P2izMQh6+TON+Um2nw0yLQq+P0M/Sx5pTw4UAjpEO8LdeTCulzRDUcCXdQ5SBIpi/SpIkblJ7xq9/wfZa5MlxxK1TwDwUKC9Alcgahy2RF6IawBAWvt0Z+x8iMlT7TRuBR28Zgle2fAvfPgRkflqSjfvTamzMf2zjdENDXtEhypzrXReZnLy+7zweD8/GLQP3/226+/XFw86/f7dK3W8frEbdR8ZbMfoZmEUatMfw7zNEGFpT8Rc5vx2jnrTvJlag4ZnR9S1S7wlEroA+++oBl1okexBCqeykThoUxtd69X3Nh5u8vYbmKzMjdNg8o5tSF7GiH3J8bzKkiMzML+t/F+pTP4/464Nimsv3dDtYs7YiP7usYKiTuNK22a5RMLymQY2IxqRTX/+6ueH+6cSuD47YmG4lsTVTyWfM1lrPPeTOg+U8fOzdrvWPCm6kFR0JqjZSWqMKuGbrRN5ar2dQc/xaPmu1Y/O/Uz8cBY10My+8He7+lh69NdDriyDJ0KG0BKoRgEyZ4qdG/QUyXaD0AD0KvkehFhUYC34BiLzWooNeFNHyerCagOFV4hFiwb2Oh7HpiIEg+v9sPw5z/T4DYjiHGNw67XKi8yqIe+Gt9m52h+MhrvwV/K42vOy3AkxteTqRi+Hd0HiNWF8KVbqKTu1oN0QZnmWWXgyHFHucFZnxuZE0ebkM3G5cwAR9TwpLVUD3DpAWBaJQthjT2yq014RVzGsrE47wlnaeIc0N+hQGzoYHIZsfGKS0rs2+2cLt65bLdjMmXUbWLpbpXTvL0D7CUBWuZUEYbEH4FY5FV0tjtlpzqHjN/DebvOXmJIGLHAL/LOGl339s1kyh1Q4ezcpizj1B0R+fdS8lCF5IXGCrQtrTKzLNWSeaNOLr46brdWe4Wo9vvHbBoeUnoCx9R+BEMp6lShIH+Tu6T8X9IjPj8=
+api: eJzdV01z4zYM/SscXXKxY9dpN21uTppM3dltM7F3etjx7NASbDNLkSoJJfF6/N8LkJIsf6Rp2t3D9hBHIgGQAN4DoHWCcuGTiw/JzxKlB0ymncQW4CQqa0ZZcpFkcaObOpAISSfJwKdOFSxA21dhWUhRGegIX6ZLIb2QRaFVGgwJdDIFfyquSufAoF4JrXKFkAm0pJvLJ5WXufDqMwg7F9/1++8uT8UQhQbpUVgTlk+UKUo86YgTWyI/CWkycbJwtjTZR3QlLk9EanWZGzregXDwZ6kcZKd0bQ9p6RSuyNl1cgm07YakQK/TDTnNouDx0mYksU5Sa5Auyo8tP3r3np1eJz5dQi75CRVqaOJQBeEuGqNTcVXwrp3dQ8rvhePoogLPykbmEIxEKY9OmcVBiH8pc2m6ZD+TMw2ClcTcOoFLEFkddTUPUYIn5dGfJps9I688o7XJgX/hJOVv4HG8tHj9JPNCR9+q82bWUg7NwYG3HsrMvpUz0OLezsRcgc5qc8MU1QOEzWO2NvveHUGhMgqV1IQ0aQTkBa6EX4LWojSoNEnOFfmpvCgLbWUGGVlluw58YY2PPgz6ff63e9a4TAnLfl5q0TCF3PuviInHvgiZKg1tQzV1X1JV2REt4vhLeg9Sl0dgGqMVCcYVJIpNaTWWimyIx3BHyM0lxsICXVTEAFIpi+y1Kv8T8thHA+69BzfaSU+18sVzY8r8zj62WaUItwtwZDon0lAZTi66Pw0GZ2fng/7Zmx9/+P78/E2/36ftWKWTiyO70fKV1V/DcsVl9TlQaowSS3/E533Ba+esOyqnubLQ83Om9hM8oRT6IFsnVBMSqTEtgJIntShCNevWdmNF20UZn1v1ptaB0jm5ovOoF+b+CD2vgsbIzO2/o/cNVblvl+LKZPD0pQG1n9wRH1LnNWZIPCpcKtNOX+gXgbCackU5/+0flR9GTqWwW3viQbHWRBMvBV9xGrdxbwe0jtTu5aYHbXLSHOxFQZ2O+pWo3KwA3YJNdVVqkQ2CX3Ojdl3blp1tmXiG1luSTL/y7ev16SZ2/hxwaXniLWwY3QrJ02HSk4XqDXqyRPsRiAC9Sq/XDMTk4wM4nqKn2zFzzP0+kqs9bDZJXiIWrBvEeLYJQrQSH25qPvz6xyTcnOeIu+2MWk1a2yHyOQA2y0eGNJqY4XDc4tXAPao5rYLylgbxdxzY4UjcXY8nYng7Ojit3qCPADenkb+Be6NdUKqY7DySc9Si3uC0z0zgyFMrbXlVDXbbEWevMTdT17fzIVIBAOEJexQNZUJxdJrdiZj7QBOkIskB/TW4Y9+bKFTYI7wtGayksV7PaO+905sNLxNQ3Coi8kE6xXNJ+NIhBRpTCGj8FfQJVhy4GMLuhO/VqVvB4RC76dQaQxqAC/xb2WmLT7e/jycM7OrTKrcZ6zj5SIv8e5FwuQgpDXwJa2tq0mZRygXLRptMA7nLoj3WBK/qzmpWrRtSeILExH4CQyHqVK4gv9N1yfhfjX0pHg==
 sidebar_class_name: "post api-method"
 info_path: api/lastmile-ai-rest-api
 custom_edit_url: null
@@ -27,13 +27,13 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Get Dataset"}
+  children={"Create Dataset"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/dataset/get"}
+  path={"/api/2/auto_eval/dataset/create"}
   context={"endpoint"}
 >
   
@@ -41,7 +41,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-Retrieve a Dataset.
+Create a Dataset, such as application traces. Currently limited to a maximum size of 100MB. At least one of 'input', 'output' and 'ground_truth' columns are required.
 
 <Heading
   id={"request"}
@@ -81,52 +81,41 @@ Retrieve a Dataset.
         style={{"marginLeft":"1rem"}}
       >
         <SchemaItem
-          collapsible={true}
-          className={"schemaItem"}
+          collapsible={false}
+          name={"name"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"Human-readable name for the dataset, if one exists."}}
         >
-          <details
-            style={{}}
-            className={"openapi-markdown__details"}
-          >
-            <summary
-              style={{}}
-            >
-              <span
-                className={"openapi-schema__container"}
-              >
-                <strong
-                  className={"openapi-schema__property"}
-                >
-                  id
-                </strong><span
-                  className={"openapi-schema__name"}
-                >
-                   object
-                </span><span
-                  className={"openapi-schema__divider"}
-                >
-                  
-                </span><span
-                  className={"openapi-schema__required"}
-                >
-                  required
-                </span>
-              </span>
-            </summary><div
-              style={{"marginLeft":"1rem"}}
-            >
-              <SchemaItem
-                collapsible={false}
-                name={"value"}
-                required={true}
-                schemaName={"string"}
-                qualifierMessage={undefined}
-                schema={{"type":"string"}}
-              >
-                
-              </SchemaItem>
-            </div>
-          </details>
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"description"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"Human-readable description of the dataset, if one exists."}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"isFewShotExamples"}
+          required={false}
+          schemaName={"boolean"}
+          qualifierMessage={undefined}
+          schema={{"type":"boolean","description":"PseudoLabel job fields."}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"isActiveLabels"}
+          required={false}
+          schemaName={"boolean"}
+          qualifierMessage={undefined}
+          schema={{"type":"boolean"}}
+        >
+          
         </SchemaItem>
       </ul>
     </details>

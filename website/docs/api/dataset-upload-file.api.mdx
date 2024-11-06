@@ -1,13 +1,13 @@
 ---
-id: list-metric-base-models
-title: "List Metric Bases"
-description: "Description of listMetricBases"
-sidebar_label: "List Metric Bases"
+id: dataset-upload-file
+title: "Upload Dataset File"
+description: "Upload a file representing a Dataset."
+sidebar_label: "Upload Dataset File"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVEuP2jAQ/iuRz2mDOHKD7VZi1VVXC20PKKqMMxDvJrHXduiiKP+9M3YC4dHSQzkEP755ffONG+b41rLJij2qDIpoAWYnBbA0ZkqD4U6qap6xCSukdY/gjBQzbsGDLYtZBlYYqQmGoE/HXaQ20akNwS2I2ki3x4ANmwE3YHCZthjOwFsN1s1UhrcNE6pyUDlacq0LKXwqyYulQA2zIoeS08pJVwDG/nIlwefgEwO7vSaQWr+AoL02VJ6TmNWkaelHGVitKuuP2Hg0or/T+ha1EGDtpi6iAzvo7D/lGqLfSpaVgXtyF3DcGL5HmHRQ2mGYsxD/5pm6PXDRHd0y3fGihkFOFiNXWxZofaulgYxEFmApnq77rKZG5Ji5cLW55iAg78nQsxpquh2pPCR+PdIf/KbtVUfWX9BVCS5XNBBaeWFp7nLcJVzLZJzw2qmfgE4Tb5ZcmwCzA0MTlx7HYUEKCUT2Q3GoL3dOk52H4H4dAHG3+KxMyVF67OHH0pNAqns+ztL9Oy81tbLBO1lt1IkOOaYnC4im82j6NI++jy9G+hIyie5UiVJFxVNBVE2Ajj+OqF9ETMm98ite9nKPAg1Rz8NJlMG4335DOl4cvLtEF1xWFLQ2BbkJ3VjhGEpEUjWHjuC67Kbg3Cd2IqduomHTkCy+maJt6RhpNPvQqx03kq+JthXpNwee+cerYa+AEHYXKviwpPTifiAuH4Q27i2m+Jho91dsOhDc09fFktrePZBUDJ4a/gsP6TthjB5tsvZK8mcNK3i1rfmWsMEniQRZyQcaO9OUr6p/XKr9IEOkxyOW6hUqpCjuSnG0x3TR+W/MdDCT
+api: eJy1VcFu4jAQ/RXLZwoVvfVGt0Vi1dUioNoDQqshGcBt4nhtp9sI8e87YychhWrpYfcASuwZz8x7zy976WHr5O1S3oMHh16uerIwaMGrQk9SeSvTuHFVmqyA9OdGZSh7MkWXWGU4imKewp4AwbvCorHoUHult7RWn9ynLIdJaZWvqOBe3iFYtKPS7+h1daDCFn+V6PxdkVLEXiaF9nQKP4IxmUpCU4NnxzX30iU7zIGfvPLUVNNGXW9MrczigVTZV4YjivUzJvxuLE/pFTo+oJ6R5z2edt8uXkp/hazEkBrDnLc0ujwc4kjKYsoQx7DV6fKx+OoU14lWXoFHAVpE/MW6EjVMEV2C+sqprcZUzG+aoKfZY5/Kx0rOFNrFRofX12Hcd0XmZZKgc5syEy3zNOK/QD+Wvoifu5lSm2GIaeF899D5ydalo0qbfUBET24UZqnrbIG1UFG68pi7bsVxiHzQ3lYXq71g9WG1TwqC03utLE7Jj42IJkFsCiv8Dplm02Aipt/ni0YQYoua+cOgEncjXPrSPyvKCLV4nCnuPxU9ZXh1iOrM0e8KdhkTyTXAbiAHYNRgOIDSFz+R8BnUd2Tw3oQc2le0bF+ro7fMWZiRnq7DtFzsvDecG8LofR2CaCU+jAubA0lQfv2xCGOw4GdHY3p4g9xkeOYaNeVdqpXeFF1lPYLz39ggRxMxeyAIR9PJmZU2G8KVdgMJtgy02SYDT4s5GyqPH/OG/WtWHuOYQ7ihGvLjtWxcWIw/8O+O1X7ayms0Pb75AXWkNFevb19kcUm+oShySL+WSS5df2kovMMmMbgLd38p9/s1BTzZ7HDgZYLeVpHjV7AK1gzmku/LDiEl6vhjEm6i/BLHuFpwc+01PPevQ6/JGJH3Gf/X2FVHpqx8lkr9hcqLlHMs/KZF/r+Vkr+fnB0UGNb2MgO9LWHLsfFMlge81+WJDsNUjVfpqtMhwRMiFsULaoKoV4/i+Z3apcP/AAEItLs=
 sidebar_class_name: "post api-method"
-info_path: docs/api/lastmile-ai-api-v-2
+info_path: api/lastmile-ai-rest-api
 custom_edit_url: null
 ---
 
@@ -27,20 +27,21 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"List Metric Bases"}
+  children={"Upload Dataset File"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/model/listMetricBases"}
+  path={"/api/2/auto_eval/dataset/upload_file"}
+  context={"endpoint"}
 >
   
 </MethodEndpoint>
 
 
 
-Description of listMetricBases
+Upload a file representing a Dataset.
 
 <Heading
   id={"request"}
@@ -80,14 +81,52 @@ Description of listMetricBases
         style={{"marginLeft":"1rem"}}
       >
         <SchemaItem
-          collapsible={false}
-          name={""}
-          required={false}
-          schemaName={"object"}
-          qualifierMessage={undefined}
-          schema={{}}
+          collapsible={true}
+          className={"schemaItem"}
         >
-          
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  datasetId
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <SchemaItem
+                collapsible={false}
+                name={"value"}
+                required={true}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string"}}
+              >
+                
+              </SchemaItem>
+            </div>
+          </details>
         </SchemaItem>
       </ul>
     </details>
@@ -161,11 +200,11 @@ Description of listMetricBases
                               <strong
                                 className={"openapi-schema__property"}
                               >
-                                models
+                                s3PresignedPost
                               </strong><span
                                 className={"openapi-schema__name"}
                               >
-                                 object[]
+                                 object
                               </span><span
                                 className={"openapi-schema__divider"}
                               >
@@ -179,13 +218,24 @@ Description of listMetricBases
                           </summary><div
                             style={{"marginLeft":"1rem"}}
                           >
-                            <li>
-                              <div
-                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
-                              >
-                                Array [
-                              </div>
-                            </li><SchemaItem
+                            <div
+                              style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                            >
+                              
+                              
+                              Fields required for the S3 presigned POST request generated by s3 sdk.
+                              
+                              
+                            </div><SchemaItem
+                              collapsible={false}
+                              name={"url"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
                               collapsible={true}
                               className={"schemaItem"}
                             >
@@ -202,11 +252,11 @@ Description of listMetricBases
                                     <strong
                                       className={"openapi-schema__property"}
                                     >
-                                      modelId
+                                      fields
                                     </strong><span
                                       className={"openapi-schema__name"}
                                     >
-                                       object
+                                       object[]
                                     </span><span
                                       className={"openapi-schema__divider"}
                                     >
@@ -220,7 +270,30 @@ Description of listMetricBases
                                 </summary><div
                                   style={{"marginLeft":"1rem"}}
                                 >
-                                  <SchemaItem
+                                  <div
+                                    style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                  >
+                                    
+                                    
+                                    Fields required for the S3 presigned POST request generated by s3 sdk.
+                                    
+                                    
+                                  </div><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                    >
+                                      Array [
+                                    </div>
+                                  </li><SchemaItem
+                                    collapsible={false}
+                                    name={"key"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
                                     collapsible={false}
                                     name={"value"}
                                     required={true}
@@ -229,34 +302,16 @@ Description of listMetricBases
                                     schema={{"type":"string"}}
                                   >
                                     
-                                  </SchemaItem>
+                                  </SchemaItem><li>
+                                    <div
+                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                    >
+                                      ]
+                                    </div>
+                                  </li>
                                 </div>
                               </details>
-                            </SchemaItem><SchemaItem
-                              collapsible={false}
-                              name={"baseModelArchitecture"}
-                              required={true}
-                              schemaName={"string"}
-                              qualifierMessage={undefined}
-                              schema={{"type":"string"}}
-                            >
-                              
-                            </SchemaItem><SchemaItem
-                              collapsible={false}
-                              name={"baseEvaluationMetric"}
-                              required={true}
-                              schemaName={"string"}
-                              qualifierMessage={undefined}
-                              schema={{"type":"string"}}
-                            >
-                              
-                            </SchemaItem><li>
-                              <div
-                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
-                              >
-                                ]
-                              </div>
-                            </li>
+                            </SchemaItem>
                           </div>
                         </details>
                       </SchemaItem>
@@ -267,7 +322,7 @@ Description of listMetricBases
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"models\": [\n    {\n      \"modelId\": {\n        \"value\": \"string\"\n      },\n      \"baseModelArchitecture\": \"string\",\n      \"baseEvaluationMetric\": \"string\"\n    }\n  ]\n}"}
+                    responseExample={"{\n  \"s3PresignedPost\": {\n    \"url\": \"string\",\n    \"fields\": [\n      {\n        \"key\": \"string\",\n        \"value\": \"string\"\n      }\n    ]\n  }\n}"}
                     language={"json"}
                   >
                     

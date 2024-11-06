@@ -1,11 +1,11 @@
 ---
-id: get-view
-title: "Get Dataset View"
-description: "View API for a Dataset."
-sidebar_label: "Get Dataset View"
+id: dataset-get
+title: "Get Dataset"
+description: "Retrieve a Dataset."
+sidebar_label: "Get Dataset"
 hide_title: true
 hide_table_of_contents: true
-api: eJztV1tz4jYU/isaPZNASRpS3tjsbodO280kdPchy2SFfcDatSVXkiEM4//ecyQbDGZIL8tbX8CWdC76zncu3nAnFpYPn/hb4YQFx6cdrnMwwkmtxjEf8gW4jxJWvMNjsJGROe3gOi2y0f2YzbVhglXyl3jOQlQY6daodsPfgDBgRoVL8HVaonoDfxZg3Rsd44kNj7RyoBw9ijxPZeRNd79asrLhNkogE/TkpEsBDf8MrjJGLjwEbWjWrXPa1rOvENF7bugiToIl6TiI0JV2qt5uF18TX4q0AC8ajllnpFrwsgz3kQZiQjEcm+JqZe+9TOGozWrju9sVcwemISAR3QWudHgmlcyKjA8v+j9cD65vr26ub3FVvITV7eLgMNL3YiGVj8qQTRJgUsXw0mGzNTN6daFNDKbDvF22SmSUMKcZBsXgPtgidfaSo2OpzKQ7r2OVCFNFNkNn9Lx2gDwy4AqjmFbMJdKyXCzgsoVj3CDEfgSnh8aRhkj7JWUBGnJongTYSqJ6hTtxnRBlGazYXCsbotrv9Twn9xQ+FlEE1s6LlG0zEN34z/kR7P6fIPt2fU1rW61K3WmbyK8HvbKvkPmnfv/qatDvXd3c/ng9GNz0er0Gq4/sonOo+U6n59BM126oFcaINSqVDjJ7iANe7lUMZCtmKHWOeGGN+Ugv9qT3BzZFHEtKE5HeN6w7U0B5mMcfqH5BTLWMeavW5zBLQS3wT6QrsbYMXRMplZEvGKJnPGu/hFICnxWLtAnpHeNVfEloVxZJ0Ozu0ionZ3Qj0mmRqdP47WfBnZcYq7n+Fzw4Y+5GBoSDeOTaQh2Oc0gmcIeoDhdOZkBtp8jjfyri+9v3TsHDeI/JSN05QoTq3lH3EgSSzRHJqn1ifxXp7yI7gtihcmqGlQBTKOFntJ0hrzAOKl4D3/N2h3sT0Bqpfeem5aGKulzuyltVjnbUnP79RrxfwckayWbgEk3jaq79MJgLGjh5V+Sy2++KwulnQB51K9kuTrXPy1DrLZglGBqCp7vZ9ZHaamBpc4LdopU4l5OsP4bvM38IV8LD+5pYv3yaeEipXT/sBt93LyLLU2j13SojtsE40ibbR6qRr7edsXqexJi8jcz8VVj3GyphozF7ePc4odG9xZt6g9nCzEW0481WOk+Fo6yhOZ9QC3L9yx45Qthnwo8lyvPUD0lVTWDHviIa4/+JD4oKcwcvrosOSOUT26QkHwL9hLORxJN9qv11sHdUwadtwDHICXEEZTabGe7+YdKypGU/swYaLIWRYkbAPVHdSUDEBDF+z3wDPMLvgtcXE/Kss41Ja0ArO7XECIe73J08O23Q+P7D44TYVH0kZTomGSMIQfodck4faiTtSerXNjwValHgZIv7QSdxT+xT94Cq/lZ1X1DrhocIjz8x0d9AIUSd6iqO3tFdVP4XEvTTrg==
+api: eJzVVl9zGjcQ/yoaPYNhcBs3fiOO09JpmgyQ6UOGyYi7BeTcSRdpz4YwfPfuSgd3nHEcN8lM+mCs0+5v/692txLV0svL9/KlQuUB5awjbQFOobZmlMpLmUZCd0nEjkzBJ04XTCXaGNBpuAWhRIU/Ix4PSek0bkjsVr4A5cANS1zR52xH4h18KsHjC5sSx1Ym1iAY5KMqikwnQXXvxrOGrfTJCnLFJ9SYASn9HbBSNo6SSCVuCibZ+Q0k/F04dgI1eEbqtImvwOTcY7hblZUQoJHNk7dmKXe76IR2kHLoItusfU1a6S7e+sIaH4UO+n3+dxzISZkk4P2izMQh+mTON8Um6nzUySq/JyL0s8SV4uBAIaRDvA/qyIV1ucJYqdBFnYMkSFmkT4UYlZ+wql3zf5S5Ml0yKFXzDASDBMkTuAJRxbIj9EJYAwLW2qM/Y+FHQp6oo0EUdvGYJntnwL3z4EZH6aluvntuTJmP7Z1vQDQV7RIcic610XmZy8vu88Hg/Pxi0D9/9tuvv1xcPOv3+0RW60g+QY2Sr2z2IyQTGLXK9OfQTxNUWPoTPrcZr52z7iRfpuaQ0fkhUe0ETymFPvDuE5pRJXoUS6DkqUwUHsrUdvdyxY2dt6uM9SY2K3PTVKicUxvSpxFyf6I9rwJiZBb2v7X3K53B/7fFtUlh/b0Lqp3cESvZ5zVmSNxpXGnTTJ9YUCRDw2aUK8r531/1/HDlVIDjtycqim9NFPFY8DWnsY57M6D7SB0bN2u/Y8GaqgZFQWOOhpWo3KwKulE2lana1xX8FIua71r97NTPxANtXTfJ7Adbv78PU59oOeDK8gpV2LCkFIqXINlThe4NeqpE+wGoAXoVrhc3LHLwFhzvZLN6lZrwpI+d1VyoDhleIRaMDWz0PQ9MdBMPr/bN8Oc/02A2bxDjeg+7Xqu8yKBu+qp9m5Wj+clovAd/KY+vOS7DkRhfT6Zi+HZ0f0GsCMKXbqGSuloP6IIizb3KiyP7HXGDsz4XMgeOJiGrjcOZFxxRryetoXpYlx5YTKtgIayxR3q1Ca+Iyxgbk/Oe9ixNnAP6OySIFR1ULuOOvOKUEvt2OyfCO5ftdnxNEXWbmLpb5TRP77D2EoCGOWWEV+KPQCzyKhrbnbJRnUPE7+15u84eMaQdscAv8s4aVff2zWTKFVDt2blNGePUHV3y76XkpgrBC4UV7rY0ysyyVEvmjTI5+eq43FrlFbzazx+zaVhI4QkcU/sRDIWoU7mC/E3mkvB/ATMQQVI=
 sidebar_class_name: "post api-method"
 info_path: api/lastmile-ai-rest-api
 custom_edit_url: null
@@ -27,13 +27,13 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Get Dataset View"}
+  children={"Get Dataset"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/dataset/get_view"}
+  path={"/api/2/auto_eval/dataset/get"}
   context={"endpoint"}
 >
   
@@ -41,7 +41,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-View API for a Dataset.
+Retrieve a Dataset.
 
 <Heading
   id={"request"}
@@ -97,7 +97,7 @@ View API for a Dataset.
                 <strong
                   className={"openapi-schema__property"}
                 >
-                  datasetId
+                  id
                 </strong><span
                   className={"openapi-schema__name"}
                 >
@@ -127,71 +127,6 @@ View API for a Dataset.
               </SchemaItem>
             </div>
           </details>
-        </SchemaItem><SchemaItem
-          collapsible={true}
-          className={"schemaItem"}
-        >
-          <details
-            style={{}}
-            className={"openapi-markdown__details"}
-          >
-            <summary
-              style={{}}
-            >
-              <span
-                className={"openapi-schema__container"}
-              >
-                <strong
-                  className={"openapi-schema__property"}
-                >
-                  datasetFileId
-                </strong><span
-                  className={"openapi-schema__name"}
-                >
-                   object
-                </span><span
-                  className={"openapi-schema__divider"}
-                >
-                  
-                </span><span
-                  className={"openapi-schema__required"}
-                >
-                  required
-                </span>
-              </span>
-            </summary><div
-              style={{"marginLeft":"1rem"}}
-            >
-              <SchemaItem
-                collapsible={false}
-                name={"value"}
-                required={true}
-                schemaName={"string"}
-                qualifierMessage={undefined}
-                schema={{"type":"string"}}
-              >
-                
-              </SchemaItem>
-            </div>
-          </details>
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"after"}
-          required={false}
-          schemaName={"integer"}
-          qualifierMessage={"**Possible values:** `>= -2147483648` and `<= 2147483647`"}
-          schema={{"type":"integer","minimum":-2147483648,"maximum":2147483647,"description":"Pagination: The index, by row-order, after which to query results."}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"limit"}
-          required={false}
-          schemaName={"integer"}
-          qualifierMessage={"**Possible values:** `>= -2147483648` and `<= 2147483647`"}
-          schema={{"type":"integer","minimum":-2147483648,"maximum":2147483647,"description":"Pagination: The maximum number of results to return on this page."}}
-        >
-          
         </SchemaItem>
       </ul>
     </details>
@@ -265,7 +200,7 @@ View API for a Dataset.
                               <strong
                                 className={"openapi-schema__property"}
                               >
-                                datasetId
+                                dataset
                               </strong><span
                                 className={"openapi-schema__name"}
                               >
@@ -283,116 +218,95 @@ View API for a Dataset.
                           </summary><div
                             style={{"marginLeft":"1rem"}}
                           >
-                            <SchemaItem
-                              collapsible={false}
-                              name={"value"}
-                              required={true}
-                              schemaName={"string"}
-                              qualifierMessage={undefined}
-                              schema={{"type":"string"}}
+                            <div
+                              style={{"marginTop":".5rem","marginBottom":".5rem"}}
                             >
                               
-                            </SchemaItem>
-                          </div>
-                        </details>
-                      </SchemaItem><SchemaItem
-                        collapsible={true}
-                        className={"schemaItem"}
-                      >
-                        <details
-                          style={{}}
-                          className={"openapi-markdown__details"}
-                        >
-                          <summary
-                            style={{}}
-                          >
-                            <span
-                              className={"openapi-schema__container"}
-                            >
-                              <strong
-                                className={"openapi-schema__property"}
-                              >
-                                datasetFileId
-                              </strong><span
-                                className={"openapi-schema__name"}
-                              >
-                                 object
-                              </span><span
-                                className={"openapi-schema__divider"}
-                              >
-                                
-                              </span><span
-                                className={"openapi-schema__required"}
-                              >
-                                required
-                              </span>
-                            </span>
-                          </summary><div
-                            style={{"marginLeft":"1rem"}}
-                          >
-                            <SchemaItem
-                              collapsible={false}
-                              name={"value"}
-                              required={true}
-                              schemaName={"string"}
-                              qualifierMessage={undefined}
-                              schema={{"type":"string"}}
-                            >
                               
-                            </SchemaItem>
-                          </div>
-                        </details>
-                      </SchemaItem><SchemaItem
-                        collapsible={true}
-                        className={"schemaItem"}
-                      >
-                        <details
-                          style={{}}
-                          className={"openapi-markdown__details"}
-                        >
-                          <summary
-                            style={{}}
-                          >
-                            <span
-                              className={"openapi-schema__container"}
+                              The columns present in the latest DatasetFile for this dataset
+                              
+                              
+                            </div><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
                             >
-                              <strong
-                                className={"openapi-schema__property"}
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
                               >
-                                datasetView
-                              </strong><span
-                                className={"openapi-schema__name"}
-                              >
-                                 object
-                              </span><span
-                                className={"openapi-schema__divider"}
-                              >
-                                
-                              </span><span
-                                className={"openapi-schema__required"}
-                              >
-                                required
-                              </span>
-                            </span>
-                          </summary><div
-                            style={{"marginLeft":"1rem"}}
-                          >
-                            <SchemaItem
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      id
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span><span
+                                      className={"openapi-schema__divider"}
+                                    >
+                                      
+                                    </span><span
+                                      className={"openapi-schema__required"}
+                                    >
+                                      required
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <SchemaItem
+                                    collapsible={false}
+                                    name={"value"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string"}}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
                               collapsible={false}
-                              name={"numRows"}
+                              name={"createdAt"}
                               required={true}
-                              schemaName={"integer"}
-                              qualifierMessage={"**Possible values:** `>= -9223372036854776000` and `<= 9223372036854776000`"}
-                              schema={{"type":"integer","minimum":-9223372036854776000,"maximum":9223372036854776000}}
+                              schemaName={"date-time"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","format":"date-time"}}
                             >
                               
                             </SchemaItem><SchemaItem
                               collapsible={false}
-                              name={"numCols"}
+                              name={"updatedAt"}
                               required={true}
-                              schemaName={"integer"}
-                              qualifierMessage={"**Possible values:** `>= -9223372036854776000` and `<= 9223372036854776000`"}
-                              schema={{"type":"integer","minimum":-9223372036854776000,"maximum":9223372036854776000}}
+                              schemaName={"date-time"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","format":"date-time"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"name"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"Human-readable name for the dataset, if one exists."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"description"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"Human-readable description of the dataset, if one exists."}}
                             >
                               
                             </SchemaItem><SchemaItem
@@ -412,11 +326,11 @@ View API for a Dataset.
                                     <strong
                                       className={"openapi-schema__property"}
                                     >
-                                      data
+                                      ownerUserId
                                     </strong><span
                                       className={"openapi-schema__name"}
                                     >
-                                       object[]
+                                       object
                                     </span><span
                                       className={"openapi-schema__divider"}
                                     >
@@ -430,77 +344,63 @@ View API for a Dataset.
                                 </summary><div
                                   style={{"marginLeft":"1rem"}}
                                 >
-                                  <li>
-                                    <div
-                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
-                                    >
-                                      Array [
-                                    </div>
-                                  </li><SchemaItem
-                                    collapsible={true}
-                                    className={"schemaItem"}
-                                  >
-                                    <details
-                                      style={{}}
-                                      className={"openapi-markdown__details"}
-                                    >
-                                      <summary
-                                        style={{}}
-                                      >
-                                        <span
-                                          className={"openapi-schema__container"}
-                                        >
-                                          <strong
-                                            className={"openapi-schema__property"}
-                                          >
-                                            id
-                                          </strong><span
-                                            className={"openapi-schema__name"}
-                                          >
-                                             object
-                                          </span><span
-                                            className={"openapi-schema__divider"}
-                                          >
-                                            
-                                          </span><span
-                                            className={"openapi-schema__required"}
-                                          >
-                                            required
-                                          </span>
-                                        </span>
-                                      </summary><div
-                                        style={{"marginLeft":"1rem"}}
-                                      >
-                                        <SchemaItem
-                                          collapsible={false}
-                                          name={"value"}
-                                          required={true}
-                                          schemaName={"string"}
-                                          qualifierMessage={undefined}
-                                          schema={{"type":"string"}}
-                                        >
-                                          
-                                        </SchemaItem>
-                                      </div>
-                                    </details>
-                                  </SchemaItem><SchemaItem
+                                  <SchemaItem
                                     collapsible={false}
-                                    name={"rowValues"}
+                                    name={"value"}
                                     required={true}
-                                    schemaName={"object[]"}
+                                    schemaName={"string"}
                                     qualifierMessage={undefined}
-                                    schema={{"type":"array","items":{"type":"object","additionalProperties":true},"description":"Ordered row values with length always equal to `num_rows` on the\n corresponding view."}}
+                                    schema={{"type":"string"}}
                                   >
                                     
-                                  </SchemaItem><li>
-                                    <div
-                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
-                                    >
-                                      ]
-                                    </div>
-                                  </li>
+                                  </SchemaItem>
                                 </div>
                               </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"numRows"}
+                              required={true}
+                              schemaName={"integer"}
+                              qualifierMessage={"**Possible values:** `>= -9223372036854776000` and `<= 9223372036854776000`"}
+                              schema={{"type":"integer","minimum":-9223372036854776000,"maximum":9223372036854776000}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"numCols"}
+                              required={true}
+                              schemaName={"integer"}
+                              qualifierMessage={"**Possible values:** `>= -9223372036854776000` and `<= 9223372036854776000`"}
+                              schema={{"type":"integer","minimum":-9223372036854776000,"maximum":9223372036854776000}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"initializationStatus"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"initializationError"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"labelingStatus"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"The status of the latest general pseudo-labeling job for the dataset"}}
+                            >
+                              
                             </SchemaItem><SchemaItem
                               collapsible={true}
                               className={"schemaItem"}
@@ -536,7 +436,15 @@ View API for a Dataset.
                                 </summary><div
                                   style={{"marginLeft":"1rem"}}
                                 >
-                                  <li>
+                                  <div
+                                    style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                  >
+                                    
+                                    
+                                    The columns present in the latest DatasetFile for this dataset
+                                    
+                                    
+                                  </div><li>
                                     <div
                                       style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
                                     >
@@ -654,7 +562,7 @@ View API for a Dataset.
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"datasetId\": {\n    \"value\": \"string\"\n  },\n  \"datasetFileId\": {\n    \"value\": \"string\"\n  },\n  \"datasetView\": {\n    \"numRows\": 0,\n    \"numCols\": 0,\n    \"data\": [\n      {\n        \"id\": {\n          \"value\": \"string\"\n        },\n        \"rowValues\": [\n          {}\n        ]\n      }\n    ],\n    \"columns\": [\n      {\n        \"id\": {\n          \"value\": \"string\"\n        },\n        \"createdAt\": \"2024-07-29T15:51:28.071Z\",\n        \"updatedAt\": \"2024-07-29T15:51:28.071Z\",\n        \"index\": 0,\n        \"literalName\": \"string\",\n        \"dtype\": \"string\"\n      }\n    ]\n  }\n}"}
+                    responseExample={"{\n  \"dataset\": {\n    \"id\": {\n      \"value\": \"string\"\n    },\n    \"createdAt\": \"2024-07-29T15:51:28.071Z\",\n    \"updatedAt\": \"2024-07-29T15:51:28.071Z\",\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"ownerUserId\": {\n      \"value\": \"string\"\n    },\n    \"numRows\": 0,\n    \"numCols\": 0,\n    \"initializationStatus\": \"string\",\n    \"initializationError\": \"string\",\n    \"labelingStatus\": \"string\",\n    \"columns\": [\n      {\n        \"id\": {\n          \"value\": \"string\"\n        },\n        \"createdAt\": \"2024-07-29T15:51:28.071Z\",\n        \"updatedAt\": \"2024-07-29T15:51:28.071Z\",\n        \"index\": 0,\n        \"literalName\": \"string\",\n        \"dtype\": \"string\"\n      }\n    ]\n  }\n}"}
                     language={"json"}
                   >
                     
