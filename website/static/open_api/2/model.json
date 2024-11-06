@@ -16,7 +16,7 @@
       "post": {
         "tags": ["Dataset"],
         "summary": "Create Dataset",
-        "operationId": "create",
+        "operationId": "dataset-create",
         "description": "Create a Dataset, such as application traces. Currently limited to a maximum size of 100MB. At least one of 'input', 'output' and 'ground_truth' columns are required.",
         "security": [
           {
@@ -50,7 +50,7 @@
       "post": {
         "tags": ["Dataset"],
         "summary": "Upload Dataset File",
-        "operationId": "uploadFile",
+        "operationId": "dataset-upload_file",
         "description": "Upload a file representing a Dataset.",
         "security": [
           {
@@ -84,7 +84,7 @@
       "post": {
         "tags": ["Dataset"],
         "summary": "Finalize Single Dataset File Upload",
-        "operationId": "finalizeSingleFileUpload",
+        "operationId": "dataset-finalize_single_file_upload",
         "description": "Finalize the file upload for a Dataset.",
         "security": [
           {
@@ -118,7 +118,7 @@
       "post": {
         "tags": ["Dataset"],
         "summary": "Get Dataset",
-        "operationId": "get",
+        "operationId": "dataset-get",
         "description": "Retrieve a Dataset.",
         "security": [
           {
@@ -152,7 +152,7 @@
       "post": {
         "tags": ["Dataset"],
         "summary": "Get Dataset Download URL",
-        "operationId": "getDownloadUrl",
+        "operationId": "dataset-get_download_url",
         "description": "Description of get_download_url",
         "security": [
           {
@@ -186,7 +186,7 @@
       "post": {
         "tags": ["Dataset"],
         "summary": "Get Dataset View",
-        "operationId": "getView",
+        "operationId": "dataset-get_view",
         "description": "View API for a Dataset.",
         "security": [
           {
@@ -220,7 +220,7 @@
       "post": {
         "tags": ["Dataset"],
         "summary": "List Datasets",
-        "operationId": "list",
+        "operationId": "dataset-list",
         "description": "List Datasets",
         "security": [
           {
@@ -254,7 +254,7 @@
       "post": {
         "tags": ["Dataset"],
         "summary": "Refine Labels",
-        "operationId": "refineLabels",
+        "operationId": "dataset-refine_labels",
         "description": "Refine labels during active labeling after LLM Judge has done initial labeling.",
         "security": [
           {
@@ -322,7 +322,7 @@
       "post": {
         "tags": ["Evaluation"],
         "summary": "Evaluate Dataset",
-        "operationId": "evaluateDataset",
+        "operationId": "evaluate_dataset",
         "description": "Run evaluation on a Dataset.",
         "security": [
           {
@@ -356,7 +356,7 @@
       "post": {
         "tags": ["Evaluation"],
         "summary": "List Metrics",
-        "operationId": "listMetrics",
+        "operationId": "list_metrics",
         "description": "List the metrics available for evaluation.",
         "security": [
           {
@@ -388,9 +388,9 @@
     },
     "/api/2/auto_eval/fine_tune_job/create": {
       "post": {
-        "tags": ["Fine Tune Job"],
+        "tags": ["Fine-tune Job"],
         "summary": "Create Fine Tune Job",
-        "operationId": "create",
+        "operationId": "fine-tune-create",
         "description": "Create an evaluator fine-tuning job using a labeled Dataset.",
         "security": [
           {
@@ -422,9 +422,9 @@
     },
     "/api/2/auto_eval/fine_tune_job/submit": {
       "post": {
-        "tags": ["Fine Tune Job"],
+        "tags": ["Fine-tune Job"],
         "summary": "Submit Fine Tune Job",
-        "operationId": "submit",
+        "operationId": "fine-tune-submit",
         "description": "Submit an evaluator fine-tuning job.",
         "security": [
           {
@@ -456,9 +456,9 @@
     },
     "/api/2/auto_eval/fine_tune_job/get_status": {
       "post": {
-        "tags": ["Fine Tune Job"],
-        "summary": "Get Fine Tune Job Status",
-        "operationId": "getStatus",
+        "tags": ["Fine-tune Job"],
+        "summary": "Get Fine-tune Job Status",
+        "operationId": "fine-tune-get_status",
         "description": "Get the status of the evaluator fine-tuning job.",
         "security": [
           {
@@ -490,9 +490,9 @@
     },
     "/api/2/auto_eval/fine_tune_job/list": {
       "post": {
-        "tags": ["Fine Tune Job"],
-        "summary": "List Fine Tune Jobs",
-        "operationId": "list",
+        "tags": ["Fine-tune Job"],
+        "summary": "List Fine-tune Jobs",
+        "operationId": "fine-tune-list",
         "description": "List evaluator fine-tuning jobs.",
         "security": [
           {
@@ -524,9 +524,9 @@
     },
     "/api/2/auto_eval/fine_tune_job/list_base_models": {
       "post": {
-        "tags": ["Fine Tune Job"],
+        "tags": ["Fine-tune Job"],
         "summary": "List Base Models",
-        "operationId": "listBaseModels",
+        "operationId": "fine-tune-list_base_models",
         "description": "List the base models that can are available for fine-tuning.",
         "security": [
           {
@@ -558,9 +558,9 @@
     },
     "/api/2/auto_eval/pseudo_label_job/create": {
       "post": {
-        "tags": ["Pseudo Label Job", "LLM Judge"],
+        "tags": ["LLM Judge Labeling"],
         "summary": "Create LLM Judge labeling Job",
-        "operationId": "create",
+        "operationId": "llm-judge-create",
         "description": "Create an LLM Judge labeling job (also known as pseudo-labeling).",
         "security": [
           {
@@ -592,9 +592,9 @@
     },
     "/api/2/auto_eval/pseudo_label_job/submit": {
       "post": {
-        "tags": ["Pseudo Label Job", "LLM Judge"],
+        "tags": ["LLM Judge Labeling"],
         "summary": "Submit LLM Judge labeling Job",
-        "operationId": "submit",
+        "operationId": "llm-judge-submit",
         "description": "Submit an LLM Judge labeling job.",
         "security": [
           {
@@ -626,9 +626,9 @@
     },
     "/api/2/auto_eval/pseudo_label_job/get_status": {
       "post": {
-        "tags": ["Pseudo Label Job", "LLM Judge"],
+        "tags": ["LLM Judge Labeling"],
         "summary": "Get LLM Judge labeling Job Status",
-        "operationId": "getStatus",
+        "operationId": "llm-judge-get_status",
         "description": "Get the status of an LLM Judge labeling job.",
         "security": [
           {

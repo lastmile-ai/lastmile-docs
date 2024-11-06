@@ -1,11 +1,11 @@
 ---
-id: list
-title: "List Datasets"
-description: "List Datasets"
-sidebar_label: "List Datasets"
+id: llm-judge-get-status
+title: "Get LLM Judge labeling Job Status"
+description: "Get the status of an LLM Judge labeling job."
+sidebar_label: "Get LLM Judge labeling Job Status"
 hide_title: true
 hide_table_of_contents: true
-api: eJzVV9tu4zYQ/RVCz3ZsOO2mzZs3zaIuelnEXvQhNQpaGtvMUqSWHMXJGv73zpCULV+2btrNQwMkkci5cc7M8GidoVz47Po++0Gi9IDZtJPZCpxEZc2oyK4zrTxmnawAnztV8TIt/kyLIql42vWQ107hM1laZ29BOnDDGpf0Ot2QRQefavD41hYksc5yaxAM8qOsKq3y4K334Nn2OvP5EkrJT6hQQ3LXeLuLtsgpPle8aWcPkPN75ThyVOBZd640gvNnzLxLUueskbALsScxj06ZxVFePB09X4ogLXw9i2KilEirc+uEkSUIaQrR1tukH06Ur6zx0eeg3+d/+x7GdZ6D9/Naiy1OFMZ/TGn0ejYLRYP4LhHSOflMggqh3Et2U1DnbKrihBZV3jm9R6lrOEYkZvFTrRwUXNdRbEqruQOJUAzxFIyEDYFEK3RE6KIqISOVuipeqsIAn6+TH+tSmi4FVMiZhlgVXB64BJGS3BFqLqwBAU8Elb9g43tGXuijtSns/JwnuzLgPnhwoz140spXx8bU5Z1dtetKUT0vwJHpUhlV1mV23f1+MLi8vBr0L9989+03V1dv+v0+bcunuH1iN1q+sfo1LJMyKqnV59BqY5RY+xNnPhS8dc66k3JazkDT85dMHQI8IQh9kG0A1VSJNJgXQOBJLSoPdWG7jV3xYGeHVcZ+c6vr0rykqW+CxsjM7b9rb5q68P9tcWUKePraBXUI7oidNLhGhMRK4VKZNnyCbjkIDasJK8L81380frhyksL+7ImO4qyJJs4lXzGMu7y3E9pkaj+46eEcC9GkGhQV3YB0j4l0zFTQrbJJoSq/q+CXRNSea7uxsxsTX2jrXZNMXyF6tCj1ja0NvnZVTdgThUuuuLaa+1yslooISi6NmHFleEpXqDaRyARdIH8YkShVRzhYSFdo4iFspZILGkTqMxxBUewYYuuM00R2SsClZYpZ2cDnKsmMMevJSvUGPVmj/ROot3vJSi8xUQLvMRC7++mOeI6Z4MSp0aaf22wuESvWDWL0PgtCtBIf3jWN/tPvk3AKJk53O9Z6+yTLSsMBr0yksN0aimdim2ZJj78w8MORuLsdT8Tw/eioHZsNYoxuLvNdO261KyolHkYXpMuHj3qDiz53KqePrnp2G9nHET0/4A1bsngkmLKF8IQ98qlMGJFOs1aE5574pSLJAf1uIWIXW7oXYCJolowqya/XM9r54PRmw8spaQzeo3SKSyt8JpACURXChD8hPgLn9SbG2Z1wVJ3mOjgmuJtOozEkclzh38pOW4X3/rfxhGsgfZeUtmAdJ1e0yH+vMx4ZIW8B8LC2povaLGoqetqPNhl5uV9wBwUWTtXcrua5FSGlJ0hM7EcwlKJOOgryO4VLxv8C5Amn3g==
+api: eJzlWN1vIjcQ/1esfckLgVx66p14abkkrXJKlChQ9SGJkNkdwMmuvbXHuVDE/94Ze1kWljvS6nQvfQgs3vn4zbcnywTlzCX9++Tq6lp89tkMxJWcQK70LHnsJKYEK1EZfZkl/STPi+MnpjmeAY4dSvQu6SQZuNSqksmI6HdAgXMQ8bUwUyG12EjPK+niyUy6xOwg9VbhgjAsk08gLdiBxzn9fFwRAAt/eXD4yWREsUxSoxE08qMsy1ylAVzvybHqZeLSORSSn1BhDhHNrQOfmWDVZzMZBlh3USzpx0XJdGbyBCn/Li3bjAociyGQbPlG3udwcIjtReYeAlskc2jZoatVNEhZyNjnkexx9zgqpeP4wpVGuyj39OSEv7YdPvRpCs5NfS7qcBGi7+eqCOCg0VU+tK0mwi25JNHn2FS9rffM6KmaHdSnZbHHx7vpeBMeZC6YXEyNDckZkm+1Q/tmUY3jtkSJ0gFuZ815ffidM6eTTOHLcG7w/AerlSmqFwgRg+xHK3ekNEXIzkzuC91MOWmtXJAChVDsT8Xd2pkQRm5SaZQl0IgJCO8gE0qLmLjH66bVfdDi4rUMytccfaIrPXaE8Ri+Z9Z4nY3RUhsj+t8oQeBVFmUOHSGF80Uhrfo7VKMgFz2LQs3mKLShPyC51C6DxEoB6xzdnN/0BcXZ5xllm3KM0UIJkoFcsGeCvGsgO9NbaSnXEUiv9sUvbHU6l3hmGAOTVQXWCNbZ1vu3dscX0Jmxe91cmAzywyU1osq5PGf/cw0FJo4Aub8urLSGFeqroFYnZ/DtoDesuo70B22xJn9DN7kjKpFShMj/R27hSONRRxwRXkvfhPhIOqeoE2o8CnAbXfiwJyri2h0RerdVCQHrRvZjCyWUNDbolaOEq6SIqTVFEMtgReXcGm27GwZEOb1lOGuvc03EoOgXsC4msTNiKm2MjnwdmWfYqklFKGdgCXChtCp8kfSPT9+9//D+408/v/8YeOJpffhhH5SKTFBKT9gA8lHQxPkyA82DDwIGikkYg942AxrZ9rq9wXAg+dCUt2+UacpxKULL+qbM3R4XK2pdP410b/p228YKVisL/kv8qCaKEkckPSd3bo3o7TeHyklle9sCNiUfrIc1tYg0hFwiDd+p0mQJmxHhtryosqShiifGhEbRbpt8A4bQdn8d6Gfv5mKaA31Sl2cIkm4wlfoapuOqekg+kS4RVTwk1LztuhqjtykaFV9eSNWlZzTdEO4xGzZGr3nSvLzr1nJDaNyzKgebqct4NwZMDLUEqVsWXFKVWE+Dh7lFHNr1FbydflljZu8O2a8MkVbOfMXZew1o5ez/Yx7veL1epPZek8MeEAYfzg1vYaUJo7mUvCUlPVmq3mlPejRjIMW9KGQcXDSmW2lva1ej3s+Fz+vVZvca8i4Q67a5gdXZNUcsmTeQcbYFIo50eCCPFhJ5OfpzFIzjHeNus7hdRG9v7VPVna9511N6apod50o6vFY0bweX4u5iOBKD28v2QK5eUBztVKabLltzc1bSYcHLJpse+U67J6HfkS8LqTfrRFhf92yrFA8x3LvwNpbSf7v7Vu5FeMUewVSaIXkb7k0xvPe0uymiPKW/OsR1pmyCTEeNMFNo55wkxL5ccjX+YfPVio8pJnYRg/9CWS8n7Ol77pBzkBnFlLfwZ1jw5SladTxikJ06YK1dctVZcwxoDy3xm7SPjTy+vRmOOIeq1Z5bIJ1a+YUO+bOfJPwPCOaONzQ+Wya51DPPN7p+EmVy7sjthN1J0GDV+rKoFw2E5J5AEQYruahTmRKuFgSXhP8DGl//Kg==
 sidebar_class_name: "post api-method"
 info_path: api/lastmile-ai-rest-api
 custom_edit_url: null
@@ -27,13 +27,13 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"List Datasets"}
+  children={"Get LLM Judge labeling Job Status"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/dataset/list"}
+  path={"/api/2/auto_eval/pseudo_label_job/get_status"}
   context={"endpoint"}
 >
   
@@ -41,7 +41,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-List Datasets
+Get the status of an LLM Judge labeling job.
 
 <Heading
   id={"request"}
@@ -97,11 +97,19 @@ List Datasets
                 <strong
                   className={"openapi-schema__property"}
                 >
-                  filters
+                  jobId
                 </strong><span
                   className={"openapi-schema__name"}
                 >
                    object
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
                 </span>
               </span>
             </summary><div
@@ -109,11 +117,11 @@ List Datasets
             >
               <SchemaItem
                 collapsible={false}
-                name={"query"}
-                required={false}
+                name={"value"}
+                required={true}
                 schemaName={"string"}
                 qualifierMessage={undefined}
-                schema={{"type":"string","description":"search query substring match for name and description"}}
+                schema={{"type":"string"}}
               >
                 
               </SchemaItem>
@@ -176,6 +184,15 @@ List Datasets
                       style={{"marginLeft":"1rem"}}
                     >
                       <SchemaItem
+                        collapsible={false}
+                        name={"status"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
                         collapsible={true}
                         className={"schemaItem"}
                       >
@@ -192,11 +209,11 @@ List Datasets
                               <strong
                                 className={"openapi-schema__property"}
                               >
-                                datasets
+                                pseudoLabelJobResult
                               </strong><span
                                 className={"openapi-schema__name"}
                               >
-                                 object[]
+                                 object
                               </span><span
                                 className={"openapi-schema__divider"}
                               >
@@ -210,84 +227,24 @@ List Datasets
                           </summary><div
                             style={{"marginLeft":"1rem"}}
                           >
-                            <li>
-                              <div
-                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
-                              >
-                                Array [
-                              </div>
-                            </li><SchemaItem
-                              collapsible={true}
-                              className={"schemaItem"}
-                            >
-                              <details
-                                style={{}}
-                                className={"openapi-markdown__details"}
-                              >
-                                <summary
-                                  style={{}}
-                                >
-                                  <span
-                                    className={"openapi-schema__container"}
-                                  >
-                                    <strong
-                                      className={"openapi-schema__property"}
-                                    >
-                                      id
-                                    </strong><span
-                                      className={"openapi-schema__name"}
-                                    >
-                                       object
-                                    </span><span
-                                      className={"openapi-schema__divider"}
-                                    >
-                                      
-                                    </span><span
-                                      className={"openapi-schema__required"}
-                                    >
-                                      required
-                                    </span>
-                                  </span>
-                                </summary><div
-                                  style={{"marginLeft":"1rem"}}
-                                >
-                                  <SchemaItem
-                                    collapsible={false}
-                                    name={"value"}
-                                    required={true}
-                                    schemaName={"string"}
-                                    qualifierMessage={undefined}
-                                    schema={{"type":"string"}}
-                                  >
-                                    
-                                  </SchemaItem>
-                                </div>
-                              </details>
-                            </SchemaItem><SchemaItem
-                              collapsible={false}
-                              name={"createdAt"}
-                              required={true}
-                              schemaName={"date-time"}
-                              qualifierMessage={undefined}
-                              schema={{"type":"string","format":"date-time"}}
+                            <div
+                              style={{"marginTop":".5rem","marginBottom":".5rem"}}
                             >
                               
-                            </SchemaItem><SchemaItem
-                              collapsible={false}
-                              name={"updatedAt"}
-                              required={true}
-                              schemaName={"date-time"}
-                              qualifierMessage={undefined}
-                              schema={{"type":"string","format":"date-time"}}
-                            >
                               
-                            </SchemaItem><SchemaItem
+                              Subset of columns to be used in pseudo-labeling.
+                               Expected columns: input, output, ground_truth
+                               For example, a summarization task might not need an input column.
+                               TODO: Should this be repeated EvaluationMetricParameter enum?
+                              
+                              
+                            </div><SchemaItem
                               collapsible={false}
                               name={"name"}
                               required={false}
                               schemaName={"string"}
                               qualifierMessage={undefined}
-                              schema={{"type":"string","description":"Human-readable name for the dataset, if one exists."}}
+                              schema={{"type":"string","description":"Optional name for the job."}}
                             >
                               
                             </SchemaItem><SchemaItem
@@ -296,7 +253,7 @@ List Datasets
                               required={false}
                               schemaName={"string"}
                               qualifierMessage={undefined}
-                              schema={{"type":"string","description":"Human-readable description of the dataset, if one exists."}}
+                              schema={{"type":"string","description":"Optional description for the job."}}
                             >
                               
                             </SchemaItem><SchemaItem
@@ -316,7 +273,7 @@ List Datasets
                                     <strong
                                       className={"openapi-schema__property"}
                                     >
-                                      ownerUserId
+                                      datasetId
                                     </strong><span
                                       className={"openapi-schema__name"}
                                     >
@@ -347,48 +304,90 @@ List Datasets
                                 </div>
                               </details>
                             </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      fewShotDatasetId
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <SchemaItem
+                                    collapsible={false}
+                                    name={"value"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string"}}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      activeLabeledDatasetId
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <SchemaItem
+                                    collapsible={false}
+                                    name={"value"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string"}}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
                               collapsible={false}
-                              name={"numRows"}
+                              name={"selectedColumns"}
                               required={true}
-                              schemaName={"integer"}
-                              qualifierMessage={"**Possible values:** `>= -9223372036854776000` and `<= 9223372036854776000`"}
-                              schema={{"type":"integer","minimum":-9223372036854776000,"maximum":9223372036854776000}}
-                            >
-                              
-                            </SchemaItem><SchemaItem
-                              collapsible={false}
-                              name={"numCols"}
-                              required={true}
-                              schemaName={"integer"}
-                              qualifierMessage={"**Possible values:** `>= -9223372036854776000` and `<= 9223372036854776000`"}
-                              schema={{"type":"integer","minimum":-9223372036854776000,"maximum":9223372036854776000}}
-                            >
-                              
-                            </SchemaItem><SchemaItem
-                              collapsible={false}
-                              name={"initializationStatus"}
-                              required={true}
-                              schemaName={"string"}
+                              schemaName={"string[]"}
                               qualifierMessage={undefined}
-                              schema={{"type":"string"}}
-                            >
-                              
-                            </SchemaItem><SchemaItem
-                              collapsible={false}
-                              name={"initializationError"}
-                              required={false}
-                              schemaName={"string"}
-                              qualifierMessage={undefined}
-                              schema={{"type":"string"}}
-                            >
-                              
-                            </SchemaItem><SchemaItem
-                              collapsible={false}
-                              name={"labelingStatus"}
-                              required={false}
-                              schemaName={"string"}
-                              qualifierMessage={undefined}
-                              schema={{"type":"string","description":"The status of the latest general pseudo-labeling job for the dataset"}}
+                              schema={{"type":"array","items":{"type":"string"},"description":"Subset of columns to be used in pseudo-labeling.\n Expected columns: input, output, ground_truth\n For example, a summarization task might not need an input column.\n TODO: Should this be repeated EvaluationMetricParameter enum?"}}
                             >
                               
                             </SchemaItem><SchemaItem
@@ -408,11 +407,11 @@ List Datasets
                                     <strong
                                       className={"openapi-schema__property"}
                                     >
-                                      columns
+                                      chatCompletionConfig
                                     </strong><span
                                       className={"openapi-schema__name"}
                                     >
-                                       object[]
+                                       object
                                     </span><span
                                       className={"openapi-schema__divider"}
                                     >
@@ -431,16 +430,28 @@ List Datasets
                                   >
                                     
                                     
-                                    The columns present in the latest DatasetFile for this dataset
+                                    The list of messages in the conversation so far.
                                     
                                     
-                                  </div><li>
-                                    <div
-                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
-                                    >
-                                      Array [
-                                    </div>
-                                  </li><SchemaItem
+                                  </div><SchemaItem
+                                    collapsible={false}
+                                    name={"vendor"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string"}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"model"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","description":"The ID of the model to use for the completion."}}
+                                  >
+                                    
+                                  </SchemaItem><SchemaItem
                                     collapsible={true}
                                     className={"schemaItem"}
                                   >
@@ -457,11 +468,11 @@ List Datasets
                                           <strong
                                             className={"openapi-schema__property"}
                                           >
-                                            id
+                                            messages
                                           </strong><span
                                             className={"openapi-schema__name"}
                                           >
-                                             object
+                                             object[]
                                           </span><span
                                             className={"openapi-schema__divider"}
                                           >
@@ -475,90 +486,154 @@ List Datasets
                                       </summary><div
                                         style={{"marginLeft":"1rem"}}
                                       >
-                                        <SchemaItem
+                                        <div
+                                          style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                                        >
+                                          
+                                          
+                                          The list of messages in the conversation so far.
+                                          
+                                          
+                                        </div><li>
+                                          <div
+                                            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                                          >
+                                            Array [
+                                          </div>
+                                        </li><SchemaItem
                                           collapsible={false}
-                                          name={"value"}
+                                          name={"role"}
                                           required={true}
                                           schemaName={"string"}
                                           qualifierMessage={undefined}
-                                          schema={{"type":"string"}}
+                                          schema={{"type":"string","description":"Role can be 'system', 'user', or 'assistant'."}}
                                         >
                                           
-                                        </SchemaItem>
+                                        </SchemaItem><SchemaItem
+                                          collapsible={false}
+                                          name={"content"}
+                                          required={true}
+                                          schemaName={"string"}
+                                          qualifierMessage={undefined}
+                                          schema={{"type":"string","description":"The content of the message."}}
+                                        >
+                                          
+                                        </SchemaItem><li>
+                                          <div
+                                            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                                          >
+                                            ]
+                                          </div>
+                                        </li>
                                       </div>
                                     </details>
                                   </SchemaItem><SchemaItem
                                     collapsible={false}
-                                    name={"createdAt"}
-                                    required={true}
-                                    schemaName={"date-time"}
-                                    qualifierMessage={undefined}
-                                    schema={{"type":"string","format":"date-time"}}
-                                  >
-                                    
-                                  </SchemaItem><SchemaItem
-                                    collapsible={false}
-                                    name={"updatedAt"}
-                                    required={true}
-                                    schemaName={"date-time"}
-                                    qualifierMessage={undefined}
-                                    schema={{"type":"string","format":"date-time"}}
-                                  >
-                                    
-                                  </SchemaItem><SchemaItem
-                                    collapsible={false}
-                                    name={"index"}
+                                    name={"maxTokens"}
                                     required={true}
                                     schemaName={"integer"}
-                                    qualifierMessage={"**Possible values:** `>= -9223372036854776000` and `<= 9223372036854776000`"}
-                                    schema={{"type":"integer","minimum":-9223372036854776000,"maximum":9223372036854776000,"description":"Index of the column within the dataset file."}}
+                                    qualifierMessage={"**Possible values:** `>= -2147483648` and `<= 2147483647`"}
+                                    schema={{"type":"integer","minimum":-2147483648,"maximum":2147483647,"description":"The maximum number of tokens to generate."}}
                                   >
                                     
                                   </SchemaItem><SchemaItem
                                     collapsible={false}
-                                    name={"literalName"}
+                                    name={"temperature"}
                                     required={true}
-                                    schemaName={"string"}
+                                    schemaName={"number"}
                                     qualifierMessage={undefined}
-                                    schema={{"type":"string","description":"The literal name for the column."}}
+                                    schema={{"type":"number","description":"The temperature to use for the completion."}}
                                   >
                                     
                                   </SchemaItem><SchemaItem
                                     collapsible={false}
-                                    name={"dtype"}
-                                    required={false}
+                                    name={"topP"}
+                                    required={true}
+                                    schemaName={"number"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"number","description":"The top_p value to use for the completion."}}
+                                  >
+                                    
+                                  </SchemaItem>
+                                </div>
+                              </details>
+                            </SchemaItem><SchemaItem
+                              collapsible={true}
+                              className={"schemaItem"}
+                            >
+                              <details
+                                style={{}}
+                                className={"openapi-markdown__details"}
+                              >
+                                <summary
+                                  style={{}}
+                                >
+                                  <span
+                                    className={"openapi-schema__container"}
+                                  >
+                                    <strong
+                                      className={"openapi-schema__property"}
+                                    >
+                                      promptTemplate
+                                    </strong><span
+                                      className={"openapi-schema__name"}
+                                    >
+                                       object
+                                    </span><span
+                                      className={"openapi-schema__divider"}
+                                    >
+                                      
+                                    </span><span
+                                      className={"openapi-schema__required"}
+                                    >
+                                      required
+                                    </span>
+                                  </span>
+                                </summary><div
+                                  style={{"marginLeft":"1rem"}}
+                                >
+                                  <SchemaItem
+                                    collapsible={false}
+                                    name={"id"}
+                                    required={true}
                                     schemaName={"string"}
                                     qualifierMessage={undefined}
                                     schema={{"type":"string"}}
                                   >
                                     
-                                  </SchemaItem><li>
-                                    <div
-                                      style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
-                                    >
-                                      ]
-                                    </div>
-                                  </li>
+                                  </SchemaItem><SchemaItem
+                                    collapsible={false}
+                                    name={"template"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","description":"The template string that defines the prompt"}}
+                                  >
+                                    
+                                  </SchemaItem>
                                 </div>
                               </details>
-                            </SchemaItem><li>
-                              <div
-                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
-                              >
-                                ]
-                              </div>
-                            </li>
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"baseEvaluationMetric"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"TODO: @Ankush flesh out default prompt templates or \"Base Metric\"\n representation of prompt lmai.proto.model_fine_tuning.v1.templates."}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"skipActiveLabeling"}
+                              required={true}
+                              schemaName={"boolean"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"boolean","description":"If true, skip active labeling."}}
+                            >
+                              
+                            </SchemaItem>
                           </div>
                         </details>
-                      </SchemaItem><SchemaItem
-                        collapsible={false}
-                        name={"totalCount"}
-                        required={true}
-                        schemaName={"integer"}
-                        qualifierMessage={"**Possible values:** `>= -9223372036854776000` and `<= 9223372036854776000`"}
-                        schema={{"type":"integer","minimum":-9223372036854776000,"maximum":9223372036854776000,"description":"Total count of datasets which can be listed with applicable\n filters, regardless of page size"}}
-                      >
-                        
                       </SchemaItem>
                     </ul>
                   </details>
@@ -567,7 +642,7 @@ List Datasets
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"datasets\": [\n    {\n      \"id\": {\n        \"value\": \"string\"\n      },\n      \"createdAt\": \"2024-07-29T15:51:28.071Z\",\n      \"updatedAt\": \"2024-07-29T15:51:28.071Z\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"ownerUserId\": {\n        \"value\": \"string\"\n      },\n      \"numRows\": 0,\n      \"numCols\": 0,\n      \"initializationStatus\": \"string\",\n      \"initializationError\": \"string\",\n      \"labelingStatus\": \"string\",\n      \"columns\": [\n        {\n          \"id\": {\n            \"value\": \"string\"\n          },\n          \"createdAt\": \"2024-07-29T15:51:28.071Z\",\n          \"updatedAt\": \"2024-07-29T15:51:28.071Z\",\n          \"index\": 0,\n          \"literalName\": \"string\",\n          \"dtype\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"totalCount\": 0\n}"}
+                    responseExample={"{\n  \"status\": \"string\",\n  \"pseudoLabelJobResult\": {\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"datasetId\": {\n      \"value\": \"string\"\n    },\n    \"fewShotDatasetId\": {\n      \"value\": \"string\"\n    },\n    \"activeLabeledDatasetId\": {\n      \"value\": \"string\"\n    },\n    \"selectedColumns\": [\n      \"string\"\n    ],\n    \"chatCompletionConfig\": {\n      \"vendor\": \"string\",\n      \"model\": \"string\",\n      \"messages\": [\n        {\n          \"role\": \"string\",\n          \"content\": \"string\"\n        }\n      ],\n      \"maxTokens\": 0,\n      \"temperature\": 0,\n      \"topP\": 0\n    },\n    \"promptTemplate\": {\n      \"id\": \"string\",\n      \"template\": \"string\"\n    },\n    \"baseEvaluationMetric\": \"string\",\n    \"skipActiveLabeling\": true\n  }\n}"}
                     language={"json"}
                   >
                     

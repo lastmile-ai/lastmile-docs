@@ -1,11 +1,11 @@
 ---
-id: get-download-url
-title: "Get Dataset Download URL"
-description: "Description of get_download_url"
-sidebar_label: "Get Dataset Download URL"
+id: dataset-refine-labels
+title: "Refine Labels"
+description: "Refine labels during active labeling after LLM Judge has done initial labeling."
+sidebar_label: "Refine Labels"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVE1vGjEQ/SuWzzRE9MaNlLRKlaoRUPUQoWjYHcDJ7tq1Z5OgFf+9M/aybKBqeugBtB6/+XrzPI0m2AQ9vtdTIAhIejnQ1qEHMra6yfVYb5Cm9qUqLOQ/fKEHOseQeeMEwNfT40nZtWL0Q97CH+qID5jV3tCOszT6CsGjn9S05eNyz9k8/qox0JXNGdHozFaEFcknOFeYLFYyfAySrdEh22IJ8kWGCuQCvnB9qfauzNntLAXl7LRzgrKrR8zk7Ly0RwaDBMmTpzR6jDjtjO+5P0NRY3RNsEDeVBu936e2jMdcuE2w5an5mJyv0mVwtgop9ujyMlb4hu15nWUYwrouVDclrup/kZbSv89aTw9nzZ8KZLFFNf+oHDdnNhXmijMpsuoQRBEDWirU2hR4ccZfP1+kiu9LpK0VfTob5+xAJKWH4MxwNISa7AMy78M28vCPwvTP6EX9y6NK58JVarOv1a7LLZET3wjj8yqC2JI+PltfAg9Cf/25iH3IDGZHiV+/QukKPNNeq6S+gky1tv2Z3UKgb8yPmtyo2fV8oSZ3N2dsHy5UqP0aMlRr6yPDnbcrgNhYXrCvtJ/8RheXmnMKmSVE0VRQtkpRrVTUQSsywtPMvZf7DzuhJZPwlYZckKkkeZ3klCZ5z0o2jBzxr5umJG331ECfheUpbkUM7Ns0K0axXvZ7MTP9fpfm/AzewEoI5fXDDgg5j09W0xMyRH9KXXxYSIWDbi5nz2o/OHhM+Ek6+it22dPr3ff5QuTS7rvS5uLj4YWN8j/WWlaweEcVRlujC6g2NWwEm2KKROCtNk+0GLtqr6Da9SpkeiJiYZ+wYooGbSskZy6Xg/8GWDkddw==
+api: eJy1VMFu2zAM/RVBpw1ImiLH3NK1A1qkaJFk2KEICsamY7Wy5Ul02iDIv4+0XMdNh/Uw7JDAkh6px8dH7TXBJujJg74EgoCkVwPtKvRAxpXXqZ7oNB4MPWamxEcLa7RBD3SKIfGmEhyj5s2piqcqrb0pNwoSMtt2s1lnhF7NZrfqpk43qHJgqOMwUxoyYDvkGecPmHAW2jG5vb5A8OinNeW8XB2YpMdfNQa6cCkj9jpxJWFJ8glVZU3SFDB6CsJur0OSYwHyRYYsdoRnDd95zMWX0q6SQ7d+wkTWlRcxyGCQ2FYKkeWY6LLb/Cx8C7bGJjTCAolK+nCI1RiPqXQiwlan28fLV6fiL+8u775A+VyH/OtETU9Uz6x74UtivlC5MkQ64/Pzpqh3qRZ1kmAIWW1VZwMu5B/ljbd+JhAThDQ1khnsfe8kAxtwoF+HgcCUlvkNsahoN2zzTMjXeIglFki5E99WruloBeIZPYLKjMYjqMk9Iis8auUcndo6oN+il5FYHT24kPqian0ndp3MiSqJbWC8Xjcg3okf350vgGnqm5/Lpt2i2/xo4KtXKCqLHyzWGqZvFFNmrq/zDALdGotqeq3mV4ulmt5ffxzO9kCF2meQoMqcV5Sj6qIrC8SbhQyelB/jxmfnmu8UJQtoGl1Cceyumv3xLegN4394FlrFCV9pxKxNKQxrb+Xe2OsHtqhh5Jh/Xb+FZPvCyRj0e859zsUrHLjfrxnyw9vDQba5QX4XnbAFb2AtkvPzwwEIKTdYnqZnZIj+FkseLoXeoOvch2E5DN4ipjxoFf0Vu+rZ+f5usRRDte9d4VKJ8fAi9fD/RGt5uSW68Wmzt9cWyk0NG8HGnGIieO/eE7c2VbVHUO56DFmeBrF0z1iyRIO2FJI10+XkvwEEXzA5
 sidebar_class_name: "post api-method"
 info_path: api/lastmile-ai-rest-api
 custom_edit_url: null
@@ -27,13 +27,13 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Get Dataset Download URL"}
+  children={"Refine Labels"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/dataset/get_download_url"}
+  path={"/api/2/auto_eval/dataset/refine_labels"}
   context={"endpoint"}
 >
   
@@ -41,7 +41,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-Description of get_download_url
+Refine labels during active labeling after LLM Judge has done initial labeling.
 
 <Heading
   id={"request"}
@@ -185,11 +185,11 @@ Description of get_download_url
                     >
                       <SchemaItem
                         collapsible={false}
-                        name={"downloadUrl"}
-                        required={true}
-                        schemaName={"string"}
+                        name={""}
+                        required={false}
+                        schemaName={"object"}
                         qualifierMessage={undefined}
-                        schema={{"type":"string","description":"The S3 presigned URL to download the dataset file."}}
+                        schema={{}}
                       >
                         
                       </SchemaItem>
@@ -200,7 +200,7 @@ Description of get_download_url
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"downloadUrl\": \"string\"\n}"}
+                    responseExample={"{}"}
                     language={"json"}
                   >
                     
