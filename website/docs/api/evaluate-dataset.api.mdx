@@ -1,13 +1,13 @@
 ---
 id: evaluate-dataset
 title: "Evaluate Dataset"
-description: "Run evaluation on a Dataset."
+description: "Evaluate a metric on a dataset, returning scores for each example. Specify metric.id or metric.name to identify the metric."
 sidebar_label: "Evaluate Dataset"
 hide_title: true
 hide_table_of_contents: true
-api: eJzdVclu2zAQ/RWBZzcKfPTNaVLARYMGtoseDCMYS2OLiSSyJOXGEPTvnSG12UmaQ28FvIjDNwvnvaFq4eBgxWwj7o6QV+CkKsV2IpRG4xeLVMwEhj18TMGBRScmIkWbGKk9fiaWVRlhHyCiD0S3AXtFYItJZaQ7UZ5a3CAYNPPKZbTcNpTM4K8KrbtRKSFqkajSYen4EbTOZeKDxk+WU9XCJhkWwE9Ouhwpe1s6thmXIRzldSfN+2r3hAmvteFzOYmW3Qt0RibjQPfB8pGjTL1TwFhyKQ+imYgSCnxz46xXr/ab0ABpMGUeKHgb6txxy4HCARfpuOjb3vhR3dymtyq8qCDAtpfmomvOUAVhAspqVdqQZHp9zX/n+lhVSYLW7qs86pVFkf6d6ZD4P6TaJsqEEtoYYAycCCgdFmN7WRU7NKJ5l642kueKMGTPFA+1Vn5GNPAgihi0jKcxVE498iTHwzjHb4y/RXNEwxfHdhjvFfMVih4PeV9q5pz2BTGM1jsPIkt4+KJMASQG8fXn2veKdbAc7oa7Fyh0jud8MkFdfztehvW5Ckc0jQepHYsxS7Lcq7FavoF19zLHaL6IlnerdTR/WLy+BNuNyFZmDwlGe2Uil2HUe+scHBkLvhO5fcFvenXNNTEfBXjZtMfo1N5dpZcZR1flRzdwy4DDFxdTFbLkjJXJOUhQwIZGUBJySt9eBfQ8BB0WgxKI/Yx1RO51vSPTD5M3DZuJNnMK+jiCkbDjRm5Y2hlCSrTzu+AZCSI+h1N8WnORk56PV1dCM+k85nSdaPdX7HYk9YfvqzXLrH3BFCplHwO/yci/MyH4lcfeXr3eVoscykMFB8aGmCwNONf0hYb9qbqJLU+jCqk9HrFWz1hSiybtURyvqVwK/gcTHZl9
+api: eJztVk1v1DAQ/SvWnE236jG3toBUBAJ1CxxWEZpNpruGxHbtSSGK8t/RxEk22y5wQeLCZdcevxnPx5txOmDcRcg28OoRqwbZOAu5BucpDJubErLpjF4iYyQGDSXFIhg/wA/nClVNHEyhnFWoygTXKhA3wRq7U7FwgaK6d0ERFntFP7D2FZ2ptafC3Lej/pkplQvTxmJNip0yJVkWEO9pOgMNkYomGG4h23RwRRgoXDa8h2yT97mGQA8NRb5yZQtZB4WzTJZlid5XphjCXH2NEkkHsdhTjbJiwxU9D/42mQMN3Ho5d9uvVMjeB8kaG4qinvxbGnqXJH9SNOWglDCRg7E76DVIEk4eHJXi5LmvXFuT5TUjN/EEqE9ZMoFKoYIpYbzv2PoJW7lckBJzUy6DfTkL/xSvpPdUZE+cSrD8qbieknrwIu/7hIre2ZguuTg/l79j2q6boqAY75tKzXwH/RcYki7+T5GZIqntF2YxBGxBg2Gql3Lb1FsK0P+yzKOloca9FvneyYjybuhJj9L4sEJvVhcrbNh9oUesVjRPt2lJX8p5mkUKjxRkDOaHcbKWOienl0NldnXP7AeHBAYZbAcQ6HHx2oUaGTJ48/luSJ/w5/Ywi16lyXfMAynslPKpnof9MXsX4qfVW5Z22Zxjqy2Lauy9WzLwLUZ+ZypSlzfq8sON+nTx7OLnkExdu9o7S5YjaJBcJujF2bk4IcWpceDeGNP8YvziSVnM6X/8uozVZvrBK1+hsRJQEyrxMbFtA+gNaJBMzYwDDQfOHTYH1uUa9sLZbANdt8VIH0PV9yJ+aCi0iYuPGAxupTAbaaM9YUlheOe+UQsZXKckvbgTJ/Vc32djq9eTxmVRkOffYvNFW314v74TSo+PZ+1K0Qn4HfTwmwHIx4JoD50yyDqo0O4a3Ak22RSq4XH/POmXIappOth24WHXJcSd+0a270GPobDsoZdR8BM9Jgwn
 sidebar_class_name: "post api-method"
-info_path: api/lastmile-ai-rest-api
+info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
 ---
 
@@ -41,7 +41,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-Run evaluation on a Dataset.
+Evaluate a metric on a dataset, returning scores for each example. Specify metric.id or metric.name to identify the metric.
 
 <Heading
   id={"request"}
@@ -136,6 +136,15 @@ Run evaluation on a Dataset.
               </SchemaItem><SchemaItem
                 collapsible={false}
                 name={"description"}
+                required={true}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"deploymentStatus"}
                 required={true}
                 schemaName={"string"}
                 qualifierMessage={undefined}
@@ -310,6 +319,15 @@ Run evaluation on a Dataset.
                               schema={{"type":"string"}}
                             >
                               
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"deploymentStatus"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string"}}
+                            >
+                              
                             </SchemaItem>
                           </div>
                         </details>
@@ -330,7 +348,7 @@ Run evaluation on a Dataset.
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"metric\": {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"description\": \"string\"\n  },\n  \"scores\": [\n    0\n  ]\n}"}
+                    responseExample={"{\n  \"metric\": {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"deploymentStatus\": \"string\"\n  },\n  \"scores\": [\n    0\n  ]\n}"}
                     language={"json"}
                   >
                     

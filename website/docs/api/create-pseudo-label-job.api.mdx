@@ -1,13 +1,13 @@
 ---
-id: llm-judge-create
-title: "Create LLM Judge labeling Job"
-description: "Create an LLM Judge labeling job (also known as pseudo-labeling)."
-sidebar_label: "Create LLM Judge labeling Job"
+id: create-pseudo-label-job
+title: "Create Pseudo Label Job"
+description: "Step 1 of 2: Create a new job configuration for LLM Judge labeling, to be subsequently submitted by calling SubmitPseudoLabelJob."
+sidebar_label: "Create Pseudo Label Job"
 hide_title: true
 hide_table_of_contents: true
-api: eJzlWFtP60YQ/isrv9BKIeHQo56jvLTcKoFAIEjVB4iijT1JFuxddy9AGuW/d2bXsR3bEFSh89IHSLKenf3m8s3MehVZPjfR8D66vLxiFy6ZA7vkU0iFnEfjXqRy0NwKJc+TaBilabb/SDL7sQZuIepFCZhYi5xEUODELzMuWaUuLdSxRzVlP/HUKPYk1Ytk3LDcgEvU/kbk5z5qNBA7LewSQa2iY+Aa9JGzC/w5XiMiDX87MPZYJSiximIlLUhLX3mepyL2aAePhvCsIhMvIOP0zQqbQgnxxh/sLb1Q09ugEw+3y5yE1PQRYvqda/KAFWBIR76160TJmZjXdd90Pd+lVPIMvJIgZawm3zc9e+2/8JSROJspzewCyKX9aN2Q/bCq2nJbI7fcgKWwV/adlou7jHrmqeuwar0OARQaEkq6IDbG1Rm83C2UPf3Bx/LYimfwEYPkRx9u8NDYQnKiUpdJU9vKteZLPEBYyEyHymZI79wUMTI1Y3HQxaxiU2DOQMKEbPKs/yDZ2WvuD9/sGKJc7myPKWf951wrJ5OJ1Ug+lP8DEwReeZan0GOcGZdlXIt/PN0YuuiJZWK+sEwq/APUi0XAaywOoDNH16fXQ4ZxdmmC2SYMYdSQEyMTdkae8fquAO2Mb7jGXLeA50qX/UZWxwtuTxRhILE2AU+2nn+U1s8gE6U73ZypBNLdlBohc85Pyf/EIb+JIoDuL4kVl7A8vzIwhs/h/aDXrLoK8jtt0Sr9QDW5RSkWY4TQ/3tmafDEvR7bQ7waPxHxHjdGGMul3fNwa2V2tycK4dIdAXq/xQSPtdI9bqGEXIPBRwYTrtDCZlplXi2BZYVzS7TtaugRpfiU4Gy8TpwIQZHPoE1IYmxMM65DdPjrSD3BFicFopyDRsCZkCJzWTTcP/zy9dvX77/8+vW73xNWy8VvXVAKMYYpPSUD0Ef+JMqXOUhqt+AxYEx883W6HtCwrdPttQ07ks+q/OaDOlU+yZkvWe/qbNa4wKgNf2rpXvftto0FrFYW/Jf4ISey3I5Qe0pjSr1Fbz/ZRSeRdJYFW9e8kw8baRZkEDm32HxnQqIlZEaA2/KiSKLaUdQxptiKmmXyAxh82f39SD45s2CzFPA/VnmCwF1qi+NLmIZY9RAd41ksHPEQYfHWGzYGb2M0in1pxkUfv1vV9+GekGET6yR1mucv/VKvD415EvlR1XUJb2XAVGFJ4LJlwTmyRDtsPLSbhaZdDpbt9EtqPbvZZN9oIq2cecPZnQa0cvb/0Y8bXu+cjsfrdZAzuZImkOrw4IA+mi6LY2T3zKWsvHREvc+a78PpO+mO0+/29HfhFz558mssh0O9o/xgYBeKLlu58qNLzunuEw14LgaHA+6smgAqGgRvT3wKTVDFoLySYV+kokgXpuo2dUeOCmjrd6oS8sLanPZ6MWKiFyIW+C+YbRm35JC/Rt4uCsBtdRU7C5n43iUp3HPeqlHVcn0ILxxbq7xd94S21NtjfVu2NYXfbx6O3x44NyNjhbuYFGsL5YR3vxnLqodlWpdAxltTx0Gj/x9smvZBZ3ejNlUpr7pTzczu1lFt6qrLVHMp2ELOVJ0Vl9zYK4Ej5NE5uz27G7Gjm/P2jFk8wNKkZzyuBodyN4HExYxu/ZSxYd9h/8C3cEz/jMta5hQvFzreLGCeNY+vvRn4lLcSBU0svNoB4haSMDrt7waBovdYoARKHuJfSVMicIOoFP1AVQz5gkiOW1cris+fOl2vaRl5pZeBwM9Y1fmU3H5PE8ACeIK8pJx6giUZF8zcHxHAXpnfrWK57m12HGGhze27suNaHbq5vhtRHSheuFCe46rmL7hI/4dRRO+JaHe4gdDaKkq5nDu6sQyjoJMSiW8XnUaR8VZtLkNyWUOI7vESnh7ool5hih+dES4q/xcvQ5K3
+api: eJzlWN1v2zYQ/1cOfMmL6nysWAu9bGnSAikSJGi87cExAlo6W0wkUiWPTjzD//twpC3LlhMHQ1EM2EsiU3fH+/rdh+aC5MSJdCBuHPrcwKUcYQlfzUgME2FqtJKU0Re5SMWZRUkY6QIZUyUiR5dZVTOZSMUtYQ3HYMZwkkLkAAkan+DBjCAzeqwmPgqFsbFweXkFX30+QShZpNKTBMjACMH5kcPvHjWVM/5RKSLMYTSDTJZMCLfhcFOhnkiEw8xbRTORDubiE0qL9tRTIdLBcDFMhGWpjj6ZfCbSuciMJtTEj7KuS5UF5Q4fHNszFy4rsJL8RIpKfMEP36JMkQia1UxkRg+Y8e/ashdJoWMZ9QbXWXBHW/bNrvf7hGpZYRASqRxZpSedyFyHB1kCkwffU4EclZ5YbNG+WVTruCtRknRInDpr+86bw31GTWXpd1i1WMQAKos5p20kGy4SMcan28LQ+U++VmakphgihvnPvtxhiRlhfmZKX2nXYpXWyplIhCKs3A6RHdwy2ohxm0VZSxR6hzkoDTFx361A2rvT8Pm5DpevOFJQuvaUgPEU/k+s8Tq/J+upuNPwxVjAZ1nVJSYgwfmqklb9HWsBSfcIlZoUBNoQaMQcpI4Slxfwnf3r8+sUbgvjyxyoUI51tFgzInP4zJ4J8q6QrMpupJUVElpA7avf2OqskHRmWAcm6wLwbOP9W2E9RZ0bu9PNlcmx3A+pfoFwcc7+ZwwFJo6Ad2uoZo1aAV8VOicn+HrQW1ZdRfq9tlhTvqGafDMlQiY1+//AzRxhdZDAgXdoDxIwFg6kc8qR1HQQ1G2V2f2eWBI37oiq9zpICLquZQ87WmJt0aEmB3IlBcbWVEEsKwtL5zbadqth0KhULqiz8jpjIgZFT9G6mMTOwFjaGB353DePuIFJpQknaEUiKqVV5SuRvjs5fv/h/cdffn3/MfDE0+bwwy5VlmSgfTViA8ZA4SbOlwlqbtkYdCCsQgP3th3QyLbT7S2GPclHpr55o0xT39cQStarMrdrXETUCj+tdG/7dtPGpVqdLPg38autqWrqY1WXknCjRW++2Qcnle8sC9SWvBcPK2qINECFJMhxrDS6YEZUt+NFlYvWVdwxRtLhdpl8gw6h7P5+qh+9K2Bcoiu4yrMK0pe0vL5R0zGq7sQn6RDiFXfiTnOdjmiM3jbjFV9ZSdWrrSHTC+G+Z8PuyWvuNNPjXiM3hMY9qvp03XVZ37UBI2NKlLpjwcUYyHpMgLkhNu3WyPlUqKwApaemnKKLnYfQVpgrdvuyhUNmY6PhDC58JXUjopvBeavtb/fpF/pQJ+1eiNdOH3TS/v/R0re8vnPAHi4Wkc7VRruIy5OjI/637bIsQ+fGvoRm9xHJj1oR4u17K8aDGW0OkF/DwQ8eHreO46XBUWG2oMLwzlebMP3UktcncShrdXhyKD2Ze5zK8jB6+z6k0P2DGR1GgISMt1xXeedaL2S37KiobXsta1QuiGrmDWQM5kDEKAgPX4ytJLFD/uoHuzgA39bb3OeYia/tWXFVeqnMrY/bc/zSsa3ivWvV6FK9vBl0aTuD/GD1cvjyzLqaOtd6L4fN1kEzJA5Wk936ZZPWjSLDjcHlaGuEOFr1/aOdDZI73Vr4usG1zNzdfdZMu0o7l20OttJj00bFpXR0pUqE0ws4vbmAP0868eySpMCONJpHQpEITtFIetI7Cm3fOKqkbqXK8htG5/NIZ2Vee/O/8A1kiSjCZzqsS6k0W+dt2EQimgdC1kokgt3WIJqxvoVpTpSI6mEiCq4H6UDM5xzKP2y5WPDxd492FrE+lVbJEUdowPNGgTJHG9LvEWfsz+imd31WMGmg0Kmri2TFcZplWNOrtMNWybq5vu1zyVh+3mFIiFRY+SSS8DcVgr9sMXfcd/hsLkqpJ573o1REmZxzcrM+bdWjYNVq9dKzlobzeaQISFosRLI0JQzqYsFl9h8AHdO4
 sidebar_class_name: "post api-method"
-info_path: api/lastmile-ai-rest-api
+info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
 ---
 
@@ -27,7 +27,7 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Create LLM Judge labeling Job"}
+  children={"Create Pseudo Label Job"}
 >
 </Heading>
 
@@ -41,7 +41,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-Create an LLM Judge labeling job (also known as pseudo-labeling).
+Step 1 of 2: Create a new job configuration for LLM Judge labeling, to be subsequently submitted by calling SubmitPseudoLabelJob.
 
 <Heading
   id={"request"}
@@ -516,7 +516,7 @@ Create an LLM Judge labeling job (also known as pseudo-labeling).
                 required={true}
                 schemaName={"boolean"}
                 qualifierMessage={undefined}
-                schema={{"type":"boolean","description":"If true, skip active labeling."}}
+                schema={{"type":"boolean","description":"If true, skip active labeling, which involves an intermediate Dataset created for human labeling."}}
               >
                 
               </SchemaItem>
