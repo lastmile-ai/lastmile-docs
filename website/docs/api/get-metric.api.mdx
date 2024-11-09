@@ -1,11 +1,11 @@
 ---
-id: evaluate
-title: "Evaluate"
-description: "Evaluate a metric on rows of data, returning scores for each row. Specify metric.id or metric.name to identify the metric."
-sidebar_label: "Evaluate"
+id: get-metric
+title: "Get Metric"
+description: "Get a specific evaluation metric by id or name."
+sidebar_label: "Get Metric"
 hide_title: true
 hide_table_of_contents: true
-api: eJztVUtv2zAM/isCz1pT9OhbWmxAhxUrmmw7BMGg2Eyi1pZUiWprGP7vA2U7cdLHOuywyy6JxJdJfh+pBkhtAmQL+PigyqhIWwNLCdahT5fLArJBhyChwJB77ZLdXiGUqJC8zoU1wtvHIOxaFIqUFB4peqPNRoTcegxibb1AlW/Z7kTMHOZ6XffuJ7oQ1g8XoyoUZIUu0BAb0RYHHUgImEevqYZs0cA5Ko9+GmkL2WLZLiV4vI8Y6NwWNWQN5NYQGuKjcq7UeSpvchu4kAZCvsVK8Yk0lTiq7aaLAxKodqywq1vM+e48t4k0BvbrEhtHuOokv3PURXLqbAJ5bTbQSuDqX1QcQPCi3pW2rtDQjBTF8IJR27VHeywYe11A/73D6C/EWrYStHGRRlGV96oGCZqweuVrNtIf+2y8jaaY+4Tp+x2PaqsGELqsd6kcxl+2vWNw1oQOl7PTU/47ZPws5jmGsI6l2M0IyL9hV/fF//Ta0avbE++A3MRqhf4NyPtICdxWsnxreZ85m+bZKWYWTJTTk7OJimR/4oMqJ7hbhcMR07rxD+h5Vy73u2fGwHbJjjfQLsUtkUuJsBlksEpGIPvDJ+srRZDB5x/z1DYmzM1+cX18UpUr8RB/BnRo9YDj/n5I15H4GLURpP1ALwbRcj+wY9nBQO4VKcDajqn5RQW60iWK6aWYXl+K72fPMntukokLWzlr0FAACdzszvTs5JSzZNQqlUjZF/3auzTa9v/2iepZQPhEE1cqbbiO6EtOsWPfApTTIIEbtGMgSNhzcH9BBmHL3M0W0DQrFfCbL9uWxfcRfd1x80F5rVaMw4Kx2aIq0KdH8g5ryOCi682HOSfH5mVMU3a8t1o5eEzzHB29abscjdf119mcKd6/vJUt2MerR5DpNwNewwmrNDlJ1kCpzCaqDdt2MXkg1OE8Hc1PqmrYEqYeZdg0ncXc3qFpW5B9KcR3aHkl/AJcQxxJ
+api: eJztVU1v2zAM/SsCz1pT5OhbWnRDhxUrmmw7BEah2EysVrZUiU5rGP7vA2UncdKgwLbrLok+yCfxvWeqBVKbAMkSbrbK1Iq0rSCVYB36OLnNIYEvSHdIXmcgIceQee1iYNwRSgSHmV7rTOAeRJQxQawaoXNhvahUiRcgIWBWe00NJMsWrlB59LOaCkiWaZdK8PhSY6ArmzeQtJDZirAiHirnjM4i+OQp8OkthKzAUvGINBkcX/WhBwIJ1DjesasnzHjuPFdHGgMn9vccQ+xL/ThR5zGpjwnkdbWBTgLXeXbjiLiz+87YpsSK5qSoDmeCup4f7TFnyXQOw3nH6Gew0tPcoez0VNCBNsx3ApZ1IFGoLQpFwqAKNBJUBKQL6LoePThbhZ6c6eUl/x1jz+sswxDWtRF7f4H8J437I/+L/KciU+2rIJRY18bslO4pEK+aCqGMEWuNJg8HiTvJgIXljuBs/LSc4i8XJsrpyXSiarKP3AImhz4w2SA9ljuyA/oteu436aETzFngnu5xP9gTUxA5zo1hkMAqBoEcBp+tLxVBAl9/LSJ7bJyHQxu5eVOlM3hsA9Z1x/hOzsP8mK3R8ql4Y9F0tbZjh31Tge60QTG7FbP7W/Fz+g75fUgirm3pbIUVBZDAZPWh04tL9g/zXqroreHS3IHPN+dR9/yLPj2QT/hGE2eUrvj42hvG7WVfgnIaJHBde+lBwgEcJIzkTyUUbJtkCW27UgF/eNN1vPxSo296U2yV12rFBC7TTkKBKkcf34pnbCCB676kTwu+Hoebmq/5rnF0cpcxyzJ09GFsOnL2/ff5gr01PEClzTnHq1eQ8TcB4OeRs6Nl41oLRlWbWm04tsdkS6hjI58YN1Y1bKmqGd2wbfuIhX3GqutADqUQz6FLu677DZehqzI=
 sidebar_class_name: "post api-method"
 info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
@@ -27,13 +27,13 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Evaluate"}
+  children={"Get Metric"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/evaluation/evaluate"}
+  path={"/api/2/auto_eval/evaluation/get_metric"}
   context={"endpoint"}
 >
   
@@ -41,7 +41,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-Evaluate a metric on rows of data, returning scores for each row. Specify metric.id or metric.name to identify the metric.
+Get a specific evaluation metric by id or name.
 
 <Heading
   id={"request"}
@@ -154,33 +154,6 @@ Evaluate a metric on rows of data, returning scores for each row. Specify metric
               </SchemaItem>
             </div>
           </details>
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"input"}
-          required={true}
-          schemaName={"string[]"}
-          qualifierMessage={undefined}
-          schema={{"type":"array","items":{"type":"string"}}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"output"}
-          required={true}
-          schemaName={"string[]"}
-          qualifierMessage={undefined}
-          schema={{"type":"array","items":{"type":"string"}}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"groundTruth"}
-          required={true}
-          schemaName={"string[]"}
-          qualifierMessage={undefined}
-          schema={{"type":"array","items":{"type":"string"}}}
-        >
-          
         </SchemaItem>
       </ul>
     </details>
@@ -311,15 +284,6 @@ Evaluate a metric on rows of data, returning scores for each row. Specify metric
                             </SchemaItem>
                           </div>
                         </details>
-                      </SchemaItem><SchemaItem
-                        collapsible={false}
-                        name={"scores"}
-                        required={true}
-                        schemaName={"number[]"}
-                        qualifierMessage={undefined}
-                        schema={{"type":"array","items":{"type":"number"}}}
-                      >
-                        
                       </SchemaItem>
                     </ul>
                   </details>
@@ -328,7 +292,7 @@ Evaluate a metric on rows of data, returning scores for each row. Specify metric
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"metric\": {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"deploymentStatus\": \"string\"\n  },\n  \"scores\": [\n    0\n  ]\n}"}
+                    responseExample={"{\n  \"metric\": {\n    \"id\": \"string\",\n    \"name\": \"string\",\n    \"description\": \"string\",\n    \"deploymentStatus\": \"string\"\n  }\n}"}
                     language={"json"}
                   >
                     

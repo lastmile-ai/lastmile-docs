@@ -1,13 +1,13 @@
 ---
-id: fine-tune-create
-title: "Create Fine Tune Job"
-description: "Create an evaluator fine-tuning job using a labeled Dataset."
-sidebar_label: "Create Fine Tune Job"
+id: submit-fine-tune-job
+title: "Submit Fine Tune Job"
+description: "Step 2 of 2: Submit the job configuration created by CreateFineTuneJob to initiate a job."
+sidebar_label: "Submit Fine Tune Job"
 hide_title: true
 hide_table_of_contents: true
-api: eJzdVl9v2zgM/yqCn9Ok6GPfut4KdLhhQ5PDPfSCgrGZRK0s6SSqXRbkux9pxYljd9cDrtjDHhLLNP/zR1LbgmAVi8v74kZbPKNkUX1yi2I+KpzHAKSdva2Ky2LZfj4rAwJhMSoqjGXQXliY4bohK7AKn8EkIBdUK6TtSj26hUpRTqAMLNBgpX4Dgog0ZmURyxQ0bdiVbfEBIWC4SrTm1/mOnQn4d8JIH1zFHNuidJbQkhzBe6PLxtHJYxRXtkUs11iDnEiTwYN3EuOMY+AI77JCtkwbLxxu8YilvPsgkZPGKAqWR5FrZ5d61dV6M/j4ljoLNTYaMlekwBkZ5PJLcwCjhF0tOZO0RsnguNj1eP+zqg55oHHBVTAcy2dXoZFyH0NsSW8FJjV/JbLdLtdOB6wEZZltzlQKoO0eAKcmj8T3N8ol/9k2ObWsB6trZ1JtY0cUQoANG9CEdXxFZb+WUyTllqrMihQ5tUDuKW4kbbu9Nv7Lqmny3gU227JfMpNPNFIuUfNcBZds9UCB24wFbhgT+A1qb3DELcrpeFJR19pAEEsx1TUE/b1pNFXr1ZqURVaf1XHfV6ykq3M8yEkfZgMQ9As0TN78V8vJcL4MQmwnK+t+UTJy1Gw/pln7rdWkwejvbPZF07rpa0bss66aOEVlynNceQg8TwhDFD+yJ9E7GzOyL87P5dHLbypLjHGZjDosBK7LewzgbPrNhuMhddqrnxrCO/dpj5yNznc5TZy0tZMt6F2zMjzIZiom4PXkYgKJ3IMsvYkU80GW5APLTw6LMmJ45qTLLjsuuqmkKLvaXXcHf9dEXmQbNn5fNExMyQeGZg0k2fhz1gQlqb87bsmPGbY/XGF5Ef1oaxzIr2yGfWI7U2o4yl/h6U/eIctgUN63H5vyaLt0XRj8DpE+a4Pq6lbdfZzO1NXX20Eg7Qfu1bCE8rhMD9LeADGxlkuIVCnLXYzPxSWpdw22k7B9M560Yd9q537yf69FezAQfqMJe6qteJWCESMZhffcgJo5L/h3QCKfT7AoHZvRyAhcC4hZbruV6v4RzG4nZIZO2GSMPvNUg4Vk+V422BqhYujJzewJNxJUDu9sJt6NDqUcTILdqJW44ini6V95550++/plOhP07a97NaOPqQFemCj/l0UhF1SRbjqooW0LA3aVYCW8WafgBk77qtdHTVTtPrabjoecnoZj5p7QcopG+1BI3tldVv4Ph5/vGw==
+api: eJzdVsFuIzcM/RWBZ20c+Di3rNsAWXSxi43bHhwj0MzQtpwZSStR6brG/HtBaWyPPW63h7QoerFl+YmkHh9J7YHUOkCxgHttUMyjQfHBlrCUYB16RdqahxoKeIxlq4lBjGGIhBpD5bVjDCMInZgKuxLTQmS4oA2KrS1FZc1Kr2O2JyqPirAW5U7M0nJgVpAV2mjSilAoPnwDEgJW0WvaQbHYw3tUHv1dpA0Ui2W3lODxa8RA7229g2IPlTWEhnipnGt0ldxOtoHj3EOoNtgqXpGmBq9d7ks2CBJo5xhhyy1W/Nt55oU0BjawtSWzc7L0IW1879iraiKmYxkWyGuzhq7LV9Eea05Jhi07CatTaLNE5dDn/ejP7/k3qr3i/jKhn9JCNYLhYmX9IZ030F1g/7apwfbIYqkCNtrgR1tjc07rYevNiSWvtPlBkQpI5y5Pm2/vFAP92z4DNlgR1jPbxNaEwVHlvdqBBE3YhismR3WOxEVeZUNcryWKGLAW2ggW6juKRpv1zZMRj9E567nWe3ghtHGRpLCR0vfa22jqZ/KRNk9G3Fsv8JtqXYNSKEEqvIigW90oz55CbFvl9e+5j7R6vSFhEOvenFCmfjJnNm9GnFzKbCSCywSNyVv+3zjZ9m1r3GeWXZfBwVkTsvimt7f8dUFBrCoMYRUbcZwcIN+kF2fX/5FmfJW5xFInoUXaWB6Xzqbp4RQPKZgopyfTiYpkn/FVNRPm+ZmiweetLSchXTnpzL+i53G8PM28R6YohzqcfMd4N0SOzyYYFFAmEMh+cW99q4jZ+HWeLsXUfzkNzB+zss4I7CkZtICrAyiPkT/r+cftK3197GDciK9gLvvmGDJqc4vDnylz2qzsUCE/qUAfdYPi7kHcfX4Qv0xH1xhDCjGzrbMGDQWQwBnL0OnNLcfAuW+VGTDUv4bOn1ijEXoslX/0KdWrhvAbTVyjtOGQo284gizXBSinQQJzcZRs3xyOomXFZdkuJWxY7cUC9nvO9c++6Tre/hrR77KYX5XXqmTOFzyNNqhq9Ok194I7KGCW7/5uztHJY2JHLaOThxN3VYWO/hK7HBTk50+Pc9Zi/0Rsbc1nvPoNZPosAPjJy6dTqaW9PTTKrKNaMzbbZBWp8wK8KLh0q8NsNbtBhPt9RsztC5quA9lfhfg3dNxE/gDzPwd0
 sidebar_class_name: "post api-method"
-info_path: api/lastmile-ai-rest-api
+info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
 ---
 
@@ -27,13 +27,13 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Create Fine Tune Job"}
+  children={"Submit Fine Tune Job"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/fine_tune_job/create"}
+  path={"/api/2/auto_eval/fine_tune_job/submit"}
   context={"endpoint"}
 >
   
@@ -41,7 +41,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-Create an evaluator fine-tuning job using a labeled Dataset.
+Step 2 of 2: Submit the job configuration created by CreateFineTuneJob to initiate a job.
 
 <Heading
   id={"request"}
@@ -81,6 +81,53 @@ Create an evaluator fine-tuning job using a labeled Dataset.
         style={{"marginLeft":"1rem"}}
       >
         <SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  jobId
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <SchemaItem
+                collapsible={false}
+                name={"value"}
+                required={true}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string"}}
+              >
+                
+              </SchemaItem>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
           collapsible={true}
           className={"schemaItem"}
         >
