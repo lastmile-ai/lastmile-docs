@@ -1,13 +1,13 @@
 ---
-id: fine-tune-get-status
-title: "Get Fine-tune Job Status"
-description: "Get the status of the evaluator fine-tuning job."
-sidebar_label: "Get Fine-tune Job Status"
+id: get-fine-tune-job-status
+title: "Get Fine Tune Job Status"
+description: "Get the status of an existing job, including any results."
+sidebar_label: "Get Fine Tune Job Status"
 hide_title: true
 hide_table_of_contents: true
-api: eJzNVl9v2zYQ/yoEH4YWcGzPSeM0b87QdAkWLIg99CEwAlo6W0wlUSNPaTzD3313pGTLljevQwv0xRaPd8e7+92/lUS1cPLyUV7rHE6wzEHcmpmcdqQpwCrUJr+J5aWc19cnC8AnhwpLJzsyBhdZXTAbMX0EFJiACNfCzP0JXlRaKjRW1Ep0vhDPZtYlBQ6i0mpckgkreQXKgh2VmNBxuiYjLPxZgsMrExPHSkYmR8iRP1VRpDryBvaeHT+/ki5KIFP8hRpTCBaxYxMynNwae7segk56HJcFM5nZM0R8Liw7jRoc6yAL2fWtsltPOCbG3oIXC2wOLfkr1+vgjbYQc7wD23SfHB4lcrhwhcld0Dvo9/lvN+LjMorAuXmZig1eZNE3ilN4/ajHVTa0Xe74tKmUkroyxeaj163LYy/RaUFBab6lrFVLYtQImWtqn1ilOdPua5kfA++OhMJESUNAE1YLsKQ4I4OzMpOXJ4Ofz4ZnF6fnZxdEVa+BuiEOSUtqdsKQl9mMdNCFiqiiVLQ8eHkggNtL1BnVhcqKtjeEpLGZIvhkrJCKmFhbLj5X8QoOViY2DGo833xsut9GasREBvR65MTcmkxkJoZUYIVqlw3eqwWu6xy1SoXLVeESg6EHVSK1Oi/qiRDfsdJrnUIT9y3xGPY6Pij3PbImskCBj0f4X8HpyLKIv1bEB/mm7dV38Sg0qbv43a/KJf/QPlIY67/gaongjpTM+8Hg9HQ46J+eX7w7Gw7P+/1+o3YO3O5bptnHbZib8dsGpmX2vpGtbB5FWFJKMpdQztGIjIwNnT3mrEQjVEhuGVo+NcI/bHoIs13FxMTCLxq++DlLQyAVQd4JlceirjbxBrqLroBXBJuTKZ9+uhKlTd+2sNmUZ8uJr6itPZ2bVaE9CvyU46QDTAwvGYXxY7lQvADInip0b9BTJZon3iF6rOGJd5An6jS9nT3EgX0By4vMdLtTjHnMhbxpbhabuCaIBct6NjrPPBNRwsd1XSG3nybeLR6fD9uF5MMrda/QOTajoyqCZvLrfG6a9fSbcnjHyTC6EQ8fxhMxur9pYVtfCFfauYoIXFqfGOSNdJEq5BrmJYpdD3KDbt+3eQpkpvysz1VWDXixs+KJ8cEdrrFj/Z91roosUq71yEKd+z4UsjnA+kgbiSbOAU+GGtoqPTbg0rkBL0GacGaQ7Go1Uw4o89drJhMWdhlAf1FWqxlH+JGbSwIqJix5q/wMxCJ/CW6dTNjCzgao1nq07tQSI1qtCvxX3mkjee9/H084d6pVlSuaqFZ9ISL/XkrJSzVL+5T0tJVMVb4o1YJ5g07OGbWbqHuJ6b2q15982bCQwuM5JuYz5BSiTuUK8pnMJeV/A9mrGnM=
+api: eJzNVm1PIzcQ/ivWfKhayZA0cED3WziVFlRUBKH3IYqQsztJnPPae/YsRxrlv1dj52XJ5kpP7Un9All7ZjzPPPO2BFLTANkQrrRFMagtihs3hpEEV6FXpJ29LiCDX5BYggVu3PiBFNUBJBQYcq8rFktCgmYoQrwWbiKUFfiiA2k7FXM3lkLb3NQFfyq7EB5DbSgcg4SAee01LSAbLuESlUffr2kG2XC0Gknw+KnGQJeuWEC2hNxZQkv8U1WV0Xn0tDMP7McSQj7DUvEv0mTwC/7fJ5sggRYVC7nxHHP+rjyjJ42BbczdmGOwM3YTD95Se1amxqiWxAJ5baewWiU02mPBgU9io/3j9OhotUoXoXI2JLu9bpf/vQ79Q53nGMKkNmJLHMj/Kk7p9TcRJ94PQJYw2Rm9j6Q3H71qXb71UuXd1GNovqW8VwuQoAnL0LQ+8Epbbad3G53/B98SsHL5rKGgLeEUPUgotdVlXUJ21Pvx9Pz04uTs9EJCqV7S6fbwfCXBuFdhsHU5Rs8hV3lee5UvDl4eCODuknSJgVRZtdFImDhfKoIMCkV4xKItiPN1vBLAtYsNhxrPNx8b7feTDWOiRPI6D2LiXSlKV6ARtGb1mB3eqwWua0taGRGsqsLMUWxGG5WNuagaD7G4ZaNX2mCT993hW9zr4qDet8ia3KMiLPr0T8mRUFfF16rEIF+3UX0TRKlJ3RbvflVh9oX2YfBB/4mXC8LwRsn81OudnJz3uidnF+9Oz8/Put1uo3YO3O57phnjLszN+O0C03J738lWNvdzqpURLCVUCEgidz519jgQyQmVkhtSy68NPXpziLPXhh+9YeVnjZ/j+J3UxmxGq1C2EJtqE9/j8fRY4Auht8qID99ditqbH1rcbMuzBeIramvPZtjsDO1REKccJx3SzPG2Ubk4livFCwB0VKU7vY6qyT3hszIdtvBEtcWnuRt3pkhPW+MB/TN63mhGu53igcdcypvmZrGN64yoYt0oBhmMoxDI9Y+rTYXcfBhEWDw+73cLyc8vqqxS59iOjnURNJNf24lr1tNvKtAtJ0P/WvTvrsUfvRazbZFMvHdl5SxaYriMNYn2jruxr7tApYrD3apyPdHFq+VOHN7eGkvVv1rk1jElfKFOZZS2sQOlPE6EDkFVGiQw3i2p68TY0goSGsSOJMw4J7IhLJdjFfDRm9WKjz/V6BeJ7mfltRpzbIfcVmaoCvRxn/yIC8jgfcJ3NGAP5Zai1mK0khuNfp5jRX8rO2qk7d3vDwPOmvWSyrUMGXj1GWT8mwHwXs3aMRnj2RKMstNaTVk22eRsUa9TdC8lI6rN4mMXDQ+XyyQxcB/RrlYg11CIv2HFpfYXNAAavw==
 sidebar_class_name: "post api-method"
-info_path: api/lastmile-ai-rest-api
+info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
 ---
 
@@ -27,7 +27,7 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Get Fine-tune Job Status"}
+  children={"Get Fine Tune Job Status"}
 >
 </Heading>
 
@@ -41,7 +41,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-Get the status of the evaluator fine-tuning job.
+Get the status of an existing job, including any results.
 
 <Heading
   id={"request"}
