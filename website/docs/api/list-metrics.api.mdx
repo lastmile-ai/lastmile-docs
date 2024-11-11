@@ -1,13 +1,13 @@
 ---
 id: list-metrics
 title: "List Metrics"
-description: "List the metrics available for evaluation."
+description: "List all available evaluation metrics."
 sidebar_label: "List Metrics"
 hide_title: true
 hide_table_of_contents: true
-api: eJylVFFvGjEM/iunPEOv4pE3OnVSp1WrCtMeKjSZOwNpc5cs8bGi0/332ckBB61WTUMCktj+Yvv7nFYRbIKaPqnbHZgGSNtaLUfKOvRxc1eqqTI60M8KyesiqJEqMRReu+g7VV/ZmNEWs94hgx1oAyuD2dr6DI+4VxwasGi8pj3f2KobBI9+1tCWt8uOr/X4q8FAN7Zkj1YVtiasSZbgnNFFxMmfg1zcqlBssQJZkSaDfS73KY3HBMV30t6Jza6esZC981IdaeS6226koCy14IJ5GFjWYAKO1Os4EOjaYAhjrBztxz3OlHyDHX8k6+BsHSKemlxfy995j+ZNUTDCujHZsbOcyf/Vly79qEB14E1gkiN4D3v204RVGMIn6A8RdTkACxxSbxS3oYYK3zWc9eKNvUu0a4+l6JDBe6jzwGV36XkoTCxi4/3Wilydjbw7EGGpHJzOJzk0ZH+KGPOTIvMLYQf0O/QyDsuTVOfCQip8KNhjHVsiJ7HRjfer6MQnafHZ+gqYYvXlxyIWK+w+nnR++wqVk+6LFHW9tmd8A/OteZJmd9nj7XyRzR7u3gzgwZCFxq+hSGMnA3mMdgaIDyuZQCkwxU2uroUd6VYFkZnEYJro+/fHfTCU/zb5fbcIXynnfHQtdzfeCGRi6omHQLPnhL9Htnh9wuHNGWPM0la45tC2XUHA7950nRxze/0+8bgDryWn+MZwAELJ9Mj784Lsoj6lesYLSVDcTROH5HIgu9EhYsbD7OivvsuBHB++zRcih/5Rq2wpMR5+86H8TpWSB1eio8riWasM1JsGNuKbMEU8cK69C63Fqg5DXu8HGXJ7osfCvmDNLRr1pZDsOV0G/wPnUhiG
+api: eJylVE1v2zAM/SsGz2pT5OhbWnRAhxUrmmw7BMHA2GyiVpZUic5qGP7vA6U0H222DtglkUzyieR7ZA+MqwjlHK43aFpk7SwsFDhPIV1uaijhi458Sxx0FUFBTbEK2ifXbCvQmAI3qA0uDRW0gyqaHHUOCiJVbdDcQTnv4ZIwUJi0vIZyvhgWCgI9txT50tUdlD1UzjJZliN6b3SV8EaPUR7tIVZralBOrNnQcY73GQoUcOfF5paPVMndBymMNUUo+0EB1rUWXDR3B5YHNJEUvJxFRm0NxXhGjefubItTcmhpGIZBso7e2ZjwYHxxIX/H/Zm2VUUxPrSm2DUV1H/Wlx/9qEDYdj/BZEcMATtQoJmaeAifoT9E1PUBWOSg7QoGBRYbOmk46sVJuzeua8jylJHbeMJpyNrQgWrRqa5h+94x+gmsxfA2+LUhYhFbQ7x2onDvkl48iiBhhF6PxiNs2f0UMY/2ih4ZHflnsxuGSGFDQSZosZf4VNjLDTsU+q60NbOX2OQGJSyTE6jt4ZMLDTKU8PnHLNUvqrjfz8f1CzZeWBMJa/vgjnSCkW+1oWJyU0zuborv4/cj+86lLK5c450ly1KUVJRdx+cXQpO0p8FEYaY6j/0fdsLB9P77eti2humFR96gtvJuG4zAZVrmgF6DAiloRw0o2OOBgiN6FgrWQmw5h75fYqRvwQyDfH5uKXSZtA0GLXmlRaRgTVhTSEvqiToo4SrXcjaTBMXdtGmS3k7toF4jJlVFnv/quzjQ3t3X6Uy4326+xtUSE/AXqPRbAshClugkqfStB4N21eJKfDOmKAWPhfZGWKmq101gu4MM+z57zNwT2WEAtS2F5Q6DzMtvv+Yj+g==
 sidebar_class_name: "post api-method"
-info_path: api/lastmile-ai-rest-api
+info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
 ---
 
@@ -41,7 +41,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-List the metrics available for evaluation.
+List all available evaluation metrics.
 
 <Heading
   id={"request"}
@@ -213,6 +213,15 @@ List the metrics available for evaluation.
                               schema={{"type":"string"}}
                             >
                               
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"deploymentStatus"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string"}}
+                            >
+                              
                             </SchemaItem><li>
                               <div
                                 style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
@@ -230,7 +239,7 @@ List the metrics available for evaluation.
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"metrics\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\"\n    }\n  ]\n}"}
+                    responseExample={"{\n  \"metrics\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"description\": \"string\",\n      \"deploymentStatus\": \"string\"\n    }\n  ]\n}"}
                     language={"json"}
                   >
                     
