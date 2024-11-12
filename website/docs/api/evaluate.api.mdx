@@ -5,7 +5,7 @@ description: "Evaluate a metric on rows of data, returning scores for each row. 
 sidebar_label: "Evaluate"
 hide_title: true
 hide_table_of_contents: true
-api: eJzdVcFu2zAM/RWBZ60pcvQtLTagw4oVTbYdgmBQbCZRa0uqRKU1DP/7QDmunTbbOuwwYDkkkviokHx8VAOktgGyJbzfqzIq0tbASoJ16NPmqoCstyFIKDDkXruEGwxCiQrJ61xYI7x9DMJuRKFISeGRojfabEXIrccgNtYLVPmOcWdi7jDXm/rgfqYLYX2/MapCQVboAg0xiHbY20BCwDx6TTVkywYuUHn0s0g7yJardiXB40PEQBe2qCFrILeG0BAvlXOlzlN6k7vAiTQQ8h1WilekqcRRbrfdPSCBascGu77DnPfOc5lIY2C/LrDxDdfdye8cdZGcOkwgr80WWgmc/UnDEQUn7a60dYWG5qQohhOgtpWgjYs0sinvVQ0SNGF10keCjfTHPltvoykWPjHzdsf0YRKDsyZ0hZqen/PPcQvOY55jCJtYiuemBfk3dHf/+N/x3cnvDRyYWK3R9xy0kjPdWZ4DziYdOMVcwkQ5PZlOVCT7HfeqnODzCOmXmGTq9+h5xqwGzc65/l00Y+U+x7AjcuybYJDBOoFAHhYfrK8UQQYfvy1SlzGvt4Pg3z+pypV4TBPXva9IX+5hf9xVo+OXxR1V/iChZX+0GiQyPjuSwGBIF2zsuIM+qUDXukQxuxKzmyvxdfoqsteQTFzaylmDhgJI4GJ30OnZOUfJrFUq9c4h6Z/N89GU/Lej/dAFhE80caXShvOIvuQQu+5bgnIaJHCBnjsQJAw9OGyQSdhx72ZLaJq1CvjFl23Lxw8Rfd315l55rdbMw5K52aEq0KfH5R5ryOCyq827BQfH8DImGb0cL63sPWZ5jo5+iV2N5HXzeb7gFj+8WJUt2MerR5DpOwPgl5m9k3LSWQOlMtuotozt7mRBqGM9vdBPyqofA6YeRdg0HWJh79G0LchDKsR7aFdt2/4ApajW8g==
+api: eJzdVU1v2zAM/SsCz1pT9OhbWnRAhxUrmmw7BMGg2Eyi1pZUiUprGP7vA2U7cdqu67DDgF0S8Usm+R6pBkhtAmQLuNypMirS1sBSgnXok3BVQDbYECQUGHKvXfI7GIQSFZLXubBGePsYhF2LQpGSwiNFb7TZiJBbj0GsrReo8i37nYiZw1yv6z78RBfC+kEwqkJBVugCDbETbXGwgYSAefSaasgWDZyj8uinkbaQLZbtUoLHh4iBzm1RQ9ZAbg2hIT4q50qdp/Imd4ELaSDkW6wUn0hTiaPabrt7QALVjg12dYc5y85zm0hj4LgusfEN153md4G6SEGdTyCvzQZaCVz9q4YjCF61u9LWFRqakaIYXnFqWwnauEgjm/Je1SBBE1avxkiwkf44ZuNtNMXcJ2TeH9h2AGqPBbOzGlrZZb1P5fj+ZdsHBmdN6Lp7dnrKf8e8ncU8xxDWsRR7poP8G450X/zvSNLN7DuAM7FaoX8DuP6mBFErWb+1vFucTbPlFPMDJsrpydlERbI/cKfKCe7X0nDENPp+h5731vKwB2YMT5fseBvsU9wSuZQIu0EGq+QEsj98tL5SBBl8+j5PzGXYbw9L5PJJVa7EYxQZlqFhAxoH+Zh0I/Xz3o+A6cdyMaiWh7Eb647G6mBIF6ztmGCfVaBrXaKYXonpzZX4dvYis5cumbiwlbMGDQWQwM3uXM9OTjlLRq1SiVp90b96I0ab998+Fz0LCJ9o4kqlDdcRfckpduxbgHIaJHCD9gwECQcOHgRkELbM3WwBTbNSAb/6sm1Z/RDR1x03d8prtWIcFozNFlWBPj1Y91hDBhddbz7MOTl2L2Oasufbp5VDxDTP0dGbvsvReN18mc2Z4v0rWNmCY7x6BJl+M+BlmrBKk5N0DZTKbKLasG93Jw+EOp6nZ/OTqhq2hKlHGTZN5zG392jaFmRfCrEMLa+En65a894=
 sidebar_class_name: "post api-method"
 info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
@@ -102,6 +102,14 @@ Evaluate a metric on rows of data, returning scores for each row. Specify metric
                   className={"openapi-schema__name"}
                 >
                    object
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
                 </span>
               </span>
             </summary><div
@@ -149,7 +157,7 @@ Evaluate a metric on rows of data, returning scores for each row. Specify metric
         </SchemaItem><SchemaItem
           collapsible={false}
           name={"input"}
-          required={false}
+          required={true}
           schemaName={"string[]"}
           qualifierMessage={undefined}
           schema={{"type":"array","items":{"type":"string"}}}
@@ -158,7 +166,7 @@ Evaluate a metric on rows of data, returning scores for each row. Specify metric
         </SchemaItem><SchemaItem
           collapsible={false}
           name={"output"}
-          required={false}
+          required={true}
           schemaName={"string[]"}
           qualifierMessage={undefined}
           schema={{"type":"array","items":{"type":"string"}}}
@@ -167,7 +175,7 @@ Evaluate a metric on rows of data, returning scores for each row. Specify metric
         </SchemaItem><SchemaItem
           collapsible={false}
           name={"groundTruth"}
-          required={false}
+          required={true}
           schemaName={"string[]"}
           qualifierMessage={undefined}
           schema={{"type":"array","items":{"type":"string"}}}
@@ -251,6 +259,14 @@ Evaluate a metric on rows of data, returning scores for each row. Specify metric
                                 className={"openapi-schema__name"}
                               >
                                  object
+                              </span><span
+                                className={"openapi-schema__divider"}
+                              >
+                                
+                              </span><span
+                                className={"openapi-schema__required"}
+                              >
+                                required
                               </span>
                             </span>
                           </summary><div
@@ -298,7 +314,7 @@ Evaluate a metric on rows of data, returning scores for each row. Specify metric
                       </SchemaItem><SchemaItem
                         collapsible={false}
                         name={"scores"}
-                        required={false}
+                        required={true}
                         schemaName={"number[]"}
                         qualifierMessage={undefined}
                         schema={{"type":"array","items":{"type":"number"}}}
