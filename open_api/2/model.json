@@ -5,7 +5,19 @@
     "description": "LastMile AI API V2: Components",
     "version": "2.0"
   },
-  "servers": [],
+  "options": {
+    "servers": [
+      {
+        "url": "https://lastmileai.dev2",
+        "description": "REST API surface for the LastMile platform."
+      }
+    ]
+  },
+  "servers": [
+    {
+      "url": "https://your-custom-url.com"
+    }
+  ],
   "security": [
     {
       "BearerAuth": []
