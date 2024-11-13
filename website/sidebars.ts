@@ -85,7 +85,17 @@ const sidebars: SidebarsConfig = {
         title: "Overview",
         description: "Some mock description text here",
       },
-      items: require("./docs/api/sidebar.js"),
+      items: [
+        {
+          type: "doc",
+          id: "api-keys",
+        },
+        {
+          type: "doc",
+          id: "sdk",
+        },
+        ...require("./docs/api/sidebar.js"),
+      ],
       collapsible: true,
       collapsed: true,
     },
