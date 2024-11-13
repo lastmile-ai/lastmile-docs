@@ -66,6 +66,7 @@ const config: Config = {
             sidebarOptions: {
               groupPathsBy: "tag",
             },
+            baseUrl: "https://lastmileai.dev",
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
@@ -73,6 +74,23 @@ const config: Config = {
   ],
   themes: ["docusaurus-theme-openapi-docs"],
   themeConfig: {
+    languageTabs: [
+      {
+        highlight: "curl",
+        language: "curl",
+        logoClass: "curl",
+      },
+      {
+        highlight: "python",
+        language: "python",
+        logoClass: "python",
+      },
+      {
+        highlight: "javascript",
+        language: "nodejs",
+        logoClass: "nodejs",
+      },
+    ],
     navbar: {
       logo: {
         alt: "LastMile AI",

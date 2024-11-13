@@ -1,0 +1,49 @@
+---
+id: api-keys
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import constants from "@site/core/tabConstants";
+
+# Manage API keys
+
+## Get your LastMile API Key
+
+- Log in or sign up at https://lastmileai.dev
+- Navigate to https://lastmileai.dev/apikeys
+- Click `+ New Key`
+
+![LastMile API Key](/img/lastmile-api-key.png)
+
+## Use your LastMile API Key
+
+## Managing External API
+
+### Configure Weights & Biases API token
+
+![PyPI](https://img.shields.io/pypi/v/lastmile?label=lastmile)
+
+The [LastMile Python library](https://pypi.org/project/lastmile/) provides pythonic access to the LastMile REST API from any Python 3.7+ application.
+
+#### Installation
+
+```bash
+# install from PyPI
+pip install lastmile
+```
+
+#### Usage
+
+```python
+import os
+from lastmile import Lastmile
+
+client = Lastmile(
+    # This is the default and can be omitted
+    bearer_token=os.environ.get("LASTMILE_API_TOKEN"),
+)
+
+dataset = client.datasets.create()
+print(dataset.dataset)
+```
