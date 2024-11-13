@@ -55,7 +55,7 @@
         ],
         "summary": "Upload Dataset File",
         "operationId": "UploadDatasetFile",
-        "description": "Initiate a file upload to a Dataset. Call FinalizeSingleDatasetFileUpload to complete the upload with the presigned URL returned from this call.",
+        "description": "Initiate a file upload to a Dataset. Call FinalizeSingleDatasetFileUpload\n to complete the upload with the presigned URL returned from this call.",
         "security": [
           {
             "BearerAuth": []
@@ -91,7 +91,7 @@
         ],
         "summary": "Finalize Single Dataset File Upload",
         "operationId": "FinalizeSingleDatasetFileUpload",
-        "description": "Finalize a Dataset file upload. This call should be made after the file has been uploaded to the S3 URL returned from UploadDatasetFile.",
+        "description": "Finalize a Dataset file upload. This call should be made after the file has\n been uploaded to the S3 URL returned from UploadDatasetFile.",
         "security": [
           {
             "BearerAuth": []
@@ -271,7 +271,7 @@
         ],
         "summary": "Evaluate",
         "operationId": "Evaluate",
-        "description": "Evaluate a metric on rows of data, returning scores for each row. Specify metric.id or metric.name to identify the metric.",
+        "description": "Evaluate a metric on rows of data, returning scores for each row. Specify\n metric.id or metric.name to identify the metric.",
         "security": [
           {
             "BearerAuth": []
@@ -307,7 +307,7 @@
         ],
         "summary": "Evaluate Dataset",
         "operationId": "EvaluateDataset",
-        "description": "Evaluate a metric on a dataset, returning scores for each example. Specify metric.id or metric.name to identify the metric.",
+        "description": "Evaluate a metric on a dataset, returning scores for each example. Specify\n metric.id or metric.name to identify the metric.",
         "security": [
           {
             "BearerAuth": []
@@ -451,7 +451,7 @@
         ],
         "summary": "Submit Fine Tune Job",
         "operationId": "SubmitFineTuneJob",
-        "description": "Step 2 of 2: Submit the job configuration created by CreateFineTuneJob to initiate a job.",
+        "description": "Step 2 of 2: Submit the job configuration created by CreateFineTuneJob to\n initiate a job.",
         "security": [
           {
             "BearerAuth": []
@@ -595,7 +595,7 @@
         ],
         "summary": "Create Pseudo Label Job",
         "operationId": "CreatePseudoLabelJob",
-        "description": "Step 1 of 2: Create a new job configuration for LLM Judge labeling, to be subsequently submitted by calling SubmitPseudoLabelJob.",
+        "description": "Step 1 of 2: Create a new job configuration for LLM Judge labeling, to be\n subsequently submitted by calling SubmitPseudoLabelJob.",
         "security": [
           {
             "BearerAuth": []
@@ -631,7 +631,7 @@
         ],
         "summary": "Submit Pseudo Label Job",
         "operationId": "SubmitPseudoLabelJob",
-        "description": "Step 2 of 2: Submit the job configuration created by CreatePseudoLabelJob to initiate an LLM Judge labeling job.",
+        "description": "Step 2 of 2: Submit the job configuration created by CreatePseudoLabelJob\n to initiate an LLM Judge labeling job.",
         "security": [
           {
             "BearerAuth": []
@@ -706,147 +706,12 @@
       }
     },
     "schemas": {
-      "lmai.proto.model_fine_tuning.v1.DatasetId": {
-        "title": "DatasetId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.DatasetFileId": {
-        "title": "DatasetFileId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.DatasetFileColumnId": {
-        "title": "DatasetFileColumnId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.DataRowId": {
-        "title": "DataRowId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.OperationId": {
-        "title": "OperationId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.UserId": {
-        "title": "UserId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.OrganizationId": {
-        "title": "OrganizationId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.MetricBaseModelId": {
-        "title": "MetricBaseModelId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.ModelId": {
-        "title": "ModelId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.ModelDeploymentId": {
-        "title": "ModelDeploymentId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.ModelFileId": {
-        "title": "ModelFileId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.JobId": {
-        "title": "JobId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.FineTuneJobConfigId": {
-        "title": "FineTuneJobConfigId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.PseudoLabelJobConfigId": {
-        "title": "PseudoLabelJobConfigId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
-      "lmai.proto.model_fine_tuning.v1.DVCRepoId": {
-        "title": "DVCRepoId",
-        "type": "object",
-        "properties": {
-          "value": {
-            "type": "string"
-          }
-        }
-      },
       "lmai.proto.model_fine_tuning.v1.ModelDeployment": {
         "title": "ModelDeployment",
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.ModelDeploymentId"
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -857,7 +722,7 @@
             "format": "date-time"
           },
           "modelId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.ModelId"
+            "type": "string"
           },
           "status": {
             "type": "string"
@@ -869,17 +734,24 @@
             "type": "string",
             "description": "The ID of the job coordinating the deployment, if one exists."
           }
-        }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "modelId",
+          "status"
+        ]
       },
       "lmai.proto.model_fine_tuning.v1.MetricBaseModel": {
         "title": "MetricBaseModel",
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.MetricBaseModelId"
+            "type": "string"
           },
           "modelId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.ModelId"
+            "type": "string"
           },
           "baseModelArchitecture": {
             "type": "string"
@@ -888,6 +760,11 @@
             "type": "string"
           }
         },
+        "required": [
+          "id",
+          "modelId",
+          "baseModelArchitecture"
+        ],
         "description": "Information about a base model corresponding to a metric"
       },
       "lmai.proto.model_fine_tuning.v1.ModelCard": {
@@ -895,7 +772,7 @@
         "type": "object",
         "properties": {
           "modelId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.ModelId"
+            "type": "string"
           },
           "name": {
             "type": "string"
@@ -949,7 +826,22 @@
               "type": "string"
             }
           }
-        }
+        },
+        "required": [
+          "modelId",
+          "name",
+          "description",
+          "deploymentStatus",
+          "createdAt",
+          "updatedAt",
+          "modelSize",
+          "purpose",
+          "trainingProgress",
+          "baseModelArchitecture",
+          "values",
+          "tags",
+          "columns"
+        ]
       },
       "lmai.proto.model_fine_tuning.v1.ModelCard.ValuesEntry": {
         "title": "ValuesEntry",
@@ -961,14 +853,18 @@
           "value": {
             "type": "string"
           }
-        }
+        },
+        "required": [
+          "key",
+          "value"
+        ]
       },
       "lmai.proto.model_fine_tuning.v1.Model": {
         "title": "Model",
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.ModelId"
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -983,7 +879,7 @@
             "format": "date-time"
           },
           "userId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.UserId"
+            "type": "string"
           },
           "metricBaseModel": {
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.MetricBaseModel"
@@ -992,6 +888,12 @@
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.ModelCard"
           }
         },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "metricBaseModel"
+        ],
         "description": "Definition for the model"
       },
       "lmai.proto.model_fine_tuning.v1.ModelFile": {
@@ -999,7 +901,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.ModelFileId"
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -1010,7 +912,7 @@
             "format": "date-time"
           },
           "modelId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.ModelId"
+            "type": "string"
           },
           "contentMd5Hash": {
             "type": "string"
@@ -1021,6 +923,14 @@
             "maximum": 9223372036854775807
           }
         },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "modelId",
+          "contentMd5Hash",
+          "fileSizeBytes"
+        ],
         "description": "Actual file asset corresponding to a model"
       },
       "lmai.proto.model_fine_tuning.v1.TrainingProgress": {
@@ -1028,7 +938,7 @@
         "type": "object",
         "properties": {
           "jobId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.JobId"
+            "type": "string"
           },
           "epoch": {
             "type": "integer",
@@ -1049,6 +959,14 @@
             "format": "date-time"
           }
         },
+        "required": [
+          "jobId",
+          "epoch",
+          "loss",
+          "accuracy",
+          "progress",
+          "timestamp"
+        ],
         "description": "Progress metrics from model training."
       },
       "lmai.proto.model_fine_tuning.v1.User": {
@@ -1056,9 +974,12 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.UserId"
+            "type": "string"
           }
         },
+        "required": [
+          "id"
+        ],
         "description": "Basic user. TODO: Merge with other notions of a user."
       },
       "lmai.proto.model_fine_tuning.v1.Organization": {
@@ -1066,9 +987,12 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.OrganizationId"
+            "type": "string"
           }
         },
+        "required": [
+          "id"
+        ],
         "description": "Organization - collection of Users with shared assets. We do not prescribe\n here any semantics about whether a user can be in more than one organization,\n or any other relationships."
       },
       "lmai.proto.model_fine_tuning.v1.Role": {
@@ -1088,6 +1012,11 @@
             "description": "\"Owner\" permissions."
           }
         },
+        "required": [
+          "basic",
+          "editor",
+          "owner"
+        ],
         "description": "A role for a principal (likely a user) within an organization. Mostly used\n for Authorization. Anticipating the need for more roles here, we space out\n the values to leave unused numbers so that we can add more later while\n preserving the natural ordering of permissions. We don't prescribe specific\n authorizations here despite the suggestive names."
       },
       "lmai.proto.model_fine_tuning.v1.OrganizationRole": {
@@ -1095,12 +1024,16 @@
         "type": "object",
         "properties": {
           "organizationId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.OrganizationId"
+            "type": "string"
           },
           "role": {
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.Role"
           }
         },
+        "required": [
+          "organizationId",
+          "role"
+        ],
         "description": "A role specified in the context of a particular organization. Can be used as\n its own Principal as a convenient way to define groups of permissions."
       },
       "lmai.proto.model_fine_tuning.v1.Principal": {
@@ -1108,15 +1041,20 @@
         "type": "object",
         "properties": {
           "userId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.UserId"
+            "type": "string"
           },
           "organizationId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.OrganizationId"
+            "type": "string"
           },
           "organizationRole": {
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.OrganizationRole"
           }
         },
+        "required": [
+          "userId",
+          "organizationId",
+          "organizationRole"
+        ],
         "description": "A Principal is an entity in an authorization context, such as a user\n requesting read access to a resource or an organization who owns it."
       },
       "lmai.proto.model_fine_tuning.v1.Subject": {
@@ -1124,19 +1062,24 @@
         "type": "object",
         "properties": {
           "datasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string",
+            "description": "A dataset which a principal may or may not have access to."
           },
           "modelId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.ModelId"
+            "type": "string",
+            "description": "A model _definition_ which a principal may or may not have access to."
           },
           "modelFileId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.ModelFileId"
+            "type": "string",
+            "description": "A model _file_ which a principal may or may not have access to. In\n practice, this likely matches the model itself."
           },
           "fineTuneJobId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.JobId"
+            "type": "string",
+            "description": "A job, in the sense of an async/worker job. Ex: a user may be able to see\n a fine tune job but not edit/cancel it."
           },
           "operationId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.OperationId"
+            "type": "string",
+            "description": "An operation. Ex: a user may be able to see datasets without their full\n lineage (as operations)."
           },
           "targetPrincipal": {
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.Principal"
@@ -1146,6 +1089,15 @@
             "description": "When true, this flag dictates that the Subject represents the entire\n resource type. The `id` field must also be a literal \"*\" or else we should\n fail validation, to avoid magic strings or unexpected auth configurations.\n A wildcard subject is especially important for creating new resources of a\n type (CREATE), and listing (LIST), since in each case there is no existing\n ID to base authorization on."
           }
         },
+        "required": [
+          "datasetId",
+          "modelId",
+          "modelFileId",
+          "fineTuneJobId",
+          "operationId",
+          "targetPrincipal",
+          "isWildcard"
+        ],
         "description": "A Subject is an entity to which access can be granted, such as a dataset."
       },
       "lmai.proto.model_fine_tuning.v1.Predicate": {
@@ -1162,6 +1114,11 @@
             "type": "string"
           }
         },
+        "required": [
+          "principal",
+          "subject",
+          "scope"
+        ],
         "description": "A Predicate is either a statement or a query of authorization - when a\n Principal, Subject, and Scope are specified, it has a positive or negative\n answer. For example, \"can user 4 access resource 9 to write?\" or something\n like \"user_4:resource_9:write\". When the Principal is omitted, it is a\n Clause, and can be used to specify an authorization constraint on a resource.\n For example, simply \"resource_9:write\", tagging a concrete action with its\n authorization requirements. When the Subject is itself a Principal, the\n Predicate expresses a relation between the Principals. For example, an owner\n user 11 might have write access to a basic user 3, or write access to a whole\n org. Importantly, the target (subject, scope) must have authorization not\n greater than the principal, since the predicate enables \"impersonation\". So,\n an organization should typically not be authorized to act as an individual\n user this way, since it would confer the same authorization to every member."
       },
       "lmai.proto.model_fine_tuning.v1.Clause": {
@@ -1175,6 +1132,10 @@
             "type": "string"
           }
         },
+        "required": [
+          "subject",
+          "scope"
+        ],
         "description": "A Clause is a Predicate not bound to a Principal, specifying a requirement\n for authorization. Example: \"dataset_5:write\" might represent the \"write\"\n scope on a resource \"dataset_5\""
       },
       "lmai.proto.model_fine_tuning.v1.Policy": {
@@ -1187,7 +1148,10 @@
               "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.Clause"
             }
           }
-        }
+        },
+        "required": [
+          "clauses"
+        ]
       },
       "lmai.proto.model_fine_tuning.v1.ChatMessage": {
         "title": "ChatMessage",
@@ -1202,6 +1166,10 @@
             "description": "The content of the message."
           }
         },
+        "required": [
+          "role",
+          "content"
+        ],
         "description": "Represents a message from the user or the assistant."
       },
       "lmai.proto.model_fine_tuning.v1.ChatCompletionRequest": {
@@ -1237,6 +1205,14 @@
             "description": "The top_p value to use for the completion."
           }
         },
+        "required": [
+          "vendor",
+          "model",
+          "messages",
+          "maxTokens",
+          "temperature",
+          "topP"
+        ],
         "description": "The list of messages in the conversation so far."
       },
       "lmai.proto.model_fine_tuning.v1.PromptTemplate": {
@@ -1250,7 +1226,11 @@
             "type": "string",
             "description": "The template string that defines the prompt"
           }
-        }
+        },
+        "required": [
+          "id",
+          "template"
+        ]
       },
       "lmai.proto.model_fine_tuning.v1.DataColumn": {
         "title": "DataColumn",
@@ -1263,16 +1243,22 @@
             "type": "string"
           },
           "sourceOperationId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.OperationId"
+            "type": "string"
           }
-        }
+        },
+        "required": [
+          "name",
+          "type",
+          "sourceOperationId"
+        ]
       },
       "lmai.proto.model_fine_tuning.v1.Dataset": {
         "title": "Dataset",
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string",
+            "description": "The ID of the dataset."
           },
           "createdAt": {
             "type": "string",
@@ -1291,7 +1277,8 @@
             "description": "Human-readable description of the dataset, if one exists."
           },
           "ownerUserId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.UserId"
+            "type": "string",
+            "description": "The ID of the user who owns the dataset."
           },
           "numRows": {
             "type": "integer",
@@ -1320,6 +1307,16 @@
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetLabelState"
           }
         },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "ownerUserId",
+          "numRows",
+          "numCols",
+          "initializationStatus",
+          "columns"
+        ],
         "description": "The columns present in the latest DatasetFile for this dataset"
       },
       "lmai.proto.model_fine_tuning.v1.DatasetFileInfo": {
@@ -1327,7 +1324,8 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetFileId"
+            "type": "string",
+            "description": "The ID of the dataset file."
           },
           "createdAt": {
             "type": "string",
@@ -1338,7 +1336,8 @@
             "format": "date-time"
           },
           "datasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string",
+            "description": "The ID of the corresponding dataset."
           },
           "contentMd5Hash": {
             "type": "string"
@@ -1364,14 +1363,26 @@
               "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetColumnInfo"
             }
           }
-        }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "datasetId",
+          "contentMd5Hash",
+          "fileSizeBytes",
+          "numRows",
+          "numCols",
+          "columns"
+        ]
       },
       "lmai.proto.model_fine_tuning.v1.DatasetColumnInfo": {
         "title": "DatasetColumnInfo",
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetFileId"
+            "type": "string",
+            "description": "The ID of the dataset file."
           },
           "createdAt": {
             "type": "string",
@@ -1394,7 +1405,14 @@
           "dtype": {
             "type": "string"
           }
-        }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "index",
+          "literalName"
+        ]
       },
       "lmai.proto.model_fine_tuning.v1.DatasetView": {
         "title": "DatasetView",
@@ -1422,14 +1440,20 @@
               "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetColumnInfo"
             }
           }
-        }
+        },
+        "required": [
+          "numRows",
+          "numCols",
+          "data",
+          "columns"
+        ]
       },
       "lmai.proto.model_fine_tuning.v1.DataRow": {
         "title": "DataRow",
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DataRowId"
+            "type": "string"
           },
           "rowValues": {
             "type": "array",
@@ -1440,6 +1464,10 @@
             "description": "Ordered row values with length always equal to `num_rows` on the\n corresponding view."
           }
         },
+        "required": [
+          "id",
+          "rowValues"
+        ],
         "description": "Ordered row values with length always equal to `num_rows` on the\n corresponding view."
       },
       "lmai.proto.model_fine_tuning.v1.DatasetLabelState": {
@@ -1453,15 +1481,24 @@
           "promptTemplate": {
             "type": "string",
             "description": "aka user general instructions"
+          },
+          "error": {
+            "type": "string",
+            "description": "if the labeling status is error, this field may contain an error message"
           }
-        }
+        },
+        "required": [
+          "labelingStatus",
+          "promptTemplate"
+        ]
       },
       "lmai.proto.model_fine_tuning.v1.FineTuneJob": {
         "title": "FineTuneJob",
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.JobId"
+            "type": "string",
+            "description": "The ID of the fine tune job."
           },
           "createdAt": {
             "type": "string",
@@ -1487,7 +1524,15 @@
           "result": {
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.FineTuneJobResult"
           }
-        }
+        },
+        "required": [
+          "id",
+          "createdAt",
+          "updatedAt",
+          "status",
+          "config",
+          "result"
+        ]
       },
       "lmai.proto.model_fine_tuning.v1.FineTuneJobConfig": {
         "title": "FineTuneJobConfig",
@@ -1502,13 +1547,16 @@
             "description": "Optional description for the job."
           },
           "baselineModelId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.ModelId"
+            "type": "string",
+            "description": "The ID for the model used as the starting point for training."
           },
           "trainDatasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string",
+            "description": "The dataset to use for training, with splits baked in or to be\n derived dynamically"
           },
           "testDatasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string",
+            "description": "The dataset to use for an unbiased evaluation of the model"
           },
           "selectedColumns": {
             "type": "array",
@@ -1518,6 +1566,12 @@
             "description": "Set of columns to be used in fine-tuning.\n Supported columns: input, output, ground_truth\n For example, a task similar to summarization might need output and\n ground_truth."
           }
         },
+        "required": [
+          "baselineModelId",
+          "trainDatasetId",
+          "testDatasetId",
+          "selectedColumns"
+        ],
         "description": "Set of columns to be used in fine-tuning.\n Supported columns: input, output, ground_truth\n For example, a task similar to summarization might need output and\n ground_truth."
       },
       "lmai.proto.model_fine_tuning.v1.FineTuneJobResult": {
@@ -1539,6 +1593,9 @@
             "description": "Url to view the full results and progress (e.g. external W&B url)"
           }
         },
+        "required": [
+          "progress"
+        ],
         "description": "Sequential snapshots of training metrics."
       },
       "lmai.proto.webserver.v2.CreateDatasetRequest": {
@@ -1570,16 +1627,23 @@
           "dataset": {
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.Dataset"
           }
-        }
+        },
+        "required": [
+          "dataset"
+        ]
       },
       "lmai.proto.webserver.v2.UploadDatasetFileRequest": {
         "title": "UploadDatasetFileRequest",
         "type": "object",
         "properties": {
           "datasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string",
+            "description": "The ID of the dataset corresponding to the file."
           }
         },
+        "required": [
+          "datasetId"
+        ],
         "description": "Initiate an upload by requesting a pre-signed S3 upload URL."
       },
       "lmai.proto.webserver.v2.UploadDatasetFileResponse": {
@@ -1589,7 +1653,10 @@
           "s3PresignedPost": {
             "$ref": "#/components/schemas/lmai.proto.webserver.v2.S3PresignedPost"
           }
-        }
+        },
+        "required": [
+          "s3PresignedPost"
+        ]
       },
       "lmai.proto.webserver.v2.S3PresignedPost": {
         "title": "S3PresignedPost",
@@ -1606,6 +1673,10 @@
             "description": "Fields required for the S3 presigned POST request generated by s3 sdk."
           }
         },
+        "required": [
+          "url",
+          "fields"
+        ],
         "description": "Fields required for the S3 presigned POST request generated by s3 sdk."
       },
       "lmai.proto.webserver.v2.S3PresignedPost.FieldsEntry": {
@@ -1618,19 +1689,28 @@
           "value": {
             "type": "string"
           }
-        }
+        },
+        "required": [
+          "key",
+          "value"
+        ]
       },
       "lmai.proto.webserver.v2.FinalizeSingleDatasetFileUploadRequest": {
         "title": "FinalizeSingleDatasetFileUploadRequest",
         "type": "object",
         "properties": {
           "datasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string",
+            "description": "The ID of the dataset corresponding to the file"
           },
           "s3PresignedPost": {
             "$ref": "#/components/schemas/lmai.proto.webserver.v2.S3PresignedPost"
           }
         },
+        "required": [
+          "datasetId",
+          "s3PresignedPost"
+        ],
         "description": "Request to finalize a single dataset file upload"
       },
       "lmai.proto.webserver.v2.FinalizeSingleDatasetFileUploadResponse": {
@@ -1648,9 +1728,12 @@
         "type": "object",
         "properties": {
           "id": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string"
           }
-        }
+        },
+        "required": [
+          "id"
+        ]
       },
       "lmai.proto.webserver.v2.GetDatasetResponse": {
         "title": "GetDatasetResponse",
@@ -1659,17 +1742,22 @@
           "dataset": {
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.Dataset"
           }
-        }
+        },
+        "required": [
+          "dataset"
+        ]
       },
       "lmai.proto.webserver.v2.GetDatasetViewRequest": {
         "title": "GetDatasetViewRequest",
         "type": "object",
         "properties": {
           "datasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string",
+            "description": "The ID of the dataset from which to retrieve content. When specified,\n gets data from the current file in the dataset."
           },
           "datasetFileId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetFileId"
+            "type": "string",
+            "description": "The ID of the (pinned) dataset file from which to retrieve content.\n Requests iterating over pages of results are recommended to use this\n pinned identifier after the first page in order to prevent any effects\n from a dataset changing between the queries."
           },
           "after": {
             "type": "integer",
@@ -1684,6 +1772,10 @@
             "description": "Pagination: The maximum number of results to return on this page."
           }
         },
+        "required": [
+          "datasetId",
+          "datasetFileId"
+        ],
         "description": "Get a view of the data within a dataset."
       },
       "lmai.proto.webserver.v2.GetDatasetViewResponse": {
@@ -1691,15 +1783,20 @@
         "type": "object",
         "properties": {
           "datasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string"
           },
           "datasetFileId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetFileId"
+            "type": "string"
           },
           "datasetView": {
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetView"
           }
-        }
+        },
+        "required": [
+          "datasetId",
+          "datasetFileId",
+          "datasetView"
+        ]
       },
       "lmai.proto.webserver.v2.ListDatasetsRequestFilters": {
         "title": "ListDatasetsRequestFilters",
@@ -1736,16 +1833,23 @@
             "maximum": 9223372036854775807,
             "description": "Total count of datasets which can be listed with applicable\n filters, regardless of page size"
           }
-        }
+        },
+        "required": [
+          "datasets",
+          "totalCount"
+        ]
       },
       "lmai.proto.webserver.v2.RefineLabelsRequest": {
         "title": "RefineLabelsRequest",
         "type": "object",
         "properties": {
           "datasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string"
           }
         },
+        "required": [
+          "datasetId"
+        ],
         "description": "TODO(ankush): Active labeling flow"
       },
       "lmai.proto.webserver.v2.RefineLabelsResponse": {
@@ -1760,9 +1864,12 @@
         "type": "object",
         "properties": {
           "datasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string"
           }
-        }
+        },
+        "required": [
+          "datasetId"
+        ]
       },
       "lmai.proto.webserver.v2.GetDatasetDownloadURLResponse": {
         "title": "GetDatasetDownloadURLResponse",
@@ -1772,7 +1879,10 @@
             "type": "string",
             "description": "The S3 presigned URL to download the dataset file."
           }
-        }
+        },
+        "required": [
+          "downloadUrl"
+        ]
       },
       "lmai.proto.webserver.v2.Metric": {
         "title": "Metric",
@@ -1817,7 +1927,13 @@
               "type": "string"
             }
           }
-        }
+        },
+        "required": [
+          "metric",
+          "input",
+          "output",
+          "groundTruth"
+        ]
       },
       "lmai.proto.webserver.v2.EvaluateResponse": {
         "title": "EvaluateResponse",
@@ -1832,7 +1948,11 @@
               "type": "number"
             }
           }
-        }
+        },
+        "required": [
+          "metric",
+          "scores"
+        ]
       },
       "lmai.proto.webserver.v2.EvaluateDatasetRequest": {
         "title": "EvaluateDatasetRequest",
@@ -1842,9 +1962,13 @@
             "$ref": "#/components/schemas/lmai.proto.webserver.v2.Metric"
           },
           "datasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string"
           }
-        }
+        },
+        "required": [
+          "metric",
+          "datasetId"
+        ]
       },
       "lmai.proto.webserver.v2.EvaluateDatasetResponse": {
         "title": "EvaluateDatasetResponse",
@@ -1859,7 +1983,11 @@
               "type": "number"
             }
           }
-        }
+        },
+        "required": [
+          "metric",
+          "scores"
+        ]
       },
       "lmai.proto.webserver.v2.ListMetricsRequest": {
         "title": "ListMetricsRequest",
@@ -1878,7 +2006,10 @@
               "$ref": "#/components/schemas/lmai.proto.webserver.v2.Metric"
             }
           }
-        }
+        },
+        "required": [
+          "metrics"
+        ]
       },
       "lmai.proto.webserver.v2.GetMetricRequest": {
         "title": "GetMetricRequest",
@@ -1888,6 +2019,9 @@
             "$ref": "#/components/schemas/lmai.proto.webserver.v2.Metric"
           }
         },
+        "required": [
+          "metric"
+        ],
         "description": "Requested metric must have at least id or name set."
       },
       "lmai.proto.webserver.v2.GetMetricResponse": {
@@ -1898,6 +2032,9 @@
             "$ref": "#/components/schemas/lmai.proto.webserver.v2.Metric"
           }
         },
+        "required": [
+          "metric"
+        ],
         "description": "Returns a full metric object with all fields set."
       },
       "lmai.proto.webserver.v2.CreateFineTuneJobRequest": {
@@ -1908,6 +2045,9 @@
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.FineTuneJobConfig"
           }
         },
+        "required": [
+          "fineTuneJobConfig"
+        ],
         "description": "Create a new Fine Tune Job\n Initialized with the provided configuration parameters."
       },
       "lmai.proto.webserver.v2.CreateFineTuneJobResponse": {
@@ -1915,39 +2055,52 @@
         "type": "object",
         "properties": {
           "jobId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.JobId"
+            "type": "string"
           }
-        }
+        },
+        "required": [
+          "jobId"
+        ]
       },
       "lmai.proto.webserver.v2.SubmitFineTuneJobRequest": {
         "title": "SubmitFineTuneJobRequest",
         "type": "object",
         "properties": {
           "jobId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.JobId"
+            "type": "string"
           },
           "fineTuneJobConfig": {
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.FineTuneJobConfig"
           }
-        }
+        },
+        "required": [
+          "jobId",
+          "fineTuneJobConfig"
+        ]
       },
       "lmai.proto.webserver.v2.SubmitFineTuneJobResponse": {
         "title": "SubmitFineTuneJobResponse",
         "type": "object",
         "properties": {
           "jobId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.JobId"
+            "type": "string"
           }
-        }
+        },
+        "required": [
+          "jobId"
+        ]
       },
       "lmai.proto.webserver.v2.GetFineTuneJobStatusRequest": {
         "title": "GetFineTuneJobStatusRequest",
         "type": "object",
         "properties": {
           "jobId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.JobId"
+            "type": "string"
           }
-        }
+        },
+        "required": [
+          "jobId"
+        ]
       },
       "lmai.proto.webserver.v2.GetFineTuneJobStatusResponse": {
         "title": "GetFineTuneJobStatusResponse",
@@ -1959,7 +2112,11 @@
           "fineTuneJobResult": {
             "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.FineTuneJobResult"
           }
-        }
+        },
+        "required": [
+          "status",
+          "fineTuneJobResult"
+        ]
       },
       "lmai.proto.webserver.v2.ListFineTuneJobsRequestFilters": {
         "title": "ListFineTuneJobsRequestFilters",
@@ -1999,7 +2156,11 @@
             "maximum": 9223372036854775807,
             "description": "Total count of fine tune jobs which can be listed with applicable\n filters, regardless of page size"
           }
-        }
+        },
+        "required": [
+          "jobs",
+          "totalCount"
+        ]
       },
       "lmai.proto.webserver.v2.ListBaseModelsRequest": {
         "title": "ListBaseModelsRequest",
@@ -2018,7 +2179,10 @@
               "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.Model"
             }
           }
-        }
+        },
+        "required": [
+          "models"
+        ]
       },
       "lmai.proto.webserver.v2.PseudoLabelJobConfig": {
         "title": "PseudoLabelJobConfig",
@@ -2033,13 +2197,16 @@
             "description": "Optional description for the job."
           },
           "datasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string",
+            "description": "ID of the main dataset to be pseudo-labeled"
           },
           "fewShotDatasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string",
+            "description": "ID of the dataset containing few-shot examples. Optional."
           },
           "activeLabeledDatasetId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.DatasetId"
+            "type": "string",
+            "description": "ID of the actively labeled dataset. Optional. If null, this job is for\n active learning."
           },
           "selectedColumns": {
             "type": "array",
@@ -2060,9 +2227,17 @@
           },
           "skipActiveLabeling": {
             "type": "boolean",
-            "description": "If true, skip active labeling, which involves an intermediate Dataset created for human labeling."
+            "description": "If true, skip active labeling, which involves an intermediate Dataset\n created for human labeling."
           }
         },
+        "required": [
+          "datasetId",
+          "selectedColumns",
+          "chatCompletionConfig",
+          "promptTemplate",
+          "baseEvaluationMetric",
+          "skipActiveLabeling"
+        ],
         "description": "Subset of columns to be used in pseudo-labeling.\n Expected columns: input, output, ground_truth\n For example, a summarization task might not need an input column.\n TODO: Should this be repeated EvaluationMetricParameter enum?"
       },
       "lmai.proto.webserver.v2.CreatePseudoLabelJobRequest": {
@@ -2072,46 +2247,62 @@
           "pseudoLabelJobConfig": {
             "$ref": "#/components/schemas/lmai.proto.webserver.v2.PseudoLabelJobConfig"
           }
-        }
+        },
+        "required": [
+          "pseudoLabelJobConfig"
+        ]
       },
       "lmai.proto.webserver.v2.CreatePseudoLabelJobResponse": {
         "title": "CreatePseudoLabelJobResponse",
         "type": "object",
         "properties": {
           "jobId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.JobId"
+            "type": "string"
           }
-        }
+        },
+        "required": [
+          "jobId"
+        ]
       },
       "lmai.proto.webserver.v2.SubmitPseudoLabelJobRequest": {
         "title": "SubmitPseudoLabelJobRequest",
         "type": "object",
         "properties": {
           "jobId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.JobId"
+            "type": "string"
           },
           "pseudoLabelJobConfig": {
             "$ref": "#/components/schemas/lmai.proto.webserver.v2.PseudoLabelJobConfig"
           }
-        }
+        },
+        "required": [
+          "jobId",
+          "pseudoLabelJobConfig"
+        ]
       },
       "lmai.proto.webserver.v2.SubmitPseudoLabelJobResponse": {
         "title": "SubmitPseudoLabelJobResponse",
         "type": "object",
         "properties": {
           "jobId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.JobId"
+            "type": "string"
           }
-        }
+        },
+        "required": [
+          "jobId"
+        ]
       },
       "lmai.proto.webserver.v2.GetPseudoLabelJobStatusRequest": {
         "title": "GetPseudoLabelJobStatusRequest",
         "type": "object",
         "properties": {
           "jobId": {
-            "$ref": "#/components/schemas/lmai.proto.model_fine_tuning.v1.JobId"
+            "type": "string"
           }
-        }
+        },
+        "required": [
+          "jobId"
+        ]
       },
       "lmai.proto.webserver.v2.GetPseudoLabelJobStatusResponse": {
         "title": "GetPseudoLabelJobStatusResponse",
@@ -2123,7 +2314,11 @@
           "pseudoLabelJobResult": {
             "$ref": "#/components/schemas/lmai.proto.webserver.v2.PseudoLabelJobConfig"
           }
-        }
+        },
+        "required": [
+          "status",
+          "pseudoLabelJobResult"
+        ]
       },
       "google.protobuf.Value": {
         "type": "object",

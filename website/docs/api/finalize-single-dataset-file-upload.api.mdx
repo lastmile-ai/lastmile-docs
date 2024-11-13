@@ -1,11 +1,11 @@
 ---
 id: finalize-single-dataset-file-upload
 title: "Finalize Single Dataset File Upload"
-description: "Finalize a Dataset file upload. This call should be made after the file has been uploaded to the S3 URL returned from UploadDatasetFile."
+description: "Finalize a Dataset file upload. This call should be made after the file has"
 sidebar_label: "Finalize Single Dataset File Upload"
 hide_title: true
 hide_table_of_contents: true
-api: eJzlV99v2zYQ/leIe2Ziw16bzW9O2mAe2i2Ine3BMAJaOllsKFIlqSSuof99OFK2FVutO2wZBuwlkMn7wbv77u7LBrxYORjN4Z3wwqGHBQdTohVeGj1JYQTXUgslv+BU6pXCRuxaKrwrlREpcEjRJVaWpNGSZ4I1wiyTClkVxM/ZLJeOJUIp5nJTqZQtkRUiRSYyj5b5HKN8LhxbIupGEVPmTbidDtnd7Qdm0VdWY8oyawoWH9N63TlwcJhUVvo1jOYbuERh0Y4rn8NovqgXHCx+rtD5S5OuYbSBxGiP2tOnKEslk5CD3idHYW3AJTkWgr689ApPZ+Y2mgcOfl2SvFl+woR+l5ZS7CU6MpdGRUr23va73eEp9UehKgyqUcx5K/UK6rrm4IY3Fp1caUxvjPNtB9ODq1NuKqs6nHDIJKrUta6EtWINHKTHwr1MF0m+196uT3p7wHWnt28FewhD8saoxtISSozdoqfcBs5ufpvOWAMDtkJNuMeULdfMDZlLH87hXzTc4IVgnu17yAVwsfS4lSjqmlDsSqNdzNug3w+QemF4WiUJOpdViu1aG/gr4D0+5HsBT5odkKfjic7MSTOyq2GC9t9rmsQiFWvsj+85ZMYWwsOIgsAzLwskWFZl+ldVXrHrm8J+TN/8LFz+la5VOJVf8HLtsd28UntcoQUOhdSyqAoYnf00GAyHF4P+8O2Pb364uHjb7/c5FOI5Xnfc1hx0Vdyap1eyfGXUa1hOjKoK/V2jrKnTVdD4H4BV6hSf/+mUH86/CTlhJgvTNBaDPUmfSx1O2hPwnB6lpEcr1K+i6EjOofFZjqxRYFoUuBvb0VEwmEYTHXmuOxbMdtw1vKUZ2VKvTg/tmkOBPjdEr8q4fEtBvAR6opS9QU9U3tzjo1C9xkRvuxHuo+l7MnlfbRmYQ/uIlnjcYs96pjTAI4La3GcXXu59SbpBDEawDELAm4/rLRJ++WMWthUthts9ZXr/LIoyTvAXs6xBa2vYdLCQwCZaqGtIxLzZ/PubQ2uLOsAxM+12+iCc/0g5Hk/Y+GbCfh8c1f9YZMSuTFEajdo7coTWRdHBeZ9eTYUpRFiFOkBsz2zjAtzRW2pj1s2GW6zyv0SMGwR4fPa9Ugmpw1yIDC8icQ6ilMCBMrlDI+zWVqjZ1xG54JCHSs9hs1kKh3dW1TUdf67QriNOH4WVYkkFnC9qDjmKFG0LA1cxc2czeuweCUdcpeZbjXGSYOm/KbtotR6RNIJ7w/8Lk5KOFU/Aw98RAP0zRNqhi8LZBpTQq0qsSDbaJEiKl7110Eshqu1S0evWCzebKDEzD6jrGngTiqffAe71nw1FpVI=
+api: eJzdV1Fv2zYQ/ivEPSuxYa/N5rckbTAP7RbEzvbgGQEtniw2FKmSVBrX0H8fjpQsJXbntliGYS+GbN4dT999d/d5C56vHUwW8IZ77tDDMgFTouVeGj0VMIErqbmSn3Em9VphY3YlFd6WynABCQh0qZUlefTsGWeNMcukQlYF81M2z6VjKVeKudxUSrAVsoILZDzzaJnPMdrn3P2p2QpRN64omDfhfDZmtzfvmEVfWY2CZdYULKbTy+8UEnCYVlb6DUwWW7hAbtGeVz6HyWJZLxOw+LFC5y+M2MBkC6nRHrWnR16WSqYBhcEHRy+2BZfmWHB68tIrPI7NTQwPCfhNSfZm9QFT+l5aAtlLdBROREeCe9uaOm+lXu+hO8+RTd8wkwUgGkeWGmvRlUYLqdctSoQi1Am48bVFJ9caxbVxvp//7NnRsUQrq/ZTrBPIJCrhekfcWr6BBKTHwj1FjCzfam83R2+7x83B2x64qvDASR0LKi0KYjS5t8bLep+mlAhrHVhmbMutssWEXf82m7OGJGyNmvoCBVttmBszJ+5P9y4lhHZ4LP+lSzv+7Fd7L4eGlMSSrGtVFxi8I1SvY6Gu433ELxcrMxoOA2+fBJ5VaYrOZZViuwkCyQs0VUzka7uKPPvhewGnOjNHw8jv7sosDKE6gdQilfDcH4qUGVtwDxPKF0+8LELTVqX4VpfvniJPp0cTJiYea/devPqZu/wLra9wJj/jxcZjfwJI7XGNFhIopJZFVcDk5KfRaDw+Gw3Hr3989cPZ2evhcJhAwR/j8YHTOgFdFTfm0wtFvjTqJSKnRlWF/qp52LDxMnj8v/gotcDHfxrd5286pUs6IhOK7JP0udSHX11Jj5arX3lxYIMcgrFxYJoXuJvX8aIQUMQQx5aRpNnc4d4HtEXqaXLL+ptC9FfAs6593qNdT3U90HF2We+tynbiNgqt2Ro0K47ujTqBAn1uSEiWUWGUnPQXDHgpB6MBr7y5wweuBk2IQbuU7mLoOwp5V7Va06F9QEuKddmpuxntkNgdfY23q0nufUm+wQwmsApGkDQPVy19f/ljHgpHu+mmk4ZvH3lRxiXSm7EdaQ4IrCCUeg3S6KNFI2q6k0bL7GgT4Jc0B3pD4h13/j0hez5l59dT9vtoj6r7JhN2aYrSaNSe6kuoRdPR6ZCIS+UoeNjBOnRDp9zj5t3Jd1qV7LDa72nm/5bwbyrv8dEPSsWlDkMsytfIwAXwUkIChOWOhV0nhap9mYnLBPJQ6wVstyvu8NaquqafP1ZoN5GfD9xKvqISLkiA5sgF2h4LLiN2J3NKtuPCnkyqk9bjPE2x9H9ru+y1HElJonnz/6Ywgnws/wRJ+JwA0N898g7dE37bguJ6XfE12caYREr+tKee9VB4q3bZ6U0vw+02WszNPeq6hqR5FU/fA+HrvwAiEvCX
 sidebar_class_name: "post api-method"
 info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
@@ -41,7 +41,8 @@ import TabItem from "@theme/TabItem";
 
 
 
-Finalize a Dataset file upload. This call should be made after the file has been uploaded to the S3 URL returned from UploadDatasetFile.
+Finalize a Dataset file upload. This call should be made after the file has
+ been uploaded to the S3 URL returned from UploadDatasetFile.
 
 <Heading
   id={"request"}
@@ -81,44 +82,14 @@ Finalize a Dataset file upload. This call should be made after the file has been
         style={{"marginLeft":"1rem"}}
       >
         <SchemaItem
-          collapsible={true}
-          className={"schemaItem"}
+          collapsible={false}
+          name={"datasetId"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"The ID of the dataset corresponding to the file"}}
         >
-          <details
-            style={{}}
-            className={"openapi-markdown__details"}
-          >
-            <summary
-              style={{}}
-            >
-              <span
-                className={"openapi-schema__container"}
-              >
-                <strong
-                  className={"openapi-schema__property"}
-                >
-                  datasetId
-                </strong><span
-                  className={"openapi-schema__name"}
-                >
-                   object
-                </span>
-              </span>
-            </summary><div
-              style={{"marginLeft":"1rem"}}
-            >
-              <SchemaItem
-                collapsible={false}
-                name={"value"}
-                required={false}
-                schemaName={"string"}
-                qualifierMessage={undefined}
-                schema={{"type":"string"}}
-              >
-                
-              </SchemaItem>
-            </div>
-          </details>
+          
         </SchemaItem><SchemaItem
           collapsible={true}
           className={"schemaItem"}
@@ -141,6 +112,14 @@ Finalize a Dataset file upload. This call should be made after the file has been
                   className={"openapi-schema__name"}
                 >
                    object
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
                 </span>
               </span>
             </summary><div
@@ -157,7 +136,7 @@ Finalize a Dataset file upload. This call should be made after the file has been
               </div><SchemaItem
                 collapsible={false}
                 name={"url"}
-                required={false}
+                required={true}
                 schemaName={"string"}
                 qualifierMessage={undefined}
                 schema={{"type":"string"}}
@@ -185,6 +164,14 @@ Finalize a Dataset file upload. This call should be made after the file has been
                         className={"openapi-schema__name"}
                       >
                          object[]
+                      </span><span
+                        className={"openapi-schema__divider"}
+                      >
+                        
+                      </span><span
+                        className={"openapi-schema__required"}
+                      >
+                        required
                       </span>
                     </span>
                   </summary><div
@@ -207,7 +194,7 @@ Finalize a Dataset file upload. This call should be made after the file has been
                     </li><SchemaItem
                       collapsible={false}
                       name={"key"}
-                      required={false}
+                      required={true}
                       schemaName={"string"}
                       qualifierMessage={undefined}
                       schema={{"type":"string"}}
@@ -216,7 +203,7 @@ Finalize a Dataset file upload. This call should be made after the file has been
                     </SchemaItem><SchemaItem
                       collapsible={false}
                       name={"value"}
-                      required={false}
+                      required={true}
                       schemaName={"string"}
                       qualifierMessage={undefined}
                       schema={{"type":"string"}}
@@ -318,48 +305,18 @@ Finalize a Dataset file upload. This call should be made after the file has been
                             style={{"marginLeft":"1rem"}}
                           >
                             <SchemaItem
-                              collapsible={true}
-                              className={"schemaItem"}
+                              collapsible={false}
+                              name={"id"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"The ID of the dataset file."}}
                             >
-                              <details
-                                style={{}}
-                                className={"openapi-markdown__details"}
-                              >
-                                <summary
-                                  style={{}}
-                                >
-                                  <span
-                                    className={"openapi-schema__container"}
-                                  >
-                                    <strong
-                                      className={"openapi-schema__property"}
-                                    >
-                                      id
-                                    </strong><span
-                                      className={"openapi-schema__name"}
-                                    >
-                                       object
-                                    </span>
-                                  </span>
-                                </summary><div
-                                  style={{"marginLeft":"1rem"}}
-                                >
-                                  <SchemaItem
-                                    collapsible={false}
-                                    name={"value"}
-                                    required={false}
-                                    schemaName={"string"}
-                                    qualifierMessage={undefined}
-                                    schema={{"type":"string"}}
-                                  >
-                                    
-                                  </SchemaItem>
-                                </div>
-                              </details>
+                              
                             </SchemaItem><SchemaItem
                               collapsible={false}
                               name={"createdAt"}
-                              required={false}
+                              required={true}
                               schemaName={"date-time"}
                               qualifierMessage={undefined}
                               schema={{"type":"string","format":"date-time"}}
@@ -368,55 +325,25 @@ Finalize a Dataset file upload. This call should be made after the file has been
                             </SchemaItem><SchemaItem
                               collapsible={false}
                               name={"updatedAt"}
-                              required={false}
+                              required={true}
                               schemaName={"date-time"}
                               qualifierMessage={undefined}
                               schema={{"type":"string","format":"date-time"}}
                             >
                               
                             </SchemaItem><SchemaItem
-                              collapsible={true}
-                              className={"schemaItem"}
+                              collapsible={false}
+                              name={"datasetId"}
+                              required={true}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"type":"string","description":"The ID of the corresponding dataset."}}
                             >
-                              <details
-                                style={{}}
-                                className={"openapi-markdown__details"}
-                              >
-                                <summary
-                                  style={{}}
-                                >
-                                  <span
-                                    className={"openapi-schema__container"}
-                                  >
-                                    <strong
-                                      className={"openapi-schema__property"}
-                                    >
-                                      datasetId
-                                    </strong><span
-                                      className={"openapi-schema__name"}
-                                    >
-                                       object
-                                    </span>
-                                  </span>
-                                </summary><div
-                                  style={{"marginLeft":"1rem"}}
-                                >
-                                  <SchemaItem
-                                    collapsible={false}
-                                    name={"value"}
-                                    required={false}
-                                    schemaName={"string"}
-                                    qualifierMessage={undefined}
-                                    schema={{"type":"string"}}
-                                  >
-                                    
-                                  </SchemaItem>
-                                </div>
-                              </details>
+                              
                             </SchemaItem><SchemaItem
                               collapsible={false}
                               name={"contentMd5Hash"}
-                              required={false}
+                              required={true}
                               schemaName={"string"}
                               qualifierMessage={undefined}
                               schema={{"type":"string"}}
@@ -425,7 +352,7 @@ Finalize a Dataset file upload. This call should be made after the file has been
                             </SchemaItem><SchemaItem
                               collapsible={false}
                               name={"fileSizeBytes"}
-                              required={false}
+                              required={true}
                               schemaName={"integer"}
                               qualifierMessage={"**Possible values:** `>= -9223372036854776000` and `<= 9223372036854776000`"}
                               schema={{"type":"integer","minimum":-9223372036854776000,"maximum":9223372036854776000}}
@@ -434,7 +361,7 @@ Finalize a Dataset file upload. This call should be made after the file has been
                             </SchemaItem><SchemaItem
                               collapsible={false}
                               name={"numRows"}
-                              required={false}
+                              required={true}
                               schemaName={"integer"}
                               qualifierMessage={"**Possible values:** `>= -9223372036854776000` and `<= 9223372036854776000`"}
                               schema={{"type":"integer","minimum":-9223372036854776000,"maximum":9223372036854776000}}
@@ -443,7 +370,7 @@ Finalize a Dataset file upload. This call should be made after the file has been
                             </SchemaItem><SchemaItem
                               collapsible={false}
                               name={"numCols"}
-                              required={false}
+                              required={true}
                               schemaName={"integer"}
                               qualifierMessage={"**Possible values:** `>= -9223372036854776000` and `<= 9223372036854776000`"}
                               schema={{"type":"integer","minimum":-9223372036854776000,"maximum":9223372036854776000}}
@@ -471,6 +398,14 @@ Finalize a Dataset file upload. This call should be made after the file has been
                                       className={"openapi-schema__name"}
                                     >
                                        object[]
+                                    </span><span
+                                      className={"openapi-schema__divider"}
+                                    >
+                                      
+                                    </span><span
+                                      className={"openapi-schema__required"}
+                                    >
+                                      required
                                     </span>
                                   </span>
                                 </summary><div
@@ -483,48 +418,18 @@ Finalize a Dataset file upload. This call should be made after the file has been
                                       Array [
                                     </div>
                                   </li><SchemaItem
-                                    collapsible={true}
-                                    className={"schemaItem"}
+                                    collapsible={false}
+                                    name={"id"}
+                                    required={true}
+                                    schemaName={"string"}
+                                    qualifierMessage={undefined}
+                                    schema={{"type":"string","description":"The ID of the dataset file."}}
                                   >
-                                    <details
-                                      style={{}}
-                                      className={"openapi-markdown__details"}
-                                    >
-                                      <summary
-                                        style={{}}
-                                      >
-                                        <span
-                                          className={"openapi-schema__container"}
-                                        >
-                                          <strong
-                                            className={"openapi-schema__property"}
-                                          >
-                                            id
-                                          </strong><span
-                                            className={"openapi-schema__name"}
-                                          >
-                                             object
-                                          </span>
-                                        </span>
-                                      </summary><div
-                                        style={{"marginLeft":"1rem"}}
-                                      >
-                                        <SchemaItem
-                                          collapsible={false}
-                                          name={"value"}
-                                          required={false}
-                                          schemaName={"string"}
-                                          qualifierMessage={undefined}
-                                          schema={{"type":"string"}}
-                                        >
-                                          
-                                        </SchemaItem>
-                                      </div>
-                                    </details>
+                                    
                                   </SchemaItem><SchemaItem
                                     collapsible={false}
                                     name={"createdAt"}
-                                    required={false}
+                                    required={true}
                                     schemaName={"date-time"}
                                     qualifierMessage={undefined}
                                     schema={{"type":"string","format":"date-time"}}
@@ -533,7 +438,7 @@ Finalize a Dataset file upload. This call should be made after the file has been
                                   </SchemaItem><SchemaItem
                                     collapsible={false}
                                     name={"updatedAt"}
-                                    required={false}
+                                    required={true}
                                     schemaName={"date-time"}
                                     qualifierMessage={undefined}
                                     schema={{"type":"string","format":"date-time"}}
@@ -542,7 +447,7 @@ Finalize a Dataset file upload. This call should be made after the file has been
                                   </SchemaItem><SchemaItem
                                     collapsible={false}
                                     name={"index"}
-                                    required={false}
+                                    required={true}
                                     schemaName={"integer"}
                                     qualifierMessage={"**Possible values:** `>= -9223372036854776000` and `<= 9223372036854776000`"}
                                     schema={{"type":"integer","minimum":-9223372036854776000,"maximum":9223372036854776000,"description":"Index of the column within the dataset file."}}
@@ -551,7 +456,7 @@ Finalize a Dataset file upload. This call should be made after the file has been
                                   </SchemaItem><SchemaItem
                                     collapsible={false}
                                     name={"literalName"}
-                                    required={false}
+                                    required={true}
                                     schemaName={"string"}
                                     qualifierMessage={undefined}
                                     schema={{"type":"string","description":"The literal name for the column."}}
@@ -586,7 +491,7 @@ Finalize a Dataset file upload. This call should be made after the file has been
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"datasetFile\": {\n    \"id\": {\n      \"value\": \"string\"\n    },\n    \"createdAt\": \"2024-07-29T15:51:28.071Z\",\n    \"updatedAt\": \"2024-07-29T15:51:28.071Z\",\n    \"datasetId\": {\n      \"value\": \"string\"\n    },\n    \"contentMd5Hash\": \"string\",\n    \"fileSizeBytes\": 0,\n    \"numRows\": 0,\n    \"numCols\": 0,\n    \"columns\": [\n      {\n        \"id\": {\n          \"value\": \"string\"\n        },\n        \"createdAt\": \"2024-07-29T15:51:28.071Z\",\n        \"updatedAt\": \"2024-07-29T15:51:28.071Z\",\n        \"index\": 0,\n        \"literalName\": \"string\",\n        \"dtype\": \"string\"\n      }\n    ]\n  }\n}"}
+                    responseExample={"{\n  \"datasetFile\": {\n    \"id\": \"string\",\n    \"createdAt\": \"2024-07-29T15:51:28.071Z\",\n    \"updatedAt\": \"2024-07-29T15:51:28.071Z\",\n    \"datasetId\": \"string\",\n    \"contentMd5Hash\": \"string\",\n    \"fileSizeBytes\": 0,\n    \"numRows\": 0,\n    \"numCols\": 0,\n    \"columns\": [\n      {\n        \"id\": \"string\",\n        \"createdAt\": \"2024-07-29T15:51:28.071Z\",\n        \"updatedAt\": \"2024-07-29T15:51:28.071Z\",\n        \"index\": 0,\n        \"literalName\": \"string\",\n        \"dtype\": \"string\"\n      }\n    ]\n  }\n}"}
                     language={"json"}
                   >
                     

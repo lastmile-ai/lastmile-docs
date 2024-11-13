@@ -5,7 +5,7 @@ description: "Get a download url for a Dataset."
 sidebar_label: "Get Dataset Download URL"
 hide_title: true
 hide_table_of_contents: true
-api: eJytVMlu2zAQ/RVizmwcuDfdnKQtUqRoYDvtwRCCsTS2mFAkQ1JODEH/XgwlL4nbpofqIFDUG5JvGbYQcR0gW8AVRgwUIZdgHXmMyprrEjL4QnH4d2WfjbZY3k1vQEJJofDKMa5HCRTlgBCN12JlvUAx1J6BhEBF41XcQrZo4YLQk580sYJskXe5BE9PDYV4YcstZC0U1kQykYfonFZFOtLoIfB+LYSiohp5FFXU9KeDTvtFQULcOkbZ5QMV/O0884yKAi9S9pXM+LDi1X7yvfIN6oZSaQ8L0Suzhm54mFxw1oQePT4/T3u+UnDWFAWFsGq02BsA8r/J0G//vg67Gq9P6bw1fV6RmH0UzlNQa0OluJveiGgPMYgViUFZsVKazmAvSE2xspwvZ5M9DjkJMEKnRuMRNtHe0wb1aCgfrSne79a9b7xOefIb8pze/BCuGQvSczmO2J5KFaPj2gSDDJYJBHIYfLa+xggZfP05Bz4nCz09JPPTC9ZO00lkhgAcjJegzMoeG3ODIX5TmsTkWkxur8WP8Ymgp5BMXNraWUMmBpDAfHvo+OwcOpnUqzFFwWA9+L9rOrFLgPhNyx512D9176BfpJc4chqV4e2bPia9eQtAp0AC89obyNsOV4uEExNzCRX7ny2gbZcY6M7rruPpp4b8trd2g17hkjVc5J2EirAkny6RR9pCBpc9jw9zPqHcW3HSLp3cVUyKglz8KzY/iujt99mcEzLcTLUtucbjM8j0zgD41uTqFLw014JGs25wzdh+TU4Fvo7jm/glVsMvNNujE7Ztj5jbRzJdB3KgEvkburzrul/ON/9E
+api: eJytVMlu2zAQ/RVizmwUuDfdnHRBihQNbKc9GEIwlsYWE4lkSCqJIejfiyHlJXG3Qy8CJb1Z3ps37CHgxkO+hA8Y0FOAQoKx5DAoo68qyOEzhfHfB/OsG4PV7ewaJFTkS6cs4xJKoKhGhOhcI9bGCRRj7BlI8FR2ToUt5MseLggduWkXasiXxVBIcPTYkQ8XptpC3kNpdCAd+IjWNqqMLWX3nuv14MuaWuRTUKGh3zU6S0lBQthaRpnVPZX8bh3zDIo8J6lSJDPud1AfnNIbGIbUm3JUsVIHaDEM6ae3RvuUaHJ+HvO9UmfelSV5v+4asRcX5H+jmMr/neMuxjWnLN8OdFGTmL8X1pFXG02VuJ1di2AOIw41iVEKsVYNnZ0KdVQvSjVIaCnUhm1lTZyKRTYAZGhVNsmwC+aOnrDJxszZhsLdLs9d55poI/dEjk1bHDw1Z60SzWNn7VnWIViOjTDIYRVBIMfDJ+NaDJDDlx+LyINnMDsY8uMLtpZH8Mope4dIUHptjid1jT58VQ2J6ZWY3lyJ75MThU8hubg0rTWadPAggVkm6OTsnIuwZi1Gb2hsR0PsNkzsLCF+sZ9H6/RPqzqqFuglZLZBpbl8l3yTRrYEtAokMK/92LjseI9IOBldIaHmqedL6PsVerp1zTDw58eO3DYN9AmdwhVruCwGCTVhRS7eGA+0hRwuE493C+6Q4U3HnZ7szyB3EdOyJBv+iC2OjHnzbb5gX4zXUGsqjnH4DDI+cwC+Ijk62i1+66FBvelww9iUk12Er034xnSR1fgL9faow75PiIV5ID0MIEcqgd9h4GX6CcCJ+N0=
 sidebar_class_name: "post api-method"
 info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
@@ -81,44 +81,14 @@ Get a download url for a Dataset.
         style={{"marginLeft":"1rem"}}
       >
         <SchemaItem
-          collapsible={true}
-          className={"schemaItem"}
+          collapsible={false}
+          name={"datasetId"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
         >
-          <details
-            style={{}}
-            className={"openapi-markdown__details"}
-          >
-            <summary
-              style={{}}
-            >
-              <span
-                className={"openapi-schema__container"}
-              >
-                <strong
-                  className={"openapi-schema__property"}
-                >
-                  datasetId
-                </strong><span
-                  className={"openapi-schema__name"}
-                >
-                   object
-                </span>
-              </span>
-            </summary><div
-              style={{"marginLeft":"1rem"}}
-            >
-              <SchemaItem
-                collapsible={false}
-                name={"value"}
-                required={false}
-                schemaName={"string"}
-                qualifierMessage={undefined}
-                schema={{"type":"string"}}
-              >
-                
-              </SchemaItem>
-            </div>
-          </details>
+          
         </SchemaItem>
       </ul>
     </details>
@@ -178,7 +148,7 @@ Get a download url for a Dataset.
                       <SchemaItem
                         collapsible={false}
                         name={"downloadUrl"}
-                        required={false}
+                        required={true}
                         schemaName={"string"}
                         qualifierMessage={undefined}
                         schema={{"type":"string","description":"The S3 presigned URL to download the dataset file."}}
