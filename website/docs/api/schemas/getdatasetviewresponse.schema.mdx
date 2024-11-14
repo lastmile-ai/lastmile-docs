@@ -1,0 +1,277 @@
+---
+id: getdatasetviewresponse
+title: "GetDatasetViewResponse"
+description: ""
+sidebar_label: "GetDatasetViewResponse"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"GetDatasetViewResponse"}
+>
+</Heading>
+
+
+
+
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"datasetId"}
+    required={true}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"datasetFileId"}
+    required={true}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={true}
+    className={"schemaItem"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details"}
+    >
+      <summary
+        style={{}}
+      >
+        <span
+          className={"openapi-schema__container"}
+        >
+          <strong
+            className={"openapi-schema__property"}
+          >
+            datasetView
+          </strong><span
+            className={"openapi-schema__name"}
+          >
+             object
+          </span><span
+            className={"openapi-schema__divider"}
+          >
+            
+          </span><span
+            className={"openapi-schema__required"}
+          >
+            required
+          </span>
+        </span>
+      </summary><div
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"numRows"}
+          required={true}
+          schemaName={"integer"}
+          qualifierMessage={undefined}
+          schema={{"type":"integer"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"numCols"}
+          required={true}
+          schemaName={"integer"}
+          qualifierMessage={undefined}
+          schema={{"type":"integer"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  data
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"id"}
+                required={true}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"rowValues"}
+                required={true}
+                schemaName={"object[]"}
+                qualifierMessage={undefined}
+                schema={{"type":"array","items":{"description":"Ordered row values with length always equal to `num_rows` on the\n corresponding view.","type":"object","additionalProperties":true}}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  columns
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object[]
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
+                collapsible={false}
+                name={"id"}
+                required={true}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","description":"The ID of the dataset file."}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"createdAt"}
+                required={true}
+                schemaName={"date-time"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","format":"date-time"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"updatedAt"}
+                required={true}
+                schemaName={"date-time"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","format":"date-time"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"index"}
+                required={true}
+                schemaName={"integer"}
+                qualifierMessage={undefined}
+                schema={{"type":"integer","description":"Index of the column within the dataset file."}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"literalName"}
+                required={true}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","description":"The literal name for the column."}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"dtype"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
+            </div>
+          </details>
+        </SchemaItem>
+      </div>
+    </details>
+  </SchemaItem>
+</ul>
+            

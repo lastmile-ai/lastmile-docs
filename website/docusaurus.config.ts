@@ -32,6 +32,16 @@ const config: Config = {
     locales: ["en"],
   },
 
+  headTags: [
+    {
+      tagName: "meta",
+      attributes: {
+        name: "referrer",
+        content: "origin-when-cross-origin", // Choose your desired policy
+      },
+    },
+  ],
+
   presets: [
     [
       "classic",
@@ -65,8 +75,12 @@ const config: Config = {
             outputDir: "docs/api",
             sidebarOptions: {
               groupPathsBy: "tag",
+              categoryLinkSource: "tag",
             },
-            baseUrl: "https://lastmileai.dev",
+            proxy: "https://lastmileai.dev",
+            template: "api.mustache",
+            showExtensions: true,
+            showSchemas: true,
           } satisfies OpenApiPlugin.Options,
         } satisfies Plugin.PluginOptions,
       },
@@ -87,8 +101,8 @@ const config: Config = {
       },
       {
         highlight: "javascript",
-        language: "nodejs",
-        logoClass: "nodejs",
+        language: "javascript",
+        logoClass: "javascript",
       },
     ],
     navbar: {

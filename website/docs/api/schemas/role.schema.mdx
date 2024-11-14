@@ -1,0 +1,62 @@
+---
+id: role
+title: "Role"
+description: "A role for a principal (likely a user) within an organization. Mostly used"
+sidebar_label: "Role"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Role"}
+>
+</Heading>
+
+
+
+A role for a principal (likely a user) within an organization. Mostly used
+ for Authorization. Anticipating the need for more roles here, we space out
+ the values to leave unused numbers so that we can add more later while
+ preserving the natural ordering of permissions. We don't prescribe specific
+ authorizations here despite the suggestive names.
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"basic"}
+    required={true}
+    schemaName={"boolean"}
+    qualifierMessage={undefined}
+    schema={{"type":"boolean","description":"\"Basic\" permissions."}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"editor"}
+    required={true}
+    schemaName={"boolean"}
+    qualifierMessage={undefined}
+    schema={{"type":"boolean","description":"\"Editor\" permissions."}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"owner"}
+    required={true}
+    schemaName={"boolean"}
+    qualifierMessage={undefined}
+    schema={{"type":"boolean","description":"\"Owner\" permissions."}}
+  >
+    
+  </SchemaItem>
+</ul>
+            

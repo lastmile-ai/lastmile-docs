@@ -1,0 +1,85 @@
+---
+id: finetunejobconfig
+title: "FineTuneJobConfig"
+description: ""
+sidebar_label: "FineTuneJobConfig"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"FineTuneJobConfig"}
+>
+</Heading>
+
+
+
+
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"name"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"Optional name for the job."}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"description"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"Optional description for the job."}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"baselineModelId"}
+    required={true}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"The ID for the model used as the starting point for training."}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"trainDatasetId"}
+    required={true}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"The dataset to use for training, with splits baked in or to be\n derived dynamically"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"testDatasetId"}
+    required={true}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"The dataset to use for an unbiased evaluation of the model"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"selectedColumns"}
+    required={true}
+    schemaName={"string[]"}
+    qualifierMessage={undefined}
+    schema={{"type":"array","items":{"type":"string","description":"Set of columns to be used in fine-tuning.\n Supported columns: input, output, ground_truth\n For example, a task similar to summarization might need output and\n ground_truth."}}}
+  >
+    
+  </SchemaItem>
+</ul>
+            

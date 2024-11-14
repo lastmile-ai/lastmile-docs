@@ -1,0 +1,444 @@
+---
+id: model
+title: "Model"
+description: "Definition for the model"
+sidebar_label: "Model"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Model"}
+>
+</Heading>
+
+
+
+Definition for the model
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"id"}
+    required={true}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"createdAt"}
+    required={true}
+    schemaName={"date-time"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","format":"date-time"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"updatedAt"}
+    required={true}
+    schemaName={"date-time"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","format":"date-time"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"deletedAt"}
+    required={false}
+    schemaName={"date-time"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","format":"date-time"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"userId"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={true}
+    className={"schemaItem"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details"}
+    >
+      <summary
+        style={{}}
+      >
+        <span
+          className={"openapi-schema__container"}
+        >
+          <strong
+            className={"openapi-schema__property"}
+          >
+            metricBaseModel
+          </strong><span
+            className={"openapi-schema__name"}
+          >
+             object
+          </span><span
+            className={"openapi-schema__divider"}
+          >
+            
+          </span><span
+            className={"openapi-schema__required"}
+          >
+            required
+          </span>
+        </span>
+      </summary><div
+        style={{"marginLeft":"1rem"}}
+      >
+        <div
+          style={{"marginTop":".5rem","marginBottom":".5rem"}}
+        >
+          
+          
+          Information about a base model corresponding to a metric
+          
+          
+        </div><SchemaItem
+          collapsible={false}
+          name={"id"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"modelId"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"baseModelArchitecture"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"baseEvaluationMetric"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem>
+      </div>
+    </details>
+  </SchemaItem><SchemaItem
+    collapsible={true}
+    className={"schemaItem"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details"}
+    >
+      <summary
+        style={{}}
+      >
+        <span
+          className={"openapi-schema__container"}
+        >
+          <strong
+            className={"openapi-schema__property"}
+          >
+            modelCard
+          </strong><span
+            className={"openapi-schema__name"}
+          >
+             object
+          </span>
+        </span>
+      </summary><div
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"modelId"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"name"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"description"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"deploymentStatus"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"createdAt"}
+          required={true}
+          schemaName={"date-time"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","format":"date-time"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"updatedAt"}
+          required={true}
+          schemaName={"date-time"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","format":"date-time"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"modelSize"}
+          required={true}
+          schemaName={"integer"}
+          qualifierMessage={undefined}
+          schema={{"type":"integer"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"purpose"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  trainingProgress
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <div
+                style={{"marginTop":".5rem","marginBottom":".5rem"}}
+              >
+                
+                
+                Progress metrics from model training.
+                
+                
+              </div><SchemaItem
+                collapsible={false}
+                name={"jobId"}
+                required={true}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"epoch"}
+                required={true}
+                schemaName={"integer"}
+                qualifierMessage={undefined}
+                schema={{"type":"integer"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"loss"}
+                required={true}
+                schemaName={"number"}
+                qualifierMessage={undefined}
+                schema={{"type":"number"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"accuracy"}
+                required={true}
+                schemaName={"number"}
+                qualifierMessage={undefined}
+                schema={{"type":"number"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"progress"}
+                required={true}
+                schemaName={"number"}
+                qualifierMessage={undefined}
+                schema={{"type":"number"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"timestamp"}
+                required={true}
+                schemaName={"date-time"}
+                qualifierMessage={undefined}
+                schema={{"type":"string","format":"date-time"}}
+              >
+                
+              </SchemaItem>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"baseModelArchitecture"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"baseEvaluationMetric"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  values
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <SchemaItem
+                name={"property name*"}
+                required={false}
+                schemaName={"string"}
+                qualifierMessage={undefined}
+                schema={{"type":"string"}}
+                collapsible={false}
+                discriminator={false}
+              >
+                
+              </SchemaItem>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"tags"}
+          required={true}
+          schemaName={"string[]"}
+          qualifierMessage={undefined}
+          schema={{"type":"array","items":{"type":"string"}}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"columns"}
+          required={true}
+          schemaName={"string[]"}
+          qualifierMessage={undefined}
+          schema={{"type":"array","items":{"type":"string"}}}
+        >
+          
+        </SchemaItem>
+      </div>
+    </details>
+  </SchemaItem>
+</ul>
+            

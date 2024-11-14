@@ -1,0 +1,118 @@
+---
+id: organizationrole
+title: "OrganizationRole"
+description: "A role specified in the context of a particular organization. Can be used as"
+sidebar_label: "OrganizationRole"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"OrganizationRole"}
+>
+</Heading>
+
+
+
+A role specified in the context of a particular organization. Can be used as
+ its own Principal as a convenient way to define groups of permissions.
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"organizationId"}
+    required={true}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={true}
+    className={"schemaItem"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details"}
+    >
+      <summary
+        style={{}}
+      >
+        <span
+          className={"openapi-schema__container"}
+        >
+          <strong
+            className={"openapi-schema__property"}
+          >
+            role
+          </strong><span
+            className={"openapi-schema__name"}
+          >
+             object
+          </span><span
+            className={"openapi-schema__divider"}
+          >
+            
+          </span><span
+            className={"openapi-schema__required"}
+          >
+            required
+          </span>
+        </span>
+      </summary><div
+        style={{"marginLeft":"1rem"}}
+      >
+        <div
+          style={{"marginTop":".5rem","marginBottom":".5rem"}}
+        >
+          
+          
+          A role for a principal (likely a user) within an organization. Mostly used
+           for Authorization. Anticipating the need for more roles here, we space out
+           the values to leave unused numbers so that we can add more later while
+           preserving the natural ordering of permissions. We don't prescribe specific
+           authorizations here despite the suggestive names.
+          
+          
+        </div><SchemaItem
+          collapsible={false}
+          name={"basic"}
+          required={true}
+          schemaName={"boolean"}
+          qualifierMessage={undefined}
+          schema={{"type":"boolean","description":"\"Basic\" permissions."}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"editor"}
+          required={true}
+          schemaName={"boolean"}
+          qualifierMessage={undefined}
+          schema={{"type":"boolean","description":"\"Editor\" permissions."}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"owner"}
+          required={true}
+          schemaName={"boolean"}
+          qualifierMessage={undefined}
+          schema={{"type":"boolean","description":"\"Owner\" permissions."}}
+        >
+          
+        </SchemaItem>
+      </div>
+    </details>
+  </SchemaItem>
+</ul>
+            
