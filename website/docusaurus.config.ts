@@ -77,7 +77,6 @@ const config: Config = {
               groupPathsBy: "tag",
               categoryLinkSource: "tag",
             },
-            proxy: "https://lastmileai.dev",
             template: "api.mustache",
             showExtensions: true,
             showSchemas: true,
