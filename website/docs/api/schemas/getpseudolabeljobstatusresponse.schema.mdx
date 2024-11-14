@@ -75,8 +75,7 @@ import TabItem from "@theme/TabItem";
         >
           
           
-          TODO: @Ankush Add support for different label types (e.g., Binary Single
-           Label, Multi Label) Currently, only Binary Single Label is supported.
+          Configuration for LLM Judge labeling job.
           
           
         </div><SchemaItem
@@ -130,7 +129,7 @@ import TabItem from "@theme/TabItem";
           required={true}
           schemaName={"string[]"}
           qualifierMessage={undefined}
-          schema={{"type":"array","items":{"type":"string","description":"Subset of columns to be used in pseudo-labeling.\n Expected columns: input, output, ground_truth\n For example, a summarization task might not need an input column.\n TODO: Should this be repeated EvaluationMetricParameter enum?"}}}
+          schema={{"type":"array","items":{"type":"string","description":"Subset of columns to be used in pseudo-labeling.\n Expected columns: input, output, ground_truth\n For example, a summarization task might not need an input column.\n By default, all columns are used."}}}
         >
           
         </SchemaItem><SchemaItem
@@ -355,7 +354,7 @@ import TabItem from "@theme/TabItem";
           required={true}
           schemaName={"string"}
           qualifierMessage={undefined}
-          schema={{"type":"string","description":"TODO: @Ankush flesh out default prompt templates or \"Base Metric\"\n representation of prompt lmai.proto.model_fine_tuning.v1.templates."}}
+          schema={{"type":"string","description":"Reserved field. Do not use  at the moment."}}
         >
           
         </SchemaItem><SchemaItem

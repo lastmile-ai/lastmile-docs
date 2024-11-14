@@ -414,18 +414,6 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "api/schemas/refinelabelsrequest",
-          label: "RefineLabelsRequest",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/refinelabelsresponse",
-          label: "RefineLabelsResponse",
-          className: "schema",
-        },
-        {
-          type: "doc",
           id: "api/schemas/getdatasetdownloadurlrequest",
           label: "GetDatasetDownloadURLRequest",
           className: "schema",
