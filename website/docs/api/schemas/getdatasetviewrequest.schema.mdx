@@ -1,0 +1,67 @@
+---
+id: getdatasetviewrequest
+title: "GetDatasetViewRequest"
+description: "Get a view of the data within a dataset."
+sidebar_label: "GetDatasetViewRequest"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"GetDatasetViewRequest"}
+>
+</Heading>
+
+
+
+Get a view of the data within a dataset.
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"datasetId"}
+    required={true}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"The ID of the dataset from which to retrieve content. When specified,\n gets data from the current file in the dataset."}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"datasetFileId"}
+    required={true}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"The ID of the (pinned) dataset file from which to retrieve content.\n Requests iterating over pages of results are recommended to use this\n pinned identifier after the first page in order to prevent any effects\n from a dataset changing between the queries."}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"after"}
+    required={false}
+    schemaName={"integer"}
+    qualifierMessage={undefined}
+    schema={{"type":"integer","description":"Pagination: The index, by row-order, after which to query results."}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"limit"}
+    required={false}
+    schemaName={"integer"}
+    qualifierMessage={undefined}
+    schema={{"type":"integer","description":"Pagination: The maximum number of results to return on this page."}}
+  >
+    
+  </SchemaItem>
+</ul>
+            
