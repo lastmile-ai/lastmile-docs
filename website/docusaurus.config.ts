@@ -61,7 +61,6 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
   plugins: [
     "docusaurus-plugin-sass",
     [
