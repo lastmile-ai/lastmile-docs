@@ -1,0 +1,11 @@
+ground_truth,input,output,label
+Musical instruments are allowed on board if they fit in the cabin's overhead bin.,Can I carry a musical instrument on board?,Small musical instruments that fit in the overhead bin are allowed.,1
+"2 checked bags, 23kg each",How many free checked bags am I allowed on long-haul flights?,"You are allowed 1 checked bag, weighing up to 23kg, on long-haul flights.",0
+1-800-555-1234,What is the phone number for customer service?,Please call customer service at 1-800-555-1243.,0
+Next flight: 8:00 PM from JFK to LHR,When is the next flight from New York to London?,The next flight from New York to London is at 9:00 PM.,0
+"Business class amenities on StrikeAir flights include flatbed seats, gourmet dining, premium beverages, and extra baggage allowance.",What are the business class amenities on StrikeAir flights?,"Business class includes fully flat seats, gourmet meals, and a selection of fine wines.",0
+Flight status for SA1234 is available on our website or by calling customer service at 1-800-555-1234.,How can I track my flight status?,You can check the status of your flight SA1234 on our website or call customer service at 1-800-555-1234.,1
+Vegetarian meals are available upon request. Please ensure you request it at the time of booking or contact customer service.,Can I get a vegetarian meal on my flight?,"Yes, we offer vegetarian meals on our flights. Please make sure to request it during booking or contact customer service.",1
+1 carry-on bag and 1 personal item are allowed,How many carry-on bags am I allowed to bring?,You are allowed to bring 1 carry-on bag and 1 personal item.,1
+A negative COVID-19 test result taken within 72 hours before boarding is required.,Do I need to provide a negative COVID-19 test result before boarding?,"Yes, you need to provide a negative COVID-19 test result taken within 72 hours before boarding.",1
+JFK Terminal 4,What terminal is my flight arriving at?,Your flight is arriving at JFK Terminal 5.,0
