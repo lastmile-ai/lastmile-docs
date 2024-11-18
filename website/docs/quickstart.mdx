@@ -81,7 +81,7 @@ npm install lastmile
   <TabItem value="python">
   
   ```python
-from lastmile.lib.auto_eval import AutoEval, Metric
+from lastmile.lib.auto_eval import AutoEval, BuiltinMetrics
 import pandas as pd
 
 eval = AutoEval(api_token="api_token_if_LASTMILE_API_TOKEN_not_set")
@@ -96,7 +96,7 @@ eval_result = eval.evaluate_data(
         "output": [llm_response],
         "ground_truth": [expected_response]
     }),
-    metrics=[Metric(name="Faithfulness")]
+    metrics=[BuiltinMetrics.FAITHFULNESS]
 )
 
 print(eval_result)
@@ -107,11 +107,11 @@ print(eval_result)
 
 You can reference any metric by its name as it appears in the [Model Console](https://lastmileai.dev/models).
 Accepted values include:
-* `Faithfulness`
-* `Relevance`
-* `Summarization`
-* `Toxicity`
-* `Answer Correctness`
+* `Metric(name="Faithfulness")`
+* `Metric(name="Relevance")`
+* `Metric(name="Summarization")`
+* `Metric(name="Toxicity")`
+* `Metric(name="Answer Correctness")`
 
 Congrats on running your first evaluation! The platform can do a lot more, so head on to these sections
 or guides below to continue your AutoEval journey.
