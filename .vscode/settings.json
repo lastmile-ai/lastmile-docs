@@ -10,6 +10,7 @@
     "yarn.lock": true
   },
   "editor.formatOnSave": true,
+  "prettier.disableLanguages": ["mdx"],
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -24,5 +25,17 @@
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[mdx]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "[markdown_latex_combined]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
   }
 }

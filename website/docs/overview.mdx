@@ -21,46 +21,72 @@ LastMile is the full-stack developer platform to debug, evaluate and <u>improve<
   codeBlocks={[
     {
       language: "python",
-      code: `from lastmile import LastMile;
-LastMile.eval("Hello world")`,
+      code: `from lastmile.lib.auto_eval import AutoEval, Metric
+import pandas as pd
+
+result = AutoEval().evaluate_data(
+    data=pd.DataFrame({
+        "input": ["Where did the author grow up?"],
+        "output": ["France"],
+        "ground_truth": ["England"]
+    }),
+    metrics=[Metric(name="Faithfulness")]
+)
+
+print(f'Evlauation result:', result)`,
     },
     {
       language: "javascript",
       label: "node.js",
-      code: `const { LastMile } = require('lastmile');
-LastMile.eval("Hello world");`,
-    },
-  ]}
+      code: `import {Lastmile, Metric} from 'lastmile';
+
+const client = new Lastmile();
+
+const response = await client.evaluation.evaluate({
+    input: ["Where did the author grow up?"],
+    output: ["France"],
+    groundTruth: ["England"]
+    metric: Metric(name: "Faithfulness")
+  });
+`,
+},
+]}
 />
 
-## Meet alBERTa 🍁
+## Design your own metric
 
-alBERTa is a family of small language models designed for evaluation. They are optimized to be:
+Use the fine-tuning service to design your own evaluators that represent custom criteria for your app quality.
 
-- **small** -- 400M parameter entailment model
-- **fast** -- can run inference on CPU in < 300ms
-- **customizable** -- fine-tune for custom evaluation tasks
-
-<Grid className="alberta-grid">
+<Grid className="custom-grid customize">
   <Card
-    href="/autoeval/models"
-    title="alBERTa-512 🍁"
-    description="2048 token context, specialized for evaluation tasks (like faithfulness), and gives a numeric 0->1 score."
-    backgroundColor="#F5F5F5"
-    className="custom-card model-512"
+    href="/autoeval/datasets"
+    title="1. Create Datasets"
+    description="Upload and manage application data for running and training evals, and generate synthetic labels."
+    className="custom-card datasets"
+  />
+  <Card
+    href="/autoeval/labeling"
+    title="2. LLM Judge Active Labeling"
+    description="Generate high-quality labels for your data using LLM Judge with human-in-the-loop"
+    className="custom-card labeling"
+  />
+  <Card
+    href="/autoeval/fine-tune"
+    title="3. Fine-tune Models"
+    description="Use the AutoEval fine-tuning service to develop custom metrics for your application."
+    className="custom-card fine-tune"
   />
   <Card
     href="/autoeval/models"
-    title="alBERTa-LC-8k 🍁"
-    description="Long-context window variant that can scale to 128k+ tokens using a scaled dot-product attention layer"
-    backgroundColor="#F5F5F5"
-    className="custom-card model-8k"
+    title="4. Run Evals"
+    description="Compute metrics by running high-performance inference on a prebuilt or fine-tuned model."
+    className="custom-card models"
   />
 </Grid>
 
-### Out-of-the-box metrics
+## Out-of-the-box metrics
 
-<!-- Batteries-included evaluation metrics covering common AI application types, such as RAG and multi-agent compound AI systems. -->
+Batteries-included evaluation metrics covering common AI application types, such as RAG and multi-agent compound AI systems.
 
 <Grid className="custom-grid">
   <Card
@@ -95,34 +121,28 @@ alBERTa is a family of small language models designed for evaluation. They are o
   />
 </Grid>
 
-## Design your own metric
+## Meet alBERTa 🍁
 
-<!-- Use the fine-tuning service to design your own evaluators that represent custom criteria for your app quality. -->
+alBERTa is a family of small language models designed for evaluation. They are optimized to be:
 
-<Grid className="custom-grid customize">
+- **small** -- 400M parameter entailment model
+- **fast** -- can run inference on CPU in < 300ms
+- **customizable** -- fine-tune for custom evaluation tasks
+
+<Grid className="alberta-grid">
   <Card
-    href="/autoeval/datasets"
-    title="1. Create Datasets"
-    description="Upload and manage application data for running and training evals, and generate synthetic labels."
-    className="custom-card datasets"
-  />
-  <Card
-    href="/autoeval/labeling"
-    title="2. LLM Judge Active Labeling"
-    description="Generate high-quality labels for your data using LLM Judge with human-in-the-loop"
-    className="custom-card labeling"
-  />
-  <Card
-    href="/autoeval/fine-tune"
-    title="3. Fine-tune Models"
-    description="Use the AutoEval fine-tuning service to develop custom metrics for your application."
-    className="custom-card fine-tune"
+    href="/autoeval/models"
+    title="alBERTa-512 🍁"
+    description="2048 token context, specialized for evaluation tasks (like faithfulness), and gives a numeric 0->1 score."
+    backgroundColor="#F5F5F5"
+    className="custom-card model-512"
   />
   <Card
     href="/autoeval/models"
-    title="4. Run Evals"
-    description="Compute metrics by running high-performance inference on a prebuilt or fine-tuned model."
-    className="custom-card models"
+    title="alBERTa-LC-8k 🍁"
+    description="Long-context window variant that can scale to 128k+ tokens using a scaled dot-product attention layer"
+    backgroundColor="#F5F5F5"
+    className="custom-card model-8k"
   />
 </Grid>
 
@@ -130,21 +150,27 @@ alBERTa is a family of small language models designed for evaluation. They are o
 
 <Grid className="guides-grid">
   <Card
-    href="/guides/rag-evaluation"
-    title="Retrieval systems"
-    description="Evaluate a RAG application for hallucination, relevance and a custom brand tone metric."
+    href="https://github.com/lastmile-ai/lastmile-docs/blob/main/cookbook/AutoEval_Getting_Started.ipynb"
+    title="Quickstart"
+    description="Start-to-finish overview of AutoEval, from running evals, labeling with LLM Judge to fine-tuning a custom metric."
     className="custom-card"
   />
   <Card
+    href="https://github.com/lastmile-ai/lastmile-docs/blob/main/cookbook/RAG_Evaluation.ipynb"
+    title="Retrieval systems"
+    description="Evaluate a RAG application for hallucination, relevance and other out-of-the-box metrics available via AutoEval."
+    className="custom-card"
+  />
+  <!-- <Card
     href="/guides/multi-agent-evaluation"
     title="Multi-agent applications"
     description="Evaluate end-to-end and intermediate step metrics for a compound AI system."
     className="custom-card"
-  />
+  /> -->
   <Card
-    href="/guides/guardrails-guide"
+    href="https://github.com/lastmile-ai/lastmile-docs/blob/main/cookbook/RAG_Guardrails.ipynb"
     title="Real-time guardrails"
-    description="Use alBERTa 🍁 model inference for real-time use-cases, like guardrails."
+    description="Build real-time guardrails in a RAG application using fine-tuned alBERTa 🍁 models."
     className="custom-card"
   />
 </Grid>
