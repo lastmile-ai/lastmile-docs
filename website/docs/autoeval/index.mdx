@@ -8,24 +8,54 @@ import constants from "@site/core/tabConstants";
 
 # AutoEval
 
-The AutoEval fine-tuning platform enables customization of the AlBERTa SLMs to better evaluate and measure your application's performance.
+Platform Overview
 
-![autoeval-platform](https://andrew-dev-s3.s3.amazonaws.com/autoeval-platform.png)
+The AutoEval fine-tuning platform enables the customization of [alBERTa small language models](/autoeval/models) (SLMs) to better evaluate and measure your application's performance.
+It solves a key problem in generative AI application development -- developing metrics that accurately represent your application's performance, which you can
+use to iteratively drive improvements and have confidence in production.
+
+Here's how it works:
+
+![autoeval-flow](/img/autoeval_flow.png)
+
+You come to AutoEval if you have a compound AI application, such as a RAG pipeline or agent system, and you want to understand if the application is performing well or not.
+This can be a single quality metric of AI interactions, or a whole suite of metrics - each measuring something specific about the system:
+* Is the response faithful to the data provided?
+* Is the input relevant to the application's purpose? (input guardrail)
+* Does the response adhere to my company's brand tone?
+
+AutoEval starts from the application's trace data, helps label the interactions using LLM Judge where you can specify an evaluation criteria in natural language (prompt),
+and then fine-tune an alBERTa SLM to learn the distribution of those labeled interactions. You can then use the fine-tuned model
+as an eval, or at runtime as a guardrail. For e.g. if a response is deemed to have hallucinated, i.e. unsufficiently faithful to the data, then deny that response from reaching the user.
 
 ## Platform Capabilities
 
-### Synthetic Data Generation
+![autoeval-platform](https://andrew-dev-s3.s3.amazonaws.com/autoeval-platform.png)
 
-For use cases that have few to no labels or ground truth data, the AutoEval platform provides the capability to synthetically generate labels. **Synthetic Data Generation** involves using a model to create data that matches what a realistic response would be and matches the underlying distribution of the data. The platform does its initial labeling through a large-language model (LLM) and over time aligns the performance of the synthetic labels to the ground truth data.
+### Dataset Management
+Store application trace data in AutoEval to be used for running evals, for labeling, and for fine-tuning evaluator models.
+[Learn more](/autoeval/datasets)
+
+### Synthetic Data Generation (LLM Judge Labeling)
+
+For use cases that have few to no labels or ground truth data, AutoEval provides the capability to synthetically generate labels.
+We refer to this as **LLM Judge++**, because it uses an LLM to generate labels given a custom evaluation criteria, and also allows a 
+developer to improve the labels manually as part of an [active learning](https://en.wikipedia.org/wiki/Active_learning_(machine_learning)) process.
+
+You can continuously improve the active learning by providing additional samples of ground truth data.
+
+[Learn more](/autoeval/labeling)
+
 
 ### Fine-tuning
+**Design your own eval metric**. Fine-tuning allows you to improve the performance of LastMile AI's models by tuning the performance to your specific data and use case. 
 
-Fine-tuning allows you to improve the performance of LastMile AI's models by tuning the performance to your specific data and use case. **Fine-tuning** is the process of adapting the small language models for specific tasks.
+[Learn more](/autoeval/fine-tune)
 
-### Active Learning
+### Online inference
+You can use the evaluator models for offline tasks such as running evals, as well as online tasks such as guardrails.
+AutoEval has a high-performance inference server that can handle both kinds of workloads.
 
-**Active learning** is in which we use an algorithm (an LLM in this case) to interactively label the training data. You can continuously improve the active learning by providing additional samples of ground truth data.
-
-Instructions:
-
-1.
+:::info
+Use the [quickstart](/quickstart) guide to get started running your first evaluation.
+:::

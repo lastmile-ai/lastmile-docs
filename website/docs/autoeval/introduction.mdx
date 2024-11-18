@@ -7,7 +7,12 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import constants from '@site/core/tabConstants';
 
-Testing is the most important step in both LLM application development and monitoring it's behavior in production. In Machine Learning and Artificial Intelligence, testing is referred to by different names depending on _when_ and _how_ you test. When testing an LLM application during development, the process is often referred to as **Evaluation**. When testing an LLM application's behavior during production (typically for an real-time/online use case), the testing is referred to as **Guardrails**. We'll cover both of these in more depth.
+Introduction to *eval*-driven development
+
+Testing is the most important step in both LLM application development and monitoring its behavior in production. In Machine Learning and Artificial Intelligence, testing is referred to by different names depending on _when_ and _how_ you test. 
+
+When testing an LLM application <u>offline</u> (e.g. during development, or periodically on test cases generated from a sampling of application traces), the process is often referred to as **evaluation**. 
+When testing the application's behavior <u>online</u>, the testing is referred to as **guardrails**. We'll cover both of these in more depth.
 
 ## Evaluation
 
