@@ -16,6 +16,9 @@ We have a collection of notebooks to guide you through using AutoEval efficientl
 1. [RAG Evaluation](https://github.com/lastmile-ai/lastmile-docs/blob/main/cookbook/RAG_Evaluation.ipynb)
 2. [Guardrails](https://github.com/lastmile-ai/lastmile-docs/blob/main/cookbook/RAG_Guardrails.ipynb)
 
+## Sample Datasets
+We've generated synthetic data for example AI applications that you can use to get started with AutoEval. You can find details of the datasets [here](https://github.com/lastmile-ai/lastmile-docs/blob/main/cookbook/data/README.md).
+
 ## Contributing
 
 Contributions are welcome! Please submit a pull request or open an issue to suggest a new notebook or improvement.
