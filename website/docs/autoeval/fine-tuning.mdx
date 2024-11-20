@@ -1,29 +1,178 @@
 ---
 id: fine-tune
-title: "Fine-tune Evaluation Models"
+title: "Evaluator Fine-tuning"
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import constants from "@site/core/tabConstants";
 
-# Fine-tuning al-BERTa
+# Evaluator Fine-tuning
 
-Fine-tuning allows you to improve the performance of LastMile AI's models by tuning the performance to your specific data and use case. **Fine-tuning** is the process of adapting the small language models for specific tasks. Example use cases from customers:
+Build your own evaluation metric by fine-tuning [alBERTa evaluator models](/autoeval/models)
 
-- Fine tuning AlBERTa on what **correctness** is for their use case
-- Fine tuning AlBERTa to better detect a company's **brand or tone**
+![AutoEval Flow](/img/autoeval_flow_finetuning.png)
+
+The AutoEval fine-tuning service enables you to develop models that represent your custom evaluation criteria. The flow is roughly as follows:
+1. Start with a [Dataset](/autoeval/datasets) of your application data.
+2. (Assuming you don't have labels) Specify your evaluation criteria and generate labels with [LLM Judge++](/autoeval/labeling).
+3. Use the AutoEval fine-tuning service to train a fine-tuned evaluator model using the labeled data to learn the evaluation criteria.
+
+The fine-tuned model will then produce a numeric 0->1 probability score for every request.
 
 ![fine-tuning#diagram](https://andrew-dev-s3.s3.amazonaws.com/Fine-Tuning.png)
 
-Instructions:
+Some example evaluators that AutoEval customers have trained:
+* A custom **response quality** metric that includes succinctness, clarity, and accuracy.
+* A custom **correctness metric** for tool use (function calling) in a multi-agent system.
+* A custom **brand tone** metric to measure LLM response adherence to company's brand tone rubric.
 
-1. In the left-hand navigation, head to **Model Console**.
-2. At the top-right, click on **Fine Tune a Model**.
-3.
+### Why fine-tune?
 
-# Fine-tuning with web UI
+Fine-tuning your own alBERTa evaluator model is much more effective than LLM Judge style eval approaches for a number of reasons.
+Unlike an LLM Judge, this model can be small, fast and include human-in-the-loop refinement:
+* **better metric quality** -- the quality of evaluations is bound by quality of the labels (which can be refined with human feedback), not bound by an LLM's ability to understand your application context.
+* **small & fast** -- can run inference in < 300ms, which allows these evaluators to run online as [guardrails](/autoeval/guardrails).
+* **customizable** -- the model is simply learning the label distribution, making it easy to teach it any kind of classification task.
 
-# Fine-tuning API
+You can fine-tune as many evaluators as you want – one for each evaluation criteria you need for your application.
 
-# Weights & Biases Integration
+## Usage Guide 
+
+### Upload Datasets
+[Create a Dataset](/autoeval/datasets#create-a-new-dataset) containing the application trace data to use for fine-tuning. 
+
+:::tip
+We recommend at least a few hundred examples (256 minimum). A few thousand examples is ideal.
+:::
+
+During the fine-tuning flow you can choose which of these columns to include in the training. Make sure that the data contains at least one of the following columns:
+* `input`
+* `output`
+* `ground_truth`
+
+### Label data
+Use the [LLM Judge++](/autoeval/labeling#usage-guide) flow to define your evaluation criteria and generate labels.
+
+### Training and test data split (optional)
+Split the dataset into a training dataset and a test (holdout) dataset.
+
+:::tip
+We recommend an 80/20 or 90/10 split.
+:::
+
+You can do this via [API](/category/api):
+
+<Tabs groupId="split_dataset">
+  <TabItem value="python">
+  
+  ```python title="split_dataset"
+from lastmile.lib.auto_eval import AutoEval, Metric
+from sklearn.model_selection import train_test_split
+import pandas as pd
+
+client = AutoEval(api_token="api_token_if_LASTMILE_API_TOKEN_not_set")
+dataset_df = client.download_dataset(dataset_id=dataset_id) # Labeled dataset from previous step
+
+# Split the data into training and test sets
+train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)
+
+train_df.to_csv('train.csv', index=False)
+test_df.to_csv('test.csv', index=False)
+
+test_dataset_id = client.upload_dataset(
+    file_path="test.csv",  # Your test dataset file
+    name="My Test Dataset for Fine-tuning",
+    description="Test dataset for evaluating the fine-tuned model"
+)
+
+train_dataset_id = client.upload_dataset(
+    file_path="train.csv",
+    name="My Training Dataset for Fine-tuning",
+    description="Training dataset for the fine-tuned model"
+)
+```
+
+  </TabItem>
+</Tabs>
+
+
+### Fine-tune model
+At this point we have labeled application data to train, and test the model. Time to fine-tune!
+
+#### API
+<Tabs groupId="fine_tune">
+  <TabItem value="python">
+  
+  ```python title="fine_tune"
+# Continuation from previous step
+fine_tune_job_id = client.fine_tune_model(
+    train_dataset_id=train_dataset_id,  
+    test_dataset_id=test_dataset_id,
+    model_name="My Custom Evaluation Metric",
+    selected_columns=["input", "output", "ground_truth"], # You can decide which of these columns to include in the training data
+    wait_for_completion=False # Set to true for blocking
+)
+
+print(f"Fine-tuning job initiated with ID: {fine_tune_job_id}. Waiting for completion...")
+client.wait_for_fine_tune_job(fine_tune_job_id)
+print(f"Fine-tuning job completed with ID: {fine_tune_job_id}")
+```
+
+  </TabItem>
+</Tabs>
+
+#### UI
+1. Navigate to [Model Console](https://lastmileai.dev/models) and click **Fine-Tune a Model**.
+![Model Console](/img/models/model_console.png)
+
+2. Fill out the Fine-tuning form and click Submit to start the training job.
+![Fine-tuning Wizard](/img/models/fine_tuning_form.png)
+
+3. Track progress in the [Model Console](https://lastmileai.dev/models), including training metrics such as loss/accuracy.
+    :::info
+    [Set up](#weights--biases-integration) your Weights & Biases API key to have the training data logged to your own W&B account if you prefer.
+    :::
+    ![Fine-tuning Sneak Peek](/img/models/fine_tuning_progress_data.png)
+
+### Use fine-tuned model
+
+Once the model is trained and deployed on the inference server, it will be listed as 🟢 **Online** in the dashboard.
+
+![Fine-tuned Model Details](/img/models/fine_tuning_model_details.png)
+
+You can try it out directly in the playground, and see its training metrics in the **Fine-Tune Info** tab.
+
+#### API
+Use the API to run evals using your new model
+
+<Tabs groupId="run_inference">
+  <TabItem value="python">
+  
+  ```python title="run_inference"
+
+fine_tuned_metric = Metric(name="My Custom Evaluation Metric") # Reference the fine-tuned model by name or id
+
+# Run evals on your test/holdout dataset to see how the model is performing
+test_results_df = client.evaluate_dataset(test_dataset_id, fine_tuned_metric)
+
+# Run evals on any application data
+eval_results_df = client.evaluate_data(
+    # data should include the columns that the model expects
+    data=pd.DataFrame({
+        "input": ["What is the meaning of life?"],
+        "output": ["42"],
+        "ground_truth": ["Life, universe and everything"]
+    }),
+    metrics=[fine_tuned_metric],
+)
+```
+
+  </TabItem>
+</Tabs>
+
+### Weights & Biases integration
+
+AutoEval allows you to track detailed training runs in your own Weights & Biases account. To do so, navigate to the [API Keys console](https://lastmileai.dev/apikeys), and save your W&B API key.
+Subsequent fine-tuning runs will be tracked in your account.
+![Wandb Integration](/img/api/wandb.png)
