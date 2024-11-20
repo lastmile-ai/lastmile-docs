@@ -1,29 +1,104 @@
 ---
-title: "alBERTa Models"
+id: models
+title: "Evaluator Models"
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import constants from "@site/core/tabConstants";
 
-# Models Overview
+# Evaluator Models
 
-LastMile AI provides small foundational models for evaluating your specific use case for your success metric. If you need additional customization, you can fine-tune these foundational models for your specific use case.
+AutoEval models for evaluation tasks
 
-## AlBERTa
+AutoEval ships with small language models (SLMs) for evaluation tasks. The [Metrics section](/autoeval/metrics) lists all out-of-the-box metrics available on the platform.
 
-The AlBERTa model series are language models optimized for evaluating the correctness of responses based on the input. The AlBERTa models come in either:
+In addition, if you need to design your own metric, you can [fine-tune](/autoeval/fine-tune) LastMile's alBERTa 🍁 base model to have a custom evaluator.
 
-| model         | input length       | latency   | task |
-| ------------- | ------------------ | --------- | ---- |
-| AlBERTa-512   | 512 token coontext | &lt;10ms  | nli  |
-| AlBERTa-LC-8k | 8192 token context | &lt;400ms | nli  |
+## alBERTa 🍁
 
-## Models++
+alBERTa is a 400M parameter BERT model that has been trained for NLI tasks and optimized for evaluation workfloads.
+It is particularly good at framing questions in the premise/hypothesis/entailment formulation, and returns a numeric probability score (0->1), which makes it
+particularly well-suited for computing *metrics*.
 
-| model         | input length       | latency   | task |
-| ------------- | ------------------ | --------- | ---- |
-| AlBERTa-512   | 512 token coontext | &lt;10ms  | nli  |
-| AlBERTa-LC-8k | 8192 token context | &lt;400ms | nli  |
+Key value props:
+- **small** -- 400M parameters small
+- **fast** -- can run inference <u>on CPU</u> in < 300ms
+- **customizable** -- fine-tune for custom evaluation tasks
+- **self-hostable** -- available for [VPC deployment](/deployment)
 
-##
+There are two variants in the alBERTa model family:
+
+| model         | context window       | latency    | fine-tune | description
+| ------------- | ------------------ | ---------  | --------- | ----------
+| alBERTa-512   | 512 tokens | &lt;10ms    |    ✅     | 512-token context variant, available for fine-tuning, and specialized for evaluation tasks (e.g. faithfulness)
+| alBERTa-LC-8k | 8192 tokens | &lt;400ms  |           | Long-context window variant that can scale to 128k+ tokens using a scaled dot-product attention layer
+
+
+![alBERTa](/img/models/alberta.png)
+
+## Usage Guide
+Running evals is possible both from the [Model Console](https://lastmileai.dev/models) dashboard as well as the API.
+
+### Console
+You can run a one-off evaluation from the model playground. Click any model in the [Model Console](https://lastmileai.dev/models).
+Click `Run Model` (the play button) to compute a score on some provided data.
+
+![Model Playground](/img/models/playground_quickstart.png)
+
+:::info
+Depending on what metric the model calculates, it will accept different input fields. For example, `Faithfulness` measures the faithfulness of the `output` to the `ground_truth` (i.e. context provided)
+given the `input`. On the other hand, `Summarization` measures the quality of the `output` summary given the `input` (no ground_truth needed).
+:::
+
+### API
+Reference models by their `name` or `id` (both are available from the console. For example, the `Faithfulness` model can be referenced by its name, or its id `cm2plr07q000ipkr4o8qhj4oe`).
+
+<Tabs groupId="first-api-request">
+  <TabItem value="python">
+  
+  ```python
+from lastmile.lib.auto_eval import AutoEval, Metric
+import pandas as pd
+
+client = AutoEval(api_token="api_token_if_LASTMILE_API_TOKEN_not_set")
+
+query = "Where did the author grow up?"
+expected_response = "England"
+llm_response = "France"
+
+# Evaluate data in a dataframe
+data_result_df = client.evaluate_data(
+    data=pd.DataFrame({
+        "input": [query],
+        "output": [llm_response],
+        "ground_truth": [expected_response]
+    }),
+    metrics=[Metric(name="Faithfulness")]
+)
+
+# Evaluate data in a Dataset
+dataset_result_df = client.evaluate_dataset(
+    dataset_id=dataset_id, 
+    metrics=[Metric(id="cm2plr07q000ipkr4o8qhj4oe"), Metric(name="Summarization")]
+)
+```
+
+</TabItem>
+</Tabs>
+
+You can reference any metric by its name as it appears in the [Model Console](https://lastmileai.dev/models).
+Accepted values include:
+* `Metric(name="Faithfulness")`
+* `Metric(name="Relevance")`
+* `Metric(name="Summarization")`
+* `Metric(name="Toxicity")`
+* `Metric(name="Answer Correctness")`
+
+:::tip
+You can use the same method to run inference on [fine-tuned evaluator models](/autoeval/fine-tune). Simply refer to them by their `name` or `id`.
+:::
+
+:::info
+Since alBERTa 🍁 models are small and fast, you can run them **online** as guardrails. Simply use the API in application code directly.
+:::
