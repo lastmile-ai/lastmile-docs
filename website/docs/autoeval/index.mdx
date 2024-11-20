@@ -11,8 +11,9 @@ import constants from "@site/core/tabConstants";
 Platform Overview
 
 The AutoEval fine-tuning platform enables the customization of [alBERTa small language models](/autoeval/models) (SLMs) to better evaluate and measure your application's performance.
-It solves a key problem in generative AI application development -- developing metrics that accurately represent your application's performance, which you can
-use to iteratively drive improvements and have confidence in production.
+
+It solves a key problem in generative AI application development -- helping you develop metrics that accurately represent your application's performance, enabling you to
+iteratively drive improvements and have confidence in production.
 
 Here's how it works:
 
@@ -31,6 +32,10 @@ as an eval, or at runtime as a guardrail. For e.g. if a response is deemed to ha
 ## Platform Capabilities
 
 ![autoeval-platform](https://andrew-dev-s3.s3.amazonaws.com/autoeval-platform.png)
+
+### Out-of-the-box metrics
+Key metrics to evaluate typical AI applications (such as RAG) are available out of the box. Detect hallucinations, measure input/context relevance, score summarizations and more.
+[Learn more](/autoeval/metrics)
 
 ### Dataset Management
 Store application trace data in AutoEval to be used for running evals, for labeling, and for fine-tuning evaluator models.
