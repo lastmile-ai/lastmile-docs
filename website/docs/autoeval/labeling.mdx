@@ -1,41 +1,81 @@
 ---
-title: "LLM Judge Labeling"
+title: "LLM Judge++"
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import constants from "@site/core/tabConstants";
 
-# Synthetic Label Generation
+# LLM Judge++
 
-For use cases that have few to no labels or ground truth data, the AutoEval platform provides the capability to synthetically generate labels. **Synthetic Data Generation** involves using a model to create data that matches what a realistic response would be and matches the underlying distribution of the data. The platform does its initial labeling through a large-language model (LLM) and over time aligns the performance of the synthetic labels to the ground truth data.
+Synthetic label generation using LLMs
+
+Most applications have few to no labels or ground truth data. For those use cases, AutoEval provides the ability to synthetically generate labels.
+
+The platform asks for an evaluation criteria (a prompt), and labels AI interactions as positive (1) or negative (0) using an LLM (LLM Judge).
+From there, a developer can manually refine some labels, which are fed back in to the labeling job as few-shot examples (hence LLM Judge++).
+
+:::info
+LLM Judge++ is an attempt to incorporate [active learning](https://en.wikipedia.org/wiki/Active_learning_(machine_learning)) in AutoEval.
+Additional features are coming soon. [Get in touch](https://discord.com/invite/xBhNKTetGx) to provide feedback.
+:::
 
 ![synthetic-data#diagram](https://andrew-dev-s3.s3.amazonaws.com/synth-data-diagram.png)
 
-### Generating Synthetic Data:
+### Label Datasets:
 
-1. In the left-hand navigation, head to **Dataset Library**.
-2. Select the dataset that you want to synthetically add labels for.
-3. In the dataset view, click on **Generate Labels**.
-4. Within the Generate Synthetic Labels widget, select the columns to be used to generate your labels. We recommend choosing the columns that provide predictive information to the labels you are generating.
-5. Provide a few examples to be used to refine the quality of the labels you are generating. We recommend providing anywhere between 5 to 20 examples.
+#### API
+
+:::info
+See the [API section](/category/api) for more info on the API, such as provisioning API keys, examples, etc.
+:::
+
+<Tabs groupId="label_dataset">
+  <TabItem value="python">
+  
+  ```python title="label_dataset"
+from lastmile.lib.auto_eval import AutoEval, BuiltinMetrics
+
+client = AutoEval(api_token="api_token_if_LASTMILE_API_TOKEN_not_set")
+
+job_id = client.label_dataset(
+    dataset_id=dataset_id,
+    prompt_template=BuiltinMetrics.FAITHFULNESS, # Or a custom evaluation prompt criteria
+    wait_for_completion=False
+)
+print("Waiting for job to complete...")
+client.wait_for_label_dataset_job(job_id)
+
+labeled_dataset = client.download_dataset(dataset_id)
+
+print(f"Labeling Job with ID: {job_id} Completed")
+```
+
+  </TabItem>
+</Tabs>
+
+#### UI
+
+1. Navigate to [Dataset Library](https://lastmileai.dev/datasets) and open a Dataset to label.
+![View Dataset](/img/datasets/get_dataset.png)
+
+2. Click **Generate LLM Judge Labels**.
+3. Specify evaluation criteria in the form of a prompt, or use one of the predefined templates.
    :::tip
-   We recommend having a diverse set of examples for your examples for optimal performance.
+   You can reference column names inside the prompt using `{column_name}` syntax. For example, if your evaluation criteria needs to reference the output, add `{output}` to the prompt string
    :::
-6. Enter your instructions in the **General Instructions** to guide how the LLM should create your labels.
+4. (optional) Provide few-shot examples to be used to refine the quality of the labels you are generating.
    :::tip
-   We provide templates if you would like an example on what instructions work well.
+   We recommend having a diverse set of examples for your 5-20 examples for optimal performance.
    :::
-7. Click **Start Labeling** and we'll generate 16 synthetic labels for you to review and edit.
-8. Within the next page of the labeling flow, carefully review and either confirm or update the label (1 or 0).
+5. Click **Start Labeling** and we'll generate 16 labels for you to review and edit
+![Start Labeling](/img/labeling/labeling_criteria.png)
+6. Review the labels to see if the labels accurately represent your evaluation criteria. 
+If not, you can manually update the label, or **Change Configuration** to update the prompt.
+![Review Labels](/img/labeling/labeling_review.png)
    :::tip
-   The meaning of the label will depend on your prompt for your synthetic data generation
+   If you don't want to review all 16 labels, click on the last page dot directly.
    :::
-9. After you complete verifying the 16 synthetic labels, you can do a final review in the **Review Labels** widget.
-10. Clikc **Submit** to start generating synthetic labels for the rest of your dataset!
-
-![synthetic-data#diagram](https://andrew-dev-s3.s3.amazonaws.com/temp-console-screenshot.png)
-
-# Define LLM Judge Criteria
-
-# Active Labeling
+9. Click **Review and Submit**, which shows all 16 labels in one table, and gives you a final change to update them. 
+These labels are used as further few-shot prompts to help improve the LLM Judge labeling quality.
+10. Click **Submit** to start the full labeling job
