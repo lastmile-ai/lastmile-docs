@@ -8,7 +8,18 @@ import constants from "@site/core/tabConstants";
 
 # LLM Judge++
 
-Synthetic label generation using LLMs
+Generate high-quality labels using LLMs + human refinement
+
+LLM Judge uses LLM’s to evaluate the performance of your AI application. This is a good way to generate synthetic labeled datasets which can be distilled into a [fine-tuned evaluator model](/autoeval/fine-tune).
+
+![AutoEval Flow](/img/autoeval_flow_labeling.png)
+
+<u>Overall flow:</u>
+* **Upload** data: Start by [uploading](/autoeval/datasets) a few examples of the application (e.g. input/output/context).
+* **Specify eval criteria** (prompt): Define an evaluation criteria as a prompt, which is used by an LLM judge to label the app data.
+* **Refine** with human-in-the-loop: A few examples are labeled by a human (active labeling) to iterate on the LLM judge labels.
+
+### Why?
 
 Most applications have few to no labels or ground truth data. For those use cases, AutoEval provides the ability to synthetically generate labels.
 
@@ -22,7 +33,7 @@ Additional features are coming soon. [Get in touch](https://discord.com/invite/x
 
 ![synthetic-data#diagram](https://andrew-dev-s3.s3.amazonaws.com/synth-data-diagram.png)
 
-### Label Datasets:
+### Usage Guide
 
 #### API
 
