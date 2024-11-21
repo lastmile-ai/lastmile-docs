@@ -1,43 +1,26 @@
-# lastmile-docs
+# LastMile AI Platform Documentation
 
-Documentation website for LastMile AI's products
+[![Build LastMile AI Docs](https://github.com/lastmile-ai/lastmile-docs/actions/workflows/deploy-docs.yml/badge.svg?branch=main)](https://github.com/lastmile-ai/lastmile-docs/actions/workflows/deploy-docs.yml)
 
-[![Deploy LastMile AI Docs](https://github.com/lastmile-ai/lastmile-docs/actions/workflows/deploy-docs.yml/badge.svg?branch=main)](https://github.com/lastmile-ai/lastmile-docs/actions/workflows/deploy-docs.yml)
+This repository holds cookbook guides, example datasets, and the source for LastMile AI's [platform documentation](https://docs.lastmileai.dev).
+
 
 ## About LastMile AI
 
-[LastMile AI](https://lastmileai.dev) is a company that helps software developers build, test and deploy robust generative AI applications. Specifically, the company provides models and tools for developers to evaluate the performance of AI applications.
+[LastMile AI](https://lastmileai.dev) enables software developers, not just ML researchers, to build generative AI applications with confidence. 
+
+The company's most recent product is [AutoEval](https://docs.lastmileai.dev/autoeval) -- a platform for building high-quality evaluator models to measure, monitor and _improve_ AI application quality.
 
 ## Overview
 
-This repository contains the documentation for LastMile AI's products. The autoeval is built with [Docusaurus](https://docusaurus.io)
+* Platform Documentation: built from the [`website`](https://github.com/lastmile-ai/lastmile-docs/tree/main/website) directory.
+* [Cookbook & Guides](https://github.com/lastmile-ai/lastmile-docs/tree/main/cookbook): a collection of notebooks to guide you through using AutoEval efficiently
+* [Sample Datasets](https://github.com/lastmile-ai/lastmile-docs/tree/main/cookbook/data): synthetic datasets mimicking real-world applications to help you try out AutoEval.
 
 ## Contributing
 
-We welcome contributions from the community, especially fixes and improvements to the documentation.
-
-### API docs generation
-
-To regen the SDK, run the following:
-
-```
-yarn docusaurus gen-api-docs all
-```
+We welcome contributions from the community, especially new cookbook tutorials, and fixes and improvements to the documentation.
 
 ### File an issue
 
 If you find a problem with the documentation, please file an issue in this repository.
-
-### Submit a pull request
-
-Please see the [Docusaurus](https://docusaurus.io) documentation for more information on contributing to this project.
-
-At a glance, the steps to contribute are:
-
-1. Clone the repository and create a new branch (or fork the repository)
-2. Navigate to the `website` folder
-3. Make your changes
-   - Install packages with `yarn`
-   - Run the development server with `yarn start`
-   - Validate the changes with `yarn build`
-4. Submit a pull request to the `main` branch

@@ -1,6 +1,6 @@
-# Website
+# LastMile AI Platform Documentation Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator. It is hosted on https://docs.lastmileai.dev
 
 ### Installation
 
@@ -24,18 +24,24 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
+### API docs generation
 
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
+To regen the API docs, run the following:
 
 ```
-$ GIT_USER=<Your GitHub username> yarn deploy
+yarn docusaurus gen-api-docs all
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### Submit a pull request
+
+Please see the [Docusaurus](https://docusaurus.io) documentation for more information on contributing to this project.
+
+At a glance, the steps to contribute are:
+
+1. Clone the repository and create a new branch (or fork the repository)
+2. Navigate to the `website` folder
+3. Make your changes
+   - Install packages with `yarn`
+   - Run the development server with `yarn start`
+   - Validate the changes with `yarn build`
+4. Submit a pull request to the `main` branch

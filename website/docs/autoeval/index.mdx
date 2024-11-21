@@ -21,13 +21,13 @@ Here's how it works:
 
 You come to AutoEval if you have a compound AI application, such as a RAG pipeline or agent system, and you want to understand if the application is performing well or not.
 This can be a single quality metric of AI interactions, or a whole suite of metrics - each measuring something specific about the system:
-* Is the response faithful to the data provided?
-* Is the input relevant to the application's purpose? (input guardrail)
-* Does the response adhere to my company's brand tone?
+* _Is the response faithful to the data provided?_
+* _Is the input relevant to the application's purpose? (input guardrail)_
+* _Does the response adhere to my company's brand tone?_
 
-AutoEval starts from the application's trace data, helps label the interactions using LLM Judge where you can specify an evaluation criteria in natural language (prompt),
-and then fine-tune an alBERTa SLM to learn the distribution of those labeled interactions. You can then use the fine-tuned model
-as an eval, or at runtime as a guardrail. For e.g. if a response is deemed to have hallucinated, i.e. unsufficiently faithful to the data, then deny that response from reaching the user.
+AutoEval starts from the application's trace [datasets](/autoeval/datasets), [labels](/autoeval/labeling) the interactions using LLM Judge where you can specify an evaluation criteria in natural language (prompt),
+and then [fine-tunes](/autoeval/fine-tune) an alBERTa SLM to learn the distribution of those labeled interactions. You can then [run the fine-tuned model](/autoeval/models#usage-guide)
+as an eval, or at runtime as a [guardrail](/autoeval/guardrails). For e.g. if a response is deemed to have hallucinated, i.e. unsufficiently faithful to the data, then deny that response from reaching the user.
 
 ## Platform Capabilities
 
@@ -58,7 +58,7 @@ You can continuously improve the active learning by providing additional samples
 [Learn more](/autoeval/fine-tune)
 
 ### Online inference
-You can use the evaluator models for offline tasks such as running evals, as well as online tasks such as guardrails.
+You can use the evaluator models for offline tasks such as [running evals](/autoeval/models#usage-guide), as well as online tasks such as [guardrails](/autoeval/guardrails).
 AutoEval has a high-performance inference server that can handle both kinds of workloads.
 
 :::info
