@@ -14,7 +14,7 @@
 
 
 <meta name="referrer" content="origin-when-cross-origin"><link rel="stylesheet" href="/assets/css/styles.8fd50dba.css">
-<script src="/assets/js/runtime~main.804cb4e8.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.66edfc23.js" defer="defer"></script>
 <script src="/assets/js/main.1873b58b.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -28,13 +28,13 @@ iteratively drive improvements and have confidence in production.</p>
 <p>You come to AutoEval if you have a compound AI application, such as a RAG pipeline or agent system, and you want to understand if the application is performing well or not.
 This can be a single quality metric of AI interactions, or a whole suite of metrics - each measuring something specific about the system:</p>
 <ul>
-<li>Is the response faithful to the data provided?</li>
-<li>Is the input relevant to the application&#x27;s purpose? (input guardrail)</li>
-<li>Does the response adhere to my company&#x27;s brand tone?</li>
+<li><em>Is the response faithful to the data provided?</em></li>
+<li><em>Is the input relevant to the application&#x27;s purpose? (input guardrail)</em></li>
+<li><em>Does the response adhere to my company&#x27;s brand tone?</em></li>
 </ul>
-<p>AutoEval starts from the application&#x27;s trace data, helps label the interactions using LLM Judge where you can specify an evaluation criteria in natural language (prompt),
-and then fine-tune an alBERTa SLM to learn the distribution of those labeled interactions. You can then use the fine-tuned model
-as an eval, or at runtime as a guardrail. For e.g. if a response is deemed to have hallucinated, i.e. unsufficiently faithful to the data, then deny that response from reaching the user.</p>
+<p>AutoEval starts from the application&#x27;s trace <a href="/autoeval/datasets">datasets</a>, <a href="/autoeval/labeling">labels</a> the interactions using LLM Judge where you can specify an evaluation criteria in natural language (prompt),
+and then <a href="/autoeval/fine-tune">fine-tunes</a> an alBERTa SLM to learn the distribution of those labeled interactions. You can then <a href="/autoeval/models#usage-guide">run the fine-tuned model</a>
+as an eval, or at runtime as a <a href="/autoeval/guardrails">guardrail</a>. For e.g. if a response is deemed to have hallucinated, i.e. unsufficiently faithful to the data, then deny that response from reaching the user.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="platform-capabilities">Platform Capabilities<a href="#platform-capabilities" class="hash-link" aria-label="Direct link to Platform Capabilities" title="Direct link to Platform Capabilities">​</a></h2>
 <p><img decoding="async" loading="lazy" src="https://andrew-dev-s3.s3.amazonaws.com/autoeval-platform.png" alt="autoeval-platform" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="out-of-the-box-metrics">Out-of-the-box metrics<a href="#out-of-the-box-metrics" class="hash-link" aria-label="Direct link to Out-of-the-box metrics" title="Direct link to Out-of-the-box metrics">​</a></h3>
@@ -53,7 +53,7 @@ developer to improve the labels manually as part of an <a href="https://en.wikip
 <p><strong>Design your own eval metric</strong>. Fine-tuning allows you to improve the performance of LastMile AI&#x27;s models by tuning the performance to your specific data and use case.</p>
 <p><a href="/autoeval/fine-tune">Learn more</a></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="online-inference">Online inference<a href="#online-inference" class="hash-link" aria-label="Direct link to Online inference" title="Direct link to Online inference">​</a></h3>
-<p>You can use the evaluator models for offline tasks such as running evals, as well as online tasks such as guardrails.
+<p>You can use the evaluator models for offline tasks such as <a href="/autoeval/models#usage-guide">running evals</a>, as well as online tasks such as <a href="/autoeval/guardrails">guardrails</a>.
 AutoEval has a high-performance inference server that can handle both kinds of workloads.</p>
 <div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Use the <a href="/quickstart">quickstart</a> guide to get started running your first evaluation.</p></div></div></div></div></div><div class="row"><div class="col col--12"></div></div></article><div class="row"><div class="col col--12"><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/quickstart"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Quickstart</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/autoeval/autoeval-intro"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Introduction</div></a></nav></div></div></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#platform-capabilities" class="table-of-contents__link toc-highlight">Platform Capabilities</a><ul><li><a href="#out-of-the-box-metrics" class="table-of-contents__link toc-highlight">Out-of-the-box metrics</a></li><li><a href="#dataset-management" class="table-of-contents__link toc-highlight">Dataset Management</a></li><li><a href="#synthetic-data-generation-llm-judge-labeling" class="table-of-contents__link toc-highlight">Synthetic Data Generation (LLM Judge Labeling)</a></li><li><a href="#fine-tuning" class="table-of-contents__link toc-highlight">Fine-tuning</a></li><li><a href="#online-inference" class="table-of-contents__link toc-highlight">Online inference</a></li></ul></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
