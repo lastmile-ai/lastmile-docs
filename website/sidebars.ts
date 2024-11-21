@@ -77,8 +77,6 @@ const sidebars: SidebarsConfig = {
       collapsible: true,
       collapsed: true,
     },
-
-    "sdk", // TODO: saqadri - move into API Reference
     {
       type: "category",
       label: "API",

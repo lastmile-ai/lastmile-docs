@@ -32,7 +32,7 @@ Some example evaluators that AutoEval customers have trained:
 Fine-tuning your own alBERTa evaluator model is much more effective than LLM Judge style eval approaches for a number of reasons.
 Unlike an LLM Judge, this model can be small, fast and include human-in-the-loop refinement:
 * **better metric quality** -- the quality of evaluations is bound by quality of the labels (which can be refined with human feedback), not bound by an LLM's ability to understand your application context.
-* **small & fast** -- can run inference in < 300ms, which allows these evaluators to run online as [guardrails](/autoeval/guardrails).
+* **small & fast** -- 100x faster than LLM Judge (can run inference in 10-300ms), which allows these evaluators to run online as [guardrails](/autoeval/guardrails).
 * **customizable** -- the model is simply learning the label distribution, making it easy to teach it any kind of classification task.
 
 You can fine-tune as many evaluators as you want – one for each evaluation criteria you need for your application.
@@ -50,6 +50,10 @@ During the fine-tuning flow you can choose which of these columns to include in 
 * `input`
 * `output`
 * `ground_truth`
+
+:::tip
+Don't have app data handy? No problem - check out our [Example Datasets](/autoeval/datasets/example-datasets) to get synthetic datasets to try out the platform.
+:::
 
 ### Label data
 Use the [LLM Judge++](/autoeval/labeling#usage-guide) flow to define your evaluation criteria and generate labels.

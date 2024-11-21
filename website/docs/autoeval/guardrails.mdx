@@ -7,4 +7,71 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import constants from "@site/core/tabConstants";
 
-Guardrails
+import { Card } from "@site/src/components/Card";
+import { Grid } from "@site/src/components/Grid";
+
+# Guardrails
+
+Evaluation and guardrails are 2 sides of the same coin
+
+Guardrails are just evaluators that run online. If you could detect a hallucination fast enough, why not catch that in the application's runtime
+and prevent the issue from surfacing to the user?
+
+Because [AutoEval models](/autoeval/models) are fast (< 300ms on CPU and < 10ms on GPU) and cheap to operate (1/1000th the size of GPT-4), you can run them
+*on every response* as a guardrail without compromising on user experience.
+
+:::info
+**Coming soon**: Trust and safety features that allow you to provision guardrail endpoints and set appropriate thresholds for pass/fail.
+:::
+
+### Usage Guide
+
+Use the [API](/category/api) to compute metrics in the application runtime: 
+
+<Tabs groupId="guardrail">
+  <TabItem value="python">
+  
+  ```python
+from lastmile.lib.auto_eval import AutoEval, Metric
+import pandas as pd
+
+def guard(input, output, context, metric: Metric, threshold=0.5) -> bool:
+    client = AutoEval(api_token="api_token_if_LASTMILE_API_TOKEN_not_set")
+
+    result = client.evaluate_data(
+        data=pd.DataFrame({
+            "input": [input],
+            "output": [output],
+            "ground_truth": [context]
+        }),
+        metrics=[metric]
+    )
+
+    score = result[f"{metric.name}_score"][0]
+    return score >= threshold
+
+# Define a faithfulness guardrail:
+guard(
+    input="Where did the author grow up?",
+    output="France",
+    context="England",
+    metric=Metric(name="Faithfulness")
+)
+```
+
+</TabItem>
+</Tabs>
+
+### Fine-tune a custom guardrail
+You can build your own input/output guardrail models using the [fine-tuning service](/autoeval/fine-tune).
+For example, you can define a custom input guardrail that determines if the input is relevant to the purpose of the application,
+and denies irrelevant requests.
+
+Follow this guide for a detailed walkthrough:
+
+  <Card
+    href="https://github.com/lastmile-ai/lastmile-docs/blob/main/cookbook/RAG_Guardrails.ipynb"
+    title="Real-time guardrails"
+    description="Build real-time guardrails in a RAG application using fine-tuned alBERTa 🍁 models."
+    className="custom-card"
+  />
