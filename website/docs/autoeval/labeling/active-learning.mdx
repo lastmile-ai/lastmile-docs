@@ -9,7 +9,7 @@ import constants from '@site/core/tabConstants';
 # Active Learning
 Active Learning in the context of AutoEval
 
-**Active learning** is the process of using an algorithm (an LLM in this case) to interactively label the training data. 
+[Active learning](https://en.wikipedia.org/wiki/Active_learning_(machine_learning)) is the process of using an algorithm (an LLM in this case) to interactively label the training data. 
 You can continuously improve the active learning by providing additional samples of ground truth data.
 
 ![active-learning#diagram](https://andrew-dev-s3.s3.amazonaws.com/Active-Learning.png)
@@ -21,4 +21,4 @@ and refines it with human input:
 ![Labeling Flow](/img/labeling/labeling_flow.png)
 
 We are actively (no pun intended) adding more capabilities to better support active learning, because having a high quality labeled dataset
-that accurately reflects your evaluation criteria is critical to getting a high quality evaluator model that learns from those labels.
+that accurately reflects your evaluation criteria is critical to [fine-tuning](/autoeval/fine-tune) a high quality evaluator model.
