@@ -83,16 +83,16 @@ const sidebars: SidebarsConfig = {
       link: {
         type: "generated-index", // This causes page to display a grid-component of the items
         title: "Overview",
-        description: "Some mock description text here",
+        description: "Get started with the AutoEval SDK",
       },
       items: [
         {
           type: "doc",
-          id: "api-keys",
+          id: "sdk",
         },
         {
           type: "doc",
-          id: "sdk",
+          id: "api-keys",
         },
         ...require("./docs/api/sidebar.js"),
       ],

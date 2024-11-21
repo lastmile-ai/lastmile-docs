@@ -6,30 +6,406 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import constants from '@site/core/tabConstants';
 
-# SDK
+import { Card } from "@site/src/components/Card";
+import { Grid } from "@site/src/components/Grid";
 
-![PyPI](https://img.shields.io/pypi/v/lastmile?label=lastmile)
+# LastMile SDK
 
-The [LastMile Python library](https://pypi.org/project/lastmile/) provides pythonic access to the LastMile REST API from any Python 3.7+ application.
+[![PyPI version](https://img.shields.io/pypi/v/lastmile?label=lastmile%20pypi)](https://pypi.org/project/lastmile/)
+[![npm](https://img.shields.io/npm/v/lastmile?label=lastmile%20npm)](https://www.npmjs.com/package/lastmile)
 
-#### Installation
+:::tip
+**Recommendation**: This page covers the LastMile Python client, which includes more ergonomic APIs for `AutoEval`. You can see [other sections](/category/api) to use the primitive APIs in the LastMile API that are available via REST, Python and Node.js (TypeScript) clients. 
+:::
+
+## Setup
+
+### Provision API key
+To get started, [provision your free LastMile API key](/api-keys).
+
+### Installation
+
+<Tabs groupId="pacman">
+  <TabItem value="pip">
 
 ```bash
-# install from PyPI
 pip install lastmile
 ```
 
-#### Usage
+  </TabItem>
+  <TabItem value="npm">
+
+```bash
+npm install lastmile
+```
+
+  </TabItem>
+</Tabs>
+
+## Capabilities
+
+### Run Evals
+The most basic function of AutoEval is to be able to run evaluations at scale. 
+The [Evaluator Models](/autoeval/models#usage-guide) usage guide covers how to do this via API.
+
+[Learn more](/autoeval/metrics) about evaluation metrics that are supported out of the box.
+
+### Manage Datasets
+The [Datasets](/autoeval/datasets) section covers managing Datasets using the API.
+
+### LLM Judge++
+The [LLM Judge++](/autoeval/labeling#usage-guide) usage guide covers generating labels given custom evaluation criteria using an LLM Judge.
+Note that the API doesn't yet support [active learning](/autoeval/labeling/active-learning) -- it only supports LLM Judge synthetic labeling.
+
+### Fine-tuning
+The [evaluator fine-tuning](/autoeval/fine-tune#usage-guide) section covers examples of scheduling fine-tuning jobs via API.
+
+## Guides
+These guides provide targeted tutorials for accomplishing specific real-world tasks with the LastMile API.
+
+<Grid className="guides-grid">
+  <Card
+    href="https://github.com/lastmile-ai/lastmile-docs/blob/main/cookbook/AutoEval_Getting_Started.ipynb"
+    title="Getting Started Guide"
+    description="Start-to-finish overview of AutoEval, from running evals, labeling with LLM Judge to fine-tuning a custom metric."
+    className="custom-card"
+  />
+  <Card
+    href="https://github.com/lastmile-ai/lastmile-docs/blob/main/cookbook/RAG_Evaluation.ipynb"
+    title="RAG Evaluation"
+    description="Evaluate a RAG application for hallucination, relevance and other out-of-the-box metrics available via AutoEval."
+    className="custom-card"
+  />
+  <!-- <Card
+    href="/guides/multi-agent-evaluation"
+    title="Multi-agent applications"
+    description="Evaluate end-to-end and intermediate step metrics for a compound AI system."
+    className="custom-card"
+  /> -->
+  <Card
+    href="https://github.com/lastmile-ai/lastmile-docs/blob/main/cookbook/RAG_Guardrails.ipynb"
+    title="Real-time guardrails"
+    description="Build real-time guardrails in a RAG application using fine-tuned alBERTa 🍁 models."
+    className="custom-card"
+  />
+</Grid>
+
+## AutoEval Client Reference
+
+```python title="imports"
+from lastmile.lib.auto_eval import AutoEval, BuiltinMetrics, Metric
+client = AutoEval(api_token="api_token_if_LASTMILE_API_TOKEN_not_set")
+
+```
+
+### **`AutoEval` class**
+
+A high-level client wrapper for the Lastmile SDK that simplifies common workflows.
+
+#### Initialization
 
 ```python
-import os
-from lastmile import Lastmile
-
-client = Lastmile(
-    # This is the default and can be omitted
-    bearer_token=os.environ.get("LASTMILE_API_TOKEN"),
+def __init__(
+    api_token: Optional[str] = None,
+    base_url: str = "https://lastmileai.dev",
+    logger: Optional[logging.Logger] = None,
 )
+```
 
-dataset = client.datasets.create()
-print(dataset.dataset)
+**Parameters**:
+- `api_token` (str): API token for authentication.
+- `base_url` (str): Base URL of the Lastmile API (default: `https://lastmileai.dev`).
+- `logger` (logging.Logger): Optional logger object.
+
+---
+
+### Evaluation Methods
+
+#### **`evaluate_data`**
+
+Evaluates data with specified metrics.
+
+```python
+def evaluate_data(
+    data: pd.DataFrame,
+    metrics: Union[Metric, List[Metric]],
+) -> pd.DataFrame
+```
+
+**Parameters**:
+- `data` (pd.DataFrame): Data to evaluate.
+- `metrics` (Union[Metric, List[Metric]]): Metrics to use.
+
+**Returns**: `pd.DataFrame` — DataFrame with evaluation scores.
+
+---
+
+#### **`evaluate_dataset`**
+
+Evaluates a dataset directly with specified metrics.
+
+```python
+def evaluate_dataset(
+    dataset_id: str,
+    metrics: Union[Metric, List[Metric]],
+) -> pd.DataFrame
+```
+
+**Parameters**:
+- `dataset_id` (str): ID of the dataset.
+- `metrics` (Union[Metric, List[Metric]]): Metrics to use.
+
+**Returns**: `pd.DataFrame` — DataFrame with evaluation scores.
+
+---
+
+#### **`list_metrics`**
+
+Lists all available metrics.
+
+```python
+def list_metrics() -> List[Metric]
+```
+
+**Returns**: `List[Metric]` — List of metrics.
+
+---
+
+#### **`get_metric`**
+
+Retrieves a specific metric.
+
+```python
+def get_metric(
+    metric: Metric,
+) -> Metric
+```
+
+**Parameters**:
+- `metric` (Metric): Metric to retrieve (name or ID must be set).
+
+**Returns**: `Metric` — The retrieved metric.
+
+---
+
+#### **`wait_for_metric_online`**
+
+Waits for a metric to become available for evaluation.
+
+```python
+def wait_for_metric_online(
+    metric: Metric,
+    timeout: int = 360,
+    retry_interval: int = 10,
+) -> Metric
+```
+
+**Parameters**:
+- `metric` (Metric): Metric to wait for.
+- `timeout` (int): Maximum wait time in seconds.
+- `retry_interval` (int): Status check interval in seconds.
+
+**Returns**: `Metric` — Online metric.
+
+---
+
+### Built-in Metrics
+
+The `BuiltinMetrics` class includes predefined metrics:
+
+- `FAITHFULNESS`: Measures adherence to the context.
+- `RELEVANCE`: Evaluates semantic similarity.
+- `TOXICITY`: Detects potentially harmful content.
+- `ANSWER_CORRECTNESS`: Validates correctness of answers.
+- `SUMMARIZATION`: Evaluates quality of summaries.
+
+---
+
+
+### Dataset Management Methods
+
+#### **`upload_dataset`**
+
+Uploads a dataset to Lastmile.
+
+```python
+def upload_dataset(
+    file_path: str,
+    name: str,
+    description: Optional[str] = None,
+) -> str
+```
+
+**Parameters**:
+- `file_path` (str): Path to the dataset CSV file.
+- `name` (str): Name of the dataset.
+- `description` (Optional[str]): Description of the dataset.
+
+**Returns**: `str` — ID of the created dataset.
+
+---
+
+#### **`download_dataset`**
+
+Downloads a dataset to a file or as a `pandas` DataFrame.
+
+```python
+def download_dataset(
+    dataset_id: str,
+    output_file_path: Optional[str] = None,
+) -> pd.DataFrame
+```
+
+**Parameters**:
+- `dataset_id` (str): ID of the dataset to download.
+- `output_file_path` (Optional[str]): Path to save the dataset locally.
+
+**Returns**: `pd.DataFrame` — The dataset.
+
+---
+
+#### **`list_datasets`**
+
+Lists all datasets available to the user.
+
+```python
+def list_datasets() -> List[Dataset]
+```
+
+**Returns**: `List[Dataset]` — List of available datasets.
+
+---
+
+### Labeling Methods
+
+#### **`label_dataset`**
+
+Labels a dataset using a predefined prompt or custom template.
+
+```python
+def label_dataset(
+    dataset_id: str,
+    prompt_template: Union[str, Metric],
+    few_shot_examples: Optional[pd.DataFrame] = None,
+    wait_for_completion: bool = False,
+) -> str
+```
+
+**Parameters**:
+- `dataset_id` (str): ID of the dataset.
+- `prompt_template` (Union[str, Metric]): Prompt template or predefined metric.
+- `few_shot_examples` (Optional[pd.DataFrame]): Few-shot examples.
+- `wait_for_completion` (bool): Wait for the job to complete.
+
+**Returns**: `str` — Job ID of the labeling task.
+
+---
+
+#### **`wait_for_label_dataset_job`**
+
+Waits for a label dataset job to complete.
+
+```python
+def wait_for_label_dataset_job(
+    job_id: str,
+    timeout: int = 3600,
+    interval: int = 30,
+) -> None
+
+**Parameters**:
+- `job_id` (str): ID of the fine-tuning job.
+- `timeout` (int): Maximum wait time in seconds (default: 3600s).
+- `interval` (int): Status check interval in seconds (default: 30s).
+
+---
+
+### Fine-Tuning
+
+#### **`fine_tune_model`**
+
+Fine-tunes a model on training and test datasets.
+
+```python
+def fine_tune_model(
+    train_dataset_id: str,
+    test_dataset_id: str,
+    model_name: str,
+    baseline_model_id: Optional[str] = None,
+    selected_columns: Optional[List[str]] = None,
+    wait_for_completion: bool = False,
+) -> str
+```
+
+**Parameters**:
+- `train_dataset_id` (str): Training dataset ID.
+- `test_dataset_id` (str): Test dataset ID.
+- `model_name` (str): Name for the fine-tuned model.
+- `baseline_model_id` (Optional[str]): Baseline model ID.
+- `selected_columns` (Optional[List[str]]): Columns to use for training.
+- `wait_for_completion` (bool): Wait for the fine-tuning process to complete.
+
+**Returns**: `str` — Job ID of the fine-tuning job.
+
+---
+
+#### **`wait_for_fine_tune_job`**
+
+Waits for a fine-tune job to complete.
+
+```python
+def wait_for_fine_tune_job(
+    job_id: str,
+    timeout: int = 3600,
+    interval: int = 30,
+) -> None
+```
+
+**Parameters**:
+- `job_id` (str): ID of the fine-tuning job.
+- `timeout` (int): Maximum wait time in seconds.
+- `interval` (int): Status check interval in seconds.
+
+---
+
+#### **`get_prompt_templates`**
+
+Retrieves predefined prompt templates for labeling and evaluation.
+
+```python
+def get_prompt_templates() -> Dict[Metric, str]
+```
+
+**Returns**: `Dict[Metric, str]` — Mapping of metrics to prompt templates.
+
+---
+
+### Examples
+
+#### Upload a Dataset
+
+```python
+dataset_id = client.upload_dataset(
+    file_path="data.csv",
+    name="Example Dataset",
+    description="Sample data for evaluation."
+)
+```
+
+#### Fine-Tune a Model
+
+```python
+fine_tune_job_id = client.fine_tune_model(
+    train_dataset_id="train_id",
+    test_dataset_id="test_id",
+    model_name="FineTunedModel"
+)
+```
+
+#### Evaluate Data with Metrics
+
+```python
+results = client.evaluate_data(
+    data=dataframe,
+    metrics=[BuiltinMetrics.FAITHFULNESS, BuiltinMetrics.RELEVANCE]
+)
 ```

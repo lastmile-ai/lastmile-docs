@@ -8,42 +8,44 @@ import constants from "@site/core/tabConstants";
 
 # Manage API keys
 
-## Get your LastMile API Key
+Get your LastMile API key
 
-- Log in or sign up at https://lastmileai.dev
-- Navigate to https://lastmileai.dev/apikeys
+- Log in or sign up for free at https://lastmileai.dev
+- Navigate to [API Keys console](https://lastmileai.dev/apikeys)
 - Click `+ New Key`
 
 ![LastMile API Key](/img/lastmile-api-key.png)
 
-## Use your LastMile API Key
+Export the API key you generated as an environment variable. Alternatively, you can also pass it directly into the `Lastmile` client.
 
-## Managing External API
+<Tabs groupId="first-api-request">
+<TabItem value="bash">
+  
+  ```bash
+export LASTMILE_API_TOKEN="your_api_key"
+```
+
+</TabItem>
+  <TabItem value="python">
+  
+  ```python
+from lastmile import Lastmile
+from lastmile.lib.auto_eval import AutoEval
+
+# Recommended: AutoEval client SDK (higher-level APIs)
+client = AutoEval(api_token="api_token_if_LASTMILE_API_TOKEN_not_set")
+
+# Lastmile client (REST API wrappers)
+client = Lastmile(
+    bearer_token="api_token_if_LASTMILE_API_TOKEN_not_set",
+)
+```
+
+</TabItem>
+</Tabs>
 
 ### Configure Weights & Biases API token
 
-![PyPI](https://img.shields.io/pypi/v/lastmile?label=lastmile)
-
-The [LastMile Python library](https://pypi.org/project/lastmile/) provides pythonic access to the LastMile REST API from any Python 3.7+ application.
-
-#### Installation
-
-```bash
-# install from PyPI
-pip install lastmile
-```
-
-#### Usage
-
-```python
-import os
-from lastmile import Lastmile
-
-client = Lastmile(
-    # This is the default and can be omitted
-    bearer_token=os.environ.get("LASTMILE_API_TOKEN"),
-)
-
-dataset = client.datasets.create()
-print(dataset.dataset)
-```
+AutoEval allows you to track detailed training runs in your own Weights & Biases account. To do so, navigate to the [API Keys console](https://lastmileai.dev/apikeys), and save your W&B API key.
+Subsequent [fine-tuning](/autoeval/fine-tune) runs will be tracked in your account.
+![Wandb Integration](/img/api/wandb.png)
