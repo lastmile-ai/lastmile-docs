@@ -311,11 +311,24 @@ def wait_for_label_dataset_job(
     timeout: int = 3600,
     interval: int = 30,
 ) -> None
+```
 
 **Parameters**:
 - `job_id` (str): ID of the fine-tuning job.
 - `timeout` (int): Maximum wait time in seconds (default: 3600s).
 - `interval` (int): Status check interval in seconds (default: 30s).
+
+---
+
+#### **`get_prompt_templates`**
+
+Retrieves predefined prompt templates for labeling and evaluation.
+
+```python
+def get_prompt_templates() -> Dict[Metric, str]
+```
+
+**Returns**: `Dict[Metric, str]` — Mapping of metrics to prompt templates.
 
 ---
 
@@ -364,18 +377,6 @@ def wait_for_fine_tune_job(
 - `job_id` (str): ID of the fine-tuning job.
 - `timeout` (int): Maximum wait time in seconds.
 - `interval` (int): Status check interval in seconds.
-
----
-
-#### **`get_prompt_templates`**
-
-Retrieves predefined prompt templates for labeling and evaluation.
-
-```python
-def get_prompt_templates() -> Dict[Metric, str]
-```
-
-**Returns**: `Dict[Metric, str]` — Mapping of metrics to prompt templates.
 
 ---
 
