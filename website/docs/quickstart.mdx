@@ -56,7 +56,7 @@ Enter values for `input`, `output` and `ground_truth`, and click **Run Model** t
 #### API
 
 We provide a REST API surface as well as client SDKs in `Python` and `Node.js`. We recommend using the client SDKs for a streamlined experience.
-For more information, see the [API section](/category/api).
+For more information, see the [API section](/category/sdk).
 
 First, let's install the requisite packages:
 
@@ -84,13 +84,13 @@ npm install lastmile
 from lastmile.lib.auto_eval import AutoEval, BuiltinMetrics
 import pandas as pd
 
-eval = AutoEval(api_token="api_token_if_LASTMILE_API_TOKEN_not_set")
+client = AutoEval(api_token="api_token_if_LASTMILE_API_TOKEN_not_set")
 
 query = "Where did the author grow up?"
 expected_response = "England"
 llm_response = "France"
 
-eval_result = eval.evaluate_data(
+eval_result = client.evaluate_data(
     data=pd.DataFrame({
         "input": [query],
         "output": [llm_response],

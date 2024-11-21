@@ -112,7 +112,7 @@ const config: Config = {
       },
       items: [
         {
-          to: "/category/api",
+          to: "/sdk",
           label: "API Reference",
           position: "right",
         },

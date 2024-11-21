@@ -2,19 +2,6 @@
 id: {{{id}}}
 title: "{{{title}}}"
 description: "{{{frontMatter.description}}}"
-{{^api}}
-sidebar_label: Introduction
-{{/api}}
-{{#api}}
-sidebar_label: "{{{title}}}"
-{{/api}}
-{{^api}}
-sidebar_position: 0
-{{/api}}
-hide_title: true
-{{#api}}
-hide_table_of_contents: true
-{{/api}}
 {{#json}}
 api: {{{json}}}
 {{/json}}
