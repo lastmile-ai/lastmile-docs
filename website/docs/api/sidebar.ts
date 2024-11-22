@@ -52,6 +52,12 @@ const sidebar: SidebarsConfig = {
           label: "List Datasets",
           className: "api-method post",
         },
+        {
+          type: "doc",
+          id: "api/clone-dataset",
+          label: "Clone Dataset",
+          className: "api-method post",
+        },
       ],
     },
     {
@@ -422,6 +428,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/getdatasetdownloadurlresponse",
           label: "GetDatasetDownloadURLResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/clonedatasetrequest",
+          label: "CloneDatasetRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/clonedatasetresponse",
+          label: "CloneDatasetResponse",
           className: "schema",
         },
         {
