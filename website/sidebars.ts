@@ -43,7 +43,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: "category",
-          label: "LLM Judge++",
+          label: "Synthetic Labeling",
           link: {
             type: "doc",
             id: "autoeval/labeling",

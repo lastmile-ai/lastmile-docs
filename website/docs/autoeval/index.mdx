@@ -41,13 +41,13 @@ Key metrics to evaluate typical AI applications (such as RAG) are available out 
 Store application trace data in AutoEval to be used for running evals, for labeling, and for fine-tuning evaluator models.
 [Learn more](/autoeval/datasets)
 
-### Synthetic Data Generation (LLM Judge Labeling)
+### Synthetic Labeling (LLM Judge Labeling)
 
 For use cases that have few to no labels or ground truth data, AutoEval provides the capability to synthetically generate labels.
-We refer to this as **LLM Judge++**, because it uses an LLM to generate labels given a custom evaluation criteria, and also allows a 
-developer to improve the labels manually as part of an [active learning](https://en.wikipedia.org/wiki/Active_learning_(machine_learning)) process.
+We refer to this as **Synthetic Labeling**. It uses an LLM to generate labels given a custom evaluation criteria, and also allows a 
+developer to improve the labels manually as part of an refinement process (typically labeled by a subject matter expert).
 
-You can continuously improve the active learning by providing additional samples of ground truth data.
+You can continuously improve the label quality by providing additional samples of ground truth data.
 
 [Learn more](/autoeval/labeling)
 
