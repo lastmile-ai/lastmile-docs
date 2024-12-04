@@ -118,7 +118,8 @@ const sidebars: SidebarsConfig = {
     //     },
     //   ],
     // },
-    {
+   "workbooks", 
+   {
       type: "link",
       label: "RAG Workbench",
       description: "Experimentation and monitoring of RAG pipelines",
