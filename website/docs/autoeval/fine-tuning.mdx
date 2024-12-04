@@ -15,7 +15,7 @@ Build your own evaluation metric by fine-tuning [alBERTa evaluator models](/auto
 
 The AutoEval fine-tuning service enables you to develop models that represent your custom evaluation criteria. The flow is roughly as follows:
 1. Start with a [Dataset](/autoeval/datasets) of your application data.
-2. (Assuming you don't have labels) Specify your evaluation criteria and generate labels with [LLM Judge++](/autoeval/labeling).
+2. (Assuming you don't have labels) Specify your evaluation criteria and generate labels with [synthetic labeling](/autoeval/labeling).
 3. Use the AutoEval fine-tuning service to train a fine-tuned evaluator model using the labeled data to learn the evaluation criteria.
 
 The fine-tuned model will then produce a numeric 0->1 probability score for every request.
@@ -54,7 +54,7 @@ Don't have app data handy? No problem - check out our [Example Datasets](/autoev
 :::
 
 ### Label data
-Use the [LLM Judge++](/autoeval/labeling#usage-guide) flow to define your evaluation criteria and generate labels.
+Use [synthetic labeling](/autoeval/labeling#usage-guide) flow to define your evaluation criteria and generate labels.
 
 ### Training and test data split (optional)
 Split the dataset into a training dataset and a test (holdout) dataset.

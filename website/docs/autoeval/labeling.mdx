@@ -1,12 +1,12 @@
 ---
-title: "LLM Judge++"
+title: "Synthetic Labeling"
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import constants from "@site/core/tabConstants";
 
-# LLM Judge++
+# Synthetic Labeling
 
 Generate high-quality labels using LLMs + human refinement
 
@@ -24,12 +24,7 @@ LLM Judge uses LLM’s to evaluate the performance of your AI application. This 
 Most applications have few to no labels or ground truth data. For those use cases, AutoEval provides the ability to synthetically generate labels.
 
 The platform asks for an evaluation criteria (a prompt), and labels AI interactions as positive (1) or negative (0) using an LLM (LLM Judge).
-From there, a developer can manually refine some labels, which are fed back in to the labeling job as few-shot examples (hence LLM Judge++).
-
-:::info
-LLM Judge++ is an attempt to incorporate [active learning](https://en.wikipedia.org/wiki/Active_learning_(machine_learning)) in AutoEval.
-Additional features are coming soon. [Get in touch](https://discord.com/invite/xBhNKTetGx) to provide feedback.
-:::
+From there, a developer can manually refine some labels, which are fed back in to the labeling job as few-shot examples.
 
 ### Usage Guide
 
