@@ -52,6 +52,12 @@ const sidebar: SidebarsConfig = {
           label: "List Datasets",
           className: "api-method post",
         },
+        {
+          type: "doc",
+          id: "api/clone-dataset",
+          label: "Clone Dataset",
+          className: "api-method post",
+        },
       ],
     },
     {
@@ -98,6 +104,12 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/submit-fine-tune-job",
           label: "Submit Fine Tune Job",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/get-fine-tune-job",
+          label: "Get Fine Tune Job",
           className: "api-method post",
         },
         {
@@ -426,6 +438,18 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/schemas/clonedatasetrequest",
+          label: "CloneDatasetRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/clonedatasetresponse",
+          label: "CloneDatasetResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
           id: "api/schemas/metric",
           label: "Metric",
           className: "schema",
@@ -500,6 +524,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/submitfinetunejobresponse",
           label: "SubmitFineTuneJobResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/getfinetunejobrequest",
+          label: "GetFineTuneJobRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/getfinetunejobresponse",
+          label: "GetFineTuneJobResponse",
           className: "schema",
         },
         {
