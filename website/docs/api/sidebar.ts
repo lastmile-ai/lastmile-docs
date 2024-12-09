@@ -52,6 +52,12 @@ const sidebar: SidebarsConfig = {
           label: "List Datasets",
           className: "api-method post",
         },
+        {
+          type: "doc",
+          id: "api/clone-dataset",
+          label: "Clone Dataset",
+          className: "api-method post",
+        },
       ],
     },
     {
@@ -98,6 +104,12 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/submit-fine-tune-job",
           label: "Submit Fine Tune Job",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/get-fine-tune-job",
+          label: "Get Fine Tune Job",
           className: "api-method post",
         },
         {
@@ -150,12 +162,6 @@ const sidebar: SidebarsConfig = {
       items: [
         {
           type: "doc",
-          id: "api/schemas/modeldeployment",
-          label: "ModelDeployment",
-          className: "schema",
-        },
-        {
-          type: "doc",
           id: "api/schemas/metricbasemodel",
           label: "MetricBaseModel",
           className: "schema",
@@ -188,72 +194,6 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/trainingprogress",
           label: "TrainingProgress",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/user",
-          label: "User",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/organization",
-          label: "Organization",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/role",
-          label: "Role",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/organizationrole",
-          label: "OrganizationRole",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/principal",
-          label: "Principal",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/subject",
-          label: "Subject",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/predicate",
-          label: "Predicate",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/clause",
-          label: "Clause",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/policy",
-          label: "Policy",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/chatmessage",
-          label: "ChatMessage",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/chatcompletionrequest",
-          label: "ChatCompletionRequest",
           className: "schema",
         },
         {
@@ -426,6 +366,18 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/schemas/clonedatasetrequest",
+          label: "CloneDatasetRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/clonedatasetresponse",
+          label: "CloneDatasetResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
           id: "api/schemas/metric",
           label: "Metric",
           className: "schema",
@@ -500,6 +452,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/submitfinetunejobresponse",
           label: "SubmitFineTuneJobResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/getfinetunejobrequest",
+          label: "GetFineTuneJobRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/getfinetunejobresponse",
+          label: "GetFineTuneJobResponse",
           className: "schema",
         },
         {
