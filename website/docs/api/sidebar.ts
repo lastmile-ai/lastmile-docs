@@ -198,12 +198,6 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "api/schemas/prompttemplate",
-          label: "PromptTemplate",
-          className: "schema",
-        },
-        {
-          type: "doc",
           id: "api/schemas/datacolumn",
           label: "DataColumn",
           className: "schema",
@@ -242,6 +236,12 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/datasetlabelstate",
           label: "DatasetLabelState",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/prompttemplate",
+          label: "PromptTemplate",
           className: "schema",
         },
         {
