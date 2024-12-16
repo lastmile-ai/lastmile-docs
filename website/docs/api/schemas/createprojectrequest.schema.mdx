@@ -1,8 +1,8 @@
 ---
-id: clonedatasetrequest
-title: "CloneDatasetRequest"
-description: ""
-sidebar_label: "CloneDatasetRequest"
+id: createprojectrequest
+title: "CreateProjectRequest"
+description: "Create a Project"
+sidebar_label: "CreateProjectRequest"
 hide_title: true
 schema: true
 custom_edit_url: null
@@ -17,31 +17,22 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"CloneDatasetRequest"}
+  children={"CreateProjectRequest"}
 >
 </Heading>
 
 
 
-
+Create a Project
 
 <ul>
   <SchemaItem
-    collapsible={false}
-    name={"datasetId"}
-    required={true}
-    schemaName={"string"}
-    qualifierMessage={undefined}
-    schema={{"type":"string","description":"Dataset to clone"}}
-  >
-    
-  </SchemaItem><SchemaItem
     collapsible={false}
     name={"name"}
     required={false}
     schemaName={"string"}
     qualifierMessage={undefined}
-    schema={{"type":"string","description":"New dataset name. If not provided, will use the name of the dataset being\n cloned"}}
+    schema={{"type":"string","description":"Human-readable name for the project, if one exists."}}
   >
     
   </SchemaItem><SchemaItem
@@ -50,16 +41,16 @@ import TabItem from "@theme/TabItem";
     required={false}
     schemaName={"string"}
     qualifierMessage={undefined}
-    schema={{"type":"string","description":"Human-readable description of the dataset.\n If not provided, will use the name of the dataset being cloned"}}
+    schema={{"type":"string","description":"Human-readable description of the project, if one exists."}}
   >
     
   </SchemaItem><SchemaItem
     collapsible={false}
-    name={"projectId"}
+    name={"organizationId"}
     required={false}
     schemaName={"string"}
     qualifierMessage={undefined}
-    schema={{"type":"string","description":"The project to add the new dataset to"}}
+    schema={{"type":"string","description":"Organization to associate the project with, if applicable"}}
   >
     
   </SchemaItem>
