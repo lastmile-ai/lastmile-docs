@@ -264,6 +264,12 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/schemas/project",
+          label: "Project",
+          className: "schema",
+        },
+        {
+          type: "doc",
           id: "api/schemas/createdatasetrequest",
           label: "CreateDatasetRequest",
           className: "schema",
