@@ -134,6 +134,30 @@ const sidebar: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "Project",
+      items: [
+        {
+          type: "doc",
+          id: "api/create-project",
+          label: "Create Project",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/get-project",
+          label: "Get Project",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/list-projects",
+          label: "List Projects",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
       label: "Pseudo Label Job",
       items: [
         {
@@ -260,6 +284,12 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/finetunejobresult",
           label: "FineTuneJobResult",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/project",
+          label: "Project",
           className: "schema",
         },
         {
@@ -506,6 +536,48 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/listbasemodelsresponse",
           label: "ListBaseModelsResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/createprojectrequest",
+          label: "CreateProjectRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/createprojectresponse",
+          label: "CreateProjectResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/getprojectrequest",
+          label: "GetProjectRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/getprojectresponse",
+          label: "GetProjectResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/listprojectsrequestfilters",
+          label: "ListProjectsRequestFilters",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/listprojectsrequest",
+          label: "ListProjectsRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/listprojectsresponse",
+          label: "ListProjectsResponse",
           className: "schema",
         },
         {
