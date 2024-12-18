@@ -1,8 +1,8 @@
 ---
-id: listdatasetsrequestfilters
-title: "ListDatasetsRequestFilters"
-description: "Filter listed datasets by ALL filters specified"
-sidebar_label: "ListDatasetsRequestFilters"
+id: listprojectsrequestfilters
+title: "ListProjectsRequestFilters"
+description: ""
+sidebar_label: "ListProjectsRequestFilters"
 hide_title: true
 schema: true
 custom_edit_url: null
@@ -17,13 +17,13 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"ListDatasetsRequestFilters"}
+  children={"ListProjectsRequestFilters"}
 >
 </Heading>
 
 
 
-Filter listed datasets by ALL filters specified
+
 
 <ul>
   <SchemaItem
@@ -37,11 +37,11 @@ Filter listed datasets by ALL filters specified
     
   </SchemaItem><SchemaItem
     collapsible={false}
-    name={"projectId"}
+    name={"organizationId"}
     required={false}
     schemaName={"string"}
     qualifierMessage={undefined}
-    schema={{"type":"string","description":"filter datasets associated with the project"}}
+    schema={{"type":"string","description":"search only projects associated with specific organization"}}
   >
     
   </SchemaItem>
