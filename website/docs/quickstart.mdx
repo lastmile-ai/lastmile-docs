@@ -115,14 +115,14 @@ const expectedResponse = "England"
 const llmResponse = "France"
 
 const result = await client.evaluateData(
-  /*data*/ [
-    {
-      input: query,
-      output: llmResponse,
-      ground_truth: expectedResponse,
-    },
-  ],
-  /*metrics*/ [BuiltinMetrics.FAITHFULNESS]
+    /*data*/ [
+      {
+        input: query,
+        output: llmResponse,
+        ground_truth: expectedResponse,
+      },
+    ],
+    /*metrics*/ [BuiltinMetrics.FAITHFULNESS]
 );
 
 console.table(result);

@@ -38,18 +38,18 @@ print(f'Evlauation result:', result)`,
     {
       language: "javascript",
       label: "node.js",
-      code: `import { AutoEval, Metric, BuiltinMetrics } from "lastmile/lib/auto_eval";;
+      code: `import { AutoEval, Metric, BuiltinMetrics } from "lastmile/lib/auto_eval";
 
 const client = new AutoEval();
 const result = await client.evaluateData(
-  /*data*/ [
-    {
-      input: "Where did the author grow up?",
-      output: "France",
-      ground_truth: "England",
-    },
-  ],
-  /*metrics*/ [BuiltinMetrics.FAITHFULNESS]
+    /*data*/ [
+      {
+        input: "Where did the author grow up?",
+        output: "France",
+        ground_truth: "England",
+      },
+    ],
+    /*metrics*/ [BuiltinMetrics.FAITHFULNESS]
 );
 
 console.table(result);

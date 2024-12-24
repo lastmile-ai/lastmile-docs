@@ -64,14 +64,14 @@ print(dataset_id)
 import { AutoEval } from "lastmile/lib/auto_eval";
 
 const client = new AutoEval({ apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set" });
-const datasetCSV = "path_to_dataset.csv"
+const datasetCSV = "path_to_dataset.csv";
 const datasetId = await client.uploadDataset({
     filePath: datasetCSV,
     name: "My New Dataset",
     description: "This Dataset is the latest batch of application trace data" 
-})
+});
 
-console.log(datasetId)
+console.log(datasetId);
 ```
 
   </TabItem>
@@ -115,7 +115,7 @@ const data = await client.downloadDataset(
     /*outputFilePath*/ "optional_path_to_save_file"
 );
 
-console.table(data)
+console.table(data);
 ```
 
   </TabItem>
