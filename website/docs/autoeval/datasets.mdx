@@ -58,6 +58,23 @@ print(dataset_id)
 ```
 
   </TabItem>
+  <TabItem value="node.js">
+  
+  ```typescript
+import { AutoEval } from "lastmile/lib/auto_eval";
+
+const client = new AutoEval({ apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set" });
+const datasetCSV = "path_to_dataset.csv"
+const datasetId = await client.uploadDataset({
+    filePath: datasetCSV,
+    name: "My New Dataset",
+    description: "This Dataset is the latest batch of application trace data" 
+})
+
+console.log(datasetId)
+```
+
+  </TabItem>
 </Tabs>
 
 ### Download a Dataset
@@ -87,6 +104,21 @@ print(dataset_df.head(5))
 ```
 
   </TabItem>
+  <TabItem value="node.js">
+  
+  ```typescript
+import { AutoEval } from "lastmile/lib/auto_eval";
+
+const client = new AutoEval({ apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set" });
+const data = await client.downloadDataset(
+    datasetId,
+    /*outputFilePath*/ "optional_path_to_save_file"
+);
+
+console.table(data)
+```
+
+  </TabItem>
 </Tabs>
 
 ### List Datasets
@@ -110,6 +142,20 @@ client = AutoEval(api_token="api_token_if_LASTMILE_API_TOKEN_not_set")
 datasets = client.list_datasets()
 for dataset in datasets:
     print(f"Dataset ID: {dataset['id']}, Name: {dataset['name']}")
+```
+
+  </TabItem>
+  <TabItem value="node.js">
+  
+  ```typescript
+import { AutoEval } from "lastmile/lib/auto_eval";
+
+const client = new AutoEval({ apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set" });
+const datasets = await client.listDatasets();
+
+for (const dataset of datasets) {
+    console.log(`Dataset ID: ${dataset.id}, Name: ${dataset.name}`);
+}
 ```
 
   </TabItem>

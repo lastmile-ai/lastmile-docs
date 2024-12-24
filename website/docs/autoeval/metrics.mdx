@@ -84,6 +84,44 @@ print(eval_result)
 ```
 
 </TabItem>
+<TabItem value="node.js">
+  
+  ```typescript
+import { AutoEval, BuiltinMetrics } from "lastmile/lib/auto_eval";
+
+const client = new AutoEval({
+    apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set",
+});
+
+const query = "What is Albert Einstein famous for?";
+const contextRetrieved = `
+    Albert Einstein was a German-born theoretical physicist who developed
+    the theory of relativity, one of the two pillars of modern physics. His
+    work is also known for its influence on the philosophy of science. He is
+    best known to the general public for his mass-energy equivalence formula
+    E = mc², which has been dubbed 'the world's most famous equation'. He
+    received the 1921 Nobel Prize in Physics 'for his services to theoretical
+    physics, and especially for his discovery of the law of the photoelectric
+    effect', a pivotal step in the development of quantum theory.`;
+
+const llmResponse = "Albert Einstein is famous for the formula E = mc² and Brownian motion.";
+
+// Evaluate data using the FAITHFULNESS metric
+const evalResult = await client.evaluateData(
+    [
+      {
+        "input": query,
+        "output": llmResponse,
+        "ground_truth": contextRetrieved,
+      },
+    ],
+    [BuiltinMetrics.FAITHFULNESS]
+);
+
+console.table(evalResult);
+```
+
+</TabItem>
 </Tabs>
 
 <img
@@ -144,6 +182,48 @@ eval_result = client.evaluate_data(
 )
 
 print(eval_result)
+```
+
+</TabItem>
+<TabItem value="node.js">
+  
+  ```typescript
+import { AutoEval, BuiltinMetrics } from "lastmile/lib/auto_eval";
+
+const client = new AutoEval({
+    apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set",
+});
+
+const sourceDocument = `
+    Albert Einstein was a German-born theoretical physicist who developed
+    the theory of relativity, one of the two pillars of modern physics. His work
+    is also known for its influence on the philosophy of science. He is best known
+    to the general public for his mass-energy equivalence formula E = mc²,
+    which has been dubbed 'the world's most famous equation'. Einstein received
+    the 1921 Nobel Prize in Physics 'for his services to theoretical physics, and
+    especially for his discovery of the law of the photoelectric effect', a
+    pivotal step in the development of quantum theory. In his later years,
+    Einstein focused on unified field theory and became increasingly isolated
+    from the mainstream of modern physics.`;
+  
+const llmSummary = `
+    Albert Einstein, a German-born physicist, developed the theory of
+    relativity and the famous equation E = mc². He won the 1921 Nobel Prize
+    in Physics for his work on the photoelectric effect, contributing to
+    quantum theory. Later, he worked on unified field theory.`;
+
+// Evaluate data using the SUMMARIZATION metric
+const evalResult = await client.evaluateData(
+    [
+      {
+        "output": llmSummary,
+        "ground_truth": sourceDocument,
+      },
+    ],
+    [BuiltinMetrics.SUMMARIZATION]
+);
+
+console.table(evalResult);
 ```
 
 </TabItem>
@@ -213,6 +293,47 @@ print(eval_result)
 ```
 
 </TabItem>
+<TabItem value="node.js">
+  
+  ```typescript
+import { AutoEval, BuiltinMetrics } from "lastmile/lib/auto_eval";
+
+const client = new AutoEval({
+    apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set",
+});
+
+const expectedResponse = `
+    Albert Einstein transformed our understanding of the universe with his
+    groundbreaking theories. His special and general theories of relativity
+    redefined concepts of space, time, and gravity. Einstein's equation E = mc²
+    revealed the fundamental relationship between mass and energy. His
+    explanation of the photoelectric effect was crucial to the emergence of
+    quantum physics, for which he received the Nobel Prize. Throughout his career,
+    Einstein's innovative thinking and scientific contributions reshaped the
+    field of physics.`;
+  
+const llmResponse = `
+    Albert Einstein revolutionized physics with his theory of relativity.
+    He proposed that space and time are interconnected and that the speed of
+    light is constant in all reference frames. His famous equation E = mc²
+    showed that mass and energy are equivalent. Einstein's work on the
+    photoelectric effect contributed to the development of quantum theory,
+    earning him the Nobel Prize in Physics.`;
+
+const evalResult = await client.evaluateData(
+    [
+      {
+        "input": expectedResponse,
+        "output": llmResponse,
+      },
+    ],
+    [BuiltinMetrics.RELEVANCE]
+);
+
+console.table(evalResult);
+```
+
+</TabItem>
 </Tabs>
 
 <img
@@ -264,6 +385,34 @@ eval_result = client.evaluate_data(
 )
 
 print(eval_result)
+```
+
+</TabItem>
+<TabItem value="node.js">
+  
+  ```typescript
+import { AutoEval, BuiltinMetrics } from "lastmile/lib/auto_eval";
+
+const client = new AutoEval({
+    apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set",
+});
+
+const query = "Can you tell me the flight status for SA450?";
+const contextRetrieved = "Flight SA450 is on schedule and will depart from JFK Terminal 2, Gate 15 at 4:00PM.";
+const llmResponse = "SA450: On Schedule, JFK Terminal 2, Gate 15, 4:00PM departure";
+
+const evalResult = await client.evaluateData(
+    [
+      {
+        "input": query,
+        "output": llmResponse,
+        "ground_truth": contextRetrieved
+      },
+    ],
+    [BuiltinMetrics.ANSWER_CORRECTNESS]
+);
+
+console.table(evalResult);
 ```
 
 </TabItem>
@@ -472,6 +621,28 @@ eval_result = client.evaluate_data(
 )
 
 print(eval_result)
+```
+
+</TabItem>
+<TabItem value="node.js">
+  
+  ```typescript
+import { AutoEval, BuiltinMetrics } from "lastmile/lib/auto_eval";
+
+const client = new AutoEval({
+    apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set",
+});
+
+const evalResult = await client.evaluateData(
+    [
+      {
+        "output": "This is the worst airline I've ever flown with. You've lost my bags!",
+      },
+    ],
+    [BuiltinMetrics.TOXICITY]
+);
+
+console.table(evalResult);
 ```
 
 </TabItem>

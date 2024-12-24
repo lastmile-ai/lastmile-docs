@@ -85,6 +85,47 @@ dataset_result_df = client.evaluate_dataset(
 ```
 
 </TabItem>
+<TabItem value="node.js">
+
+```typescript
+import { AutoEval, Metric } from "lastmile/lib/auto_eval";
+
+const client = new AutoEval({
+  apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set",
+});
+
+const query = "Where did the author grow up?";
+const expectedResponse = "England";
+const llmResponse = "France";
+
+// Evaluate data using a direct array of DataRows
+const dataResult = await client.evaluateData(
+  [
+    {
+      input: query,
+      output: llmResponse,
+      ground_truth: expectedResponse,
+    },
+  ],
+  [{ name: "Faithfulness" }] // Metrics
+);
+
+console.table(dataResult);
+
+// Evaluate data in a dataset
+const datasetId = "your_dataset_id"; // Replace with your dataset ID
+const datasetResult = await client.evaluateDataset(
+    datasetId,
+    /*metrics*/ [
+      { id: "cm2plr07q000ipkr4o8qhj4oe" }, // Metric by ID
+      { name: "Summarization" }, // Metric by name
+    ]
+);
+
+console.table(datasetResult);
+```
+
+</TabItem>
 </Tabs>
 
 You can reference any metric by its name as it appears in the [Model Console](https://lastmileai.dev/models).

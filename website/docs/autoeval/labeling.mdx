@@ -55,6 +55,30 @@ labeled_dataset = client.download_dataset(dataset_id)
 print(f"Labeling Job with ID: {job_id} Completed")
 ```
 
+</TabItem>
+<TabItem value="node.js">
+  
+  ```typescript title="label_dataset"
+import { AutoEval, BuiltinMetrics } from "lastmile/lib/auto_eval";
+
+const client = new AutoEval({
+  apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set",
+});
+
+const jobId = await client.labelDataset({
+    datasetId,
+    promptTemplate: BuiltinMetrics.FAITHFULNESS, // Or a custom evaluation prompt criteria
+    waitForCompletion: false, // Set to true to wait for the job to complete
+});
+
+console.log(`Waiting for labeling job ${jobId} to complete...`);
+await client.waitForLabelDatasetJob(jobId);
+console.log(`Labeling Job with ID: ${jobId} Completed`);
+const labeledData = client.downloadDataset(datasetId);
+
+console.table(labeledData);
+```
+
   </TabItem>
 </Tabs>
 

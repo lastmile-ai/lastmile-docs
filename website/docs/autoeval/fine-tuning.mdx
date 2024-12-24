@@ -122,6 +122,27 @@ print(f"Fine-tuning job completed with ID: {fine_tune_job_id}")
 ```
 
   </TabItem>
+  <TabItem value="node.js">
+  
+  ```typescript title="fine_tune"
+import { AutoEval } from "lastmile/lib/auto_eval";
+const client = new AutoEval({
+    apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set",
+});
+const modelName = "My Custom Evaluation Metric";
+const fineTuningJobId = await client.fineTuneModel({
+    trainDatasetId: datasetId,
+    modelName,
+    selectedColumns: ["input", "output", "ground_truth"],
+    waitForCompletion: false, // Set to  true to block until completion
+});
+
+console.log(`Fine-tuning job initiated with ID: ${fineTuningJobId}. Waiting for completion...`);
+await client.waitForFineTuneJob(fineTuningJobId);
+console.log(`Fine-tuning job completed with ID: ${fineTuningJobId}`);
+```
+
+  </TabItem>
 </Tabs>
 
 #### UI
@@ -168,6 +189,41 @@ eval_results_df = client.evaluate_data(
     }),
     metrics=[fine_tuned_metric],
 )
+```
+
+  </TabItem>
+    <TabItem value="node.js">
+  
+  ```typescript title="run_inference"
+import { AutoEval, Metric } from "lastmile/lib/auto_eval";
+const client = new AutoEval({
+    apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set",
+});
+
+const metric: Metric = {
+    name: "My Custom Evaluation Metric",
+};
+
+console.log(`Waiting for fine-tuned model '${metric.name}' to be available as a metric...`);
+const fineTunedMetric = await client.waitForMetricOnline(metric);
+console.log(`Fine-tuned model '${metric.name}' is now available as a metric with ID: ${fineTunedMetric.id}.`);
+
+// Run evals on your test/holdout dataset to see how the model is performing
+const testResults = await client.evaluateDataset(testDatasetId, fineTunedMetric);
+console.table(testResults);
+
+// Run evals on any application data
+const results = await client.evaluateData(
+    /*data*/ [
+      {
+        "input": "What is the meaning of life?",
+        "output": "42",
+        "ground_truth": "Life, universe and everything"
+      }
+    ],
+    /*metrics*/ [fineTunedMetric]
+);
+console.table(results);
 ```
 
   </TabItem>

@@ -60,6 +60,55 @@ guard(
 ```
 
 </TabItem>
+  <TabItem value="node.js">
+  
+  ```typescript
+import { AutoEval, Metric } from "lastmile/lib/auto_eval";
+
+async function guard(
+    input: string,
+    output: string,
+    context: string,
+    metric: Metric,
+    threshold: number = 0.5
+): Promise<boolean> {
+    const client = new AutoEval({
+      apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set",
+    });
+
+    // Evaluate the data
+    const result = await client.evaluateData(
+      /*data*/ [
+        {
+          "input": input,
+          "output": output,
+          "ground_truth": context
+        }
+      ], 
+      metric
+    );
+
+    // Extract the score
+    const scoreColumnName = `${metric.name}_score`;
+    const score = result[0][scoreColumnName];
+
+    // Return whether the score meets the threshold
+    return score >= threshold;
+}
+
+const faithfulnessMetric: Metric = { name: "Faithfulness" };
+
+const isFaithful = await guard(
+    /*input*/   "Where did the author grow up?",
+    /*output*/  "France",
+    /*context*/ "England",
+    faithfulnessMetric
+);
+
+console.log(`Is the response faithful? ${isFaithful}`);
+```
+
+</TabItem>
 </Tabs>
 
 ### Fine-tune a custom guardrail
