@@ -103,6 +103,32 @@ print(eval_result)
 ```
 
 </TabItem>
+<TabItem value="node.js">
+  
+  ```typescript
+import { AutoEval, Metric, BuiltinMetrics } from "lastmile/lib/auto_eval";
+
+const client = new AutoEval({ apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set" });
+
+const query = "Where did the author grow up?"
+const expectedResponse = "England"
+const llmResponse = "France"
+
+const result = await client.evaluateData(
+  /*data*/ [
+    {
+      input: query,
+      output: llmResponse,
+      ground_truth: expectedResponse,
+    },
+  ],
+  /*metrics*/ [BuiltinMetrics.FAITHFULNESS]
+);
+
+console.table(result);
+```
+
+</TabItem>
 </Tabs>
 
 You can reference any metric by its name as it appears in the [Model Console](https://lastmileai.dev/models).

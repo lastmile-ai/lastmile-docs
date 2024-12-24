@@ -26,7 +26,7 @@ export LASTMILE_API_TOKEN="your_api_key"
 ```
 
 </TabItem>
-  <TabItem value="python">
+<TabItem value="python">
   
   ```python
 from lastmile import Lastmile
@@ -39,6 +39,24 @@ client = AutoEval(api_token="api_token_if_LASTMILE_API_TOKEN_not_set")
 client = Lastmile(
     bearer_token="api_token_if_LASTMILE_API_TOKEN_not_set",
 )
+```
+
+</TabItem>
+<TabItem value="node.js">
+  
+  ```typescript
+import { Lastmile } from 'lastmile';
+import { AutoEval } from "lastmile/lib/auto_eval";
+
+// Recommended: AutoEval client SDK (higher-level APIs)
+const client = new AutoEval({
+    apiKey: "api_token_if_LASTMILE_API_TOKEN_not_set" 
+});
+
+// Lastmile client (REST API wrappers)
+const client2 = new Lastmile({
+    bearerToken: "api_token_if_LASTMILE_API_TOKEN_not_set",
+})
 ```
 
 </TabItem>
