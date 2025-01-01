@@ -1,0 +1,40 @@
+---
+id: listvalue
+title: "ListValue"
+description: ""
+sidebar_label: "ListValue"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"ListValue"}
+>
+</Heading>
+
+
+
+
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"values"}
+    required={true}
+    schemaName={"object[]"}
+    qualifierMessage={undefined}
+    schema={{"type":"array","items":{"description":"Ordered row values with length always equal to `num_rows` on the\n corresponding view.","type":"object","additionalProperties":true}}}
+  >
+    
+  </SchemaItem>
+</ul>
+            
