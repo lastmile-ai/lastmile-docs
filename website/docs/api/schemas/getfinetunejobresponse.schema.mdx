@@ -110,9 +110,9 @@ import TabItem from "@theme/TabItem";
           collapsible={false}
           name={"status"}
           required={true}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string"}}
+          schemaName={"JobStatus (string)"}
+          qualifierMessage={"**Possible values:** [`JOB_STATUS_UNSPECIFIED`, `JOB_STATUS_QUEUED`, `JOB_STATUS_RUNNING`, `JOB_STATUS_COMPLETED`, `JOB_STATUS_CANCELLED`, `JOB_STATUS_FAILED`]"}
+          schema={{"type":"string","enum":["JOB_STATUS_UNSPECIFIED","JOB_STATUS_QUEUED","JOB_STATUS_RUNNING","JOB_STATUS_COMPLETED","JOB_STATUS_CANCELLED","JOB_STATUS_FAILED"],"title":"JobStatus"}}
         >
           
         </SchemaItem><SchemaItem
