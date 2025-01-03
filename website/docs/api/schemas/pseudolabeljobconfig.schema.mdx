@@ -140,9 +140,9 @@ Configuration for LLM Judge labeling job.
     collapsible={false}
     name={"baseEvaluationMetric"}
     required={true}
-    schemaName={"string"}
-    qualifierMessage={undefined}
-    schema={{"type":"string","description":"Reserved field. Do not use  at the moment."}}
+    schemaName={"BaseEvaluationMetric (string)"}
+    qualifierMessage={"**Possible values:** [`BASE_EVALUATION_METRIC_UNSPECIFIED`, `BASE_EVALUATION_METRIC_FAITHFULNESS`, `BASE_EVALUATION_METRIC_RELEVANCE`, `BASE_EVALUATION_METRIC_TOXICITY`, `BASE_EVALUATION_METRIC_QA`, `BASE_EVALUATION_METRIC_SUMMARIZATION`]"}
+    schema={{"type":"string","enum":["BASE_EVALUATION_METRIC_UNSPECIFIED","BASE_EVALUATION_METRIC_FAITHFULNESS","BASE_EVALUATION_METRIC_RELEVANCE","BASE_EVALUATION_METRIC_TOXICITY","BASE_EVALUATION_METRIC_QA","BASE_EVALUATION_METRIC_SUMMARIZATION"],"title":"BaseEvaluationMetric","description":"Reserved field. Do not use  at the moment."}}
   >
     
   </SchemaItem><SchemaItem

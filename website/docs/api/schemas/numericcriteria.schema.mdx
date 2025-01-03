@@ -1,0 +1,58 @@
+---
+id: numericcriteria
+title: "NumericCriteria"
+description: ""
+sidebar_label: "NumericCriteria"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"NumericCriteria"}
+>
+</Heading>
+
+
+
+
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"operator"}
+    required={true}
+    schemaName={"Operator (string)"}
+    qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_EQUALS`, `OPERATOR_NOT_EQUALS`, `OPERATOR_GREATER_THAN`, `OPERATOR_GREATER_THAN_OR_EQUAL`, `OPERATOR_LESS_THAN`, `OPERATOR_LESS_THAN_OR_EQUAL`]"}
+    schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_EQUALS","OPERATOR_NOT_EQUALS","OPERATOR_GREATER_THAN","OPERATOR_GREATER_THAN_OR_EQUAL","OPERATOR_LESS_THAN","OPERATOR_LESS_THAN_OR_EQUAL"],"title":"Operator"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"intValue"}
+    required={true}
+    schemaName={"integer"}
+    qualifierMessage={undefined}
+    schema={{"type":"integer"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"floatValue"}
+    required={true}
+    schemaName={"number"}
+    qualifierMessage={undefined}
+    schema={{"type":"number"}}
+  >
+    
+  </SchemaItem>
+</ul>
+            
