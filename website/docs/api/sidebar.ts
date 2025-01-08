@@ -84,6 +84,12 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/evaluate-run",
+          label: "Evaluate Run",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
           id: "api/list-metrics",
           label: "List Metrics",
           className: "api-method post",
@@ -426,6 +432,12 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/schemas/evaluationmetadata",
+          label: "EvaluationMetadata",
+          className: "schema",
+        },
+        {
+          type: "doc",
           id: "api/schemas/evaluateresponse",
           label: "EvaluateResponse",
           className: "schema",
@@ -440,6 +452,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/evaluatedatasetresponse",
           label: "EvaluateDatasetResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/evaluaterunrequest",
+          label: "EvaluateRunRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/evaluaterunresponse",
+          label: "EvaluateRunResponse",
           className: "schema",
         },
         {
