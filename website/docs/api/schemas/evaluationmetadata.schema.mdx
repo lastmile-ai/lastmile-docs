@@ -1,8 +1,8 @@
 ---
-id: evaluatedatasetrequest
-title: "EvaluateDatasetRequest"
+id: evaluationmetadata
+title: "EvaluationMetadata"
 description: ""
-sidebar_label: "EvaluateDatasetRequest"
+sidebar_label: "EvaluationMetadata"
 hide_title: true
 schema: true
 custom_edit_url: null
@@ -17,7 +17,7 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"EvaluateDatasetRequest"}
+  children={"EvaluationMetadata"}
 >
 </Heading>
 
@@ -43,118 +43,17 @@ import TabItem from "@theme/TabItem";
           <strong
             className={"openapi-schema__property"}
           >
-            metric
+            value
           </strong><span
             className={"openapi-schema__name"}
           >
              object
-          </span><span
-            className={"openapi-schema__divider"}
-          >
-            
-          </span><span
-            className={"openapi-schema__required"}
-          >
-            required
           </span>
         </span>
       </summary><div
         style={{"marginLeft":"1rem"}}
       >
         <SchemaItem
-          collapsible={false}
-          name={"id"}
-          required={false}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string"}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"name"}
-          required={false}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string"}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"description"}
-          required={false}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string"}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"deploymentStatus"}
-          required={false}
-          schemaName={"ModelDeploymentStatus (string)"}
-          qualifierMessage={"**Possible values:** [`MODEL_DEPLOYMENT_STATUS_UNSPECIFIED`, `MODEL_DEPLOYMENT_STATUS_PENDING`, `MODEL_DEPLOYMENT_STATUS_ONLINE`, `MODEL_DEPLOYMENT_STATUS_OFFLINE`, `MODEL_DEPLOYMENT_STATUS_PAUSED`]"}
-          schema={{"type":"string","enum":["MODEL_DEPLOYMENT_STATUS_UNSPECIFIED","MODEL_DEPLOYMENT_STATUS_PENDING","MODEL_DEPLOYMENT_STATUS_ONLINE","MODEL_DEPLOYMENT_STATUS_OFFLINE","MODEL_DEPLOYMENT_STATUS_PAUSED"],"title":"ModelDeploymentStatus"}}
-        >
-          
-        </SchemaItem>
-      </div>
-    </details>
-  </SchemaItem><SchemaItem
-    collapsible={false}
-    name={"datasetId"}
-    required={true}
-    schemaName={"string"}
-    qualifierMessage={undefined}
-    schema={{"type":"string"}}
-  >
-    
-  </SchemaItem><SchemaItem
-    collapsible={false}
-    name={"projectId"}
-    required={false}
-    schemaName={"string"}
-    qualifierMessage={undefined}
-    schema={{"type":"string","description":"The project where the evaluation run will be persisted"}}
-  >
-    
-  </SchemaItem><SchemaItem
-    collapsible={true}
-    className={"schemaItem"}
-  >
-    <details
-      style={{}}
-      className={"openapi-markdown__details"}
-    >
-      <summary
-        style={{}}
-      >
-        <span
-          className={"openapi-schema__container"}
-        >
-          <strong
-            className={"openapi-schema__property"}
-          >
-            commonMetadata
-          </strong><span
-            className={"openapi-schema__name"}
-          >
-             object
-          </span>
-        </span>
-      </summary><div
-        style={{"marginLeft":"1rem"}}
-      >
-        <div
-          style={{"marginTop":".5rem","marginBottom":".5rem"}}
-        >
-          
-          
-          Common metadata relevant to the application configuration from which all
-           request inputs were derived. E.g. 'llm_model', 'chunk_size'
-          
-          
-        </div><SchemaItem
           collapsible={true}
           className={"schemaItem"}
         >
