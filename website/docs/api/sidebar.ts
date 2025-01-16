@@ -64,6 +64,12 @@ const sidebar: SidebarsConfig = {
           label: "Archive Dataset",
           className: "api-method post",
         },
+        {
+          type: "doc",
+          id: "api/update-dataset-row",
+          label: "Update Dataset Row",
+          className: "api-method put",
+        },
       ],
     },
     {
@@ -80,6 +86,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/evaluate-dataset",
           label: "Evaluate Dataset",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/evaluate-run",
+          label: "Evaluate Run",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/list-evaluation-runs",
+          label: "List Evaluation Runs",
           className: "api-method post",
         },
         {
@@ -300,8 +318,26 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "api/schemas/columnfilter",
-          label: "ColumnFilter",
+          id: "api/schemas/datasetrowfilter",
+          label: "DatasetRowFilter",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/allof",
+          label: "AllOf",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/anyof",
+          label: "AnyOf",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/datasetfieldvaluepredicate",
+          label: "DatasetFieldValuePredicate",
           className: "schema",
         },
         {
@@ -318,14 +354,8 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "api/schemas/rowtagscriteria",
-          label: "RowTagsCriteria",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/timerangecriteria",
-          label: "TimeRangeCriteria",
+          id: "api/schemas/stringlistcriteria",
+          label: "StringListCriteria",
           className: "schema",
         },
         {
@@ -414,6 +444,24 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/schemas/updatedatasetrowrequest",
+          label: "UpdateDatasetRowRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/fieldupdatesentry",
+          label: "FieldUpdatesEntry",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/updatedatasetrowresponse",
+          label: "UpdateDatasetRowResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
           id: "api/schemas/evaluaterequest",
           label: "EvaluateRequest",
           className: "schema",
@@ -422,6 +470,12 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/metric",
           label: "Metric",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/evaluationmetadata",
+          label: "EvaluationMetadata",
           className: "schema",
         },
         {
@@ -440,6 +494,48 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/evaluatedatasetresponse",
           label: "EvaluateDatasetResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/evaluaterunrequest",
+          label: "EvaluateRunRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/evaluaterunresponse",
+          label: "EvaluateRunResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/listevaluationrunsrequest",
+          label: "ListEvaluationRunsRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/lisevaluationrunsrequestfilters",
+          label: "LisEvaluationRunsRequestFilters",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/listevaluationrunsresponse",
+          label: "ListEvaluationRunsResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/evaluationrun",
+          label: "EvaluationRun",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/metricaggregate",
+          label: "MetricAggregate",
           className: "schema",
         },
         {
