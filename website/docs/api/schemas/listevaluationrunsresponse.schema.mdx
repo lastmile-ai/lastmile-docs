@@ -1,8 +1,8 @@
 ---
-id: evaluaterequest
-title: "EvaluateRequest"
+id: listevaluationrunsresponse
+title: "ListEvaluationRunsResponse"
 description: ""
-sidebar_label: "EvaluateRequest"
+sidebar_label: "ListEvaluationRunsResponse"
 hide_title: true
 schema: true
 custom_edit_url: null
@@ -17,7 +17,7 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"EvaluateRequest"}
+  children={"ListEvaluationRunsResponse"}
 >
 </Heading>
 
@@ -43,117 +43,7 @@ import TabItem from "@theme/TabItem";
           <strong
             className={"openapi-schema__property"}
           >
-            metric
-          </strong><span
-            className={"openapi-schema__name"}
-          >
-             object
-          </span><span
-            className={"openapi-schema__divider"}
-          >
-            
-          </span><span
-            className={"openapi-schema__required"}
-          >
-            required
-          </span>
-        </span>
-      </summary><div
-        style={{"marginLeft":"1rem"}}
-      >
-        <SchemaItem
-          collapsible={false}
-          name={"id"}
-          required={false}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string"}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"name"}
-          required={false}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string"}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"description"}
-          required={false}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string"}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"deploymentStatus"}
-          required={false}
-          schemaName={"ModelDeploymentStatus (string)"}
-          qualifierMessage={"**Possible values:** [`MODEL_DEPLOYMENT_STATUS_UNSPECIFIED`, `MODEL_DEPLOYMENT_STATUS_PENDING`, `MODEL_DEPLOYMENT_STATUS_ONLINE`, `MODEL_DEPLOYMENT_STATUS_OFFLINE`, `MODEL_DEPLOYMENT_STATUS_PAUSED`]"}
-          schema={{"type":"string","enum":["MODEL_DEPLOYMENT_STATUS_UNSPECIFIED","MODEL_DEPLOYMENT_STATUS_PENDING","MODEL_DEPLOYMENT_STATUS_ONLINE","MODEL_DEPLOYMENT_STATUS_OFFLINE","MODEL_DEPLOYMENT_STATUS_PAUSED"],"title":"ModelDeploymentStatus"}}
-        >
-          
-        </SchemaItem>
-      </div>
-    </details>
-  </SchemaItem><SchemaItem
-    collapsible={false}
-    name={"input"}
-    required={true}
-    schemaName={"string[]"}
-    qualifierMessage={undefined}
-    schema={{"type":"array","items":{"type":"string"}}}
-  >
-    
-  </SchemaItem><SchemaItem
-    collapsible={false}
-    name={"output"}
-    required={true}
-    schemaName={"string[]"}
-    qualifierMessage={undefined}
-    schema={{"type":"array","items":{"type":"string"}}}
-  >
-    
-  </SchemaItem><SchemaItem
-    collapsible={false}
-    name={"groundTruth"}
-    required={true}
-    schemaName={"string[]"}
-    qualifierMessage={undefined}
-    schema={{"type":"array","items":{"type":"string"}}}
-  >
-    
-  </SchemaItem><SchemaItem
-    collapsible={false}
-    name={"projectId"}
-    required={false}
-    schemaName={"string"}
-    qualifierMessage={undefined}
-    schema={{"type":"string","description":"The project where evaluation inference logs will be stored"}}
-  >
-    
-  </SchemaItem><SchemaItem
-    collapsible={true}
-    className={"schemaItem"}
-  >
-    <details
-      style={{}}
-      className={"openapi-markdown__details"}
-    >
-      <summary
-        style={{}}
-      >
-        <span
-          className={"openapi-schema__container"}
-        >
-          <strong
-            className={"openapi-schema__property"}
-          >
-            metadata
+            evaluationRuns
           </strong><span
             className={"openapi-schema__name"}
           >
@@ -178,6 +68,78 @@ import TabItem from "@theme/TabItem";
             Array [
           </div>
         </li><SchemaItem
+          collapsible={false}
+          name={"id"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"createdAt"}
+          required={true}
+          schemaName={"date-time"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","format":"date-time"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"creatorId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"projectId"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"resultDatasetId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"sourceDatasetId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"experimentId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"experimentName"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
           collapsible={true}
           className={"schemaItem"}
         >
@@ -194,7 +156,7 @@ import TabItem from "@theme/TabItem";
                 <strong
                   className={"openapi-schema__property"}
                 >
-                  value
+                  metadata
                 </strong><span
                   className={"openapi-schema__name"}
                 >
@@ -294,61 +256,7 @@ import TabItem from "@theme/TabItem";
               </SchemaItem>
             </div>
           </details>
-        </SchemaItem><li>
-          <div
-            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
-          >
-            ]
-          </div>
-        </li>
-      </div>
-    </details>
-  </SchemaItem><SchemaItem
-    collapsible={false}
-    name={"labels"}
-    required={true}
-    schemaName={"string[]"}
-    qualifierMessage={undefined}
-    schema={{"type":"array","items":{"type":"string","description":"'1' or '0' golden label for the request inputs at the relevant index,\n with respect to the metric. Use empty string '' to skip"}}}
-  >
-    
-  </SchemaItem><SchemaItem
-    collapsible={true}
-    className={"schemaItem"}
-  >
-    <details
-      style={{}}
-      className={"openapi-markdown__details"}
-    >
-      <summary
-        style={{}}
-      >
-        <span
-          className={"openapi-schema__container"}
-        >
-          <strong
-            className={"openapi-schema__property"}
-          >
-            commonMetadata
-          </strong><span
-            className={"openapi-schema__name"}
-          >
-             object
-          </span>
-        </span>
-      </summary><div
-        style={{"marginLeft":"1rem"}}
-      >
-        <div
-          style={{"marginTop":".5rem","marginBottom":".5rem"}}
-        >
-          
-          
-          Common metadata relevant to the application configuration from which all
-           request inputs were derived. E.g. 'llm_model', 'chunk_size'
-          
-          
-        </div><SchemaItem
+        </SchemaItem><SchemaItem
           collapsible={true}
           className={"schemaItem"}
         >
@@ -365,11 +273,11 @@ import TabItem from "@theme/TabItem";
                 <strong
                   className={"openapi-schema__property"}
                 >
-                  fields
+                  aggregateMetrics
                 </strong><span
                   className={"openapi-schema__name"}
                 >
-                   object
+                   object[]
                 </span><span
                   className={"openapi-schema__divider"}
                 >
@@ -383,7 +291,13 @@ import TabItem from "@theme/TabItem";
             </summary><div
               style={{"marginLeft":"1rem"}}
             >
-              <SchemaItem
+              <li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                >
+                  Array [
+                </div>
+              </li><SchemaItem
                 collapsible={true}
                 className={"schemaItem"}
               >
@@ -400,44 +314,117 @@ import TabItem from "@theme/TabItem";
                       <strong
                         className={"openapi-schema__property"}
                       >
-                        property name*
+                        metric
                       </strong><span
                         className={"openapi-schema__name"}
                       >
                          object
+                      </span><span
+                        className={"openapi-schema__divider"}
+                      >
+                        
+                      </span><span
+                        className={"openapi-schema__required"}
+                      >
+                        required
                       </span>
                     </span>
                   </summary><div
                     style={{"marginLeft":"1rem"}}
                   >
-                    <div
-                      style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                    <SchemaItem
+                      collapsible={false}
+                      name={"id"}
+                      required={false}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string"}}
                     >
                       
-                      
-                      Ordered row values with length always equal to `num_rows` on the
-                       corresponding view.
-                      
-                      
-                    </div><SchemaItem
-                      name={"property name*"}
-                      required={false}
-                      schemaName={"any"}
-                      qualifierMessage={undefined}
-                      schema={{"description":"Ordered row values with length always equal to `num_rows` on the\n corresponding view.","type":"object","additionalProperties":true}}
+                    </SchemaItem><SchemaItem
                       collapsible={false}
-                      discriminator={false}
+                      name={"name"}
+                      required={false}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"description"}
+                      required={false}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={false}
+                      name={"deploymentStatus"}
+                      required={false}
+                      schemaName={"ModelDeploymentStatus (string)"}
+                      qualifierMessage={"**Possible values:** [`MODEL_DEPLOYMENT_STATUS_UNSPECIFIED`, `MODEL_DEPLOYMENT_STATUS_PENDING`, `MODEL_DEPLOYMENT_STATUS_ONLINE`, `MODEL_DEPLOYMENT_STATUS_OFFLINE`, `MODEL_DEPLOYMENT_STATUS_PAUSED`]"}
+                      schema={{"type":"string","enum":["MODEL_DEPLOYMENT_STATUS_UNSPECIFIED","MODEL_DEPLOYMENT_STATUS_PENDING","MODEL_DEPLOYMENT_STATUS_ONLINE","MODEL_DEPLOYMENT_STATUS_OFFLINE","MODEL_DEPLOYMENT_STATUS_PAUSED"],"title":"ModelDeploymentStatus"}}
                     >
                       
                     </SchemaItem>
                   </div>
                 </details>
-              </SchemaItem>
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"aggregateMethod"}
+                required={true}
+                schemaName={"MetricAggregateMethod (string)"}
+                qualifierMessage={"**Possible values:** [`METRIC_AGGREGATE_METHOD_UNSPECIFIED`, `METRIC_AGGREGATE_METHOD_SUM`, `METRIC_AGGREGATE_METHOD_AVG`]"}
+                schema={{"type":"string","enum":["METRIC_AGGREGATE_METHOD_UNSPECIFIED","METRIC_AGGREGATE_METHOD_SUM","METRIC_AGGREGATE_METHOD_AVG"],"title":"MetricAggregateMethod"}}
+              >
+                
+              </SchemaItem><SchemaItem
+                collapsible={false}
+                name={"score"}
+                required={true}
+                schemaName={"number"}
+                qualifierMessage={undefined}
+                schema={{"type":"number"}}
+              >
+                
+              </SchemaItem><li>
+                <div
+                  style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                >
+                  ]
+                </div>
+              </li>
             </div>
           </details>
-        </SchemaItem>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"runType"}
+          required={true}
+          schemaName={"EvaluationRunType (string)"}
+          qualifierMessage={"**Possible values:** [`EVALUATION_RUN_TYPE_UNSPECIFIED`, `EVALUATION_RUN_TYPE_ADHOC`, `EVALUATION_RUN_TYPE_EXPERIMENT`]"}
+          schema={{"type":"string","enum":["EVALUATION_RUN_TYPE_UNSPECIFIED","EVALUATION_RUN_TYPE_ADHOC","EVALUATION_RUN_TYPE_EXPERIMENT"],"title":"EvaluationRunType"}}
+        >
+          
+        </SchemaItem><li>
+          <div
+            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+          >
+            ]
+          </div>
+        </li>
       </div>
     </details>
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"totalCount"}
+    required={true}
+    schemaName={"integer"}
+    qualifierMessage={undefined}
+    schema={{"type":"integer","description":"Total count of evaluation runs which can be listed with applicable\n filters, regardless of page size"}}
+  >
+    
   </SchemaItem>
 </ul>
             

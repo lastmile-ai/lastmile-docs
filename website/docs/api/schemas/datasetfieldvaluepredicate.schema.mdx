@@ -1,8 +1,8 @@
 ---
-id: columnfilter
-title: "ColumnFilter"
+id: datasetfieldvaluepredicate
+title: "DatasetFieldValuePredicate"
 description: ""
-sidebar_label: "ColumnFilter"
+sidebar_label: "DatasetFieldValuePredicate"
 hide_title: true
 schema: true
 custom_edit_url: null
@@ -17,7 +17,7 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"ColumnFilter"}
+  children={"DatasetFieldValuePredicate"}
 >
 </Heading>
 
@@ -137,7 +137,7 @@ import TabItem from "@theme/TabItem";
           
         </SchemaItem><SchemaItem
           collapsible={false}
-          name={"intValue"}
+          name={"int64Value"}
           required={true}
           schemaName={"integer"}
           qualifierMessage={undefined}
@@ -146,7 +146,7 @@ import TabItem from "@theme/TabItem";
           
         </SchemaItem><SchemaItem
           collapsible={false}
-          name={"floatValue"}
+          name={"doubleValue"}
           required={true}
           schemaName={"number"}
           qualifierMessage={undefined}
@@ -173,7 +173,7 @@ import TabItem from "@theme/TabItem";
           <strong
             className={"openapi-schema__property"}
           >
-            tagsCriteria
+            stringListCriteria
           </strong><span
             className={"openapi-schema__name"}
           >
@@ -202,76 +202,11 @@ import TabItem from "@theme/TabItem";
           
         </SchemaItem><SchemaItem
           collapsible={false}
-          name={"tags"}
+          name={"values"}
           required={true}
           schemaName={"string[]"}
           qualifierMessage={undefined}
           schema={{"type":"array","items":{"type":"string"}}}
-        >
-          
-        </SchemaItem>
-      </div>
-    </details>
-  </SchemaItem><SchemaItem
-    collapsible={true}
-    className={"schemaItem"}
-  >
-    <details
-      style={{}}
-      className={"openapi-markdown__details"}
-    >
-      <summary
-        style={{}}
-      >
-        <span
-          className={"openapi-schema__container"}
-        >
-          <strong
-            className={"openapi-schema__property"}
-          >
-            timeRangeCriteria
-          </strong><span
-            className={"openapi-schema__name"}
-          >
-             object
-          </span><span
-            className={"openapi-schema__divider"}
-          >
-            
-          </span><span
-            className={"openapi-schema__required"}
-          >
-            required
-          </span>
-        </span>
-      </summary><div
-        style={{"marginLeft":"1rem"}}
-      >
-        <SchemaItem
-          collapsible={false}
-          name={"operator"}
-          required={true}
-          schemaName={"Operator (string)"}
-          qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_BEFORE`, `OPERATOR_AFTER`, `OPERATOR_BETWEEN`]"}
-          schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_BEFORE","OPERATOR_AFTER","OPERATOR_BETWEEN"],"title":"Operator"}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"timestamp"}
-          required={true}
-          schemaName={"date-time"}
-          qualifierMessage={undefined}
-          schema={{"type":"string","format":"date-time"}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"endTimestamp"}
-          required={false}
-          schemaName={"date-time"}
-          qualifierMessage={undefined}
-          schema={{"type":"string","format":"date-time"}}
         >
           
         </SchemaItem>

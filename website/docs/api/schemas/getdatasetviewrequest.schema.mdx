@@ -64,6 +64,24 @@ Get a view of the data within a dataset.
     
   </SchemaItem><SchemaItem
     collapsible={false}
+    name={"previousPageCursor"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"A cursor for the previous page in the pagination, if one exists."}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"nextPageCursor"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"A cursor for the next page in the pagination, if one exists."}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
     name={"useDatasetsService"}
     required={false}
     schemaName={"boolean"}
@@ -113,15 +131,6 @@ Get a view of the data within a dataset.
             Array [
           </div>
         </li><SchemaItem
-          collapsible={false}
-          name={"columnName"}
-          required={true}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string"}}
-        >
-          
-        </SchemaItem><SchemaItem
           collapsible={true}
           className={"schemaItem"}
         >
@@ -138,7 +147,7 @@ Get a view of the data within a dataset.
                 <strong
                   className={"openapi-schema__property"}
                 >
-                  stringCriteria
+                  allOf
                 </strong><span
                   className={"openapi-schema__name"}
                 >
@@ -157,23 +166,241 @@ Get a view of the data within a dataset.
               style={{"marginLeft":"1rem"}}
             >
               <SchemaItem
-                collapsible={false}
-                name={"operator"}
-                required={true}
-                schemaName={"Operator (string)"}
-                qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_EQUALS`, `OPERATOR_NOT_EQUALS`, `OPERATOR_CONTAINS`, `OPERATOR_STARTS_WITH`, `OPERATOR_ENDS_WITH`]"}
-                schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_EQUALS","OPERATOR_NOT_EQUALS","OPERATOR_CONTAINS","OPERATOR_STARTS_WITH","OPERATOR_ENDS_WITH"],"title":"Operator"}}
+                collapsible={true}
+                className={"schemaItem"}
               >
-                
-              </SchemaItem><SchemaItem
-                collapsible={false}
-                name={"value"}
-                required={true}
-                schemaName={"string"}
-                qualifierMessage={undefined}
-                schema={{"type":"string"}}
-              >
-                
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        predicates
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object[]
+                      </span><span
+                        className={"openapi-schema__divider"}
+                      >
+                        
+                      </span><span
+                        className={"openapi-schema__required"}
+                      >
+                        required
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                      >
+                        Array [
+                      </div>
+                    </li><SchemaItem
+                      collapsible={false}
+                      name={"columnName"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              stringCriteria
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span><span
+                              className={"openapi-schema__divider"}
+                            >
+                              
+                            </span><span
+                              className={"openapi-schema__required"}
+                            >
+                              required
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <SchemaItem
+                            collapsible={false}
+                            name={"operator"}
+                            required={true}
+                            schemaName={"Operator (string)"}
+                            qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_EQUALS`, `OPERATOR_NOT_EQUALS`, `OPERATOR_CONTAINS`, `OPERATOR_STARTS_WITH`, `OPERATOR_ENDS_WITH`]"}
+                            schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_EQUALS","OPERATOR_NOT_EQUALS","OPERATOR_CONTAINS","OPERATOR_STARTS_WITH","OPERATOR_ENDS_WITH"],"title":"Operator"}}
+                          >
+                            
+                          </SchemaItem><SchemaItem
+                            collapsible={false}
+                            name={"value"}
+                            required={true}
+                            schemaName={"string"}
+                            qualifierMessage={undefined}
+                            schema={{"type":"string"}}
+                          >
+                            
+                          </SchemaItem>
+                        </div>
+                      </details>
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              numericCriteria
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span><span
+                              className={"openapi-schema__divider"}
+                            >
+                              
+                            </span><span
+                              className={"openapi-schema__required"}
+                            >
+                              required
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <SchemaItem
+                            collapsible={false}
+                            name={"operator"}
+                            required={true}
+                            schemaName={"Operator (string)"}
+                            qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_EQUALS`, `OPERATOR_NOT_EQUALS`, `OPERATOR_GREATER_THAN`, `OPERATOR_GREATER_THAN_OR_EQUAL`, `OPERATOR_LESS_THAN`, `OPERATOR_LESS_THAN_OR_EQUAL`]"}
+                            schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_EQUALS","OPERATOR_NOT_EQUALS","OPERATOR_GREATER_THAN","OPERATOR_GREATER_THAN_OR_EQUAL","OPERATOR_LESS_THAN","OPERATOR_LESS_THAN_OR_EQUAL"],"title":"Operator"}}
+                          >
+                            
+                          </SchemaItem><SchemaItem
+                            collapsible={false}
+                            name={"int64Value"}
+                            required={true}
+                            schemaName={"integer"}
+                            qualifierMessage={undefined}
+                            schema={{"type":"integer"}}
+                          >
+                            
+                          </SchemaItem><SchemaItem
+                            collapsible={false}
+                            name={"doubleValue"}
+                            required={true}
+                            schemaName={"number"}
+                            qualifierMessage={undefined}
+                            schema={{"type":"number"}}
+                          >
+                            
+                          </SchemaItem>
+                        </div>
+                      </details>
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              stringListCriteria
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span><span
+                              className={"openapi-schema__divider"}
+                            >
+                              
+                            </span><span
+                              className={"openapi-schema__required"}
+                            >
+                              required
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <SchemaItem
+                            collapsible={false}
+                            name={"operator"}
+                            required={true}
+                            schemaName={"Operator (string)"}
+                            qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_HAS_ANY`, `OPERATOR_HAS_ALL`, `OPERATOR_HAS_NONE`]"}
+                            schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_HAS_ANY","OPERATOR_HAS_ALL","OPERATOR_HAS_NONE"],"title":"Operator"}}
+                          >
+                            
+                          </SchemaItem><SchemaItem
+                            collapsible={false}
+                            name={"values"}
+                            required={true}
+                            schemaName={"string[]"}
+                            qualifierMessage={undefined}
+                            schema={{"type":"array","items":{"type":"string"}}}
+                          >
+                            
+                          </SchemaItem>
+                        </div>
+                      </details>
+                    </SchemaItem><li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                      >
+                        ]
+                      </div>
+                    </li>
+                  </div>
+                </details>
               </SchemaItem>
             </div>
           </details>
@@ -194,7 +421,7 @@ Get a view of the data within a dataset.
                 <strong
                   className={"openapi-schema__property"}
                 >
-                  numericCriteria
+                  anyOf
                 </strong><span
                   className={"openapi-schema__name"}
                 >
@@ -213,153 +440,241 @@ Get a view of the data within a dataset.
               style={{"marginLeft":"1rem"}}
             >
               <SchemaItem
-                collapsible={false}
-                name={"operator"}
-                required={true}
-                schemaName={"Operator (string)"}
-                qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_EQUALS`, `OPERATOR_NOT_EQUALS`, `OPERATOR_GREATER_THAN`, `OPERATOR_GREATER_THAN_OR_EQUAL`, `OPERATOR_LESS_THAN`, `OPERATOR_LESS_THAN_OR_EQUAL`]"}
-                schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_EQUALS","OPERATOR_NOT_EQUALS","OPERATOR_GREATER_THAN","OPERATOR_GREATER_THAN_OR_EQUAL","OPERATOR_LESS_THAN","OPERATOR_LESS_THAN_OR_EQUAL"],"title":"Operator"}}
+                collapsible={true}
+                className={"schemaItem"}
               >
-                
-              </SchemaItem><SchemaItem
-                collapsible={false}
-                name={"intValue"}
-                required={true}
-                schemaName={"integer"}
-                qualifierMessage={undefined}
-                schema={{"type":"integer"}}
-              >
-                
-              </SchemaItem><SchemaItem
-                collapsible={false}
-                name={"floatValue"}
-                required={true}
-                schemaName={"number"}
-                qualifierMessage={undefined}
-                schema={{"type":"number"}}
-              >
-                
-              </SchemaItem>
-            </div>
-          </details>
-        </SchemaItem><SchemaItem
-          collapsible={true}
-          className={"schemaItem"}
-        >
-          <details
-            style={{}}
-            className={"openapi-markdown__details"}
-          >
-            <summary
-              style={{}}
-            >
-              <span
-                className={"openapi-schema__container"}
-              >
-                <strong
-                  className={"openapi-schema__property"}
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
                 >
-                  tagsCriteria
-                </strong><span
-                  className={"openapi-schema__name"}
-                >
-                   object
-                </span><span
-                  className={"openapi-schema__divider"}
-                >
-                  
-                </span><span
-                  className={"openapi-schema__required"}
-                >
-                  required
-                </span>
-              </span>
-            </summary><div
-              style={{"marginLeft":"1rem"}}
-            >
-              <SchemaItem
-                collapsible={false}
-                name={"operator"}
-                required={true}
-                schemaName={"Operator (string)"}
-                qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_HAS_ANY`, `OPERATOR_HAS_ALL`, `OPERATOR_HAS_NONE`]"}
-                schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_HAS_ANY","OPERATOR_HAS_ALL","OPERATOR_HAS_NONE"],"title":"Operator"}}
-              >
-                
-              </SchemaItem><SchemaItem
-                collapsible={false}
-                name={"tags"}
-                required={true}
-                schemaName={"string[]"}
-                qualifierMessage={undefined}
-                schema={{"type":"array","items":{"type":"string"}}}
-              >
-                
-              </SchemaItem>
-            </div>
-          </details>
-        </SchemaItem><SchemaItem
-          collapsible={true}
-          className={"schemaItem"}
-        >
-          <details
-            style={{}}
-            className={"openapi-markdown__details"}
-          >
-            <summary
-              style={{}}
-            >
-              <span
-                className={"openapi-schema__container"}
-              >
-                <strong
-                  className={"openapi-schema__property"}
-                >
-                  timeRangeCriteria
-                </strong><span
-                  className={"openapi-schema__name"}
-                >
-                   object
-                </span><span
-                  className={"openapi-schema__divider"}
-                >
-                  
-                </span><span
-                  className={"openapi-schema__required"}
-                >
-                  required
-                </span>
-              </span>
-            </summary><div
-              style={{"marginLeft":"1rem"}}
-            >
-              <SchemaItem
-                collapsible={false}
-                name={"operator"}
-                required={true}
-                schemaName={"Operator (string)"}
-                qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_BEFORE`, `OPERATOR_AFTER`, `OPERATOR_BETWEEN`]"}
-                schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_BEFORE","OPERATOR_AFTER","OPERATOR_BETWEEN"],"title":"Operator"}}
-              >
-                
-              </SchemaItem><SchemaItem
-                collapsible={false}
-                name={"timestamp"}
-                required={true}
-                schemaName={"date-time"}
-                qualifierMessage={undefined}
-                schema={{"type":"string","format":"date-time"}}
-              >
-                
-              </SchemaItem><SchemaItem
-                collapsible={false}
-                name={"endTimestamp"}
-                required={false}
-                schemaName={"date-time"}
-                qualifierMessage={undefined}
-                schema={{"type":"string","format":"date-time"}}
-              >
-                
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        predicates
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object[]
+                      </span><span
+                        className={"openapi-schema__divider"}
+                      >
+                        
+                      </span><span
+                        className={"openapi-schema__required"}
+                      >
+                        required
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                      >
+                        Array [
+                      </div>
+                    </li><SchemaItem
+                      collapsible={false}
+                      name={"columnName"}
+                      required={true}
+                      schemaName={"string"}
+                      qualifierMessage={undefined}
+                      schema={{"type":"string"}}
+                    >
+                      
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              stringCriteria
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span><span
+                              className={"openapi-schema__divider"}
+                            >
+                              
+                            </span><span
+                              className={"openapi-schema__required"}
+                            >
+                              required
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <SchemaItem
+                            collapsible={false}
+                            name={"operator"}
+                            required={true}
+                            schemaName={"Operator (string)"}
+                            qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_EQUALS`, `OPERATOR_NOT_EQUALS`, `OPERATOR_CONTAINS`, `OPERATOR_STARTS_WITH`, `OPERATOR_ENDS_WITH`]"}
+                            schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_EQUALS","OPERATOR_NOT_EQUALS","OPERATOR_CONTAINS","OPERATOR_STARTS_WITH","OPERATOR_ENDS_WITH"],"title":"Operator"}}
+                          >
+                            
+                          </SchemaItem><SchemaItem
+                            collapsible={false}
+                            name={"value"}
+                            required={true}
+                            schemaName={"string"}
+                            qualifierMessage={undefined}
+                            schema={{"type":"string"}}
+                          >
+                            
+                          </SchemaItem>
+                        </div>
+                      </details>
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              numericCriteria
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span><span
+                              className={"openapi-schema__divider"}
+                            >
+                              
+                            </span><span
+                              className={"openapi-schema__required"}
+                            >
+                              required
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <SchemaItem
+                            collapsible={false}
+                            name={"operator"}
+                            required={true}
+                            schemaName={"Operator (string)"}
+                            qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_EQUALS`, `OPERATOR_NOT_EQUALS`, `OPERATOR_GREATER_THAN`, `OPERATOR_GREATER_THAN_OR_EQUAL`, `OPERATOR_LESS_THAN`, `OPERATOR_LESS_THAN_OR_EQUAL`]"}
+                            schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_EQUALS","OPERATOR_NOT_EQUALS","OPERATOR_GREATER_THAN","OPERATOR_GREATER_THAN_OR_EQUAL","OPERATOR_LESS_THAN","OPERATOR_LESS_THAN_OR_EQUAL"],"title":"Operator"}}
+                          >
+                            
+                          </SchemaItem><SchemaItem
+                            collapsible={false}
+                            name={"int64Value"}
+                            required={true}
+                            schemaName={"integer"}
+                            qualifierMessage={undefined}
+                            schema={{"type":"integer"}}
+                          >
+                            
+                          </SchemaItem><SchemaItem
+                            collapsible={false}
+                            name={"doubleValue"}
+                            required={true}
+                            schemaName={"number"}
+                            qualifierMessage={undefined}
+                            schema={{"type":"number"}}
+                          >
+                            
+                          </SchemaItem>
+                        </div>
+                      </details>
+                    </SchemaItem><SchemaItem
+                      collapsible={true}
+                      className={"schemaItem"}
+                    >
+                      <details
+                        style={{}}
+                        className={"openapi-markdown__details"}
+                      >
+                        <summary
+                          style={{}}
+                        >
+                          <span
+                            className={"openapi-schema__container"}
+                          >
+                            <strong
+                              className={"openapi-schema__property"}
+                            >
+                              stringListCriteria
+                            </strong><span
+                              className={"openapi-schema__name"}
+                            >
+                               object
+                            </span><span
+                              className={"openapi-schema__divider"}
+                            >
+                              
+                            </span><span
+                              className={"openapi-schema__required"}
+                            >
+                              required
+                            </span>
+                          </span>
+                        </summary><div
+                          style={{"marginLeft":"1rem"}}
+                        >
+                          <SchemaItem
+                            collapsible={false}
+                            name={"operator"}
+                            required={true}
+                            schemaName={"Operator (string)"}
+                            qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_HAS_ANY`, `OPERATOR_HAS_ALL`, `OPERATOR_HAS_NONE`]"}
+                            schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_HAS_ANY","OPERATOR_HAS_ALL","OPERATOR_HAS_NONE"],"title":"Operator"}}
+                          >
+                            
+                          </SchemaItem><SchemaItem
+                            collapsible={false}
+                            name={"values"}
+                            required={true}
+                            schemaName={"string[]"}
+                            qualifierMessage={undefined}
+                            schema={{"type":"array","items":{"type":"string"}}}
+                          >
+                            
+                          </SchemaItem>
+                        </div>
+                      </details>
+                    </SchemaItem><li>
+                      <div
+                        style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                      >
+                        ]
+                      </div>
+                    </li>
+                  </div>
+                </details>
               </SchemaItem>
             </div>
           </details>
