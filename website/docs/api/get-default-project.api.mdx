@@ -1,8 +1,8 @@
 ---
-id: create-project
-title: "Create Project"
-description: "Create a new Project"
-api: eJylVU1v00AQ/SurOW/rqkffAgJRxEdFCxwiC03sSbKtvbvsjtsGy/8dzdpJTdJQKi6J7Z3v9+ZtB4yrCPkcLoO7oZKh0OA8BWTj7EUFObwOhEzbYw0VxTIYL+e7U4XK0r16NIpUtsHwBvJ5B68IA4VZy2vI50VfaAj0s6XIr1y1gbyD0lkmy/KI3temTNmzmygpOojlmhqUJzZc035NX4ZgoIE3Xk7dYqzCB2mFDUVxtthQCjJYRQ7Grg4aetc2aE8CYYWLmpQ4qaULitek/JBQK7NUzpKiBxM5nkK/F+SFOSaHyi2fy+TCCq35tQPouWSfJ/aKncIYXWkEtEkidW94nbKNACxqgr4fkDKBKqFIGmBxlAFb9Pt+cIze2TiM/vzsTP7+dLxqy5JiXLa12jEO9H+TYUj7LBvGxqeBHun7d1fzxNR7DWWqo5rxU5gsXWiQIYcKmU7YNCQura9e6lJRTS90SYW58BRZen1kLZ6j9D8Qcc/k09N59jhmKphOcjqisdRi32WLZNEPzGuI106Uy7ukCh5FeCBDb7LzDFt2P+gO62z0y4ZsSbTCHYWYNKsNNeSwZvYxz7IaIzemJjSnFd0drNhlcFVbpgUbYqgT9QEjfzQ1qdkFiORtFfFK+DvwaKqLu7lISqklmUEOi2QEenx4u0X4/ffrNDzZiy+PcvrmARtf06PeHZOF3ed9GCfwGbt00wWZ9KRmlxfq2/lB2EOTXL12jXeWLEfQIBMeTM9PzySJoNSgnVQ8KsqRK2dyXRy7fcZRMj1w5ms0Nu2aINqNbJgDegMapIEdI4ZFH2OMrCg0rIVG+Ry6boGRvoa67+Xzz5aC3G+FhjsMJimmXG8a1oQVhUSjW9pImUPBJ9dSl5jXrdR3IG+93nrMypI8/9W2mDD98vPVtVBkvE8bV4lPwHvQ6TcHAToNMDEvfeugRrtqcSW2Q0whFP7Jxz3+pa7GI7SbSYVdN1hcu1uyfQ96bIXlHXrZzt/vEej9
+id: get-default-project
+title: "Get Default Project"
+description: "Get the default project for the user or organization"
+api: eJytVd9v2zYQ/leIe2aqII96c9utyLC2QZNuD65QXMSzxYYSWfLk1BP0vw9HyakSe806zDAsWvzueD+++zgA4zZBuYar6L9QzVBp8IEisvXdpYES3hC/pg32jg8QDYZSHW0QzIRQ3JAyE0yFCac2Pub3faKovHy32Nm/smvQkKjuo+U9lOsBXhJGiqueGyjX1VhpiPS1p8QvvdlDOUDtO6aOZYkhOFtnN8WXJCEMkOqGWpQVW3Z0Ku4Pk0PQwPsgCH87pxOipMyWkjhYhikVGA74xNF226P0LzeS8c4aMlrdW+fU9pmCLE/41Kn33FC8t4lm80gcLe3oXxX1U/fIncKUfG2Ryah7y03GYrDqjvZiY2DMH6lvCr5LU84X5+fyeJzYdV/XlNKmd+qBEqD/l05MRz/bijnppbPvJPyxqT3RuVFDHUlqs+JTfd342CJDCQaZzti2JCZ9MD9rYsjRT5rkwHw8RbhRQ4ctndx41LET+8+R+Qnk3elzxmkcbSQjWmENLCu5LNEcavXU5NDJamZfS9x4kZfg80gGlMmHAoMtLgrs2X+mHbpitiu2xJ/nUcjSEXcUU1aOPjoooWEOqSwKh4lb6wjtC0O7o1m9it70dR6UyYc6U79j4rfWkVpdggjPQZeuhcgTmZbq9FAcOVJiyTAo4TaDQM+LXw9t/u3Pm1xBGZAP30Xtl2/YBkenFGfRHNtt/JL+i2DV6upS/XFxlOMxpFSvfBt8Rx0n0CClm6AXL87lEOlBi5lAE9GypM8zq/5B9heS/F9vgLmQTN+4CA5tl8dN+jnMhFgDBgsaJMsHUkyzPse0JEaloRE6lWsYhltM9DG6cZTXX3uKctFUGnYYLd5KMdfVqKEhNBQzk+5oDyW8mrI6u5HgBO56CfJI6kZ9sFjVNQX+IbZaMP7q/fWNsGS+2FpvxCbiPej8WwLIHSzWmXz53QAOu22PW8FOPoVT+JiSTyiYs5q3sNsvIhyGCXHj76gbR9BzKiz/YZQp/Rvl/9Gb
 sidebar_class_name: "post api-method"
 info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
@@ -25,13 +25,13 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Create Project"}
+  children={"Get Default Project"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/project/create"}
+  path={"/api/2/auto_eval/project/get_default"}
   context={"endpoint"}
 >
   
@@ -39,7 +39,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-Create a new Project
+Get the default project for the user or organization
 
 <Heading
   id={"request"}
@@ -80,29 +80,11 @@ Create a new Project
       >
         <SchemaItem
           collapsible={false}
-          name={"name"}
-          required={true}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string","description":"Human-readable name for the project, if one exists."}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"description"}
-          required={false}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string","description":"Human-readable description of the project, if one exists."}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
           name={"organizationId"}
           required={false}
           schemaName={"string"}
           qualifierMessage={undefined}
-          schema={{"type":"string","description":"Organization to associate the project with, if applicable"}}
+          schema={{"type":"string","description":"If provided, will get the default project for the organization\n Otherwise, will retrieve the default project for the user or \n organization associated with the api key used"}}
         >
           
         </SchemaItem>
