@@ -64,6 +64,12 @@ const sidebar: SidebarsConfig = {
           label: "Archive Dataset",
           className: "api-method post",
         },
+        {
+          type: "doc",
+          id: "api/update-dataset-row",
+          label: "Update Dataset Row",
+          className: "api-method put",
+        },
       ],
     },
     {
@@ -84,6 +90,24 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/evaluate-run",
+          label: "Evaluate Run",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/get-evaluation-run",
+          label: "Get Evaluation Run",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/list-evaluation-runs",
+          label: "List Evaluation Runs",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
           id: "api/list-metrics",
           label: "List Metrics",
           className: "api-method post",
@@ -92,6 +116,30 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/get-metric",
           label: "Get Metric",
+          className: "api-method post",
+        },
+      ],
+    },
+    {
+      type: "category",
+      label: "Experiment",
+      items: [
+        {
+          type: "doc",
+          id: "api/create-experiment",
+          label: "Create Experiment",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/get-experiment",
+          label: "Get Experiment",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/list-experiments",
+          label: "List Experiments",
           className: "api-method post",
         },
       ],
@@ -152,6 +200,12 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/get-project",
           label: "Get Project",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/get-default-project",
+          label: "Get Default Project",
           className: "api-method post",
         },
         {
@@ -300,8 +354,26 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "api/schemas/columnfilter",
-          label: "ColumnFilter",
+          id: "api/schemas/datasetrowfilter",
+          label: "DatasetRowFilter",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/allof",
+          label: "AllOf",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/anyof",
+          label: "AnyOf",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/datasetfieldvaluepredicate",
+          label: "DatasetFieldValuePredicate",
           className: "schema",
         },
         {
@@ -318,14 +390,8 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
-          id: "api/schemas/rowtagscriteria",
-          label: "RowTagsCriteria",
-          className: "schema",
-        },
-        {
-          type: "doc",
-          id: "api/schemas/timerangecriteria",
-          label: "TimeRangeCriteria",
+          id: "api/schemas/stringlistcriteria",
+          label: "StringListCriteria",
           className: "schema",
         },
         {
@@ -414,6 +480,24 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/schemas/updatedatasetrowrequest",
+          label: "UpdateDatasetRowRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/fieldupdatesentry",
+          label: "FieldUpdatesEntry",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/updatedatasetrowresponse",
+          label: "UpdateDatasetRowResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
           id: "api/schemas/evaluaterequest",
           label: "EvaluateRequest",
           className: "schema",
@@ -422,6 +506,12 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/metric",
           label: "Metric",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/evaluationmetadata",
+          label: "EvaluationMetadata",
           className: "schema",
         },
         {
@@ -440,6 +530,60 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/evaluatedatasetresponse",
           label: "EvaluateDatasetResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/evaluaterunrequest",
+          label: "EvaluateRunRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/evaluaterunresponse",
+          label: "EvaluateRunResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/getevaluationrunrequest",
+          label: "GetEvaluationRunRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/getevaluationrunresponse",
+          label: "GetEvaluationRunResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/evaluationrun",
+          label: "EvaluationRun",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/metricaggregate",
+          label: "MetricAggregate",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/listevaluationrunsrequest",
+          label: "ListEvaluationRunsRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/listevaluationrunsrequestfilters",
+          label: "ListEvaluationRunsRequestFilters",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/listevaluationrunsresponse",
+          label: "ListEvaluationRunsResponse",
           className: "schema",
         },
         {
@@ -464,6 +608,54 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/getmetricresponse",
           label: "GetMetricResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/createexperimentrequest",
+          label: "CreateExperimentRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/createexperimentresponse",
+          label: "CreateExperimentResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/experiment",
+          label: "Experiment",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/getexperimentrequest",
+          label: "GetExperimentRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/getexperimentresponse",
+          label: "GetExperimentResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/listexperimentsrequest",
+          label: "ListExperimentsRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/listexperimentsrequestfilters",
+          label: "ListExperimentsRequestFilters",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/listexperimentsresponse",
+          label: "ListExperimentsResponse",
           className: "schema",
         },
         {
@@ -626,6 +818,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/getprojectresponse",
           label: "GetProjectResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/getdefaultprojectrequest",
+          label: "GetDefaultProjectRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/getdefaultprojectresponse",
+          label: "GetDefaultProjectResponse",
           className: "schema",
         },
         {
