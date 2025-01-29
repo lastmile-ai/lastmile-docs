@@ -1,0 +1,298 @@
+---
+id: update-dataset-row
+title: "Update Dataset Row"
+description: "Update a row in a dataset"
+api: eJytVUtv2zgQ/ivEXPaixkGOuqXtFnAf2CB1sgev0Y7FscWGIhmSsmsI+u+LIWVbid02XezFkOThzHyPGXYQcR2gnMNbjBgowqIA68hjVNZMJZRw5yRGGv6+tVsoQFKovHIccggQKLzdCmUECjnkKiBQ1XoVd1DOO3hN6Mlft7GGcr7oFwV4emwpxNdW7qDsoLImkon8iM5pVaUuJt8C1+kgVDU1yE9RRU1nervN+aCAuHMcYJffqOJ35xlVVBT4vJIpS44J0SuzPoE1q2kPRHBjqIwyaxFrSkCjFW2qDn0B3m6nL0wZHFVqpaqnSQqx3InpW861UqRlBhZGKQ9IUErF+VDfPMH0tNRfXpInmapsULcUxFbFWmgy61gL1FvcBUGPLWru4qtpmy/ebsNXYQ1j/MeIynpPwVkjGfdG0fbiDLHn24m+pf4cfEOHfqIVzO3K+iMpCXxgGgbq78kHZc0H2r2M3k2OFw+0E3aV1NqLOFKsz9ZTniR7X0nYa/iM/3N9LF4+AH2fSzGLIct0dXl5qtbntqoohFWrxWH4oPg/5iFX/uVA/IaBM4fJWX+EwbP/Qaz7HwuFq0g+ffmBXnupzmjTZ8obirXl7eXaBBZ558AEnZpcTbCN9gttUE+GBJNchwcg7SzPLkorq/UaSqhjdKGcTDSG2ChNqC4kbU4g3Xgr24pfRM4hXomPGOInpUlcT4E33n4hfmbtMvfjtXhgjUtyLykMSlimICiGh3fWNxihhPd/zxI97Inb4zb98zs2ji2Rd91RhEHo44dn6+a8mPvwvgBlVnZsuRFAcX0zFfdXJ7ychpTijW2cNWQiz9gwtFDC1cUlF3E2xAaTyQ02R2eLwdrizD00uj5+eiUNBEf6HidOozJcMOncDT6ZAzoFBTCSg1eOdoMCRn5ZFFDbEPlU1y0x0J3Xfc+fH1vyfPEtCtigV7hkvuaLvoCaUJJPBntI9L7Jnb+acW8crlvu8WTo+2J/4rqqyMWfxi5GY3BzN2PvDPdsYyUf8cgk8m8JwNc+H87rgL91oNGsW1xzbE7JTsOnRn1mzARq+AvNbtRg1+WImX0g0/dQDEgiv0PPk/svoG75vA==
+sidebar_class_name: "put api-method"
+info_path: api/lastmile-ai-api-v-2
+custom_edit_url: null
+show_extensions: true
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Dataset Row"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2/auto_eval/dataset/update_row"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update a row in a dataset
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"id"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"The dataset containing the row to update"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"rowId"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"The specific row to update, by ID"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  fieldUpdates
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <div
+                style={{"marginTop":".5rem","marginBottom":".5rem"}}
+              >
+                
+                
+                The new values to set for specific fields
+                
+                
+              </div><SchemaItem
+                collapsible={true}
+                className={"schemaItem"}
+              >
+                <details
+                  style={{}}
+                  className={"openapi-markdown__details"}
+                >
+                  <summary
+                    style={{}}
+                  >
+                    <span
+                      className={"openapi-schema__container"}
+                    >
+                      <strong
+                        className={"openapi-schema__property"}
+                      >
+                        property name*
+                      </strong><span
+                        className={"openapi-schema__name"}
+                      >
+                         object
+                      </span>
+                    </span>
+                  </summary><div
+                    style={{"marginLeft":"1rem"}}
+                  >
+                    <div
+                      style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                    >
+                      
+                      
+                      Ordered row values with length always equal to `num_rows` on the
+                       corresponding view.
+                      
+                      
+                    </div><SchemaItem
+                      name={"property name*"}
+                      required={false}
+                      schemaName={"any"}
+                      qualifierMessage={undefined}
+                      schema={{"description":"Ordered row values with length always equal to `num_rows` on the\n corresponding view.","type":"object","additionalProperties":true}}
+                      collapsible={false}
+                      discriminator={false}
+                    >
+                      
+                    </SchemaItem>
+                  </div>
+                </details>
+              </SchemaItem>
+            </div>
+          </details>
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"datasetVersionKey"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"The version key of the dataset to update"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Successful operation
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"rowId"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"The updated row's ID"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"datasetVersionKey"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"Version key of the dataset after the update"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"rowId\": \"string\",\n  \"datasetVersionKey\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>

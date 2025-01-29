@@ -1,0 +1,123 @@
+---
+id: listevaluationrunsrequest
+title: "ListEvaluationRunsRequest"
+description: ""
+sidebar_label: "ListEvaluationRunsRequest"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"ListEvaluationRunsRequest"}
+>
+</Heading>
+
+
+
+
+
+<ul>
+  <SchemaItem
+    collapsible={true}
+    className={"schemaItem"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details"}
+    >
+      <summary
+        style={{}}
+      >
+        <span
+          className={"openapi-schema__container"}
+        >
+          <strong
+            className={"openapi-schema__property"}
+          >
+            filters
+          </strong><span
+            className={"openapi-schema__name"}
+          >
+             object
+          </span>
+        </span>
+      </summary><div
+        style={{"marginLeft":"1rem"}}
+      >
+        <div
+          style={{"marginTop":".5rem","marginBottom":".5rem"}}
+        >
+          
+          
+          Filter listed evaluation runs by ALL filters specified
+          
+          
+        </div><SchemaItem
+          collapsible={false}
+          name={"query"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"search query substring match for experiment name or metadata"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"projectId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"filter evaluation runs associated with the project"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"runType"}
+          required={false}
+          schemaName={"EvaluationRunType (string)"}
+          qualifierMessage={"**Possible values:** [`EVALUATION_RUN_TYPE_UNSPECIFIED`, `EVALUATION_RUN_TYPE_ADHOC`, `EVALUATION_RUN_TYPE_EXPERIMENT`]"}
+          schema={{"type":"string","enum":["EVALUATION_RUN_TYPE_UNSPECIFIED","EVALUATION_RUN_TYPE_ADHOC","EVALUATION_RUN_TYPE_EXPERIMENT"],"title":"EvaluationRunType","description":"filter by run type. If not specified, lists all run types"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"experimentId"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"filter runs associated with this experiment"}}
+        >
+          
+        </SchemaItem>
+      </div>
+    </details>
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"pageIndex"}
+    required={false}
+    schemaName={"integer"}
+    qualifierMessage={undefined}
+    schema={{"type":"integer"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"pageSize"}
+    required={false}
+    schemaName={"integer"}
+    qualifierMessage={undefined}
+    schema={{"type":"integer"}}
+  >
+    
+  </SchemaItem>
+</ul>
+            
