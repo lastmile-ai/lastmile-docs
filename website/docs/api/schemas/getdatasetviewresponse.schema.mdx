@@ -221,7 +221,7 @@ import TabItem from "@theme/TabItem";
                 required={true}
                 schemaName={"date-time"}
                 qualifierMessage={undefined}
-                schema={{"type":"string","format":"date-time"}}
+                schema={{"type":"string","format":"date-time","description":"A summary is retrieved for a time range from start_time to end_time\n If no end_time is provided, current time is used"}}
               >
                 
               </SchemaItem><SchemaItem
@@ -230,7 +230,7 @@ import TabItem from "@theme/TabItem";
                 required={true}
                 schemaName={"date-time"}
                 qualifierMessage={undefined}
-                schema={{"type":"string","format":"date-time"}}
+                schema={{"type":"string","format":"date-time","description":"A summary is retrieved for a time range from start_time to end_time\n If no end_time is provided, current time is used"}}
               >
                 
               </SchemaItem><SchemaItem
@@ -256,8 +256,8 @@ import TabItem from "@theme/TabItem";
                 name={"dtype"}
                 required={false}
                 schemaName={"DatasetColumnDType (string)"}
-                qualifierMessage={"**Possible values:** [`DATASET_COLUMN_D_TYPE_UNSPECIFIED`, `DATASET_COLUMN_D_TYPE_INT32`, `DATASET_COLUMN_D_TYPE_INT64`, `DATASET_COLUMN_D_TYPE_FLOAT32`, `DATASET_COLUMN_D_TYPE_FLOAT64`, `DATASET_COLUMN_D_TYPE_STRING`, `DATASET_COLUMN_D_TYPE_BYTES`, `DATASET_COLUMN_D_TYPE_ANY`]"}
-                schema={{"type":"string","enum":["DATASET_COLUMN_D_TYPE_UNSPECIFIED","DATASET_COLUMN_D_TYPE_INT32","DATASET_COLUMN_D_TYPE_INT64","DATASET_COLUMN_D_TYPE_FLOAT32","DATASET_COLUMN_D_TYPE_FLOAT64","DATASET_COLUMN_D_TYPE_STRING","DATASET_COLUMN_D_TYPE_BYTES","DATASET_COLUMN_D_TYPE_ANY"],"title":"DatasetColumnDType","description":"Datatypes for a column in a dataset file. We likely don't need everything\n here, but it's good to be explicit, for example to avoid unknowingly coercing\n int64 values into int32. Encoding for text is UTF_8 unless indicated\n otherwise."}}
+                qualifierMessage={"**Possible values:** [`DATASET_COLUMN_D_TYPE_UNSPECIFIED`, `DATASET_COLUMN_D_TYPE_INT32`, `DATASET_COLUMN_D_TYPE_INT64`, `DATASET_COLUMN_D_TYPE_FLOAT32`, `DATASET_COLUMN_D_TYPE_FLOAT64`, `DATASET_COLUMN_D_TYPE_STRING`, `DATASET_COLUMN_D_TYPE_BYTES`, `DATASET_COLUMN_D_TYPE_ANY`, `DATASET_COLUMN_D_TYPE_LIST_OF_STRINGS`, `DATASET_COLUMN_D_TYPE_BOOLEAN`]"}
+                schema={{"type":"string","enum":["DATASET_COLUMN_D_TYPE_UNSPECIFIED","DATASET_COLUMN_D_TYPE_INT32","DATASET_COLUMN_D_TYPE_INT64","DATASET_COLUMN_D_TYPE_FLOAT32","DATASET_COLUMN_D_TYPE_FLOAT64","DATASET_COLUMN_D_TYPE_STRING","DATASET_COLUMN_D_TYPE_BYTES","DATASET_COLUMN_D_TYPE_ANY","DATASET_COLUMN_D_TYPE_LIST_OF_STRINGS","DATASET_COLUMN_D_TYPE_BOOLEAN"],"title":"DatasetColumnDType","description":"Datatypes for a column in a dataset file. We likely don't need everything\n here, but it's good to be explicit, for example to avoid unknowingly coercing\n int64 values into int32. Encoding for text is UTF_8 unless indicated\n otherwise."}}
               >
                 
               </SchemaItem><li>
@@ -272,6 +272,33 @@ import TabItem from "@theme/TabItem";
         </SchemaItem>
       </div>
     </details>
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"previousPageCursor"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"A cursor for the previous page in the pagination, if one exists."}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"nextPageCursor"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"A cursor for the next page in the pagination, if one exists."}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"datasetVersionKey"}
+    required={true}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"dataset version key"}}
+  >
+    
   </SchemaItem>
 </ul>
             
