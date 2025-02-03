@@ -1,0 +1,123 @@
+---
+id: metricaggregate
+title: "MetricAggregate"
+description: ""
+sidebar_label: "MetricAggregate"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"MetricAggregate"}
+>
+</Heading>
+
+
+
+
+
+<ul>
+  <SchemaItem
+    collapsible={true}
+    className={"schemaItem"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details"}
+    >
+      <summary
+        style={{}}
+      >
+        <span
+          className={"openapi-schema__container"}
+        >
+          <strong
+            className={"openapi-schema__property"}
+          >
+            metric
+          </strong><span
+            className={"openapi-schema__name"}
+          >
+             object
+          </span><span
+            className={"openapi-schema__divider"}
+          >
+            
+          </span><span
+            className={"openapi-schema__required"}
+          >
+            required
+          </span>
+        </span>
+      </summary><div
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"id"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"name"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"description"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"deploymentStatus"}
+          required={false}
+          schemaName={"ModelDeploymentStatus (string)"}
+          qualifierMessage={"**Possible values:** [`MODEL_DEPLOYMENT_STATUS_UNSPECIFIED`, `MODEL_DEPLOYMENT_STATUS_PENDING`, `MODEL_DEPLOYMENT_STATUS_ONLINE`, `MODEL_DEPLOYMENT_STATUS_OFFLINE`, `MODEL_DEPLOYMENT_STATUS_PAUSED`]"}
+          schema={{"type":"string","enum":["MODEL_DEPLOYMENT_STATUS_UNSPECIFIED","MODEL_DEPLOYMENT_STATUS_PENDING","MODEL_DEPLOYMENT_STATUS_ONLINE","MODEL_DEPLOYMENT_STATUS_OFFLINE","MODEL_DEPLOYMENT_STATUS_PAUSED"],"title":"ModelDeploymentStatus"}}
+        >
+          
+        </SchemaItem>
+      </div>
+    </details>
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"aggregateMethod"}
+    required={true}
+    schemaName={"MetricAggregateMethod (string)"}
+    qualifierMessage={"**Possible values:** [`METRIC_AGGREGATE_METHOD_UNSPECIFIED`, `METRIC_AGGREGATE_METHOD_SUM`, `METRIC_AGGREGATE_METHOD_AVG`]"}
+    schema={{"type":"string","enum":["METRIC_AGGREGATE_METHOD_UNSPECIFIED","METRIC_AGGREGATE_METHOD_SUM","METRIC_AGGREGATE_METHOD_AVG"],"title":"MetricAggregateMethod"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"score"}
+    required={true}
+    schemaName={"number"}
+    qualifierMessage={undefined}
+    schema={{"type":"number"}}
+  >
+    
+  </SchemaItem>
+</ul>
+            

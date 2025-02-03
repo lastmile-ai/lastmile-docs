@@ -1,8 +1,8 @@
 ---
-id: timerangecriteria
-title: "TimeRangeCriteria"
+id: getprojectsummaryrequest
+title: "GetProjectSummaryRequest"
 description: ""
-sidebar_label: "TimeRangeCriteria"
+sidebar_label: "GetProjectSummaryRequest"
 hide_title: true
 schema: true
 custom_edit_url: null
@@ -17,7 +17,7 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"TimeRangeCriteria"}
+  children={"GetProjectSummaryRequest"}
 >
 </Heading>
 
@@ -28,29 +28,29 @@ import TabItem from "@theme/TabItem";
 <ul>
   <SchemaItem
     collapsible={false}
-    name={"operator"}
+    name={"id"}
     required={true}
-    schemaName={"Operator (string)"}
-    qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_BEFORE`, `OPERATOR_AFTER`, `OPERATOR_BETWEEN`]"}
-    schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_BEFORE","OPERATOR_AFTER","OPERATOR_BETWEEN"],"title":"Operator"}}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string"}}
   >
     
   </SchemaItem><SchemaItem
     collapsible={false}
-    name={"timestamp"}
+    name={"startTime"}
     required={true}
     schemaName={"date-time"}
     qualifierMessage={undefined}
-    schema={{"type":"string","format":"date-time"}}
+    schema={{"type":"string","format":"date-time","description":"A summary is retrieved for a time range from start_time to end_time\n If no end_time is provided, current time is used"}}
   >
     
   </SchemaItem><SchemaItem
     collapsible={false}
-    name={"endTimestamp"}
+    name={"endTime"}
     required={false}
     schemaName={"date-time"}
     qualifierMessage={undefined}
-    schema={{"type":"string","format":"date-time"}}
+    schema={{"type":"string","format":"date-time","description":"A summary is retrieved for a time range from start_time to end_time\n If no end_time is provided, current time is used"}}
   >
     
   </SchemaItem>
