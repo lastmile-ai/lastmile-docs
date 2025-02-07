@@ -1,0 +1,49 @@
+---
+id: stringlistcriteria
+title: "StringListCriteria"
+description: ""
+sidebar_label: "StringListCriteria"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"StringListCriteria"}
+>
+</Heading>
+
+
+
+
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"operator"}
+    required={true}
+    schemaName={"Operator (string)"}
+    qualifierMessage={"**Possible values:** [`OPERATOR_UNSPECIFIED`, `OPERATOR_HAS_ANY`, `OPERATOR_HAS_ALL`, `OPERATOR_HAS_NONE`]"}
+    schema={{"type":"string","enum":["OPERATOR_UNSPECIFIED","OPERATOR_HAS_ANY","OPERATOR_HAS_ALL","OPERATOR_HAS_NONE"],"title":"Operator"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"values"}
+    required={true}
+    schemaName={"string[]"}
+    qualifierMessage={undefined}
+    schema={{"type":"array","items":{"type":"string"}}}
+  >
+    
+  </SchemaItem>
+</ul>
+            

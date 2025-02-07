@@ -1,0 +1,50 @@
+---
+id: evaluationrunsmetricsummaryaggregate
+title: "EvaluationRunsMetricSummaryAggregate"
+description: "The aggregate score for a single time 'slice' for a"
+sidebar_label: "EvaluationRunsMetricSummaryAggregate"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"EvaluationRunsMetricSummaryAggregate"}
+>
+</Heading>
+
+
+
+The aggregate score for a single time 'slice' for a
+ ProjectEvaluationRunMetricSummary
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"timestamp"}
+    required={true}
+    schemaName={"date-time"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","format":"date-time","description":"A summary is retrieved for a time range from start_time to end_time\n If no end_time is provided, current time is used"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"aggregateScore"}
+    required={true}
+    schemaName={"number"}
+    qualifierMessage={undefined}
+    schema={{"type":"number"}}
+  >
+    
+  </SchemaItem>
+</ul>
+            

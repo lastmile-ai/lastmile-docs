@@ -41,7 +41,7 @@ Definition for the model
     required={true}
     schemaName={"date-time"}
     qualifierMessage={undefined}
-    schema={{"type":"string","format":"date-time"}}
+    schema={{"type":"string","format":"date-time","description":"A summary is retrieved for a time range from start_time to end_time\n If no end_time is provided, current time is used"}}
   >
     
   </SchemaItem><SchemaItem
@@ -50,7 +50,7 @@ Definition for the model
     required={true}
     schemaName={"date-time"}
     qualifierMessage={undefined}
-    schema={{"type":"string","format":"date-time"}}
+    schema={{"type":"string","format":"date-time","description":"A summary is retrieved for a time range from start_time to end_time\n If no end_time is provided, current time is used"}}
   >
     
   </SchemaItem><SchemaItem
@@ -59,7 +59,7 @@ Definition for the model
     required={false}
     schemaName={"date-time"}
     qualifierMessage={undefined}
-    schema={{"type":"string","format":"date-time"}}
+    schema={{"type":"string","format":"date-time","description":"A summary is retrieved for a time range from start_time to end_time\n If no end_time is provided, current time is used"}}
   >
     
   </SchemaItem><SchemaItem
@@ -137,8 +137,8 @@ Definition for the model
           name={"baseModelArchitecture"}
           required={true}
           schemaName={"BaseModelArchitecture (string)"}
-          qualifierMessage={"**Possible values:** [`BASE_MODEL_ARCHITECTURE_UNSPECIFIED`, `BASE_MODEL_ARCHITECTURE_ALBERTA_XS`, `BASE_MODEL_ARCHITECTURE_ALBERTA_LC`, `BASE_MODEL_ARCHITECTURE_DEBERTA_V3`, `BASE_MODEL_ARCHITECTURE_ST_SIMILARITY`]"}
-          schema={{"type":"string","enum":["BASE_MODEL_ARCHITECTURE_UNSPECIFIED","BASE_MODEL_ARCHITECTURE_ALBERTA_XS","BASE_MODEL_ARCHITECTURE_ALBERTA_LC","BASE_MODEL_ARCHITECTURE_DEBERTA_V3","BASE_MODEL_ARCHITECTURE_ST_SIMILARITY"],"title":"BaseModelArchitecture","description":"Keep in sync with www/prisma/schema.prisma:AEBaseModelArchitecture"}}
+          qualifierMessage={"**Possible values:** [`BASE_MODEL_ARCHITECTURE_UNSPECIFIED`, `BASE_MODEL_ARCHITECTURE_ALBERTA_XS`, `BASE_MODEL_ARCHITECTURE_ALBERTA_LC`, `BASE_MODEL_ARCHITECTURE_DEBERTA_V3`, `BASE_MODEL_ARCHITECTURE_ST_SIMILARITY`, `BASE_MODEL_ARCHITECTURE_MODERNBERT_BASE`, `BASE_MODEL_ARCHITECTURE_MODERNBERT_LARGE`]"}
+          schema={{"type":"string","enum":["BASE_MODEL_ARCHITECTURE_UNSPECIFIED","BASE_MODEL_ARCHITECTURE_ALBERTA_XS","BASE_MODEL_ARCHITECTURE_ALBERTA_LC","BASE_MODEL_ARCHITECTURE_DEBERTA_V3","BASE_MODEL_ARCHITECTURE_ST_SIMILARITY","BASE_MODEL_ARCHITECTURE_MODERNBERT_BASE","BASE_MODEL_ARCHITECTURE_MODERNBERT_LARGE"],"title":"BaseModelArchitecture","description":"Keep in sync with www/prisma/schema.prisma:AEBaseModelArchitecture"}}
         >
           
         </SchemaItem><SchemaItem
@@ -222,7 +222,7 @@ Definition for the model
           required={true}
           schemaName={"date-time"}
           qualifierMessage={undefined}
-          schema={{"type":"string","format":"date-time"}}
+          schema={{"type":"string","format":"date-time","description":"A summary is retrieved for a time range from start_time to end_time\n If no end_time is provided, current time is used"}}
         >
           
         </SchemaItem><SchemaItem
@@ -231,7 +231,7 @@ Definition for the model
           required={true}
           schemaName={"date-time"}
           qualifierMessage={undefined}
-          schema={{"type":"string","format":"date-time"}}
+          schema={{"type":"string","format":"date-time","description":"A summary is retrieved for a time range from start_time to end_time\n If no end_time is provided, current time is used"}}
         >
           
         </SchemaItem><SchemaItem
@@ -346,7 +346,7 @@ Definition for the model
                 required={true}
                 schemaName={"date-time"}
                 qualifierMessage={undefined}
-                schema={{"type":"string","format":"date-time"}}
+                schema={{"type":"string","format":"date-time","description":"A summary is retrieved for a time range from start_time to end_time\n If no end_time is provided, current time is used"}}
               >
                 
               </SchemaItem>
@@ -357,8 +357,8 @@ Definition for the model
           name={"baseModelArchitecture"}
           required={true}
           schemaName={"BaseModelArchitecture (string)"}
-          qualifierMessage={"**Possible values:** [`BASE_MODEL_ARCHITECTURE_UNSPECIFIED`, `BASE_MODEL_ARCHITECTURE_ALBERTA_XS`, `BASE_MODEL_ARCHITECTURE_ALBERTA_LC`, `BASE_MODEL_ARCHITECTURE_DEBERTA_V3`, `BASE_MODEL_ARCHITECTURE_ST_SIMILARITY`]"}
-          schema={{"type":"string","enum":["BASE_MODEL_ARCHITECTURE_UNSPECIFIED","BASE_MODEL_ARCHITECTURE_ALBERTA_XS","BASE_MODEL_ARCHITECTURE_ALBERTA_LC","BASE_MODEL_ARCHITECTURE_DEBERTA_V3","BASE_MODEL_ARCHITECTURE_ST_SIMILARITY"],"title":"BaseModelArchitecture","description":"Keep in sync with www/prisma/schema.prisma:AEBaseModelArchitecture"}}
+          qualifierMessage={"**Possible values:** [`BASE_MODEL_ARCHITECTURE_UNSPECIFIED`, `BASE_MODEL_ARCHITECTURE_ALBERTA_XS`, `BASE_MODEL_ARCHITECTURE_ALBERTA_LC`, `BASE_MODEL_ARCHITECTURE_DEBERTA_V3`, `BASE_MODEL_ARCHITECTURE_ST_SIMILARITY`, `BASE_MODEL_ARCHITECTURE_MODERNBERT_BASE`, `BASE_MODEL_ARCHITECTURE_MODERNBERT_LARGE`]"}
+          schema={{"type":"string","enum":["BASE_MODEL_ARCHITECTURE_UNSPECIFIED","BASE_MODEL_ARCHITECTURE_ALBERTA_XS","BASE_MODEL_ARCHITECTURE_ALBERTA_LC","BASE_MODEL_ARCHITECTURE_DEBERTA_V3","BASE_MODEL_ARCHITECTURE_ST_SIMILARITY","BASE_MODEL_ARCHITECTURE_MODERNBERT_BASE","BASE_MODEL_ARCHITECTURE_MODERNBERT_LARGE"],"title":"BaseModelArchitecture","description":"Keep in sync with www/prisma/schema.prisma:AEBaseModelArchitecture"}}
         >
           
         </SchemaItem><SchemaItem
