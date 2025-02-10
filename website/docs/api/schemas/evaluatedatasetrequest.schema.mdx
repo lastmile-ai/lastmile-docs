@@ -48,20 +48,20 @@ import TabItem from "@theme/TabItem";
             className={"openapi-schema__name"}
           >
              object
-          </span><span
-            className={"openapi-schema__divider"}
-          >
-            
-          </span><span
-            className={"openapi-schema__required"}
-          >
-            required
           </span>
         </span>
       </summary><div
         style={{"marginLeft":"1rem"}}
       >
-        <SchemaItem
+        <div
+          style={{"marginTop":".5rem","marginBottom":".5rem"}}
+        >
+          
+          
+          The metric to compute for the dataset. Use if only a single metric is required. For multiple metrics, use 'metrics'.
+          
+          
+        </div><SchemaItem
           collapsible={false}
           name={"id"}
           required={false}
@@ -192,7 +192,7 @@ import TabItem from "@theme/TabItem";
     required={true}
     schemaName={"string"}
     qualifierMessage={undefined}
-    schema={{"type":"string"}}
+    schema={{"type":"string","description":"The dataset to evaluate"}}
   >
     
   </SchemaItem><SchemaItem
