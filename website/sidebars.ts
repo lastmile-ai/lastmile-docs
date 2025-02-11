@@ -100,6 +100,12 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
     },
     "deployment",
+    {
+      type: "category",
+      label: "Integrations",
+      items: ["integrations/helicone"],
+      collapsed: false,
+    },
     // TODO: saqadri - add guides once we have more of them
     // Currently we are linking directly to ipynb's
     // {
@@ -118,8 +124,8 @@ const sidebars: SidebarsConfig = {
     //     },
     //   ],
     // },
-   "workbooks", 
-   {
+    "workbooks",
+    {
       type: "link",
       label: "RAG Workbench",
       description: "Experimentation and monitoring of RAG pipelines",

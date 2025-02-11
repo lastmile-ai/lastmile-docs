@@ -1,0 +1,63 @@
+---
+title: "Helicone"
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import constants from "@site/core/tabConstants";
+
+# LastMile x Helicone
+
+[Helicone](https://helicone.ai/) is a popular open-source AI observability platform that helps you monitor AI applications, track experiments and run evaluations.
+
+LastMile has partnered with Helicone to provide AutoEval's [metrics](/autoeval/metrics) natively within the Helicone platform.
+
+### Demo
+
+<video controls height="480" width="800">
+    <source src="https://github.com/user-attachments/assets/6ee41975-8059-452a-a2c9-a3c60a3911ab"/>
+</video>
+
+## Getting Started
+
+:::tip
+Check out the Helicone docs for detailed instructions:
+* [Getting Started](https://docs.helicone.ai/getting-started/quick-start)
+* [Evaluation Scores](https://docs.helicone.ai/features/advanced-usage/scores)
+* [Experiments](https://docs.helicone.ai/features/experiments)
+:::
+
+1. Go to https://helicone.ai and create an account
+
+<img
+  width="400"
+  alt="faithful"
+  src="/img/integrations/helicone/signup.png"
+/>
+
+2. Go to **Evaluators** and *Create New Evaluator*
+3. Select **LastMile AutoEval** tab, and select the desired [metric](/autoeval/metrics) as the *Evaluator Type*.
+
+    Currently, only predefined evaluator metrics are supported. Fine-tuned metrics cannot be used at this time.
+
+    ![Helicone Evaluators](/img/integrations/helicone/evaluators.png)
+
+4. Select the columns of the data to evaluate. 
+
+    For example, you can measure the Faithfulness of the output to the `context` provided with respect to the input:
+
+    ![Faithfulness](/img/integrations/helicone/faithfulness.png)
+
+5. (optional) You can test the metric right there with the **Test** option 
+
+6. After the evaluator has been saved, you can open it and **Create Online Evaluator**.
+
+    Configure the sampling rate and it will be run on sampled live traffic.
+    For more information, check out the [Helicone Evaluation](https://docs.helicone.ai/features/advanced-usage/scores) docs.
+
+    ![Sampling](/img/integrations/helicone/sampling.png)
+
+7. You can also use the saved evaluators in Helicone Experiments.
+    For more information, check out the [Helicone Experiments](https://docs.helicone.ai/features/experiments) docs.
+
+    ![Helicone Experiments](/img/integrations/helicone/experiments.png)
