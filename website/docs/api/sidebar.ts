@@ -70,6 +70,12 @@ const sidebar: SidebarsConfig = {
           label: "Update Dataset Row",
           className: "api-method put",
         },
+        {
+          type: "doc",
+          id: "api/update-dataset-metadata",
+          label: "Update Dataset Metadata",
+          className: "api-method put",
+        },
       ],
     },
     {
@@ -506,6 +512,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/updatedatasetrowresponse",
           label: "UpdateDatasetRowResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/updatedatasetmetadatarequest",
+          label: "UpdateDatasetMetadataRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/updatedatasetmetadataresponse",
+          label: "UpdateDatasetMetadataResponse",
           className: "schema",
         },
         {
