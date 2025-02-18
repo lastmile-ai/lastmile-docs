@@ -1,0 +1,194 @@
+---
+id: update-dataset-metadata
+title: "Update Dataset Metadata"
+description: "Update metadata such as title and description"
+api: eJytVU1P20AQ/SurOS8Y5ehboK1EVSoEoT1EUTWxB7xg7y6740Bk+b9Xs3aCIaK0Ui+Jvfvm4828GXfAeBchX8InZIzEsNLgPAVk4+x5CTnc+BKZxusLYiyRETSUFItgvOD2KNWM9yq2RaUwKjZck0JbqileQ6SiDYa3kC87OCUMFOYtV5AvV/1KQ6DHliKfunILeQeFs0yW5RG9r02R0svuo8TuIBYVNShPKdx7SV8NTkEDb72g3PqeCnn3QTizoShOTJlcDZjIwdi7A76ja8VOtSkW9BosNvSx6Xd6UuVoniz6N4i/cVC1DdqjQFjiuqZpcZW7VVzRLgT0/VBOE6iURpsSVn0/nEbvbBxIz05O5O91pOu2KCjG27ZWe1GA/m/tGMJ/2I84ZDEpzNq5mtAecNshE8FeQ0NcORGxb5NbFIVBht5kswxbdr9og3U2liobOvmreRF5pLChEJNK21BDDhWzj3mW1Ri5MTWhOS5pc9Cjy+DKtkj9GHyoI/UNI1+YmtT8HETkuxm4lnoNVKeTsGcrISWXBBP2CQR6fPjiQoMMOXz9uUgVkT5cvQzQ52dsfE07Zb+oapDreyobj3sNxt66aTcnPNT88lz9mB0YH0JydeYa7yxZjqBBqjpAZ8cnEsS7yA0m/Yx5jStlN2nvrZ7JdvjnLTQWmOmZM1+jsZJJ6nM3imUJ6A1oEIp7wUgK43RpeCualYbKRRbTrltjpJtQ970cP7YUZOGtNGwwGBnctO80VIQlhaSyB9pCDmcDpaOFJCjwupVED6at1zuLeVGQ5z9iV5OBuLxZiIDG/dq4UkwCPoFOvzmAfAfEOOkynXVQo71r8U6wg0uRG75W6xt1JlLjFdrtJMGuGxAL90C270GPTFjeoZcZ/g3e30tl
+sidebar_class_name: "put api-method"
+info_path: api/lastmile-ai-api-v-2
+custom_edit_url: null
+show_extensions: true
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update Dataset Metadata"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"put"}
+  path={"/api/2/auto_eval/dataset/update_metadata"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update metadata such as title and description
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"id"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"Dataset to update"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"name"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"New dataset name"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"description"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"New human-readable description of the dataset"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Successful operation
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"success"}
+                        required={true}
+                        schemaName={"boolean"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"boolean"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"success\": true\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
