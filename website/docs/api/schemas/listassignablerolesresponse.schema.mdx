@@ -1,8 +1,8 @@
 ---
-id: rolepermission
-title: "RolePermission"
+id: listassignablerolesresponse
+title: "ListAssignableRolesResponse"
 description: ""
-sidebar_label: "RolePermission"
+sidebar_label: "ListAssignableRolesResponse"
 hide_title: true
 schema: true
 custom_edit_url: null
@@ -17,7 +17,7 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"RolePermission"}
+  children={"ListAssignableRolesResponse"}
 >
 </Heading>
 
@@ -43,11 +43,11 @@ import TabItem from "@theme/TabItem";
           <strong
             className={"openapi-schema__property"}
           >
-            role
+            roles
           </strong><span
             className={"openapi-schema__name"}
           >
-             object
+             object[]
           </span><span
             className={"openapi-schema__divider"}
           >
@@ -61,7 +61,13 @@ import TabItem from "@theme/TabItem";
       </summary><div
         style={{"marginLeft":"1rem"}}
       >
-        <SchemaItem
+        <li>
+          <div
+            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+          >
+            Array [
+          </div>
+        </li><SchemaItem
           collapsible={false}
           name={"id"}
           required={true}
@@ -165,72 +171,13 @@ import TabItem from "@theme/TabItem";
           schema={{"type":"array","items":{"type":"integer"}}}
         >
           
-        </SchemaItem>
-      </div>
-    </details>
-  </SchemaItem><SchemaItem
-    collapsible={true}
-    className={"schemaItem"}
-  >
-    <details
-      style={{}}
-      className={"openapi-markdown__details"}
-    >
-      <summary
-        style={{}}
-      >
-        <span
-          className={"openapi-schema__container"}
-        >
-          <strong
-            className={"openapi-schema__property"}
+        </SchemaItem><li>
+          <div
+            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
           >
-            permission
-          </strong><span
-            className={"openapi-schema__name"}
-          >
-             object
-          </span><span
-            className={"openapi-schema__divider"}
-          >
-            
-          </span><span
-            className={"openapi-schema__required"}
-          >
-            required
-          </span>
-        </span>
-      </summary><div
-        style={{"marginLeft":"1rem"}}
-      >
-        <SchemaItem
-          collapsible={false}
-          name={"name"}
-          required={true}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string","description":"Uniquely-identifying name for the permission"}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"displayName"}
-          required={true}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string","description":"Human-readable display name for the permission"}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"description"}
-          required={true}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string"}}
-        >
-          
-        </SchemaItem>
+            ]
+          </div>
+        </li>
       </div>
     </details>
   </SchemaItem>
