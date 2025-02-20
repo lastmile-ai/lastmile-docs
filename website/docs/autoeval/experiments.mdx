@@ -1,14 +1,29 @@
-# Experimentation Guide
+---
+title: "Experimentation"
+---
 
-Build and manage your **evaluation experiments** with **LastMile AI AutoEval**. Use the **AutoEval library** to create **Experiments**, a structured way to organize and track evaluation runs as you make iterative changes to your **AI application**.
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import constants from "@site/core/tabConstants";
 
-Experiments allow you to **systematically test** the impact of changes, such as:
-- Updating the **LLM model**
+# Experimentation
+
+Track and manage experiments on your LLMs and applications to compare performance, test changes, and validate improvements.
+
+## What is an Experiment?
+
+An *Experiment* is a collection of *evaluation runs*. Each *evaluation run* consists of the *dataset* and *metrics* for that run. For example, let's say I have a dataset of customer support chatbot questions, answers, and context. For my *Customer Support Experiment*, I can run this dataset against AutoEval's *relevancy*, *toxicity*, and *faithfulness* metrics as an *evaluation run*. Next, I can update the model (let's say to Gemini) for the chatbot and generate new answers and context for the same set of questions. Then, I can save that as another *evaluation run* and compare the results to determine if the model change was a positive improvement.
+
+*Experiments* enable you to confidently make iterative changes to your LLM application in a structured and organzied way.
+
+## What types of changes can Experiments measure?
+Anything that influences the LLM application's performance is measureable through an experiment, such as:
+- Updates to the **LLM model**, such as a new training date
 - Modifying the **retrieval strategy** for a **RAG system**
 - Adjusting **system prompts** for an agent  
-- And more  
+- And more
 
-### Usage Guide
+## Usage Guide
 This guide walks through the process of setting up and running experiments using AutoEval, including:
 1. **Setting up the API key** and **creating a project**  
 2. **Preparing and uploading a dataset**  
@@ -18,7 +33,7 @@ This guide walks through the process of setting up and running experiments using
 
 ---
 
-## 1. Set Up AutoEval Client  
+### 1. Set Up AutoEval Client  
 
 Before running experiments, ensure you have the latest version of AutoEval:
 
@@ -39,8 +54,6 @@ api_token = "YOUR_API_KEY_HERE"
 
 if not api_token:
     print("Error: Please set your API key in the environment variable LASTMILE_API_KEY")
-elif api_token == "YOUR_API_KEY_HERE":
-    print("Error: Please replace 'YOUR_API_KEY_HERE' with your actual API key")
 else:
     print("✓ API key successfully configured!")
 ```
@@ -49,26 +62,15 @@ else:
 Once authenticated, initialize the **AutoEval client**:
 
 ```python
-# Setup Pandas to display without truncation (for display purposes)
-import pandas as pd
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_rows', None)
-pd.set_option('display.width', None)
-pd.set_option('display.max_colwidth', None)
-
 from lastmile.lib.auto_eval import AutoEval
-
 client = AutoEval(api_token=api_token)  # Optionally set project_id to scope to a specific project
 ```
 
-
-
-
 ---
 
-## 2. Create a Project or Select an Existing Project  
+### 2. Create a Project or Select an Existing Project  
 
-A **Project** is the container that organizes your **Experiments, Evaluation runs, and Datasets**. It typically corresponds to the **AI initiative or application** you’re building.
+A **Project** is the container that organizes your **Experiments, Evaluation runs, and Datasets**. It typically corresponds to the **AI initiative, application, or use case** you’re building.
 
 Projects help keep evaluations structured, especially when managing multiple experiments across different AI models or applications. You can create new projects or use existing ones.
 
@@ -76,41 +78,25 @@ To create a new project programmatically, use:
 
 ```python
 project = client.create_project(
-    name="AutoEval Experiments", 
-    description="Project to test AutoEval Experiments"
+    name="Example Customer Agent Project", 
+    description="Example project to evaluate customer support agents"
 )
 
-# Important - set the project_id in the client so all requests are scoped to this project
 client.project_id = project.id
 ```
 
-Once a project is created, you can list all available projects, including the default **"AutoEval"** project:
-
-```python
-# List all projects in your account
-projects = client.list_projects()
-projects
-```
-
-If you already have a project and want to use it, retrieve it using the `project_id`:
-
-```python
-default_project = client.get_project(project_id="z8kfriq6cga6j0fx38znw4y6")
-default_project
-```
-
-✅ **Next Step:** **Prepare and upload a dataset.**  
-
 ---
 
-## 3. Prepare and Upload Your Dataset  
+### 3. Prepare and Upload Your Dataset  
 
-Now that the API key is configured, it's time to **prepare and upload a dataset** for evaluation.
+You can either use an existing dataset or upload a new dataset to run an evaluation within your new experiment. For an existing dataset, you can skip to Step 4.
+
+#### Uploading a new dataset
 
 LastMile AI AutoEval expects a **CSV file** with the following columns:
 - **`input`**: The user's query or input text  
 - **`output`**: The assistant's response to the user's query  
-- **`ground_truth`** *(optional)*: The correct or expected response for comparison  
+- **`ground_truth`** *(optional)*: The correct or expected response for comparison. This can also be the context for metrics like *faithfulness*
 
 Uploading this dataset allows you to evaluate how well the assistant's responses align with the **ground truth** using LastMile AI’s evaluation metrics.
 
@@ -128,13 +114,15 @@ dataset_id = client.upload_dataset(
 print(f"Dataset created with ID: {dataset_id}")
 ```
 
-✅ **Next Step:** **Create an Experiment.**  
-
 ---
 
-## 4. Create an Experiment  
+### 4. Create an Experiment  
 
 To create an experiment, use the following code:
+
+:::info
+The experiment's metadata should be used to track important information (or parameters) in regards to the application that is being tested. Important metadata to track include the LLM being used, the LLM parameters, prompt version, dataset version, the application, etc.
+:::
 
 ```python
 experiment = client.create_experiment(
@@ -151,17 +139,13 @@ experiment = client.create_experiment(
 )
 ```
 
-To retrieve an experiment by ID:
-
-```python
-experiment = client.get_experiment(experiment_id=experiment.id)
-```
-
-✅ **Next Step:** **Evaluate the dataset against default metrics.**  
-
 ---
 
-## 5. Evaluate the Dataset Against Built-in Metrics  
+### 5. Evaluate the Dataset Against Built-in Metrics  
+
+:::info
+You can specify custom and fine-tuned metrics to be evaluated for that dataset.
+:::
 
 ```python
 from lastmile.lib.auto_eval import BuiltinMetrics
@@ -183,12 +167,9 @@ evaluation_results = client.evaluate_dataset(
 print("Evaluation Results:")
 evaluation_results.head(10)
 ```
-
-✅ **Next Step:** **Visualize in the Experiments Console.**  
-
 ---
 
-## 6. Visualize in the Experiments Console  
+### 6. Visualize in the Experiments Console  
 
 📊 **Explore your results in the AutoEval UI:**
 - 🔬 **Experiments Overview:** [View all experiments](https://lastmileai.dev/evaluations?view=experiments)
@@ -196,5 +177,4 @@ evaluation_results.head(10)
 - 🏢 **Project Dashboard:** [Manage projects and experiments](https://lastmileai.dev/dashboard)
 - 📂 **Dataset Library:** [Browse and manage uploaded datasets](https://lastmileai.dev/datasets)
 
-🚀 **Start iterating on your AI application based on the evaluation insights!**
-
+**Check out the [full cookbook](https://github.com/lastmile-ai/lastmile-docs/blob/main/cookbook/AutoEval_Experiments.ipynb) for expanded details on the functionality**
