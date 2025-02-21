@@ -56,6 +56,7 @@ const sidebars: SidebarsConfig = {
           ],
         },
         "autoeval/fine-tune",
+        "autoeval/experiments",
         "autoeval/models",
         // TODO: saqadri - bring this back when we have benchmarks to share
         // {
