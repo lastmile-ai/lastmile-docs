@@ -1,0 +1,106 @@
+---
+id: listprojectmembersrequest
+title: "ListProjectMembersRequest"
+description: ""
+sidebar_label: "ListProjectMembersRequest"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"ListProjectMembersRequest"}
+>
+</Heading>
+
+
+
+
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"projectId"}
+    required={true}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={true}
+    className={"schemaItem"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details"}
+    >
+      <summary
+        style={{}}
+      >
+        <span
+          className={"openapi-schema__container"}
+        >
+          <strong
+            className={"openapi-schema__property"}
+          >
+            filters
+          </strong><span
+            className={"openapi-schema__name"}
+          >
+             object
+          </span>
+        </span>
+      </summary><div
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"query"}
+          required={false}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"search query substring match for member names"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"projectRole"}
+          required={false}
+          schemaName={"ProjectRole (string)"}
+          qualifierMessage={"**Possible values:** [`PROJECT_ROLE_UNSPECIFIED`, `PROJECT_ROLE_ADMIN`, `PROJECT_ROLE_MEMBER`]"}
+          schema={{"type":"string","enum":["PROJECT_ROLE_UNSPECIFIED","PROJECT_ROLE_ADMIN","PROJECT_ROLE_MEMBER"],"title":"ProjectRole","description":"search only members with the specified project role"}}
+        >
+          
+        </SchemaItem>
+      </div>
+    </details>
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"pageIndex"}
+    required={false}
+    schemaName={"integer"}
+    qualifierMessage={undefined}
+    schema={{"type":"integer"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"pageSize"}
+    required={false}
+    schemaName={"integer"}
+    qualifierMessage={undefined}
+    schema={{"type":"integer"}}
+  >
+    
+  </SchemaItem>
+</ul>
+            

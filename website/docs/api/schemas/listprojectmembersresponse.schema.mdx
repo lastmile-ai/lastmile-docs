@@ -1,8 +1,8 @@
 ---
-id: listresourcerolepermissionsresponse
-title: "ListResourceRolePermissionsResponse"
+id: listprojectmembersresponse
+title: "ListProjectMembersResponse"
 description: ""
-sidebar_label: "ListResourceRolePermissionsResponse"
+sidebar_label: "ListProjectMembersResponse"
 hide_title: true
 schema: true
 custom_edit_url: null
@@ -17,7 +17,7 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"ListResourceRolePermissionsResponse"}
+  children={"ListProjectMembersResponse"}
 >
 </Heading>
 
@@ -43,7 +43,7 @@ import TabItem from "@theme/TabItem";
           <strong
             className={"openapi-schema__property"}
           >
-            rolePermissions
+            projectMembers
           </strong><span
             className={"openapi-schema__name"}
           >
@@ -102,7 +102,15 @@ import TabItem from "@theme/TabItem";
             </summary><div
               style={{"marginLeft":"1rem"}}
             >
-              <SchemaItem
+              <div
+                style={{"marginTop":".5rem","marginBottom":".5rem"}}
+              >
+                
+                
+                The auth Role for the project member
+                
+                
+              </div><SchemaItem
                 collapsible={false}
                 name={"id"}
                 required={true}
@@ -219,70 +227,14 @@ import TabItem from "@theme/TabItem";
             </div>
           </details>
         </SchemaItem><SchemaItem
-          collapsible={true}
-          className={"schemaItem"}
+          collapsible={false}
+          name={"projectRole"}
+          required={true}
+          schemaName={"ProjectRole (string)"}
+          qualifierMessage={"**Possible values:** [`PROJECT_ROLE_UNSPECIFIED`, `PROJECT_ROLE_ADMIN`, `PROJECT_ROLE_MEMBER`]"}
+          schema={{"type":"string","enum":["PROJECT_ROLE_UNSPECIFIED","PROJECT_ROLE_ADMIN","PROJECT_ROLE_MEMBER"],"title":"ProjectRole","description":"The role within the project for this member"}}
         >
-          <details
-            style={{}}
-            className={"openapi-markdown__details"}
-          >
-            <summary
-              style={{}}
-            >
-              <span
-                className={"openapi-schema__container"}
-              >
-                <strong
-                  className={"openapi-schema__property"}
-                >
-                  permission
-                </strong><span
-                  className={"openapi-schema__name"}
-                >
-                   object
-                </span><span
-                  className={"openapi-schema__divider"}
-                >
-                  
-                </span><span
-                  className={"openapi-schema__required"}
-                >
-                  required
-                </span>
-              </span>
-            </summary><div
-              style={{"marginLeft":"1rem"}}
-            >
-              <SchemaItem
-                collapsible={false}
-                name={"name"}
-                required={true}
-                schemaName={"string"}
-                qualifierMessage={undefined}
-                schema={{"type":"string","description":"Uniquely-identifying name for the permission"}}
-              >
-                
-              </SchemaItem><SchemaItem
-                collapsible={false}
-                name={"displayName"}
-                required={true}
-                schemaName={"string"}
-                qualifierMessage={undefined}
-                schema={{"type":"string","description":"Human-readable display name for the permission"}}
-              >
-                
-              </SchemaItem><SchemaItem
-                collapsible={false}
-                name={"description"}
-                required={true}
-                schemaName={"string"}
-                qualifierMessage={undefined}
-                schema={{"type":"string"}}
-              >
-                
-              </SchemaItem>
-            </div>
-          </details>
+          
         </SchemaItem><li>
           <div
             style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
@@ -292,6 +244,15 @@ import TabItem from "@theme/TabItem";
         </li>
       </div>
     </details>
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"totalCount"}
+    required={true}
+    schemaName={"integer"}
+    qualifierMessage={undefined}
+    schema={{"type":"integer","description":"Total count of project members which can be listed with applicable\n filters, regardless of page size"}}
+  >
+    
   </SchemaItem>
 </ul>
             

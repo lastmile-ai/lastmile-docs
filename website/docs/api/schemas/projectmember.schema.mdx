@@ -1,8 +1,8 @@
 ---
-id: listassignablerolesresponse
-title: "ListAssignableRolesResponse"
+id: projectmember
+title: "ProjectMember"
 description: ""
-sidebar_label: "ListAssignableRolesResponse"
+sidebar_label: "ProjectMember"
 hide_title: true
 schema: true
 custom_edit_url: null
@@ -17,7 +17,7 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"ListAssignableRolesResponse"}
+  children={"ProjectMember"}
 >
 </Heading>
 
@@ -43,11 +43,11 @@ import TabItem from "@theme/TabItem";
           <strong
             className={"openapi-schema__property"}
           >
-            roles
+            role
           </strong><span
             className={"openapi-schema__name"}
           >
-             object[]
+             object
           </span><span
             className={"openapi-schema__divider"}
           >
@@ -61,13 +61,15 @@ import TabItem from "@theme/TabItem";
       </summary><div
         style={{"marginLeft":"1rem"}}
       >
-        <li>
-          <div
-            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
-          >
-            Array [
-          </div>
-        </li><SchemaItem
+        <div
+          style={{"marginTop":".5rem","marginBottom":".5rem"}}
+        >
+          
+          
+          The auth Role for the project member
+          
+          
+        </div><SchemaItem
           collapsible={false}
           name={"id"}
           required={true}
@@ -180,15 +182,18 @@ import TabItem from "@theme/TabItem";
           schema={{"type":"array","items":{"type":"integer"}}}
         >
           
-        </SchemaItem><li>
-          <div
-            style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
-          >
-            ]
-          </div>
-        </li>
+        </SchemaItem>
       </div>
     </details>
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"projectRole"}
+    required={true}
+    schemaName={"ProjectRole (string)"}
+    qualifierMessage={"**Possible values:** [`PROJECT_ROLE_UNSPECIFIED`, `PROJECT_ROLE_ADMIN`, `PROJECT_ROLE_MEMBER`]"}
+    schema={{"type":"string","enum":["PROJECT_ROLE_UNSPECIFIED","PROJECT_ROLE_ADMIN","PROJECT_ROLE_MEMBER"],"title":"ProjectRole","description":"The role within the project for this member"}}
+  >
+    
   </SchemaItem>
 </ul>
             
