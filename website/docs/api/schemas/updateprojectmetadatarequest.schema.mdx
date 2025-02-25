@@ -1,8 +1,8 @@
 ---
-id: removeresourcerolepermissionrequest
-title: "RemoveResourceRolePermissionRequest"
-description: "For a specified resource, remove the specified permission from the given"
-sidebar_label: "RemoveResourceRolePermissionRequest"
+id: updateprojectmetadatarequest
+title: "UpdateProjectMetadataRequest"
+description: ""
+sidebar_label: "UpdateProjectMetadataRequest"
 hide_title: true
 schema: true
 custom_edit_url: null
@@ -17,41 +17,40 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"RemoveResourceRolePermissionRequest"}
+  children={"UpdateProjectMetadataRequest"}
 >
 </Heading>
 
 
 
-For a specified resource, remove the specified permission from the given
- role_ids
+
 
 <ul>
   <SchemaItem
     collapsible={false}
-    name={"resourceName"}
+    name={"id"}
     required={true}
     schemaName={"string"}
     qualifierMessage={undefined}
-    schema={{"type":"string"}}
+    schema={{"type":"string","description":"Project to update"}}
   >
     
   </SchemaItem><SchemaItem
     collapsible={false}
-    name={"roleIds"}
-    required={true}
-    schemaName={"integer[]"}
+    name={"name"}
+    required={false}
+    schemaName={"string"}
     qualifierMessage={undefined}
-    schema={{"type":"array","items":{"type":"integer"}}}
+    schema={{"type":"string","description":"New project name"}}
   >
     
   </SchemaItem><SchemaItem
     collapsible={false}
-    name={"permissionName"}
-    required={true}
+    name={"description"}
+    required={false}
     schemaName={"string"}
     qualifierMessage={undefined}
-    schema={{"type":"string"}}
+    schema={{"type":"string","description":"New human-readable description of the project"}}
   >
     
   </SchemaItem>

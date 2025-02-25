@@ -1,0 +1,49 @@
+---
+id: listprojectmembersrequestfilters
+title: "ListProjectMembersRequestFilters"
+description: ""
+sidebar_label: "ListProjectMembersRequestFilters"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"ListProjectMembersRequestFilters"}
+>
+</Heading>
+
+
+
+
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"query"}
+    required={false}
+    schemaName={"string"}
+    qualifierMessage={undefined}
+    schema={{"type":"string","description":"search query substring match for member names"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"projectRole"}
+    required={false}
+    schemaName={"ProjectRole (string)"}
+    qualifierMessage={"**Possible values:** [`PROJECT_ROLE_UNSPECIFIED`, `PROJECT_ROLE_ADMIN`, `PROJECT_ROLE_MEMBER`]"}
+    schema={{"type":"string","enum":["PROJECT_ROLE_UNSPECIFIED","PROJECT_ROLE_ADMIN","PROJECT_ROLE_MEMBER"],"title":"ProjectRole","description":"search only members with the specified project role"}}
+  >
+    
+  </SchemaItem>
+</ul>
+            
