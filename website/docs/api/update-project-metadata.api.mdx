@@ -1,9 +1,9 @@
 ---
-id: remove-resource-role-permission
-title: "Remove Resource Role Permission"
-description: "Description of remove_resource_role_permission"
-api: eJytVctu2zAQ/BViz0xk+KibkzaAiz4Mx20PrmDQ0tpmQpEMSTkxBP17saQfStwkLdCTKXK43J2dWbcQxNpDPocpetO4EtkEXS29l0ZDwcFYdCJIo8cV5DDF2mzxAJ0ahT00hwp96aQlOOTw4fTFzIq5eHfh9pcXzihc2P51j2XjZNhBPm/hCoVDN2rCBvJ50RUcHD406MOVqXaQt1AaHVAHWgprlSxjmtmdp8db8OUGa0GrIIPCd5KfptjAIewsgc3yDkv6to4oCBI9xTpk/1XUGGMntA9O6jV0HKiqceV7Z8I5sQMOMmDd35c64BoddB2HEw2vBO5S+dJhRc16lsbp0bNAxcue3BjHBPMWS7mSWLFDIL5vDwsb7B2fwrGVM3U8Xcst6l+axf7JykPXpfS8NdonmoaDAf08f/u2KUv0ftUodlQV8P/dx5TFu430KZke1UtjFAp9xvUBWXSp0BrDxpAZrImCsYIkCpmwMhtmoglmgVuhsqPQTyRmf+MBt0XnowUapyCHTQjW51mmhA+1VCjkZYXbM7dNnKmaMpotxWAX7LPw4YtUyEZjIAcdDHZLnCYe+jY7UkFPUi4RRtREEPD94sa4WgTI4dPPWaSLejU9ufPjk6itwnO/HOTcs8l8UJzLv+cnqVem3/xeSWw0GbMfwzMmziE5uza1NRp1IJMQwQk6vBzQI9TJWkS56ZRA0hg7DkVSGXt91vWm0b+PvT3pAZ9CZpWQmlKKvW/34pqDsBI4UK1HgQGHP0gs7r79YsFhQ9LN59C2S+Hxu1NdR9sPDTqavgWHrXBSLInyedFx2KCo0EVV3uMOcrhO9V7MKHmCqyYOu5cO7vjhxqgs0YY3sUXPXZNvtzNS3H7a16aiO048UoXiEXIA+nei22ky014LSuh1I9aETTFJn+K5vF/IOVZ1GNZ618uwbRNiZu5Rdx3wfSmBvqGjifAb53+RUw==
-sidebar_class_name: "post api-method"
+id: update-project-metadata
+title: "Update Project Metadata"
+description: "Update metadata such as name and description"
+api: eJytVd9P2zAQ/lesezYE9TFvBW0S05gQlO2hqqYjORpDEhv7Uqii/O/T2WkJdIxN2kvr2t/9+O6+u/bAuA6QL+HS23sqGFYarCOPbGx7XkION65EpvH5ghhLZAQNJYXCGye4PUo147sKXVEpDKrFhhS2pZrCNQQqOm94C/myh1NCT37ecQX5cjWsNHh67CjwqS23kPdQ2JapZTmic7UpYnbZfZDQPYSiogblxIZrei/nq+QUNPDWCcreRsYanBfKbCiIE1NGVwkT2Jt2fUB3dK3Yqi7GgkGDcP3Y9Bs9KTeaR4vhDeJvHFRdg+2RJyzxtqZpcZW9U1zRLgQMQyqn8VRKn00Jq2FIt8HZNiTSs5MT+Xod6borCgrhrqvVXhOg/1s7UvgP+xFSFpPC3FpbE7YH3HbISHDQ0BBXVjTsuugWRWGQoTPZLMOO7U/aYJ2NpcpSJ382LxoP5DfkQ1Rp52vIoWJ2Ic+yGgM3piY0xyVtfqePsitiP5IPdaS+YuALU5Oan4OIfDcD11KvRHU6CXu2ElJyiTBhH0Ggx8Nn6xtkyOHLj0WsiPTh6mWAPj1j42raKftFVUmu76lsvB40mPbOTrs54aHml+fq++zA+BCSqzPbONtSywE0SFUTdHZ8IkGcDdxg1M+Y17hRdpP23uaZbId/XUJjfZmeOXM1mlYSiW3uR60sAZ0BDcJwr5ck0FGqbzWz0lDZwGLa97cY6MbXwyDXjx152XcrDRv0RuY2rjsNFWFJPorsgbaQw1lidLSQBAVed5LowbANemcxLwpy/EfsajIPlzcL0c+4XhtbionHJ9DxMweQfwExjrKMdz3U2K47XAs2uRS14WuxvhFnJDU+YbudJNj3CbGwD9QOA+iRCctvGGSEfwEF7EsN
+sidebar_class_name: "put api-method"
 info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
 show_extensions: true
@@ -25,13 +25,13 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Remove Resource Role Permission"}
+  children={"Update Project Metadata"}
 >
 </Heading>
 
 <MethodEndpoint
-  method={"post"}
-  path={"/api/2/auto_eval/resource_permission/remove_resource_role_permission"}
+  method={"put"}
+  path={"/api/2/auto_eval/project/update_metadata"}
   context={"endpoint"}
 >
   
@@ -39,7 +39,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-Description of remove_resource_role_permission
+Update metadata such as name and description
 
 <Heading
   id={"request"}
@@ -80,29 +80,29 @@ Description of remove_resource_role_permission
       >
         <SchemaItem
           collapsible={false}
-          name={"resourceName"}
+          name={"id"}
           required={true}
           schemaName={"string"}
           qualifierMessage={undefined}
-          schema={{"type":"string"}}
+          schema={{"type":"string","description":"Project to update"}}
         >
           
         </SchemaItem><SchemaItem
           collapsible={false}
-          name={"roleIds"}
-          required={true}
-          schemaName={"integer[]"}
+          name={"name"}
+          required={false}
+          schemaName={"string"}
           qualifierMessage={undefined}
-          schema={{"type":"array","items":{"type":"integer"}}}
+          schema={{"type":"string","description":"New project name"}}
         >
           
         </SchemaItem><SchemaItem
           collapsible={false}
-          name={"permissionName"}
-          required={true}
+          name={"description"}
+          required={false}
           schemaName={"string"}
           qualifierMessage={undefined}
-          schema={{"type":"string"}}
+          schema={{"type":"string","description":"New human-readable description of the project"}}
         >
           
         </SchemaItem>

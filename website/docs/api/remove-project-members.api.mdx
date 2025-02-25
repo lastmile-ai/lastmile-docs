@@ -1,8 +1,8 @@
 ---
-id: remove-resource-role-permission
-title: "Remove Resource Role Permission"
-description: "Description of remove_resource_role_permission"
-api: eJytVctu2zAQ/BViz0xk+KibkzaAiz4Mx20PrmDQ0tpmQpEMSTkxBP17saQfStwkLdCTKXK43J2dWbcQxNpDPocpetO4EtkEXS29l0ZDwcFYdCJIo8cV5DDF2mzxAJ0ahT00hwp96aQlOOTw4fTFzIq5eHfh9pcXzihc2P51j2XjZNhBPm/hCoVDN2rCBvJ50RUcHD406MOVqXaQt1AaHVAHWgprlSxjmtmdp8db8OUGa0GrIIPCd5KfptjAIewsgc3yDkv6to4oCBI9xTpk/1XUGGMntA9O6jV0HKiqceV7Z8I5sQMOMmDd35c64BoddB2HEw2vBO5S+dJhRc16lsbp0bNAxcue3BjHBPMWS7mSWLFDIL5vDwsb7B2fwrGVM3U8Xcst6l+axf7JykPXpfS8NdonmoaDAf08f/u2KUv0ftUodlQV8P/dx5TFu430KZke1UtjFAp9xvUBWXSp0BrDxpAZrImCsYIkCpmwMhtmoglmgVuhsqPQTyRmf+MBt0XnowUapyCHTQjW51mmhA+1VCjkZYXbM7dNnKmaMpotxWAX7LPw4YtUyEZjIAcdDHZLnCYe+jY7UkFPUi4RRtREEPD94sa4WgTI4dPPWaSLejU9ufPjk6itwnO/HOTcs8l8UJzLv+cnqVem3/xeSWw0GbMfwzMmziE5uza1NRp1IJMQwQk6vBzQI9TJWkS56ZRA0hg7DkVSGXt91vWm0b+PvT3pAZ9CZpWQmlKKvW/34pqDsBI4UK1HgQGHP0gs7r79YsFhQ9LN59C2S+Hxu1NdR9sPDTqavgWHrXBSLInyedFx2KCo0EVV3uMOcrhO9V7MKHmCqyYOu5cO7vjhxqgs0YY3sUXPXZNvtzNS3H7a16aiO048UoXiEXIA+nei22ky014LSuh1I9aETTFJn+K5vF/IOVZ1GNZ618uwbRNiZu5Rdx3wfSmBvqGjifAb53+RUw==
+id: remove-project-members
+title: "Remove Project Members"
+description: "Description of remove_members"
+api: eJytlMFu2zAMhl/F4Fmtgxx9S7sNyLBiQZtth8AYGJtN1MqSKslpA0PvPlB2Ejdd18tOlu1fFH/yozoIuPFQrGDhzANVAUoBxpLDII2e11DALTVmR8PvG2rW5DwIqMlXTlqWQQGfTm+Zuc9c2vO7Oao9Va2TYQ/FqoMrQkdu1oYtFKsylgIcPbXkw5Wp91B0UBkdSAdeorVKVimb/MHzWR34aksN8irIoOidHG/7mCAg7C2LzDoZFGAdOwySPMew/S722h2kPjipNxAFOKNoXvvRP3QO9yBABmrG36UOtCEHMcbekHRUc2VPB5zClXGQeWu07xOZTib8eF3Yu7aqyPv7VmXHtoD4XxXqT/+wRL5PYmR2bYwi1HDu9aBM/qKAhsLWMEXWpFZY5KZDjlbm0xzbYH7TDlU+1Cj/CzhuxyvmpnUKCtiGYH2R5wp9aKQilJc17d4QuXCmbqsEZB8ju8i+oQ83UlE2mwNjd6DyjsvVWx2zeXTLR3IuScbukwjEsPhiXIMBCvj6a5kqwm24PSH9+QUby114BdsBshFjq0kZBUh9b8atG2WdzRbz7Of0jdm3kiK7No01mnTgMnINe+n0csJccz8aTLBobE6EZAMi2TuTPhrOD4d+qF6gl5BbhVLzwamJ3QDCCtBKEMCOjjD0+A0gngUtBWyZpGIFXbdGTz+cipE/P7Xk+HopBezQSVxz7VZczy1hTS4R9Eh7KOC6d3Cx5PxYrto02OeDFMVhx6yqyIZ/assR7Ivvd0umY7jOGlPzHofPbAifoQDgW5Z3J+jStw4U6k2LG9b2MZklfI3iGXrJ1eFi0vtRhl3XK5bmkXSMIAYrgd8h8oD+AVWSE2U=
 sidebar_class_name: "post api-method"
 info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
@@ -25,13 +25,13 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"Remove Resource Role Permission"}
+  children={"Remove Project Members"}
 >
 </Heading>
 
 <MethodEndpoint
   method={"post"}
-  path={"/api/2/auto_eval/resource_permission/remove_resource_role_permission"}
+  path={"/api/2/auto_eval/project/remove_members"}
   context={"endpoint"}
 >
   
@@ -39,7 +39,7 @@ import TabItem from "@theme/TabItem";
 
 
 
-Description of remove_resource_role_permission
+Description of remove_members
 
 <Heading
   id={"request"}
@@ -80,7 +80,7 @@ Description of remove_resource_role_permission
       >
         <SchemaItem
           collapsible={false}
-          name={"resourceName"}
+          name={"projectId"}
           required={true}
           schemaName={"string"}
           qualifierMessage={undefined}
@@ -94,15 +94,6 @@ Description of remove_resource_role_permission
           schemaName={"integer[]"}
           qualifierMessage={undefined}
           schema={{"type":"array","items":{"type":"integer"}}}
-        >
-          
-        </SchemaItem><SchemaItem
-          collapsible={false}
-          name={"permissionName"}
-          required={true}
-          schemaName={"string"}
-          qualifierMessage={undefined}
-          schema={{"type":"string"}}
         >
           
         </SchemaItem>
