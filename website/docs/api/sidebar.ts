@@ -226,6 +226,12 @@ const sidebar: SidebarsConfig = {
           label: "List Projects",
           className: "api-method post",
         },
+        {
+          type: "doc",
+          id: "api/update-project-metadata",
+          label: "Update Project Metadata",
+          className: "api-method put",
+        },
       ],
     },
     {
@@ -950,6 +956,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/listprojectsresponse",
           label: "ListProjectsResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/updateprojectmetadatarequest",
+          label: "UpdateProjectMetadataRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/updateprojectmetadataresponse",
+          label: "UpdateProjectMetadataResponse",
           className: "schema",
         },
         {
