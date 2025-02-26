@@ -294,6 +294,12 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/change-project-member-role",
+          label: "Change Project Member Role",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
           id: "api/list-assignable-project-member-roles",
           label: "List Assignable Project Member Roles",
           className: "api-method post",
@@ -1142,6 +1148,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/removeprojectmembersresponse",
           label: "RemoveProjectMembersResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/changeprojectmemberrolerequest",
+          label: "ChangeProjectMemberRoleRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/changeprojectmemberroleresponse",
+          label: "ChangeProjectMemberRoleResponse",
           className: "schema",
         },
         {
