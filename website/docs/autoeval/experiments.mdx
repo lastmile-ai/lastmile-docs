@@ -15,6 +15,8 @@ Track and manage experiments on your LLMs and applications to compare performanc
 
 An *Experiment* is a collection of *evaluation runs*. Each *evaluation run* consists of the *dataset* and *metrics* for that run. For example, let's say I have a dataset of customer support chatbot questions, answers, and context. For my *Customer Support Experiment*, I can run this dataset against AutoEval's *relevancy*, *toxicity*, and *faithfulness* metrics as an *evaluation run*. Next, I can update the model (let's say to Gemini) for the chatbot and generate new answers and context for the same set of questions. Then, I can save that as another *evaluation run* and compare the results to determine if the model change was a positive improvement.
 
+![Experiments Diagram](https://andrew-dev-s3.s3.us-east-1.amazonaws.com/Experiments-Diagram.png)
+
 *Experiments* enable you to confidently make iterative changes to your LLM application in a structured and organzied way.
 
 ## What types of changes can Experiments measure?
