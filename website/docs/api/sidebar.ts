@@ -234,6 +234,12 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/change-resource-role-permission",
+          label: "Change Resource Role Permission",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
           id: "api/remove-resource-role-permission",
           label: "Remove Resource Role Permission",
           className: "api-method post",
@@ -1004,6 +1010,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/addresourcerolepermissionresponse",
           label: "AddResourceRolePermissionResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/changeresourcerolepermissionrequest",
+          label: "ChangeResourceRolePermissionRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/changeresourcerolepermissionresponse",
+          label: "ChangeResourceRolePermissionResponse",
           className: "schema",
         },
         {
