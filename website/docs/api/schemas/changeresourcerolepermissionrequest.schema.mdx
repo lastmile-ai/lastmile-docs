@@ -1,8 +1,8 @@
 ---
-id: roleuser
-title: "RoleUser"
-description: ""
-sidebar_label: "RoleUser"
+id: changeresourcerolepermissionrequest
+title: "ChangeResourceRolePermissionRequest"
+description: "For a specified resource, change an existing permission for a given role_id"
+sidebar_label: "ChangeResourceRolePermissionRequest"
 hide_title: true
 schema: true
 custom_edit_url: null
@@ -17,27 +17,19 @@ import TabItem from "@theme/TabItem";
 <Heading
   as={"h1"}
   className={"openapi__heading"}
-  children={"RoleUser"}
+  children={"ChangeResourceRolePermissionRequest"}
 >
 </Heading>
 
 
 
-
+For a specified resource, change an existing permission for a given role_id
+ to a new permission
 
 <ul>
   <SchemaItem
     collapsible={false}
-    name={"id"}
-    required={true}
-    schemaName={"string"}
-    qualifierMessage={undefined}
-    schema={{"type":"string","description":"User id for the user"}}
-  >
-    
-  </SchemaItem><SchemaItem
-    collapsible={false}
-    name={"name"}
+    name={"resourceName"}
     required={true}
     schemaName={"string"}
     qualifierMessage={undefined}
@@ -46,8 +38,17 @@ import TabItem from "@theme/TabItem";
     
   </SchemaItem><SchemaItem
     collapsible={false}
-    name={"email"}
-    required={false}
+    name={"roleId"}
+    required={true}
+    schemaName={"integer"}
+    qualifierMessage={undefined}
+    schema={{"type":"integer"}}
+  >
+    
+  </SchemaItem><SchemaItem
+    collapsible={false}
+    name={"permissionName"}
+    required={true}
     schemaName={"string"}
     qualifierMessage={undefined}
     schema={{"type":"string"}}
@@ -55,8 +56,8 @@ import TabItem from "@theme/TabItem";
     
   </SchemaItem><SchemaItem
     collapsible={false}
-    name={"profileImageUrl"}
-    required={false}
+    name={"newPermissionName"}
+    required={true}
     schemaName={"string"}
     qualifierMessage={undefined}
     schema={{"type":"string"}}
