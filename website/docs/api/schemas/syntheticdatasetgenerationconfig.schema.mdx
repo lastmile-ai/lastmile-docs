@@ -1,0 +1,40 @@
+---
+id: syntheticdatasetgenerationconfig
+title: "SyntheticDatasetGenerationConfig"
+description: ""
+sidebar_label: "SyntheticDatasetGenerationConfig"
+hide_title: true
+schema: true
+custom_edit_url: null
+---
+
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"SyntheticDatasetGenerationConfig"}
+>
+</Heading>
+
+
+
+
+
+<ul>
+  <SchemaItem
+    collapsible={false}
+    name={"baseEvaluationMetric"}
+    required={true}
+    schemaName={"BaseEvaluationMetric (string)"}
+    qualifierMessage={"**Possible values:** [`BASE_EVALUATION_METRIC_UNSPECIFIED`, `BASE_EVALUATION_METRIC_FAITHFULNESS`, `BASE_EVALUATION_METRIC_RELEVANCE`, `BASE_EVALUATION_METRIC_TOXICITY`, `BASE_EVALUATION_METRIC_QA`, `BASE_EVALUATION_METRIC_SUMMARIZATION`]"}
+    schema={{"type":"string","enum":["BASE_EVALUATION_METRIC_UNSPECIFIED","BASE_EVALUATION_METRIC_FAITHFULNESS","BASE_EVALUATION_METRIC_RELEVANCE","BASE_EVALUATION_METRIC_TOXICITY","BASE_EVALUATION_METRIC_QA","BASE_EVALUATION_METRIC_SUMMARIZATION"],"title":"BaseEvaluationMetric","description":"Keep in sync with www/prisma/schema.prisma:AEBaseEvaluationMetric"}}
+  >
+    
+  </SchemaItem>
+</ul>
+            
