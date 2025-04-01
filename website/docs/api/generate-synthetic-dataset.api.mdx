@@ -1,0 +1,232 @@
+---
+id: generate-synthetic-dataset
+title: "Generate Synthetic Dataset"
+description: "Generate a synthetic dataset from uploaded file contents"
+api: eJytVl1zqzYQ/SuafcYhk0feiENa2jhx/ZF+eBiPAmujewHpSsKOh+G/dxawjb/ubad98SBxtOyePXvkCixfG/AW8MQtN2ghckAq1NwKWYQJePATFrTE6a6wKVoR75EOJGhiLRRBe0DGmdljWdKC2UrLnJUqkzzBhK1EhiyWhcXCGnDAYFxqYXfgLSp4RK5R+6VNwVtEdeSAxm8lGvsokx14FXQH6ZErlYm4Sdb9YiiNCkycYs7pyQqb4XdKmLRxwQG7UwSUH18wprXSRIIVaChOVwTRUe2hxmpRrC9ImKXIwicmV8ymeKjeSrbes0N7bCU11A60hPz7uO05FmvkluiUutkmWilsLIuVWPcZOK+8Y0TIYthif0TBBzcYbHhWNodGaLWIr2WNRZmTnB79abAM3v2XuT8L316Xo2A2CYfL+et0HAzD5zB4AucW6NkPZz8/z19eg+n0NmoSvATv/uswuA2Zvf0RDsPZn7cRv/m3303no5E/Cf9qNmku9mQ+XuPivGG/IiomChqFmG2FTdl2u3WVFibnbivRu3bl+cHViHXdKl9oTIjSqy2IzlFHrfbkdZBEdJ7mWKoyI1n25dqkezrDB/0m7Sjz4nSaoa7bTIyShWk183B/30zPyQenZRyjMasyYwefafP7v2a6zeBHiq4d4Eki6Cs8G/ferHhm0IHPgbFcFBkaM8Bc2d2gi+NZXWLdlpujTSWZpJKNjShOpgUuV8J9cHlp5RI3PHM7Yt09icsDuY356Q1q03hfqTPwILVWGc91M25sLjLk4i7BzYXExlomZUwL1sZgA/bCjR2Ru/ohkHXunXVKBLZt6fvrYYDpk5RLAwMPPhoQON3Ds9Q5t+DBL7/PGmFSYyZHWw4+ea6oLydmebSFo9Ed944udd1c/omHUCqiWMm+MnoUMH8csveHC+YuIR4bylzJoruQqCEt9OHuniyVGpzzRosFz/sCZAcFshs3Y+/G+i+XZNcpi5/WVRkXRXODkGCqTngL4EqAA1TwQXyUzSGvKwKMHEhJvd4Cqoo6MddZXdP2txI1XcmRAxuuBf8gehdR7UCKPEHdKPYr7sCDYZvmYEY5EjwrKdeLUa6d/Qk/jlHZ72Kj3oCN36YzUmP3FyCXCZ3RfAtO8+sB0B8XOt2IvNmrIOPFuuRrwrYxSTD8VPpnUm+q6l7xYtfLsKpaxEx+xaKuwelKsbSGOqrr+m+iUDX1
+sidebar_class_name: "post api-method"
+info_path: api/lastmile-ai-api-v-2
+custom_edit_url: null
+show_extensions: true
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Generate Synthetic Dataset"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/api/2/auto_eval/dataset/generate_synthetic"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Generate a synthetic dataset from uploaded file contents
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"datasetId"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"The ID of the dataset to generate data for"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={false}
+          name={"uploadId"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"The ID of the upload created for the file"}}
+        >
+          
+        </SchemaItem><SchemaItem
+          collapsible={true}
+          className={"schemaItem"}
+        >
+          <details
+            style={{}}
+            className={"openapi-markdown__details"}
+          >
+            <summary
+              style={{}}
+            >
+              <span
+                className={"openapi-schema__container"}
+              >
+                <strong
+                  className={"openapi-schema__property"}
+                >
+                  config
+                </strong><span
+                  className={"openapi-schema__name"}
+                >
+                   object
+                </span><span
+                  className={"openapi-schema__divider"}
+                >
+                  
+                </span><span
+                  className={"openapi-schema__required"}
+                >
+                  required
+                </span>
+              </span>
+            </summary><div
+              style={{"marginLeft":"1rem"}}
+            >
+              <SchemaItem
+                collapsible={false}
+                name={"baseEvaluationMetric"}
+                required={true}
+                schemaName={"BaseEvaluationMetric (string)"}
+                qualifierMessage={"**Possible values:** [`BASE_EVALUATION_METRIC_UNSPECIFIED`, `BASE_EVALUATION_METRIC_FAITHFULNESS`, `BASE_EVALUATION_METRIC_RELEVANCE`, `BASE_EVALUATION_METRIC_TOXICITY`, `BASE_EVALUATION_METRIC_QA`, `BASE_EVALUATION_METRIC_SUMMARIZATION`]"}
+                schema={{"type":"string","enum":["BASE_EVALUATION_METRIC_UNSPECIFIED","BASE_EVALUATION_METRIC_FAITHFULNESS","BASE_EVALUATION_METRIC_RELEVANCE","BASE_EVALUATION_METRIC_TOXICITY","BASE_EVALUATION_METRIC_QA","BASE_EVALUATION_METRIC_SUMMARIZATION"],"title":"BaseEvaluationMetric","description":"Keep in sync with www/prisma/schema.prisma:AEBaseEvaluationMetric"}}
+              >
+                
+              </SchemaItem>
+            </div>
+          </details>
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Successful operation
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={""}
+                        required={false}
+                        schemaName={"object"}
+                        qualifierMessage={undefined}
+                        schema={{}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>

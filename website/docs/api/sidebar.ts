@@ -30,6 +30,12 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/generate-synthetic-dataset",
+          label: "Generate Synthetic Dataset",
+          className: "api-method post",
+        },
+        {
+          type: "doc",
           id: "api/get-dataset",
           label: "Get Dataset",
           className: "api-method post",
@@ -416,6 +422,24 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/finalizesingledatasetfileuploadresponse",
           label: "FinalizeSingleDatasetFileUploadResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/generatesyntheticdatasetrequest",
+          label: "GenerateSyntheticDatasetRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/syntheticdatasetgenerationconfig",
+          label: "SyntheticDatasetGenerationConfig",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/generatesyntheticdatasetresponse",
+          label: "GenerateSyntheticDatasetResponse",
           className: "schema",
         },
         {
