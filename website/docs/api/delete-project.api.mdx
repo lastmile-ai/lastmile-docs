@@ -1,0 +1,176 @@
+---
+id: delete-project
+title: "Delete Project"
+description: "Delete a Project."
+api: eJytVMFu2zAM/RWBZ7UucvQtbTMgQwcUbbYdAmNgbDZRa1uqRGcNDP/7QMlJ06bdZbsksvRIPj4+qQfGdYB8CbfePlLJUGiwjjyyse28ghyuqSam/bGGikLpjZPzw6lCNQLOQUOgsvOGd5Ave7gk9OSnHW8gXxZDocHTc0eBL221g7yH0rZMLcsSnatNGUtnj0Hy9xDKDTUoKzZc03tCdykZaOCdk1O7Gnk6L32woSDBpoopEiawN+36pJf5tbIPijekXEqu2KoqVoNhSMSNp0rkMhUUw5B2g7NtSGUmFxfy9zbvfVeWFMJDV6uDtKD/ufFU9j93ntqt9gp82vegoSHeWHHIKJEGhzJlyNCZbJJhx/YXbbHOxmTZARjIb8mHaJDO15DDhtmFPMtqDNyYmtCcV7Q9IXrrbdWV8qFSDnWmbjDwN1OTms5B/LW3370ImDQ4NuFBCykpXCIMclhFEOhx8cX6Bhly+PpzEWWQwdy9enf2go2TuSSJ99IOGkz7YI/ndkRQTW/n6sfkpK9TSK6ubONsSy0H0CByJejk/EKKOBu4weiUFptXe6hPburRRfvw0o6iML1w5mo0rRSJs+nHuS4BnQENwv4w22S3Q8E430LDxgaWiL5fYaDvvh4G2X7uyMuzUGjYoje4En2WxaBhQ1iRj4Z4oh3kcJXYni2El8DrTvid3JRB7yOmZUmO/4otjlx7PbuZLWYy7vEhamwlUR5/g46/OYA8hhIfXRT3eqixXXe4FmzKKubAt95656XY13iE7e6IY98nxMI+UTsMoMdmWL5hkLv2B7027Yo=
+sidebar_class_name: "delete api-method"
+info_path: api/lastmile-ai-api-v-2
+custom_edit_url: null
+show_extensions: true
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Project"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2/auto_eval/project/delete"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a Project.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"id"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"ID of the project to delete"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Successful operation
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"id"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"ID of the deleted project"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"id\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
