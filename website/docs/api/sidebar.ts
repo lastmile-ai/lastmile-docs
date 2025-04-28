@@ -120,6 +120,12 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/delete-evaluation-run",
+          label: "Delete Evaluation Run",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
           id: "api/list-metrics",
           label: "List Metrics",
           className: "api-method post",
@@ -153,6 +159,12 @@ const sidebar: SidebarsConfig = {
           id: "api/list-experiments",
           label: "List Experiments",
           className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/delete-experiment",
+          label: "Delete Experiment",
+          className: "api-method delete",
         },
       ],
     },
@@ -285,6 +297,12 @@ const sidebar: SidebarsConfig = {
           id: "api/list-projects",
           label: "List Projects",
           className: "api-method post",
+        },
+        {
+          type: "doc",
+          id: "api/delete-project",
+          label: "Delete Project",
+          className: "api-method delete",
         },
         {
           type: "doc",
@@ -720,6 +738,18 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/schemas/deleteevaluationrunrequest",
+          label: "DeleteEvaluationRunRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/deleteevaluationrunresponse",
+          label: "DeleteEvaluationRunResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
           id: "api/schemas/listmetricsrequest",
           label: "ListMetricsRequest",
           className: "schema",
@@ -788,6 +818,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/listexperimentsresponse",
           label: "ListExperimentsResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/deleteexperimentrequest",
+          label: "DeleteExperimentRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/deleteexperimentresponse",
+          label: "DeleteExperimentResponse",
           className: "schema",
         },
         {
@@ -1154,6 +1196,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/listprojectsresponse",
           label: "ListProjectsResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/deleteprojectrequest",
+          label: "DeleteProjectRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/deleteprojectresponse",
+          label: "DeleteProjectResponse",
           className: "schema",
         },
         {

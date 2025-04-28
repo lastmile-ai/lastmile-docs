@@ -1,0 +1,176 @@
+---
+id: delete-experiment
+title: "Delete Experiment"
+description: "Delete an Experiment."
+api: eJytVMFu2zAM/RWBZ7UucvQtbTMgQwcUbbYdAmNQbDZWa0uqRGcNDP/7QMlNnGXdqRfbkh/Jx8cn9UBqGyBfw+LNodctGoJCgnXoFWlrlhXkcIsNEk4QEioMpdeOIQeAUEYcQZcgIWDZeU17yNc9XKPy6Ocd1ZCvi6GQ4PG1w0DXttpD3kNpDXH2vAflXKPLyCB7Dlyjh1DW2Cr+Ik0N/oPXQ8oHEmjvGGA3z1jy2nnuiDQGjtdVzJIwgbw227OWlrfCPgmqUeAhvyArqlgThiHR1x4rlk9XUAxD2g3OmpAqza6u+HWa+rErSwzhqWvEQWeQn9F+qvzJ/aeOq4kOH3Y/SGiRasumGYWS4BRPHDLldDbLVEf2F+5Ukx3zZQdsQL9DH6JfOt9ADjWRC3mWNSpQqxtU+rLC3Rnde2+rruSFSDnEhbhTgb7pBsV8CWy3dzc+spJJiaknD4pwSeYSYZDDJoJAjh9frG8VQQ5ff66iEjyhh6OVF2+qdTygJPS7wIMEbZ7sdIATgmJ+vxQ/Zmd9nUNycWNbZw0aCiCB5UrQ2eUVF3E2UKuiZYxqjz4RH5/fydH78CiP2hC+UeYapQ3XiiPqxwmvQTkNEriJw5RBAp7WjZMuJNQ2EAf1/UYF/O6bYeDt1w493xeFhJ3yWm1YqXUxSKhRVeijNV5wDzncJNIXK6bG8KZjimeHZ5DvEfOyREf/xRYTC98u7harBQ9+vKFaW3GUV79BxmcOwJclx0c/xb0eGmW2ndoyNmVlm6hTl/3lqtjX+EuZ/YRj3yfEyr6gGQaQYzPEaxj44P0BHrn8lA==
+sidebar_class_name: "delete api-method"
+info_path: api/lastmile-ai-api-v-2
+custom_edit_url: null
+show_extensions: true
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Heading from "@theme/Heading";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete Experiment"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/api/2/auto_eval/experiment/delete"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete an Experiment.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<MimeTabs
+  className={"openapi-tabs__mime"}
+>
+  <TabItem
+    label={"application/json"}
+    value={"application/json-schema"}
+  >
+    <details
+      style={{}}
+      className={"openapi-markdown__details mime"}
+      data-collapsed={false}
+      open={true}
+    >
+      <summary
+        style={{}}
+        className={"openapi-markdown__details-summary-mime"}
+      >
+        <h3
+          className={"openapi-markdown__details-summary-header-body"}
+        >
+          Body
+        </h3>
+      </summary><div
+        style={{"textAlign":"left","marginLeft":"1rem"}}
+      >
+        
+      </div><ul
+        style={{"marginLeft":"1rem"}}
+      >
+        <SchemaItem
+          collapsible={false}
+          name={"id"}
+          required={true}
+          schemaName={"string"}
+          qualifierMessage={undefined}
+          schema={{"type":"string","description":"ID of the experiment to delete"}}
+        >
+          
+        </SchemaItem>
+      </ul>
+    </details>
+  </TabItem>
+</MimeTabs><div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          Successful operation
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"id"}
+                        required={true}
+                        schemaName={"string"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"string","description":"ID of the deleted experiment"}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"id\": \"string\"\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
