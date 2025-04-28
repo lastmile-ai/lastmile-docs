@@ -120,6 +120,12 @@ const sidebar: SidebarsConfig = {
         },
         {
           type: "doc",
+          id: "api/delete-evaluation-run",
+          label: "Delete Evaluation Run",
+          className: "api-method delete",
+        },
+        {
+          type: "doc",
           id: "api/list-metrics",
           label: "List Metrics",
           className: "api-method post",
@@ -716,6 +722,18 @@ const sidebar: SidebarsConfig = {
           type: "doc",
           id: "api/schemas/listevaluationrunsresponse",
           label: "ListEvaluationRunsResponse",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/deleteevaluationrunrequest",
+          label: "DeleteEvaluationRunRequest",
+          className: "schema",
+        },
+        {
+          type: "doc",
+          id: "api/schemas/deleteevaluationrunresponse",
+          label: "DeleteEvaluationRunResponse",
           className: "schema",
         },
         {
