@@ -2,7 +2,7 @@
 id: change-project-member-role
 title: "Change Project Member Role"
 description: "Description of change_member_role"
-api: eJytVcFu4jAQ/ZVozm5TccyNUlaiKi0CuntACJlkIG4T27UdWhTl31djBwil3d3DnnDsmfG8N++ZGhzfWkgWMDHqBVMHSwZKo+FOKDnKIIFBzuUW2+Mxlms0U1UgMMjQpkZoioQE7k5fkdpEqU9blT5hZUKGxbQywu0hWdRwi9yg6Vcuh2SxbJYMDL5VaN2tyvaQ1JAq6VA6WnKtC5H6puIXS/fVYNMcS04rJ1yB37c6DWWBgdtrilNrD5WBNoTVCbRURodEQl0fQq0zQm6hYUAQzo6EdLhFc0HEPMeIgiOREREux6itHAU2qFq745m8uI0Byqr0U5k+3Q8H89X06WG4en6cTYaD0Y/R8A7Y+VH/bjx6/Lw5Ho5vh1Oa6IGgSefWr9qW+H7s1UPYKOMBHBpvwpCEwYzaOzF25Occ2rJpQo7VStpAc+/mhn7Ob59VaYrWbqoiOsoP2H+UQGjgrxqwoY/OTNZKFcjlBfZDpIfYMCjR5YoMo5XXmuYkbIi5FnEv5pVTK9zxIm7pib8xiNmhsd4flSkggdw5bZM4Lrh1pSiQi+sMdxfTmxiVVak3X6gRXUUP3LqxKDDqj4DsdXDfjFgLcLsePCKmK6kXH0YM+CBg7eKHMiV3kMD9r7lnhaYxPVl3+MFLHWTdcdRJ2wcj3XxywfdibxgIuVHdOXewRf3JKPrZu6DkMiSJBqrUSqJ0FhgQ0yG0d33jTamsK7lXluTlSU5Rq6coCCr6yj+d5+qfnsKWa4cfLtYFF5Ia8COvW+ksgGsBDAjZUT4nf5E7LgsvGeSkv2QBdb3mFp9N0TS0/VahoYd3yWDHjeBr4nGxbBjkyDM0XnOvuCfUAcnVnHqk8KKiXi8c2LBDRj9NUbs/xi47Fpk8zeakp/ahL1VGOYa/kzz4OyQA9DdE2V6mfq+GgsttxbcUG2qS+vi5eD+J1aNqj7jcdzqs6xAxV68omwZYC8XRNzRk699THnGj
+api: eJytVcFu4jAQ/ZVozm5T9ZgbUFaiKgUB3T0ghEwyJW4T27WdtijKv6/GDhCg3d3DnpLYM+N5b95zanB8ayFZwtSoF0wdrBgojYY7oeQogwQGOZdbbLfHWG7QzFSBwCBDmxqhKRISuDt+Reo5Sn3auvQJaxMyLKaVEW4HybKGPnKDple5HJLlqlkxMPhWoXV9le0gqSFV0qF09Mq1LkTqm4pfLJ1Xg01zLDm9OeEK/L7VWSgLDNxOU5zaeKgMtCGsTqClMjokEup6H2qdEXILDQOCcLIlpMMtmgsiFjlGFByJjIhwOUZt5SiwQdXaFc/kxWkMUFaln8pscj8cLNazycNw/fQ4nw4Hox+j4R2w063e3Xj0eL44Ho77w9n56mDyuJiN+k+LyYyGvedu2mnoK0QSPw4wPLpnZTy2PaYmzE8YzKjzI5kH6k5Rr5om5FitpA0TuL25ocfp6fMqTdHa56qIDsoE9h/VERr4qzxs6KMzro1SBXJ5gX0f6SE2DEp0uSIvaeVlqDlpHmKuRXwb88qpNb7zIm7pib/xjnlHY711KlNAArlz2iZxXHDrSlEgF9cZvl9Mb2pUVqXel6FGdBU9cOvGosCoNwJy3t6Yc2ItwO3a84CYjqRefBgx4IOAtS8/lCm5gwTufy08KzSN2dHVw09e6qD4jtmOst977ObMIN/7oGEg5LPqzrmDLepNR9HP2wtKLkOSaKBKrSRKZ4EBMR1Cb69vvF+VdSX3ypK8PMopavUUBUFFX/mnc5P90y3Zcu3w08W64EJSA37kdSudJXAtgAEhO8jn6C9yx2XhFYOc9Jcsoa433OKTKZqGlt8qNHQnrxi8cyP4hnhcrhoGOfIMjdfcK+4IdUBytaAeKbyoqNcLBzZsn9FLU9Tuj7GrjkWmk/mC9NT+A0qVUY7hHyQP/gEJAP2hKNvL1K/VUHC5rfiWYkNNUh8/Fe+ZWD2qdovLXafDug4RC/WKsmmAtVAcfUNDtv4NMLt5dQ==
 sidebar_class_name: "post api-method"
 info_path: api/lastmile-ai-api-v-2
 custom_edit_url: null
@@ -101,8 +101,8 @@ Description of change_member_role
           name={"projectRole"}
           required={true}
           schemaName={"ProjectRole (string)"}
-          qualifierMessage={"**Possible values:** [`PROJECT_ROLE_UNSPECIFIED`, `PROJECT_ROLE_ADMIN`, `PROJECT_ROLE_MEMBER`]"}
-          schema={{"type":"string","enum":["PROJECT_ROLE_UNSPECIFIED","PROJECT_ROLE_ADMIN","PROJECT_ROLE_MEMBER"],"title":"ProjectRole","description":"The new project role for the member"}}
+          qualifierMessage={"**Possible values:** [`PROJECT_ROLE_UNSPECIFIED`, `PROJECT_ROLE_ADMIN`, `PROJECT_ROLE_MEMBER`, `PROJECT_ROLE_CONTRIBUTOR`]"}
+          schema={{"type":"string","enum":["PROJECT_ROLE_UNSPECIFIED","PROJECT_ROLE_ADMIN","PROJECT_ROLE_MEMBER","PROJECT_ROLE_CONTRIBUTOR"],"title":"ProjectRole","description":"The new project role for the member"}}
         >
           
         </SchemaItem>
